@@ -1,301 +1,1075 @@
 <!DOCTYPE html>
-<html lang="zh-TW" translate="no">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>雲端監控中心 ｜ 異常告警平台 (4.6 運維管理)</title>
+  <title>進金生能源 6692｜太陽光電雲端監控・異常告警戰情平台 (4.6 運維管理)</title>
   <link rel="icon" href="assets/img/acme-logo.png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-  <!-- 原廠樣式與 Bootstrap-Vue 基礎架構 -->
-  <link rel="stylesheet" href="assets/css/chunk-vendors.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-  <!-- 自訂儀表板美化樣式 -->
-  <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- 遵循 taoyuan-aidc-platform 視覺規範樣式 -->
+  <link rel="stylesheet" href="assets/css/taoyuan.css">
+  <style>
+    /* 輔助增強樣式 */
+    .site-link { color: var(--blue); font-weight: 700; text-decoration: underline; cursor: pointer; }
+    .site-link:hover { color: var(--blue-dd); }
+    .btn-detail { background: var(--blue-soft); border: 1px solid var(--line); border-radius: 3px; padding: 3px 8px; font-size: .75rem; font-weight: 700; color: var(--blue-d); cursor: pointer; }
+    .btn-detail:hover { background: var(--blue); color: #fff; }
+    .page_btn { padding: 4px 10px; border: 1px solid var(--line); background: #fff; border-radius: 3px; font-size: .78rem; font-weight: 700; cursor: pointer; }
+    .page_btn:disabled { opacity: .4; cursor: not-allowed; }
+    .status_pill { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--line); background: #fff; font-size: .8rem; font-weight: 700; color: var(--muted); cursor: pointer; transition: all .15s; }
+    .status_pill:hover { border-color: var(--blue); color: var(--blue); }
+    .status_pill.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .status_pill .badge_num { margin-left: 6px; padding: 1px 6px; border-radius: 10px; font-size: .72rem; background: var(--grey-soft); color: var(--ink); }
+    .status_pill.active .badge_num { background: #fff; color: var(--blue); }
+    .modal_overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+    .modal_overlay.show { opacity: 1; pointer-events: auto; }
+    .modal_box { background: #fff; border-radius: 6px; width: 92%; max-width: 960px; max-height: 85vh; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.25); border-top: 4px solid var(--blue); }
+    .modal_header { padding: 14px 20px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-weight: 800; font-size: 1rem; color: var(--ink); }
+    .modal_close { background: none; border: none; font-size: 1.3rem; cursor: pointer; color: var(--muted); }
+    .modal_body { padding: 20px; overflow-y: auto; }
+    .modal_footer { padding: 12px 20px; border-top: 1px solid var(--line); text-align: right; }
+    .font-mono { font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
 </head>
 <body>
-  <div id="app">
-    <div class="v-application--wrap">
+
+  <!-- ========== TOPBAR (照抄 taoyuan-aidc-platform) ========== -->
+  <header class="topbar">
+    <a href="#home" class="brand" data-nav="home">
+      <img src="assets/img/acme-logo.png" alt="進金生能源" class="logo-img">
+      <div class="tx">
+        進金生能源 6692
+        <small>4.6 運維管理 ｜ 太陽光電異常告警平台</small>
+      </div>
+    </a>
+
+    <nav class="topnav">
+      <a href="#home" data-nav="home" class="active">🏠 封面總覽</a>
+      <a href="#p1" data-nav="p1">📊 Part 1 目標統計分析 (3 頁)</a>
+      <a href="#p2" data-nav="p2">🏢 Part 2 案場穿透診斷 (3 頁)</a>
+      <a href="#p3" data-nav="p3">📑 Part 3 附錄・歷史備存 (2 頁)</a>
+      <a href="#p4" data-nav="p4">⚙️ Part 4 排程自動同步 (2 頁)</a>
+    </nav>
+
+    <div class="meta">
+      <span class="chip blue" id="topbarSyncTimer">每日 07:00~17:00 整點更新</span>
+      <span class="chip green"><i class="fas fa-check-circle mr-1"></i> 雲端連線正常</span>
+      <span class="chip grey"><i class="fas fa-user mr-1"></i> David Yeh</span>
+    </div>
+  </header>
+
+  <!-- ========== MAIN VIEWS CONTAINER ========== -->
+  <main>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW: HOME (封面總覽)                                                     -->
+    <!-- ========================================================================= -->
+    <div class="view active" id="view-home">
       
-      <!-- 頂部導航列 (完全照抄 om.acmepointes.com/tw/realtime 風格) -->
-      <nav class="navbar navbar py-1 navbar-light navbar-expand-lg border-bottom" style="background:#ffffff; z-index:1000;">
-        <a class="navbar-brand d-flex align-items-center py-0" href="index.html">
-          <img src="assets/img/acme-logo.png" alt="ACMEPOINT" class="logo mr-2" style="height: 36px;">
-          <div class="font-weight-bold" style="color: var(--acmeLogo); font-size: 20px; letter-spacing: 0.05rem;">
-            雲端監控中心
-            <span class="badge badge-primary ml-2" style="font-size: 11px; vertical-align: middle; font-weight: normal; background-color: #1976d2;">異常告警平台</span>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="inner">
+          <div class="kicker">KINGSUN 6692 SOLAR O&M ANOMALY COCKPIT ｜ 4.6 運維管理</div>
+          <h1>進金生能源 6692<br>太陽光電雲端監控・異常告警戰情平台</h1>
+          <p class="lede">
+            本平台為進金生能源（6692）4.6 運維管理專屬之全域異常告警決策中心。系統無縫介接 ACMEPOINT 雲端監控中心後端 API，全面掌握全台 <b>86+ 光電案場</b>之即時故障徵兆、<b>(1) 異常情況分布</b> 與 <b>(2) 同一案場異常數量統計</b>，並建立每日 07:00 ~ 17:00 每整點自動同步與歷史快照備存庫。
+          </p>
+          <div class="herometa">
+            <span>全網監控案場：86 座</span>
+            <span>獨立異常問題：499 項</span>
+            <span>原始事件紀錄：3,164 筆</span>
+            <span>每整點自動同步：11 次/日</span>
+            <span>最後同步時間：<b class="val-updated-time">2026-09-14 17:22:08</b></span>
           </div>
-        </a>
-
-        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav-collapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="nav-collapse">
-          <ul class="navbar-nav ml-auto align-items-center">
-            <li class="nav-item">
-              <a href="index.html" class="btn mx-2 btn-dark btn-sm rounded-pill">
-                <i class="mr-1 fas fa-solar-panel"></i> 異常告警中心
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="appendix.html" class="btn mx-2 btn-outline-dark btn-sm rounded-pill">
-                <i class="mr-1 fas fa-history"></i> 附錄・歷史追蹤
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://om.acmepointes.com/tw/realtime" target="_blank" class="btn mx-2 btn-outline-dark btn-sm rounded-pill" title="前往原廠即時資訊系統">
-                <i class="mr-1 fas fa-external-link-alt"></i> 原廠即時資訊
-              </a>
-            </li>
-            <li class="nav-item">
-              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button" title="切換主題">
-                <i class="fas fa-adjust"></i>
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button" title="多國語言">
-                <i class="fas fa-globe-asia"></i>
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button" title="功能選單">
-                <i class="fas fa-bars"></i>
-              </button>
-            </li>
-            <li class="nav-item ml-2">
-              <span class="badge badge-light p-2 border rounded-pill d-inline-flex align-items-center" style="font-size:13px; font-weight:600;">
-                <i class="fas fa-user-circle mr-1 text-primary"></i> David Yeh
-              </span>
-            </li>
-          </ul>
         </div>
-      </nav>
+      </section>
 
-      <!-- 主體框架 -->
-      <div class="view_wrapper">
+      <!-- HOME BODY -->
+      <div class="homebody">
         
-        <!-- 左側邊欄 (照抄 realtime 原廠側邊欄) -->
-        <div class="sidebar d-none d-lg-block">
-          <div class="text-right">
-            <i class="fas fa-exchange-alt btn_sidebar_expand" title="展開/收合側邊欄"></i>
+        <!-- 四大核心指標 (METRICS) -->
+        <div class="four-col" style="margin-bottom: 24px;">
+          <div class="metric">
+            <div class="k"><span class="val-sites-count">86</span> <small style="font-size:.9rem; font-weight:700;">座</small></div>
+            <div class="t"><b>全網監控電廠總量</b><br>涵蓋北中南四大工務區域之屋頂型、地面型與水面型案場</div>
           </div>
-          <ul class="sidebar_ul">
-            <li class="sidebar_li sidebar_li__active">
-              <a class="sidebar_link" href="index.html" title="即時告警儀表板">
-                <i class="sidebar_icon fas fa-home"></i>
-                <span class="sidebar_text" style="display: none;">即時告警</span>
-              </a>
-            </li>
-            <li class="sidebar_li">
-              <a class="sidebar_link" href="appendix.html" title="附錄歷史追蹤">
-                <i class="sidebar_icon fas fa-history"></i>
-                <span class="sidebar_text" style="display: none;">歷史附錄</span>
-              </a>
-            </li>
-            <li class="sidebar_li">
-              <a class="sidebar_link" href="https://om.acmepointes.com/tw/realtime" target="_blank" title="原廠即時資訊">
-                <i class="sidebar_icon fas fa-poll"></i>
-                <span class="sidebar_text" style="display: none;">原廠即時</span>
-              </a>
-            </li>
-            <li class="sidebar_li">
-              <a class="sidebar_link" href="https://om.acmepointes.com/tw/historyalarms" target="_blank" title="原廠告警事件">
-                <i class="sidebar_icon fa fa-bell"></i>
-                <span class="sidebar_text" style="display: none;">原廠告警</span>
-              </a>
-            </li>
-            <li class="sidebar_li">
-              <a class="sidebar_link" href="https://om.acmepointes.com/tw/multiplefactoryanalysis" target="_blank" title="多案場分析">
-                <i class="sidebar_icon fas fa-chart-line"></i>
-                <span class="sidebar_text" style="display: none;">多案場分析</span>
-              </a>
-            </li>
-            <li class="sidebar_li">
-              <a class="sidebar_link" href="appendix.html#snapshotsTable" title="快照備存紀錄">
-                <i class="sidebar_icon fas fa-database"></i>
-                <span class="sidebar_text" style="display: none;">快照備存</span>
-              </a>
-            </li>
-          </ul>
+          <div class="metric coral">
+            <div class="k" style="color:var(--coral);"><span class="val-distinct-issues">499</span> <small style="font-size:.9rem; font-weight:700;">項</small></div>
+            <div class="t"><b>當前受影響獨立異常</b><br>經 Inverter 與異常類別去重後之待排除獨立故障項</div>
+          </div>
+          <div class="metric amber">
+            <div class="k" style="color:#9a6a10;"><span class="val-raw-events">3,164</span> <small style="font-size:.9rem; font-weight:700;">次</small></div>
+            <div class="t"><b>累計歷史告警事件</b><br>包含連續性日照低電流、通訊逾時與數值突波之原始紀錄</div>
+          </div>
+          <div class="metric teal">
+            <div class="k" style="color:var(--teal-d);">11 <small style="font-size:.9rem; font-weight:700;">次/日</small></div>
+            <div class="t"><b>每日整點自動同步</b><br>每天 07:00 ~ 17:00 透過 GitHub Actions 每整點自動採集發布</div>
+          </div>
         </div>
 
-        <!-- 主要工作區 -->
-        <main class="main_content">
+        <!-- 【圖片輔助說明】全系統資料流與架構圖 -->
+        <div class="fig mb-4">
+          <div class="figtitle">
+            <i class="fas fa-sitemap mr-1" style="color:var(--blue);"></i>
+            圖 0.1：進金生能源 6692 異常告警平台全系統數據流向與運維架構圖
+          </div>
+          <svg viewBox="0 0 1200 240" xmlns="http://www.w3.org/2000/svg" style="background:#071d3b; border-radius:4px;">
+            <!-- Background Grids -->
+            <defs>
+              <linearGradient id="gradBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1968AD"/>
+                <stop offset="100%" stop-color="#1BB1BF"/>
+              </linearGradient>
+            </defs>
+            <!-- Step 1 -->
+            <rect x="30" y="40" width="190" height="150" rx="6" fill="#0d2b52" stroke="#1968AD" stroke-width="2"/>
+            <text x="125" y="75" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">資料源：ACMEPOINT</text>
+            <text x="125" y="105" fill="#fff" font-size="12" text-anchor="middle">雲端監控中心 (OT)</text>
+            <text x="125" y="128" fill="#9FB1C0" font-size="11" text-anchor="middle">全台 86+ 案場監控數據</text>
+            <text x="125" y="150" fill="#E09A2B" font-size="11" font-weight="bold" text-anchor="middle">RESTful API / JSON</text>
+            <!-- Arrow 1 -->
+            <path d="M 225 115 L 265 115" stroke="#1BB1BF" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+            <polygon points="265,110 275,115 265,120" fill="#1BB1BF"/>
+            <!-- Step 2 -->
+            <rect x="280" y="40" width="190" height="150" rx="6" fill="#0d2b52" stroke="#1BB1BF" stroke-width="2"/>
+            <text x="375" y="75" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">自動採集引擎</text>
+            <text x="375" y="105" fill="#fff" font-size="12" text-anchor="middle">Python fetch_alarms.py</text>
+            <text x="375" y="128" fill="#9FB1C0" font-size="11" text-anchor="middle">自動登入認證取得 Token</text>
+            <text x="375" y="150" fill="#2E7D32" font-size="11" font-weight="bold" text-anchor="middle">3 秒快速無頭抓取</text>
+            <!-- Arrow 2 -->
+            <path d="M 475 115 L 515 115" stroke="#1BB1BF" stroke-width="3" fill="none"/>
+            <polygon points="515,110 525,115 515,120" fill="#1BB1BF"/>
+            <!-- Step 3 -->
+            <rect x="530" y="40" width="200" height="150" rx="6" fill="#0d2b52" stroke="#E09A2B" stroke-width="2"/>
+            <text x="630" y="75" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">統計分析與去重運算</text>
+            <text x="630" y="105" fill="#fff" font-size="12" text-anchor="middle">(1) 異常情況分布運算</text>
+            <text x="630" y="128" fill="#fff" font-size="12" text-anchor="middle">(2) 同一案場排行去重</text>
+            <text x="630" y="150" fill="#E09A2B" font-size="11" font-weight="bold" text-anchor="middle">499 筆獨立異常彙整</text>
+            <!-- Arrow 3 -->
+            <path d="M 735 115 L 775 115" stroke="#1BB1BF" stroke-width="3" fill="none"/>
+            <polygon points="775,110 785,115 775,120" fill="#1BB1BF"/>
+            <!-- Step 4 -->
+            <rect x="790" y="40" width="180" height="150" rx="6" fill="#0d2b52" stroke="#1968AD" stroke-width="2"/>
+            <text x="880" y="75" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">附錄歷史整點快照</text>
+            <text x="880" y="105" fill="#fff" font-size="12" text-anchor="middle">data/snapshots/*.json</text>
+            <text x="880" y="128" fill="#9FB1C0" font-size="11" text-anchor="middle">07:00 ~ 17:00 每時存檔</text>
+            <text x="880" y="150" fill="#1BB1BF" font-size="11" font-weight="bold" text-anchor="middle">歷時演變可溯源</text>
+            <!-- Arrow 4 -->
+            <path d="M 975 115 L 1015 115" stroke="#1BB1BF" stroke-width="3" fill="none"/>
+            <polygon points="1015,110 1025,115 1015,120" fill="#1BB1BF"/>
+            <!-- Step 5 -->
+            <rect x="1030" y="40" width="140" height="150" rx="6" fill="#0d2b52" stroke="#2E7D32" stroke-width="2"/>
+            <text x="1100" y="75" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">戰情發布</text>
+            <text x="1100" y="105" fill="#fff" font-size="12" text-anchor="middle">GitHub Pages</text>
+            <text x="1100" y="128" fill="#9FB1C0" font-size="11" text-anchor="middle">行動與桌面端</text>
+            <text x="1100" y="150" fill="#2E7D32" font-size="11" font-weight="bold" text-anchor="middle">全體運維即時連線</text>
+          </svg>
+          <div class="cap">本架構實現自原廠 OT 監控系統至 GitHub Pages 靜態戰情中心之全自動化閉環工作流。</div>
+        </div>
+
+        <!-- 【表格輔助說明】全網運維四項核心關鍵指標矩陣表 -->
+        <div class="table-wrap mb-4">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:180px;">核心運維指針</th>
+                <th style="width:120px;">當前指標數值</th>
+                <th style="width:140px;">目標基準閾值</th>
+                <th>運維管理意涵與決策指導</th>
+                <th style="width:120px;">狀態燈號</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>(1) 發電效率不佳異常</b></td>
+                <td class="num font-weight-bold" style="color:var(--coral);">293 項 (58.7%)</td>
+                <td class="num">&lt; 150 項</td>
+                <td>全網最主要異常來源，主要集中於日照超過 300W/m² 時串列電流偏低或 RA/PR% 偏低，需安排清洗與遮蔭排查。</td>
+                <td class="ctr"><span class="chip coral">警戒注意</span></td>
+              </tr>
+              <tr>
+                <td><b>(2) 裝置通訊斷訊</b></td>
+                <td class="num font-weight-bold" style="color:var(--coral);">157 項 (31.5%)</td>
+                <td class="num">&lt; 50 項</td>
+                <td>變流器通訊中斷直接影響發電監視連續性，應檢測 RS485 迴路、終端電阻與現場輔助供電器。</td>
+                <td class="ctr"><span class="chip coral">重點排查</span></td>
+              </tr>
+              <tr>
+                <td><b>(3) 系統整場未連線</b></td>
+                <td class="num font-weight-bold" style="color:var(--amber);">13 案場 (2.6%)</td>
+                <td class="num">&lt; 5 案場</td>
+                <td>整座案場通訊完全失聯，需即時派工重啟路由器、確認 4G SIM 卡流量或台電外線停電。</td>
+                <td class="ctr"><span class="chip amber">派工處理</span></td>
+              </tr>
+              <tr>
+                <td><b>(4) 排程更新覆蓋率</b></td>
+                <td class="num font-weight-bold" style="color:var(--green);">100% (11 次/日)</td>
+                <td class="num">100%</td>
+                <td>每日 07:00 ~ 17:00 每整點準時自動同步，確保日間發電高峰期每小時具備最新快照。</td>
+                <td class="ctr"><span class="chip green">運作正常</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 4 個分部跳轉卡片 (PART CARDS) -->
+        <div class="part-cards">
           
-          <!-- 標題區與排程狀態 -->
-          <div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
-            <div>
-              <div class="pageTitle">
-                <i class="fas fa-shield-alt text-primary mr-2" style="font-size:22px;"></i>
-                太陽光電異常告警平台
-              </div>
-              <div class="pageSubtitle">
-                <span>最後數據更新：<b id="lastUpdatedTime">載入中...</b></span>
-                <span class="mx-2">｜</span>
-                <span class="text-info font-weight-bold" id="nextSyncTimer">每日 07:00~17:00 整點更新</span>
-              </div>
+          <div class="part-card" data-jump="#p1-1">
+            <div class="pc-eyebrow">PART 1 ｜ 3 頁</div>
+            <i class="fas fa-chart-pie pc-icon" style="font-size:32px; color:var(--blue-soft);"></i>
+            <h2>目標統計分析 (Distribution & Ranking)</h2>
+            <p>深入解析全台 86 座案場之 (1) 異常情況分布圓環圖與等級佔比，以及 (2) 同一案場異常數量排行榜與 499 筆即時告警診斷清冊。</p>
+            <div class="pc-flags">
+              <span class="flag blue">異常分布</span>
+              <span class="flag teal">案場排行</span>
+              <span class="flag coral">499 筆資料</span>
             </div>
-            <div class="mb-2">
-              <button id="btnRefresh" class="btn_refresh">
-                <i class="fas fa-sync-alt"></i> 立即更新
-              </button>
-            </div>
+            <div class="pc-go">進入 Part 1 觀看統計圖表 &rarr;</div>
           </div>
 
-          <!-- 頂部即時狀態膠囊 (照抄 realtime 膠囊過濾條) -->
-          <div class="status_pills_container" id="statusPillsContainer">
-            <!-- 由 app.js 動態渲染膠囊計數 -->
-            <div class="text-muted small p-2"><i class="fas fa-spinner fa-spin mr-1"></i> 正在載入統計數據...</div>
+          <div class="part-card c2" data-jump="#p2-1">
+            <div class="pc-eyebrow">PART 2 ｜ 3 頁</div>
+            <i class="fas fa-building pc-icon" style="font-size:32px; color:var(--teal-soft);"></i>
+            <h2>全台案場穿透診斷 (Site Breakdown)</h2>
+            <p>北中南三大工務區域責任負載盤點、變流器 (INV) 故障型態分析，以及光電運維四級處置標準 SOP 升級因應矩陣。</p>
+            <div class="pc-flags">
+              <span class="flag teal">工務所責任</span>
+              <span class="flag amber">變流器故障</span>
+              <span class="flag green">SOP 矩陣</span>
+            </div>
+            <div class="pc-go">進入 Part 2 檢視案場穿透 &rarr;</div>
           </div>
 
-          <!-- 核心統計模組：(1) 異常情況分布 與 (2) 同一案場異常數量統計 -->
-          <div class="row stats_row">
-            
-            <!-- 統計目標 (1)：異常情況分布 -->
-            <div class="col-lg-5 col-md-12 mb-3">
-              <div class="stat_card">
-                <div class="stat_card_header">
-                  <div class="stat_card_title">
-                    <i class="fas fa-chart-pie"></i>
-                    (1) 異常情況分布 (Distribution of Anomaly Types)
-                  </div>
-                  <span class="badge badge-light border">佔比與筆數</span>
-                </div>
-                <div id="chartTypeDistribution" class="chart_container"></div>
-                <div class="text-muted text-center small mt-2">
-                  <i class="fas fa-info-circle mr-1"></i> 點擊圓環區塊可直接過濾下方告警清冊
-                </div>
-              </div>
+          <div class="part-card c3" data-jump="#p3-1">
+            <div class="pc-eyebrow">PART 3 ｜ 2 頁</div>
+            <i class="fas fa-history pc-icon" style="font-size:32px; color:var(--amber-soft);"></i>
+            <h2>附錄・歷史整點備存 (Hourly Archive)</h2>
+            <p>每日 07:00 ~ 17:00 各整點快照封存歸檔庫、歷時異常數量演變趨勢折線圖，與歷史快照調閱器 (支援 CSV/JSON 匯出)。</p>
+            <div class="pc-flags">
+              <span class="flag amber">整點快照</span>
+              <span class="flag blue">趨勢曲線</span>
+              <span class="flag purple">數據匯出</span>
             </div>
-
-            <!-- 統計目標 (2)：同一案場有多少異常 (排行榜) -->
-            <div class="col-lg-7 col-md-12 mb-3">
-              <div class="stat_card">
-                <div class="stat_card_header">
-                  <div class="stat_card_title">
-                    <i class="fas fa-list-ol"></i>
-                    (2) 同一案場異常數量統計 (Top Sites with Most Anomalies)
-                  </div>
-                  <span class="badge badge-primary">前 10 大異常案場排行</span>
-                </div>
-                <div id="chartSiteRanking" class="chart_container"></div>
-                <div class="text-muted text-center small mt-2">
-                  <i class="fas fa-info-circle mr-1"></i> 點擊長條圖可鎖定該案場進行穿透診斷
-                </div>
-              </div>
-            </div>
-
+            <div class="pc-go">進入 Part 3 調閱歷史備存 &rarr;</div>
           </div>
 
-          <!-- 異常告警清冊表格區塊 (照抄 historyalarms 佈局) -->
-          <div class="table_section">
-            
-            <!-- 多維度篩選列 -->
-            <div class="filter_bar">
-              <div class="search_box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" class="search_input" placeholder="依案場名稱、設備或工程師搜尋...">
-              </div>
-
-              <div>
-                <select id="filterCounty" class="filter_select">
-                  <option value="all">依區域篩選: 全部</option>
-                </select>
-              </div>
-
-              <div>
-                <select id="filterAlarmType" class="filter_select">
-                  <option value="all">依屬性篩選: 全部</option>
-                </select>
-              </div>
-
-              <div>
-                <select id="filterMaintainer" class="filter_select">
-                  <option value="all">依工程師篩選: 全部</option>
-                </select>
-              </div>
-
-              <div class="count_badge ml-auto">
-                資料筆數: <span id="dataCountBadge" class="text-primary font-weight-bold">0</span> 筆
-              </div>
+          <div class="part-card c4" data-jump="#p4-1">
+            <div class="pc-eyebrow">PART 4 ｜ 2 頁</div>
+            <i class="fas fa-cogs pc-icon" style="font-size:32px; color:var(--coral-soft);"></i>
+            <h2>排程自動同步與維運機制 (Cloud Sync)</h2>
+            <p>GitHub Actions 雲端 CI/CD 排程架構規範、RESTful API 認證機制，與本機手動批次同步操作手冊。</p>
+            <div class="pc-flags">
+              <span class="flag coral">GitHub Actions</span>
+              <span class="flag teal">Cron: 0 23,0-9</span>
+              <span class="flag grey">維運手冊</span>
             </div>
-
-            <!-- 告警資料清單表格 -->
-            <div class="table-responsive">
-              <table class="alarms_table">
-                <thead>
-                  <tr>
-                    <th class="sortable" data-sort="factoryName" style="width:200px;">
-                      <i class="fas fa-globe-americas mr-1" style="color:#4294cf"></i> 案場
-                      <i class="fas fa-sort text-muted ml-1"></i>
-                    </th>
-                    <th class="sortable" data-sort="county" style="width:100px;">
-                      縣市 <i class="fas fa-sort text-muted ml-1"></i>
-                    </th>
-                    <th class="sortable" data-sort="maintainer" style="width:120px;">
-                      工程師 <i class="fas fa-sort text-muted ml-1"></i>
-                    </th>
-                    <th class="sortable" data-sort="which" style="width:110px;">
-                      設備 <i class="fas fa-sort text-muted ml-1"></i>
-                    </th>
-                    <th class="sortable" data-sort="lastAlarmType" style="width:140px;">
-                      屬性 <i class="fas fa-sort-up text-primary ml-1"></i>
-                    </th>
-                    <th class="sortable" data-sort="time" style="width:170px;">
-                      開始時間 <i class="fas fa-sort text-muted ml-1"></i>
-                    </th>
-                    <th class="sortable" data-sort="impact" style="width:90px;">
-                      影響 <i class="fas fa-sort text-muted ml-1"></i>
-                    </th>
-                    <th style="width:90px;">內容</th>
-                  </tr>
-                </thead>
-                <tbody id="tableBody">
-                  <tr>
-                    <td colspan="8" class="text-muted p-4">
-                      <i class="fas fa-spinner fa-spin mr-2"></i> 正在載入告警紀錄...
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- 分頁導航 -->
-            <div class="pagination_wrap" id="paginationWrap">
-              <!-- 由 app.js 動態渲染 -->
-            </div>
-
+            <div class="pc-go">進入 Part 4 查看排程設定 &rarr;</div>
           </div>
 
-        </main>
+        </div>
+
       </div>
+    </div>
 
-      <!-- 詳細彈窗 (Setting Modal) -->
-      <div class="modal_overlay" id="alarmDetailModal">
-        <div class="modal_content_box">
-          <div class="modal_header">
-            <div class="modal_title" id="modalTitle">告警詳細資訊</div>
-            <button class="modal_close" id="modalCloseX">&times;</button>
+    <!-- ========================================================================= -->
+    <!-- VIEW: PART 1 (目標統計分析 - 3 頁)                                         -->
+    <!-- ========================================================================= -->
+    <div class="view" id="view-p1">
+      
+      <!-- SLIDE 1.1: 目標統計 (1) 異常情況分布 -->
+      <section class="slide active" id="slide-p1-1">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 1 ｜ 目標統計 1.1</div>
+            <h2>目標統計 (1)：異常情況分布與嚴重等級結構</h2>
+            <p class="sub">全網 499 筆獨立異常事件經屬性分類與嚴重度分級，精確描繪全台光電案場之故障型態與發電衝擊結構。</p>
           </div>
-          <div class="modal_body" id="modalBodyContent">
-            <!-- 動態插入 -->
-          </div>
-          <div class="modal_footer">
-            <button type="button" class="btn btn-secondary btn-sm" id="modalCloseBtn">關閉</button>
+          <div class="flags">
+            <span class="flag blue">指標一：情況分布</span>
+            <span class="flag coral">緊急 187 項</span>
+            <span class="flag amber">重要 312 項</span>
           </div>
         </div>
-      </div>
 
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】兩欄圖表 -->
+          <div class="two-col">
+            <div class="fig">
+              <div class="figtitle"><i class="fas fa-chart-pie mr-1"></i> 全網異常屬性佔比甜甜圈圖 (Distribution of Anomaly Types)</div>
+              <div id="chartTypeDistSlide" style="width:100%; height:260px;"></div>
+              <div class="cap">點擊各區塊可查看該類別細項。前二大異常（效率不佳與裝置斷訊）合計佔比達 90.2%。</div>
+            </div>
+
+            <div class="fig">
+              <div class="figtitle"><i class="fas fa-shield-alt mr-1"></i> 告警嚴重度等級結構 (Severity Counts)</div>
+              <div id="chartLevelSlide" style="width:100%; height:260px;"></div>
+              <div class="cap">Red 等級（緊急處置）187 筆 (37.5%)，Orange 等級（發電與通訊衰減）312 筆 (62.5%)。</div>
+            </div>
+          </div>
+
+          <!-- 【表格輔助說明】異常屬性分類標準與處置建議對照表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:60px;" class="ctr">項次</th>
+                  <th style="width:130px;">異常屬性分類</th>
+                  <th style="width:100px;" class="num">事件筆數</th>
+                  <th style="width:90px;" class="num">全網佔比</th>
+                  <th style="width:90px;" class="ctr">嚴重等級</th>
+                  <th>判定標準與觸發條件</th>
+                  <th>運維標準處置與對策</th>
+                </tr>
+              </thead>
+              <tbody id="tableTypeDist">
+                <!-- 由 main.js 自動填充 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 1 ｜ 1 / 3 頁</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 1.2: 目標統計 (2) 同一案場異常數量排行 -->
+      <section class="slide" id="slide-p1-2">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 1 ｜ 目標統計 1.2</div>
+            <h2>目標統計 (2)：全網案場異常數量排行榜與負載分析</h2>
+            <p class="sub">計算同一案場之獨立異常項與累計原始事件次數，直觀展現運維風險最高之關鍵電廠清冊。</p>
+          </div>
+          <div class="flags">
+            <span class="flag blue">指標二：案場排行</span>
+            <span class="flag coral">最高：新陽 48 項</span>
+            <span class="flag amber">次高：台南機場 32 項</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】水平長條排行榜 -->
+          <div class="fig">
+            <div class="figtitle"><i class="fas fa-list-ol mr-1"></i> 前 15 大異常案場排行榜 (Top 15 Sites with Most Anomalies)</div>
+            <div id="chartSiteRankSlide" style="width:100%; height:280px;"></div>
+            <div class="cap">前十大案場集中了全網超過 45% 的異常項目，為當前維運派工特勤攻堅之第一優先對象。</div>
+          </div>
+
+          <!-- 【表格輔助說明】高發異常案場細部穿透清冊表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:50px;" class="ctr">排名</th>
+                  <th style="width:150px;">案場名稱</th>
+                  <th style="width:80px;" class="ctr">縣市</th>
+                  <th style="width:100px;" class="ctr">責任工程師</th>
+                  <th style="width:100px;" class="num">獨立問題項</th>
+                  <th style="width:100px;" class="num">原始事件</th>
+                  <th style="width:180px;">涉及變流器 (INV)</th>
+                  <th>主要異常屬性分佈</th>
+                  <th style="width:90px;" class="ctr">最高風險</th>
+                </tr>
+              </thead>
+              <tbody id="tableTopSites">
+                <!-- 由 main.js 自動填充 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 1 ｜ 2 / 3 頁</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 1.3: 即時異常告警清冊與多維篩選 -->
+      <section class="slide" id="slide-p1-3">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 1 ｜ 告警檢索 1.3</div>
+            <h2>即時異常告警清冊與多維度篩選診斷系統</h2>
+            <p class="sub">完整收錄全網 499 筆獨立異常，支援依案場、區域縣市、異常屬性、維運工程師即時篩選與穿透彈窗。</p>
+          </div>
+          <div class="flags">
+            <span class="flag green">即時連線中</span>
+            <span class="flag blue">共 499 筆資料</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表/互動按鈕輔助說明】頂部狀態膠囊過濾條 -->
+          <div style="background:#fff; border:1px solid var(--line); border-radius:4px; padding:12px 16px; margin-bottom:12px;">
+            <div class="d-flex flex-wrap gap-2 align-items-center" id="statusPillsContainer">
+              <!-- 由 main.js 動態渲染膠囊按鈕 -->
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:10px; padding-top:10px; border-top:1px solid var(--line);">
+              <div style="flex:1; min-width:200px; max-width:320px; position:relative;">
+                <input type="text" id="searchInput" placeholder="依案場名稱、設備或關鍵字搜尋..." style="width:100%; padding:6px 12px; border:1px solid var(--line); border-radius:3px; font-size:.82rem;">
+              </div>
+              <select id="filterCounty" style="padding:6px 10px; border:1px solid var(--line); border-radius:3px; font-size:.82rem; background:#fff;"></select>
+              <select id="filterAlarmType" style="padding:6px 10px; border:1px solid var(--line); border-radius:3px; font-size:.82rem; background:#fff;"></select>
+              <select id="filterMaintainer" style="padding:6px 10px; border:1px solid var(--line); border-radius:3px; font-size:.82rem; background:#fff;"></select>
+              <span style="font-size:.82rem; font-weight:700; margin-left:auto;">
+                篩選結果：<b id="dataCountBadge" style="color:var(--blue); font-size:.95rem;">499</b> 筆
+              </span>
+            </div>
+          </div>
+
+          <!-- 【表格輔助說明】即時異常告警清單表 -->
+          <div class="table-wrap">
+            <table id="tableAlarms">
+              <thead>
+                <tr>
+                  <th class="sortable" data-sort="factoryName" style="width:220px;">案場名稱 <i class="fas fa-sort text-muted"></i></th>
+                  <th class="sortable ctr" data-sort="county" style="width:90px;">縣市 <i class="fas fa-sort text-muted"></i></th>
+                  <th class="sortable ctr" data-sort="maintainer" style="width:110px;">責任工程師 <i class="fas fa-sort text-muted"></i></th>
+                  <th class="sortable ctr" data-sort="which" style="width:100px;">設備 (INV) <i class="fas fa-sort text-muted"></i></th>
+                  <th class="sortable" data-sort="lastAlarmType" style="width:140px;">異常屬性 <i class="fas fa-sort text-muted"></i></th>
+                  <th class="sortable ctr" data-sort="time" style="width:170px;">開始時間 <i class="fas fa-sort text-muted"></i></th>
+                  <th class="sortable ctr" data-sort="impact" style="width:80px;">影響筆數 <i class="fas fa-sort text-muted"></i></th>
+                  <th class="ctr" style="width:80px;">診斷明細</th>
+                </tr>
+              </thead>
+              <tbody id="tableAlarmsBody">
+                <!-- 由 main.js 自動填充 -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 分頁器 -->
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; font-size:.8rem;" id="tablePagination"></div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 1 ｜ 3 / 3 頁</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW: PART 2 (全台案場穿透診斷 - 3 頁)                                     -->
+    <!-- ========================================================================= -->
+    <div class="view" id="view-p2">
+      
+      <!-- SLIDE 2.1: 北中南三大工務區域異常負載 -->
+      <section class="slide active" id="slide-p2-1">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 2 ｜ 區域診斷 2.1</div>
+            <h2>北中南三大工務區域異常承擔與責任中心矩陣</h2>
+            <p class="sub">依進金生能源 4.6 運維責任劃分，分析桃辦、彰辦、南辦與高辦四大工務中心之案場異常密度與資源調度。</p>
+          </div>
+          <div class="flags">
+            <span class="flag blue">區域分佈</span>
+            <span class="flag coral">南辦佔比 48.5%</span>
+            <span class="flag teal">高辦佔比 27.7%</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】各縣市區域異常數量長條圖 -->
+          <div class="fig">
+            <div class="figtitle"><i class="fas fa-map-marked-alt mr-1"></i> 全台各縣市光電案場異常筆數分佈 (Regional Distribution)</div>
+            <div id="chartCountySlide" style="width:100%; height:250px;"></div>
+            <div class="cap">台南市（242 項）與高雄市（138 項）為全台異常最密集區域，合占全網異常總量 76.2%。</div>
+          </div>
+
+          <!-- 【表格輔助說明】三大工務責任中心維運負載矩陣表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:180px;">工務責任中心</th>
+                  <th style="width:120px;" class="ctr">管轄縣市</th>
+                  <th style="width:200px;">維運工程師代表</th>
+                  <th style="width:100px;" class="ctr">異常案場數</th>
+                  <th style="width:100px;" class="num">獨立異常項</th>
+                  <th>重點高風險案場代表</th>
+                  <th>主要設備通病與現場特徵</th>
+                </tr>
+              </thead>
+              <tbody id="tableRegionalOandM">
+                <!-- 由 main.js 自動填充 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 2 ｜ 1 / 3 頁</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 2.2: 變流器故障型態 vs 系統斷線 -->
+      <section class="slide" id="slide-p2-2">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 2 ｜ 設備分析 2.2</div>
+            <h2>變流器 (INV) 故障型態 vs 系統斷線穿透分析</h2>
+            <p class="sub">深入現場硬體與通訊架構，區分單台變流器 MPPT/通訊故障與全場斷訊之物理根因。</p>
+          </div>
+          <div class="flags">
+            <span class="flag amber">硬體通病</span>
+            <span class="flag coral">施奈德停產改背架</span>
+            <span class="flag teal">水面型跳線檢修</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】變流器故障結構與比對圖 -->
+          <div class="fig">
+            <div class="figtitle"><i class="fas fa-microchip mr-1"></i> 圖 2.2：光電案場設備異常型態與根因架構圖</div>
+            <svg viewBox="0 0 1100 180" xmlns="http://www.w3.org/2000/svg" style="background:#08192b; border-radius:4px;">
+              <!-- Left: Inverter -->
+              <rect x="40" y="30" width="300" height="120" rx="6" fill="#0d2b52" stroke="#1968AD" stroke-width="2"/>
+              <text x="190" y="60" fill="#8FD9E4" font-size="14" font-weight="bold" text-anchor="middle">單台變流器異常 (INV Issues)</text>
+              <text x="190" y="85" fill="#fff" font-size="12" text-anchor="middle">佔比 97.4% (486 項)</text>
+              <text x="190" y="110" fill="#9FB1C0" font-size="11" text-anchor="middle">MPPT 衰減、進水短路、風扇停轉、RS485 斷訊</text>
+              <text x="190" y="132" fill="#E09A2B" font-size="11" font-weight="bold" text-anchor="middle">對策：原廠保固出保 / 換裝台達 M20A/M30A</text>
+              <!-- Arrow -->
+              <line x1="360" y1="90" x2="420" y2="90" stroke="#1BB1BF" stroke-width="2" stroke-dasharray="4"/>
+              <text x="390" y="80" fill="#1BB1BF" font-size="11" text-anchor="middle">比對</text>
+              <!-- Right: System Offline -->
+              <rect x="440" y="30" width="300" height="120" rx="6" fill="#0d2b52" stroke="#D95F45" stroke-width="2"/>
+              <text x="590" y="60" fill="#D95F45" font-size="14" font-weight="bold" text-anchor="middle">全場系統斷線 (System Offline)</text>
+              <text x="590" y="85" fill="#fff" font-size="12" text-anchor="middle">佔比 2.6% (13 案場)</text>
+              <text x="590" y="110" fill="#9FB1C0" font-size="11" text-anchor="middle">4G 路由器當機、SIM 流量耗盡、AC 輔助電跳脫</text>
+              <text x="590" y="132" fill="#D95F45" font-size="11" font-weight="bold" text-anchor="middle">對策：現場重啟 / 固網改裝 / 電源自癒迴路</text>
+              <!-- Third Box: Special Sites -->
+              <rect x="760" y="30" width="300" height="120" rx="6" fill="#0d2b52" stroke="#1BB1BF" stroke-width="2"/>
+              <text x="910" y="60" fill="#1BB1BF" font-size="14" font-weight="bold" text-anchor="middle">特種環境案場 (Special Sites)</text>
+              <text x="910" y="85" fill="#fff" font-size="12" text-anchor="middle">水面型 / 畜牧屋頂 / 沿海鹽害</text>
+              <text x="910" y="110" fill="#9FB1C0" font-size="11" text-anchor="middle">埤塘 7-1 浮台跳線損壞、富強鑫外殼鏽蝕</text>
+              <text x="910" y="132" fill="#2E7D32" font-size="11" font-weight="bold" text-anchor="middle">對策：特種絕緣防腐套件 / 浮台專屬扣件</text>
+            </svg>
+            <div class="cap">單台變流器故障佔比達 97.4%，全場斷訊佔 2.6%，維運對策採取「通用備品安全庫存」與「現場快速更換背架」雙軌推進。</div>
+          </div>
+
+          <!-- 【表格輔助說明】常見設備故障徵兆與備品對策表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:140px;">設備類別</th>
+                  <th style="width:160px;">常見故障代碼 / 徵兆</th>
+                  <th style="width:240px;">物理根因分析</th>
+                  <th>現場標準排查步驟</th>
+                  <th style="width:160px;">戰略備品因應</th>
+                  <th style="width:100px;" class="ctr">預期時效</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>施奈德 20kW / 25kW</b></td>
+                  <td>DC RL 絕緣阻抗過低、開機自檢不過</td>
+                  <td>外殼密封膠條老化，大雨後水氣滲入電路板造成 DC Relay 燒損。原廠已停產。</td>
+                  <td>量測正負極對地絕緣阻抗，確認內部是否有冷凝水積存。</td>
+                  <td><span class="chip coral">台達 M20A + 改背架</span></td>
+                  <td class="ctr">48 小時更換</td>
+                </tr>
+                <tr>
+                  <td><b>台達 M70A / M50A</b></td>
+                  <td>E034 內部散熱風扇停轉、降額發電</td>
+                  <td>長期運轉累積粉塵或高溫軸承卡死，內部溫度過高保護性停機。</td>
+                  <td>清潔外散熱鰭片，手動旋轉風扇確認阻力，更換散熱模組。</td>
+                  <td><span class="chip amber">外置防水風扇組</span></td>
+                  <td class="ctr">24 小時排除</td>
+                </tr>
+                <tr>
+                  <td><b>4G 工規路由器</b></td>
+                  <td>Ping 逾時、連線燈號橘紅閃爍</td>
+                  <td>電信商基地台訊號微弱、天線老化或 SIM 卡流量超標被限速。</td>
+                  <td>以現場測試機測試訊號強度 (RSSI)，確認流量用量與輔助供電電壓。</td>
+                  <td><span class="chip teal">多電信自動切換 SIM</span></td>
+                  <td class="ctr">12 小時重啟</td>
+                </tr>
+                <tr>
+                  <td><b>水面型浮台串列</b></td>
+                  <td>MPPT 開路、串列無電流輸出</td>
+                  <td>強風大浪導致浮台搖晃拉扯跳線、MC4 接頭鬆脫進水碳化。</td>
+                  <td>出動浮台特勤巡檢艇，逐串量測開路電壓 (Voc) 與短路電流 (Isc)。</td>
+                  <td><span class="chip green">特規抗 UV 耐拉線纜</span></td>
+                  <td class="ctr">72 小時修復</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 2 ｜ 2 / 3 頁</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 2.3: 異常分級處置 SOP 與優先順序 -->
+      <section class="slide" id="slide-p2-3">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 2 ｜ 應變管理 2.3</div>
+            <h2>太陽光電異常分級處置 SOP 與故障排除優先順序</h2>
+            <p class="sub">建立進金生能源 4.6 運維分級處置機制，規範 P0 至 P3 四級告警之通報鏈與結案驗證標準。</p>
+          </div>
+          <div class="flags">
+            <span class="flag coral">P0 停發電即時</span>
+            <span class="flag amber">P1 效率衰退 24h</span>
+            <span class="flag teal">P2 通訊中斷 48h</span>
+            <span class="flag green">P3 巡檢排程</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】告警應變流程圖 (SVG) -->
+          <div class="fig">
+            <div class="figtitle"><i class="fas fa-project-diagram mr-1"></i> 圖 2.3：進金生能源 4.6 運維異常告警應變與通報流程圖</div>
+            <svg viewBox="0 0 1100 160" xmlns="http://www.w3.org/2000/svg" style="background:#071d3b; border-radius:4px;">
+              <!-- Node 1 -->
+              <rect x="30" y="30" width="180" height="100" rx="4" fill="#0d2b52" stroke="#1968AD" stroke-width="2"/>
+              <text x="120" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">Step 1. 系統告警觸發</text>
+              <text x="120" y="90" fill="#fff" font-size="11" text-anchor="middle">每整點自動比對</text>
+              <text x="120" y="110" fill="#9FB1C0" font-size="10" text-anchor="middle">判定 P0 ~ P3 等級</text>
+              <line x1="210" y1="80" x2="260" y2="80" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="260,76 270,80 260,84" fill="#1BB1BF"/>
+              <!-- Node 2 -->
+              <rect x="270" y="30" width="200" height="100" rx="4" fill="#0d2b52" stroke="#E09A2B" stroke-width="2"/>
+              <text x="370" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">Step 2. 工務主管審核</text>
+              <text x="370" y="90" fill="#fff" font-size="11" text-anchor="middle">LINE 智慧戰情通報</text>
+              <text x="370" y="110" fill="#9FB1C0" font-size="10" text-anchor="middle">雙向確認是否有備品</text>
+              <line x1="470" y1="80" x2="520" y2="80" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="520,76 530,80 520,84" fill="#1BB1BF"/>
+              <!-- Node 3 -->
+              <rect x="530" y="30" width="200" height="100" rx="4" fill="#0d2b52" stroke="#D95F45" stroke-width="2"/>
+              <text x="630" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">Step 3. 現場特勤派工</text>
+              <text x="630" y="90" fill="#fff" font-size="11" text-anchor="middle">工程師 24h 內抵達</text>
+              <text x="630" y="110" fill="#9FB1C0" font-size="10" text-anchor="middle">執行硬體換裝/量測</text>
+              <line x1="730" y1="80" x2="780" y2="80" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="780,76 790,80 780,84" fill="#1BB1BF"/>
+              <!-- Node 4 -->
+              <rect x="790" y="30" width="280" height="100" rx="4" fill="#0d2b52" stroke="#2E7D32" stroke-width="2"/>
+              <text x="930" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">Step 4. 驗證復歸與結案</text>
+              <text x="930" y="90" fill="#fff" font-size="11" text-anchor="middle">整點快照確認告警消除</text>
+              <text x="930" y="110" fill="#2E7D32" font-size="10" font-weight="bold" text-anchor="middle">閉環反饋至附錄歷史庫</text>
+            </svg>
+            <div class="cap">標準四步處置SOP，落實「即時通報、24小時派工、48小時換裝、整點快照閉環驗證」。</div>
+          </div>
+
+          <!-- 【表格輔助說明】四級處置標準對照表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:90px;" class="ctr">分級等級</th>
+                  <th style="width:140px;">告警屬性定義</th>
+                  <th style="width:180px;">觸發條件範例</th>
+                  <th style="width:100px;" class="ctr">反應時效</th>
+                  <th>通報對象與權責人</th>
+                  <th>結案驗證標準</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bad-row">
+                  <td class="ctr"><span class="chip coral">P0 緊急</span></td>
+                  <td><b>全場停電 / 系統斷線</b></td>
+                  <td>全場無法回傳、主交流斷路器跳脫、台電饋線跳脫</td>
+                  <td class="ctr"><b>2 小時內</b></td>
+                  <td>維運處主管、責任工務所所長、業主窗口</td>
+                  <td>現場復歸供電且通訊連續 1 小時正常</td>
+                </tr>
+                <tr>
+                  <td class="ctr"><span class="chip coral">P1 重要</span></td>
+                  <td><b>單台變流器停運 / 斷訊</b></td>
+                  <td>Inverter 停機、DC RL 阻抗過低、通訊斷線 &gt; 30 分鐘</td>
+                  <td class="ctr"><b>24 小時內</b></td>
+                  <td>責任工程師、備品庫存管理員</td>
+                  <td>更換變流器或排除斷線，恢復發電併網</td>
+                </tr>
+                <tr>
+                  <td class="ctr"><span class="chip amber">P2 警告</span></td>
+                  <td><b>發電效率偏低 / 數據異常</b></td>
+                  <td>PR% &lt; 75%、MPPT 電流不平衡、日照計數值突波</td>
+                  <td class="ctr"><b>48 小時內</b></td>
+                  <td>責任工程師、數據分析組</td>
+                  <td>清洗組件或校正傳感器，PR% 回復基準線</td>
+                </tr>
+                <tr>
+                  <td class="ctr"><span class="chip green">P3 觀察</span></td>
+                  <td><b>系統短暫斷線 / 暫態事件</b></td>
+                  <td>雲端連線瞬斷後自癒、雲層遮蔭低功率</td>
+                  <td class="ctr"><b>例行巡檢</b></td>
+                  <td>工務巡檢特勤組</td>
+                  <td>月例行巡檢時確認接頭緊固與韌體更新</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 2 ｜ 3 / 3 頁</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW: PART 3 (附錄・歷史整點備存 - 2 頁)                                   -->
+    <!-- ========================================================================= -->
+    <div class="view" id="view-p3">
+      
+      <!-- SLIDE 3.1: 整點歷史快照備存庫與趨勢演變 -->
+      <section class="slide active" id="slide-p3-1">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 3 ｜ 歷史附錄 3.1</div>
+            <h2>每日 07:00~17:00 整點快照備存庫與歷時趨勢演變</h2>
+            <p class="sub">依運維管理要求完整留下分析頁面並歸檔備存，可隨時回溯檢視各整點之異常總量與嚴重度趨勢。</p>
+          </div>
+          <div class="flags">
+            <span class="flag purple">歷史快照備存</span>
+            <span class="flag blue">data/snapshots/</span>
+            <span class="flag green">支援趨勢追蹤</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】當日整點異常趨勢折線圖 -->
+          <div class="fig">
+            <div class="figtitle"><i class="fas fa-chart-line mr-1"></i> 當日整點異常數量演變趨勢 (Hourly Anomaly Trend 07:00 ~ 17:00)</div>
+            <div id="chartHourlyTrendSlide" style="width:100%; height:260px;"></div>
+            <div class="cap">折線圖反映日間發電各小時之異常數量動態變化，便於運維團隊追蹤故障自癒或修復復歸進度。</div>
+          </div>
+
+          <!-- 【表格輔助說明】歷史整點快照歸檔目錄清單表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:150px;">快照編號 (ID)</th>
+                  <th style="width:170px;" class="ctr">採集時間戳 (UTC+8)</th>
+                  <th style="width:110px;" class="num">異常案場數</th>
+                  <th style="width:110px;" class="num">獨立問題項</th>
+                  <th style="width:110px;" class="num">累計原始事件</th>
+                  <th>最高發案場</th>
+                  <th>主要異常屬性</th>
+                  <th style="width:100px;" class="ctr">歷史調閱</th>
+                </tr>
+              </thead>
+              <tbody id="tableSnapshotArchive">
+                <!-- 由 main.js 自動填充 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 3 ｜ 1 / 2 頁</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 3.2: 歷史快照調閱器與跨時段比對 -->
+      <section class="slide" id="slide-p3-2">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 3 ｜ 快照調閱 3.2</div>
+            <h2>歷史快照調閱器 (Snapshot Picker) 與數據匯出</h2>
+            <p class="sub">可任意切換調閱任一歷史整點之案場原始告警記錄，支援將當時數據導出為 JSON 或 Excel/CSV 清冊。</p>
+          </div>
+          <div class="flags">
+            <span class="flag blue">快照調閱器</span>
+            <span class="flag green">匯出 CSV</span>
+            <span class="flag amber">下載 JSON</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表/卡片輔助說明】調閱控制區 -->
+          <div class="fig">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+              <div style="flex:1; min-width:280px;">
+                <label style="font-size:.78rem; font-weight:800; color:var(--muted); display:block; margin-bottom:4px;">請選擇調閱之歷史整點快照：</label>
+                <select id="snapshotPickerSelect" style="width:100%; padding:8px 12px; border:2px solid var(--blue); border-radius:4px; font-weight:700; background:#fff; font-size:.85rem;"></select>
+              </div>
+              <div style="display:flex; gap:16px; background:var(--blue-soft); padding:10px 18px; border-radius:4px; font-size:.82rem;">
+                <span>快照時間：<b id="snapViewerTime" style="color:var(--blue);">--</b></span>
+                <span>異常案場：<b id="snapViewerSites">--</b></span>
+                <span>獨立異常：<b id="snapViewerIssues" style="color:var(--coral);">--</b></span>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <button type="button" class="btn-detail" id="btnExportJson" style="padding:8px 14px;"><i class="fas fa-file-code mr-1"></i> 下載快照 JSON</button>
+                <button type="button" class="btn-detail" id="btnExportCsv" style="padding:8px 14px; background:var(--green-soft); color:var(--green); border-color:var(--green);"><i class="fas fa-file-excel mr-1"></i> 匯出清冊 CSV</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 【表格輔助說明】指定歷史快照完整告警清冊表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:200px;">案場名稱</th>
+                  <th style="width:90px;" class="ctr">縣市</th>
+                  <th style="width:110px;" class="ctr">責任工程師</th>
+                  <th style="width:110px;" class="ctr">設備 (INV)</th>
+                  <th style="width:140px;">異常屬性</th>
+                  <th style="width:170px;" class="ctr">當時記錄時間</th>
+                  <th style="width:90px;" class="ctr">當時影響次數</th>
+                </tr>
+              </thead>
+              <tbody id="tableSnapshotDetailBody">
+                <tr><td colspan="7" class="ctr text-muted p-4">請選擇上方快照進行調閱...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 3 ｜ 2 / 2 頁</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW: PART 4 (排程自動同步 - 2 頁)                                         -->
+    <!-- ========================================================================= -->
+    <div class="view" id="view-p4">
+      
+      <!-- SLIDE 4.1: GitHub Actions 每日整點自動排程 -->
+      <section class="slide active" id="slide-p4-1">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 4 ｜ 雲端排程 4.1</div>
+            <h2>GitHub Actions 每日 07:00~17:00 整點自動同步架構</h2>
+            <p class="sub">透過 GitHub Actions 雲端工作流程實現完全無人值守，每日白天發電時段每個整點自動採集、計算並佈署。</p>
+          </div>
+          <div class="flags">
+            <span class="flag teal">GitHub Actions</span>
+            <span class="flag blue">Cron: 0 23,0-9</span>
+            <span class="flag green">Pages 自動發布</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】GitHub Actions CI/CD Pipeline 架構圖 (SVG) -->
+          <div class="fig">
+            <div class="figtitle"><i class="fas fa-cloud-upload-alt mr-1"></i> 圖 4.1：GitHub Actions 雲端定時同步與 Pages 部署流水線</div>
+            <svg viewBox="0 0 1100 160" xmlns="http://www.w3.org/2000/svg" style="background:#071d3b; border-radius:4px;">
+              <!-- Box 1 -->
+              <rect x="30" y="30" width="180" height="100" rx="4" fill="#0d2b52" stroke="#1968AD" stroke-width="2"/>
+              <text x="120" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">Cron 排程觸發</text>
+              <text x="120" y="90" fill="#fff" font-size="11" text-anchor="middle">0 23,0-9 * * * (UTC)</text>
+              <text x="120" y="110" fill="#E09A2B" font-size="10" font-weight="bold" text-anchor="middle">台北時間 07:00 ~ 17:00</text>
+              <line x1="210" y1="80" x2="260" y2="80" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="260,76 270,80 260,84" fill="#1BB1BF"/>
+              <!-- Box 2 -->
+              <rect x="270" y="30" width="200" height="100" rx="4" fill="#0d2b52" stroke="#1BB1BF" stroke-width="2"/>
+              <text x="370" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">Ubuntu 執行環境</text>
+              <text x="370" y="90" fill="#fff" font-size="11" text-anchor="middle">Python 3.11 環境載入</text>
+              <text x="370" y="110" fill="#9FB1C0" font-size="10" text-anchor="middle">pip install requests</text>
+              <line x1="470" y1="80" x2="520" y2="80" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="520,76 530,80 520,84" fill="#1BB1BF"/>
+              <!-- Box 3 -->
+              <rect x="530" y="30" width="220" height="100" rx="4" fill="#0d2b52" stroke="#E09A2B" stroke-width="2"/>
+              <text x="640" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">執行爬取與統計</text>
+              <text x="640" y="90" fill="#fff" font-size="11" text-anchor="middle">python fetch_alarms.py</text>
+              <text x="640" y="110" fill="#9FB1C0" font-size="10" text-anchor="middle">產出最新 JSON 與快照</text>
+              <line x1="750" y1="80" x2="800" y2="80" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="800,76 810,80 800,84" fill="#1BB1BF"/>
+              <!-- Box 4 -->
+              <rect x="810" y="30" width="260" height="100" rx="4" fill="#0d2b52" stroke="#2E7D32" stroke-width="2"/>
+              <text x="940" y="65" fill="#8FD9E4" font-size="12" font-weight="bold" text-anchor="middle">Git 提交與 Pages 部署</text>
+              <text x="940" y="90" fill="#fff" font-size="11" text-anchor="middle">git commit -m "hourly sync"</text>
+              <text x="940" y="110" fill="#2E7D32" font-size="10" font-weight="bold" text-anchor="middle">actions/deploy-pages 立即上線</text>
+            </svg>
+            <div class="cap">雲端流程歷時僅約 20 秒即可完成全流程自動化同步與全球 CDN 部署更新。</div>
+          </div>
+
+          <!-- 【表格輔助說明】排程參數與 API 規格清冊表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:180px;">規格參數項目</th>
+                  <th style="width:240px;">雲端配置設定值</th>
+                  <th>技術意涵與實作說明</th>
+                  <th style="width:120px;" class="ctr">狀態</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>排程表達式 (Cron)</b></td>
+                  <td><code>0 23,0,1,2,3,4,5,6,7,8,9 * * *</code></td>
+                  <td>對應台灣時間 (UTC+8) 每日 07:00、08:00、...、17:00 共 11 個整點時刻。</td>
+                  <td class="ctr"><span class="chip green">已啟動生效</span></td>
+                </tr>
+                <tr>
+                  <td><b>API 認證端點</b></td>
+                  <td><code>POST /api/cosmos/auth/login</code></td>
+                  <td>使用使用者指定帳密憑證取得 JWT Session Token，安全儲存於環境變數。</td>
+                  <td class="ctr"><span class="chip blue">安全加密</span></td>
+                </tr>
+                <tr>
+                  <td><b>資料介接端點</b></td>
+                  <td><code>POST /api/cosmos/devicestatus/historyalarms</code></td>
+                  <td>高效率無頭 RESTful 介接，直接獲取 86 案場原始清單，無需負載瀏覽器 GUI。</td>
+                  <td class="ctr"><span class="chip teal">200 OK</span></td>
+                </tr>
+                <tr>
+                  <td><b>Pages 部署分支</b></td>
+                  <td><code>main (workflow artifact)</code></td>
+                  <td>透過 actions/deploy-pages@v4 直接將根目錄靜態資產上傳發布至 GitHub Pages。</td>
+                  <td class="ctr"><span class="chip green">即時上線</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 4 ｜ 1 / 2 頁</span>
+        </div>
+      </section>
+
+      <!-- SLIDE 4.2: 本機執行手動更新與維運指引 -->
+      <section class="slide" id="slide-p4-2">
+        <div class="slide-header">
+          <div>
+            <div class="eyebrow">Part 4 ｜ 本機維運 4.2</div>
+            <h2>本機端同步腳本與排程設定作業指引</h2>
+            <p class="sub">提供工程師離線或本機手動更新工具，支援單鍵批次更新與 Windows 工作排程器配置。</p>
+          </div>
+          <div class="flags">
+            <span class="flag blue">本機工具</span>
+            <span class="flag teal">run_local_sync.bat</span>
+            <span class="flag amber">離線支援 data.js</span>
+          </div>
+        </div>
+
+        <div class="slide-body">
+          <!-- 【圖表輔助說明】本機手動與排程更新流程圖 (SVG) -->
+          <div class="fig">
+            <div class="figtitle"><i class="fas fa-desktop mr-1"></i> 圖 4.2：本機端一鍵更新與離線瀏覽架構示意圖</div>
+            <svg viewBox="0 0 1100 140" xmlns="http://www.w3.org/2000/svg" style="background:#08192b; border-radius:4px;">
+              <rect x="50" y="25" width="280" height="90" rx="4" fill="#0d2b52" stroke="#1968AD" stroke-width="2"/>
+              <text x="190" y="55" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">雙擊 run_local_sync.bat</text>
+              <text x="190" y="80" fill="#fff" font-size="11" text-anchor="middle">或命令列執行 python fetch_alarms.py</text>
+              <text x="190" y="98" fill="#E09A2B" font-size="10" font-weight="bold" text-anchor="middle">耗時約 3~4 秒</text>
+
+              <line x1="340" y1="70" x2="410" y2="70" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="410,66 420,70 410,74" fill="#1BB1BF"/>
+
+              <rect x="420" y="25" width="300" height="90" rx="4" fill="#0d2b52" stroke="#1BB1BF" stroke-width="2"/>
+              <text x="570" y="55" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">生成三重資料備存檔</text>
+              <text x="570" y="76" fill="#fff" font-size="11" text-anchor="middle">1. data/latest.json (最新)</text>
+              <text x="570" y="94" fill="#9FB1C0" font-size="10" text-anchor="middle">2. data/snapshots/*.json ｜ 3. data/data.js</text>
+
+              <line x1="730" y1="70" x2="800" y2="70" stroke="#1BB1BF" stroke-width="2"/>
+              <polygon points="800,66 810,70 800,74" fill="#1BB1BF"/>
+
+              <rect x="810" y="25" width="240" height="90" rx="4" fill="#0d2b52" stroke="#2E7D32" stroke-width="2"/>
+              <text x="930" y="55" fill="#8FD9E4" font-size="13" font-weight="bold" text-anchor="middle">離線雙擊即刻瀏覽</text>
+              <text x="930" y="80" fill="#fff" font-size="11" text-anchor="middle">直接雙擊 index.html</text>
+              <text x="930" y="98" fill="#2E7D32" font-size="10" font-weight="bold" text-anchor="middle">無須任何本機 Web 伺服器</text>
+            </svg>
+            <div class="cap">本機腳本內建產生 data.js 全域變數，即使在無網路或本機檔案協議 (file://) 下也能完整運行所有圖表。</div>
+          </div>
+
+          <!-- 【表格輔助說明】維運操作指令與查核步驟表 -->
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:160px;">維運情境目標</th>
+                  <th style="width:260px;">執行命令 / 操作路徑</th>
+                  <th>確認檔案與檢查重點</th>
+                  <th style="width:140px;">預期產出成果</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>本機一鍵手動同步</b></td>
+                  <td><code>run_local_sync.bat</code></td>
+                  <td>確認控制台顯示「Login success!」及「Fetched 86 sites」。</td>
+                  <td>更新 <code>data/latest.json</code></td>
+                </tr>
+                <tr>
+                  <td><b>直接執行 Python</b></td>
+                  <td><code>python fetch_alarms.py</code></td>
+                  <td>檢查 <code>data/snapshots/YYYY-MM-DD_HH-00.json</code> 是否成功寫入。</td>
+                  <td>產出時間戳整點快照</td>
+                </tr>
+                <tr>
+                  <td><b>手動推播至 GitHub</b></td>
+                  <td><code>git add . && git commit -m "sync" && git push</code></td>
+                  <td>確認 GitHub Actions 自動啟動部署流程。</td>
+                  <td>1 分鐘內更新 Pages 網址</td>
+                </tr>
+                <tr>
+                  <td><b>調閱過往歷史快照</b></td>
+                  <td>進入 <b>Part 3 附錄調閱器</b> 選擇整點</td>
+                  <td>檢查該整點之各案場變流器告警清冊與嚴重度標註。</td>
+                  <td>支援匯出 CSV / JSON</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>進金生能源 6692 ｜ 4.6 運維管理 ｜ 太陽光電異常告警平台</span>
+          <span class="pageno">Part 4 ｜ 2 / 2 頁</span>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ========== BOTTOM DECKBAR (照抄 taoyuan-aidc-platform) ========== -->
+  <footer class="deckbar" id="deckbar">
+    <div class="progress">
+      <div class="fill" id="progressFill"></div>
+    </div>
+    <div class="hint">按 <b>&larr;</b> <b>&rarr;</b> 或 <b>Space</b> 切換頁面 ｜ <b>F</b> 全螢幕 ｜ <b>Home</b> 回封面</div>
+    <div class="ctrl">
+      <button type="button" id="btnPrev" title="上一頁">&larr;</button>
+      <span class="counter" id="counter">1 / 3</span>
+      <button type="button" id="btnNext" title="下一頁">&rarr;</button>
+    </div>
+  </footer>
+
+  <!-- ========== DETAIL MODAL ========== -->
+  <div class="modal_overlay" id="alarmDetailModal">
+    <div class="modal_box">
+      <div class="modal_header">
+        <div id="modalTitle">告警詳細資訊</div>
+        <button type="button" class="modal_close" id="modalCloseX">&times;</button>
+      </div>
+      <div class="modal_body" id="modalBodyContent"></div>
+      <div class="modal_footer">
+        <button type="button" class="page_btn" id="modalCloseBtn">關閉</button>
+      </div>
     </div>
   </div>
 
-  <!-- 引用本地或遠端 ECharts 圖表引擎 -->
+  <!-- ECharts 視覺化引擎 -->
   <script src="assets/js/echarts.min.js"></script>
-  <!-- 載入離線靜態資料 -->
+  <!-- 最新離線靜態資料 -->
   <script src="data/data.js"></script>
-  <!-- 平台前端邏輯 -->
-  <script src="assets/js/app.js"></script>
+  <!-- 主平台互動引擎 -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
