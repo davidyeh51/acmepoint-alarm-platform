@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "total_events": 499,
+    "time_range": "2026-09-14 00:00:00 ~ 2026-09-14 17:15:00",
+    "sites_affected": 86,
+    "exported_at": "2026-09-14 17:47:30"
+  },
+  "data_availability": {
+    "list_semantics": "undetermined",
+    "list_semantics_detail": "清單可能為「當下未結案快照」或「期間內所有告警事件紀錄」，雙軌並列 P0",
+    "missing_fields": [
+      {
+        "field": "alarm_content_text",
+        "status": "499/499 筆文字被截斷為 ...",
+        "impact": "無法根據具體錯誤代碼文字深入研判底層軟體與協定故障"
+      },
+      {
+        "field": "historical_baseline",
+        "status": "全部缺失",
+        "impact": "步驟 3「偏離基準分析」無法執行，降級為結構性推論"
+      },
+      {
+        "field": "irradiance_weather",
+        "status": "全部缺失",
+        "impact": "無法計算 PR% 與判別發電效率不佳是否因厚雲遮蔽假性觸發"
+      },
+      {
+        "field": "device_capacity_kwp",
+        "status": "全部缺失",
+        "impact": "無法將各案場變流器故障換算為精確發電損失度數 (kWh) 與財務損失 (NTD)"
+      },
+      {
+        "field": "impact_semantic_definition",
+        "status": "值域 1–42 語意未定義",
+        "impact": "數值權重無法直接作為嚴重度量化唯一依據"
+      }
+    ],
+    "steps_executed": [
+      "步驟 1: 頻率統計 (案場/設備/告警類型計數)",
+      "步驟 2: 時間分布 (評估週期聚類分析，30 分鐘評估週期判讀)",
+      "步驟 3 降級: 跨案場同時性檢定 (17:00 集中斷訊事件判別為平台側)",
+      "步驟 3 降級: 設備異質性檢定 (15 種以上硬體同時斷訊，排除現場共同失效)",
+      "步驟 4: 關聯分析 (新陽 48 串列同源性、台南機場 32 台變流器通訊同源性)",
+      "步驟 5: 嚴重度分級 (未結案快照 vs 事件紀錄雙軌 P0 分級)",
+      "步驟 6: 根因研判 (嚴格標註已驗證 vs 推論，推論附信心度與反證資料需求)"
+    ],
+    "steps_skipped": [
+      {
+        "step": "步驟 3: 偏離基準分析 (Baseline Deviation Analysis)",
+        "reason": "輸入資料完全缺乏歷史基準值、日照輻照度及案場裝置容量 (kWp)，依規範明確標示無法執行，嚴禁以絕對發電量或告警筆數假裝效率判斷。"
+      }
+    ]
+  },
+  "by_category": [
+    {
+      "category": "發電效率不佳",
+      "count": 293,
+      "percentage": 58.7,
+      "severity": "medium"
+    },
+    {
+      "category": "裝置斷訊",
+      "count": 157,
+      "percentage": 31.5,
+      "severity": "high"
+    },
+    {
+      "category": "發電數據異常",
+      "count": 24,
+      "percentage": 4.8,
+      "severity": "medium"
+    },
+    {
+      "category": "系統未連線",
+      "count": 13,
+      "percentage": 2.6,
+      "severity": "high"
+    },
+    {
+      "category": "部份通訊異常",
+      "count": 12,
+      "percentage": 2.4,
+      "severity": "medium"
+    }
+  ],
+  "anomalies": [
+    {
+      "site": "全網 29 座案場 (含東哥二期、海創、富強鑫、烏日高鐵等)",
+      "device": "跨 15+ 種逆變器型號及 4G 工規路由器",
+      "alarm_code": "裝置斷訊 / 部分通訊異常",
+      "severity": "low",
+      "fault_domain": "platform",
+      "root_cause": {
+        "type": "inferred",
+        "confidence": "high",
+        "description": "17:00:00 評估週期跨 29 案場、7 縣市同時觸發 69 筆斷訊，設備型號高度異質，現場共同失效路徑不存在，判定為雲端監控中心日落批次排程或 Polling 逾時。",
+        "verification": "遠端檢查雲端伺服器 17:00 Cron 負載與資料庫連線佇列，比對 17:30 是否自癒。驗證完成前嚴禁派工出車！"
+      },
+      "recommended_action": "網管工程師遠端檢查伺服器狀態與通訊中繼服務；嚴禁指派現場工務出車。",
+      "action_window": "immediate"
+    },
+    {
+      "site": "富強鑫、禾豐、東哥二期、益網、福斯商旅、豐富路竹、joe_test (共 7 案場)",
+      "device": "主監控箱 / 4G 工規路由器",
+      "alarm_code": "系統未連線",
+      "severity": "critical",
+      "fault_domain": "field",
+      "root_cause": {
+        "type": "inferred",
+        "confidence": "medium",
+        "description": "若本清單為「未結案快照」，此 7 案場自 00:00:00 起持續斷線已逾 17 小時，整場發電與安全監控完全脫管，屬最高優先級 P0；若為事件紀錄，則屬午夜排程測試。",
+        "verification": "以遠端 Ping 或工規路由器雲端管理介面 (RMS) 確認連線；若為持續斷線且確認非 SIM 欠費，即刻派工檢修現場交流輔電。"
+      },
+      "recommended_action": "第一優先執行遠端連線檢測，確認持續斷線則通知責任工務所立即派工檢測現場配電盤與路由器電源。",
+      "action_window": "immediate"
+    },
+    {
+      "site": "新陽",
+      "device": "Inv09, Inv12, Inv14, Inv15, Inv21 等 48 串列",
+      "alarm_code": "發電效率不佳",
+      "severity": "high",
+      "fault_domain": "field",
+      "root_cause": {
+        "type": "inferred",
+        "confidence": "medium",
+        "description": "高達 48 串列集中出現效率偏低，非通訊問題，屬現場物理性或電氣性異常。可能因厚重沙塵落塵遮蔽、局部雜草遮蔭或 MPPT 老化衰減。",
+        "verification": "調閱案場清洗紀錄日誌，比對臨近微氣象站日照計；出動無人機空拍紅外線熱顯像 (IR) 檢測熱斑。"
+      },
+      "recommended_action": "中區工務所排入 24 小時內現場巡檢，優先安排全場清洗組件並檢測熱斑。",
+      "action_window": "24h"
+    },
+    {
+      "site": "台南機場",
+      "device": "全場 32 台變流器 (Inv01~Inv32)",
+      "alarm_code": "裝置斷訊",
+      "severity": "high",
+      "fault_domain": "field",
+      "root_cause": {
+        "type": "inferred",
+        "confidence": "high",
+        "description": "全場 32 台變流器全數通訊中斷，但未報全場系統未連線，表示主監控箱 4G 尚通，現場 RS485 串列主迴路斷線或光纖轉換器供電中斷。",
+        "verification": "現場量測第一台與最後一台變流器 RS485 A/B 腳位差分電壓與 120Ω 終端電阻。"
+      },
+      "recommended_action": "南區工務所責任工程師攜帶備品 RS485 隔離中繼器與光電轉換器於 24 小時內抵達排除。",
+      "action_window": "24h"
+    },
+    {
+      "site": "新大",
+      "device": "Inv01~Inv14 等 19 項設備",
+      "alarm_code": "裝置斷訊 / 系統未連線",
+      "severity": "high",
+      "fault_domain": "field",
+      "root_cause": {
+        "type": "inferred",
+        "confidence": "high",
+        "description": "包含系統未連線與 14 台變流器斷訊，具備連鎖失效特徵，極可能為現場交流控制盤輔助電源開關跳脫。",
+        "verification": "請駐廠管理員或台電值班人員查看總盤輔電 NFB 是否呈跳脫狀態。"
+      },
+      "recommended_action": "中區工務所聯繫廠區確認電源，並於 24 小時內派員巡檢重置。",
+      "action_window": "24h"
+    }
+  ],
+  "data_gaps": [
+    {
+      "gap": "告警內容文字欄位被截斷為 ...",
+      "blocking": "所有以錯誤代碼與故障描述為基礎的深層根因研判",
+      "owner": "平台 / 3.6 資訊管理處"
+    },
+    {
+      "gap": "無案場即時輻照度 (POA / GHI) 與氣象資料",
+      "blocking": "發電效率類告警之 PR% 真偽判別（排除陰雨天假警報）",
+      "owner": "平台 / 4.2 設計規劃處"
+    },
+    {
+      "gap": "無各案場變流器額定容量 (kWp) 主檔清冊",
+      "blocking": "無法將故障轉換為量化發電損失度數 (kWh) 及營業損失金額 (NTD)",
+      "owner": "4.2 設計規劃處"
+    },
+    {
+      "gap": "無案場經緯度主檔與日落抑制窗設定",
+      "blocking": "日出前與日落後逆變器待機休眠時段的誤告警抑制機制",
+      "owner": "4.2 設計規劃處 / 3.6 資訊管理處"
+    },
+    {
+      "gap": "告警資料「影響」數值欄位語意未定義 (1–42)",
+      "blocking": "無法作為風險優先級量化加權計算之數學基礎",
+      "owner": "平台 / 3.6 資訊管理處"
+    }
+  ]
+}
