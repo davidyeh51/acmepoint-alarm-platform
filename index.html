@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-TW" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雲端監控中心 ｜ 異常告警平台 (4.6 運維管理)</title>
+  <link rel="icon" href="assets/img/acme-logo.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <!-- 原廠樣式與 Bootstrap-Vue 基礎架構 -->
+  <link rel="stylesheet" href="assets/css/chunk-vendors.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <!-- 自訂儀表板美化樣式 -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+  <div id="app">
+    <div class="v-application--wrap">
+      
+      <!-- 頂部導航列 (完全照抄 om.acmepointes.com/tw/realtime 風格) -->
+      <nav class="navbar navbar py-1 navbar-light navbar-expand-lg border-bottom" style="background:#ffffff; z-index:1000;">
+        <a class="navbar-brand d-flex align-items-center py-0" href="index.html">
+          <img src="assets/img/acme-logo.png" alt="ACMEPOINT" class="logo mr-2" style="height: 36px;">
+          <div class="font-weight-bold" style="color: var(--acmeLogo); font-size: 20px; letter-spacing: 0.05rem;">
+            雲端監控中心
+            <span class="badge badge-primary ml-2" style="font-size: 11px; vertical-align: middle; font-weight: normal; background-color: #1976d2;">異常告警平台</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-collapse">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item">
+              <a href="index.html" class="btn mx-2 btn-dark btn-sm rounded-pill">
+                <i class="mr-1 fas fa-solar-panel"></i> 異常告警中心
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="appendix.html" class="btn mx-2 btn-outline-dark btn-sm rounded-pill">
+                <i class="mr-1 fas fa-history"></i> 附錄・歷史追蹤
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://om.acmepointes.com/tw/realtime" target="_blank" class="btn mx-2 btn-outline-dark btn-sm rounded-pill" title="前往原廠即時資訊系統">
+                <i class="mr-1 fas fa-external-link-alt"></i> 原廠即時資訊
+              </a>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button" title="切換主題">
+                <i class="fas fa-adjust"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button" title="多國語言">
+                <i class="fas fa-globe-asia"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button" title="功能選單">
+                <i class="fas fa-bars"></i>
+              </button>
+            </li>
+            <li class="nav-item ml-2">
+              <span class="badge badge-light p-2 border rounded-pill d-inline-flex align-items-center" style="font-size:13px; font-weight:600;">
+                <i class="fas fa-user-circle mr-1 text-primary"></i> David Yeh
+              </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- 主體框架 -->
+      <div class="view_wrapper">
+        
+        <!-- 左側邊欄 (照抄 realtime 原廠側邊欄) -->
+        <div class="sidebar d-none d-lg-block">
+          <div class="text-right">
+            <i class="fas fa-exchange-alt btn_sidebar_expand" title="展開/收合側邊欄"></i>
+          </div>
+          <ul class="sidebar_ul">
+            <li class="sidebar_li sidebar_li__active">
+              <a class="sidebar_link" href="index.html" title="即時告警儀表板">
+                <i class="sidebar_icon fas fa-home"></i>
+                <span class="sidebar_text" style="display: none;">即時告警</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="appendix.html" title="附錄歷史追蹤">
+                <i class="sidebar_icon fas fa-history"></i>
+                <span class="sidebar_text" style="display: none;">歷史附錄</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="https://om.acmepointes.com/tw/realtime" target="_blank" title="原廠即時資訊">
+                <i class="sidebar_icon fas fa-poll"></i>
+                <span class="sidebar_text" style="display: none;">原廠即時</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="https://om.acmepointes.com/tw/historyalarms" target="_blank" title="原廠告警事件">
+                <i class="sidebar_icon fa fa-bell"></i>
+                <span class="sidebar_text" style="display: none;">原廠告警</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="https://om.acmepointes.com/tw/multiplefactoryanalysis" target="_blank" title="多案場分析">
+                <i class="sidebar_icon fas fa-chart-line"></i>
+                <span class="sidebar_text" style="display: none;">多案場分析</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="appendix.html#snapshotsTable" title="快照備存紀錄">
+                <i class="sidebar_icon fas fa-database"></i>
+                <span class="sidebar_text" style="display: none;">快照備存</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 主要工作區 -->
+        <main class="main_content">
+          
+          <!-- 標題區與排程狀態 -->
+          <div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
+            <div>
+              <div class="pageTitle">
+                <i class="fas fa-shield-alt text-primary mr-2" style="font-size:22px;"></i>
+                太陽光電異常告警平台
+              </div>
+              <div class="pageSubtitle">
+                <span>最後數據更新：<b id="lastUpdatedTime">載入中...</b></span>
+                <span class="mx-2">｜</span>
+                <span class="text-info font-weight-bold" id="nextSyncTimer">每日 07:00~17:00 整點更新</span>
+              </div>
+            </div>
+            <div class="mb-2">
+              <button id="btnRefresh" class="btn_refresh">
+                <i class="fas fa-sync-alt"></i> 立即更新
+              </button>
+            </div>
+          </div>
+
+          <!-- 頂部即時狀態膠囊 (照抄 realtime 膠囊過濾條) -->
+          <div class="status_pills_container" id="statusPillsContainer">
+            <!-- 由 app.js 動態渲染膠囊計數 -->
+            <div class="text-muted small p-2"><i class="fas fa-spinner fa-spin mr-1"></i> 正在載入統計數據...</div>
+          </div>
+
+          <!-- 核心統計模組：(1) 異常情況分布 與 (2) 同一案場異常數量統計 -->
+          <div class="row stats_row">
+            
+            <!-- 統計目標 (1)：異常情況分布 -->
+            <div class="col-lg-5 col-md-12 mb-3">
+              <div class="stat_card">
+                <div class="stat_card_header">
+                  <div class="stat_card_title">
+                    <i class="fas fa-chart-pie"></i>
+                    (1) 異常情況分布 (Distribution of Anomaly Types)
+                  </div>
+                  <span class="badge badge-light border">佔比與筆數</span>
+                </div>
+                <div id="chartTypeDistribution" class="chart_container"></div>
+                <div class="text-muted text-center small mt-2">
+                  <i class="fas fa-info-circle mr-1"></i> 點擊圓環區塊可直接過濾下方告警清冊
+                </div>
+              </div>
+            </div>
+
+            <!-- 統計目標 (2)：同一案場有多少異常 (排行榜) -->
+            <div class="col-lg-7 col-md-12 mb-3">
+              <div class="stat_card">
+                <div class="stat_card_header">
+                  <div class="stat_card_title">
+                    <i class="fas fa-list-ol"></i>
+                    (2) 同一案場異常數量統計 (Top Sites with Most Anomalies)
+                  </div>
+                  <span class="badge badge-primary">前 10 大異常案場排行</span>
+                </div>
+                <div id="chartSiteRanking" class="chart_container"></div>
+                <div class="text-muted text-center small mt-2">
+                  <i class="fas fa-info-circle mr-1"></i> 點擊長條圖可鎖定該案場進行穿透診斷
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 異常告警清冊表格區塊 (照抄 historyalarms 佈局) -->
+          <div class="table_section">
+            
+            <!-- 多維度篩選列 -->
+            <div class="filter_bar">
+              <div class="search_box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" class="search_input" placeholder="依案場名稱、設備或工程師搜尋...">
+              </div>
+
+              <div>
+                <select id="filterCounty" class="filter_select">
+                  <option value="all">依區域篩選: 全部</option>
+                </select>
+              </div>
+
+              <div>
+                <select id="filterAlarmType" class="filter_select">
+                  <option value="all">依屬性篩選: 全部</option>
+                </select>
+              </div>
+
+              <div>
+                <select id="filterMaintainer" class="filter_select">
+                  <option value="all">依工程師篩選: 全部</option>
+                </select>
+              </div>
+
+              <div class="count_badge ml-auto">
+                資料筆數: <span id="dataCountBadge" class="text-primary font-weight-bold">0</span> 筆
+              </div>
+            </div>
+
+            <!-- 告警資料清單表格 -->
+            <div class="table-responsive">
+              <table class="alarms_table">
+                <thead>
+                  <tr>
+                    <th class="sortable" data-sort="factoryName" style="width:200px;">
+                      <i class="fas fa-globe-americas mr-1" style="color:#4294cf"></i> 案場
+                      <i class="fas fa-sort text-muted ml-1"></i>
+                    </th>
+                    <th class="sortable" data-sort="county" style="width:100px;">
+                      縣市 <i class="fas fa-sort text-muted ml-1"></i>
+                    </th>
+                    <th class="sortable" data-sort="maintainer" style="width:120px;">
+                      工程師 <i class="fas fa-sort text-muted ml-1"></i>
+                    </th>
+                    <th class="sortable" data-sort="which" style="width:110px;">
+                      設備 <i class="fas fa-sort text-muted ml-1"></i>
+                    </th>
+                    <th class="sortable" data-sort="lastAlarmType" style="width:140px;">
+                      屬性 <i class="fas fa-sort-up text-primary ml-1"></i>
+                    </th>
+                    <th class="sortable" data-sort="time" style="width:170px;">
+                      開始時間 <i class="fas fa-sort text-muted ml-1"></i>
+                    </th>
+                    <th class="sortable" data-sort="impact" style="width:90px;">
+                      影響 <i class="fas fa-sort text-muted ml-1"></i>
+                    </th>
+                    <th style="width:90px;">內容</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <tr>
+                    <td colspan="8" class="text-muted p-4">
+                      <i class="fas fa-spinner fa-spin mr-2"></i> 正在載入告警紀錄...
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 分頁導航 -->
+            <div class="pagination_wrap" id="paginationWrap">
+              <!-- 由 app.js 動態渲染 -->
+            </div>
+
+          </div>
+
+        </main>
+      </div>
+
+      <!-- 詳細彈窗 (Setting Modal) -->
+      <div class="modal_overlay" id="alarmDetailModal">
+        <div class="modal_content_box">
+          <div class="modal_header">
+            <div class="modal_title" id="modalTitle">告警詳細資訊</div>
+            <button class="modal_close" id="modalCloseX">&times;</button>
+          </div>
+          <div class="modal_body" id="modalBodyContent">
+            <!-- 動態插入 -->
+          </div>
+          <div class="modal_footer">
+            <button type="button" class="btn btn-secondary btn-sm" id="modalCloseBtn">關閉</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 引用本地或遠端 ECharts 圖表引擎 -->
+  <script src="assets/js/echarts.min.js"></script>
+  <!-- 載入離線靜態資料 -->
+  <script src="data/data.js"></script>
+  <!-- 平台前端邏輯 -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

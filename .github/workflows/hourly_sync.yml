@@ -1,0 +1,66 @@
+name: Hourly Alarm Data Sync & Deployment
+
+on:
+  schedule:
+    # 每天早上 7 點到下午 5 點 (UTC+8)，每個整點執行一次
+    # UTC 時間對應：23:00 (前一天), 00:00, 01:00, 02:00, 03:00, 04:00, 05:00, 06:00, 07:00, 08:00, 09:00
+    - cron: '0 23,0,1,2,3,4,5,6,7,8,9 * * *'
+  workflow_dispatch:
+
+# 授權寫入 Repository 及 GitHub Pages 部署
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch Latest Alarm Data from ACMEPOINT
+        env:
+          OM_USERNAME: ${{ secrets.OM_USERNAME || 'davidyeh' }}
+          OM_PASSWORD: ${{ secrets.OM_PASSWORD || 'om016692' }}
+        run: |
+          python fetch_alarms.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action [Alarm Sync]"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No changes in alarm data to commit."
+          else
+            git commit -m "chore(data): hourly alarm sync $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin main
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

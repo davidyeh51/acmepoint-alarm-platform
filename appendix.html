@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-TW" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雲端監控中心 ｜ 附錄・歷史告警分析追蹤 (4.6 運維管理)</title>
+  <link rel="icon" href="assets/img/acme-logo.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <!-- 原廠樣式與 Bootstrap-Vue 基礎架構 -->
+  <link rel="stylesheet" href="assets/css/chunk-vendors.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <!-- 自訂儀表板美化樣式 -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    .appendix_hero {
+      background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+      color: #ffffff;
+      padding: 24px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(25,118,210,0.15);
+    }
+    .hero_stat_box {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      padding: 12px 18px;
+      backdrop-filter: blur(4px);
+    }
+    .hero_stat_val {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .hero_stat_label {
+      font-size: 12px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="v-application--wrap">
+      
+      <!-- 頂部導航列 -->
+      <nav class="navbar navbar py-1 navbar-light navbar-expand-lg border-bottom" style="background:#ffffff; z-index:1000;">
+        <a class="navbar-brand d-flex align-items-center py-0" href="index.html">
+          <img src="assets/img/acme-logo.png" alt="ACMEPOINT" class="logo mr-2" style="height: 36px;">
+          <div class="font-weight-bold" style="color: var(--acmeLogo); font-size: 20px; letter-spacing: 0.05rem;">
+            雲端監控中心
+            <span class="badge badge-info ml-2" style="font-size: 11px; vertical-align: middle; font-weight: normal;">附錄・歷史追蹤</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-collapse">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item">
+              <a href="index.html" class="btn mx-2 btn-outline-dark btn-sm rounded-pill">
+                <i class="mr-1 fas fa-solar-panel"></i> 異常告警中心
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="appendix.html" class="btn mx-2 btn-dark btn-sm rounded-pill">
+                <i class="mr-1 fas fa-history"></i> 附錄・歷史追蹤
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://om.acmepointes.com/tw/realtime" target="_blank" class="btn mx-2 btn-outline-dark btn-sm rounded-pill">
+                <i class="mr-1 fas fa-external-link-alt"></i> 原廠即時資訊
+              </a>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button">
+                <i class="fas fa-adjust"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button">
+                <i class="fas fa-globe-asia"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn text-decoration-none text-dark btn_navbar mx-1 btn-link rounded-pill" type="button">
+                <i class="fas fa-bars"></i>
+              </button>
+            </li>
+            <li class="nav-item ml-2">
+              <span class="badge badge-light p-2 border rounded-pill d-inline-flex align-items-center" style="font-size:13px; font-weight:600;">
+                <i class="fas fa-user-circle mr-1 text-primary"></i> David Yeh
+              </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- 主體框架 -->
+      <div class="view_wrapper">
+        
+        <!-- 左側邊欄 -->
+        <div class="sidebar d-none d-lg-block">
+          <div class="text-right">
+            <i class="fas fa-exchange-alt btn_sidebar_expand" title="展開/收合側邊欄"></i>
+          </div>
+          <ul class="sidebar_ul">
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="index.html" title="即時告警儀表板">
+                <i class="sidebar_icon fas fa-home"></i>
+                <span class="sidebar_text" style="display: none;">即時告警</span>
+              </a>
+            </li>
+            <li class="sidebar_li sidebar_li__active">
+              <a class="sidebar_link" href="appendix.html" title="附錄歷史追蹤">
+                <i class="sidebar_icon fas fa-history"></i>
+                <span class="sidebar_text" style="display: none;">歷史附錄</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="https://om.acmepointes.com/tw/realtime" target="_blank" title="原廠即時資訊">
+                <i class="sidebar_icon fas fa-poll"></i>
+                <span class="sidebar_text" style="display: none;">原廠即時</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="https://om.acmepointes.com/tw/historyalarms" target="_blank" title="原廠告警事件">
+                <i class="sidebar_icon fa fa-bell"></i>
+                <span class="sidebar_text" style="display: none;">原廠告警</span>
+              </a>
+            </li>
+            <li class="sidebar_li">
+              <a class="sidebar_link" href="#snapshotsTable" title="快照備存清冊">
+                <i class="sidebar_icon fas fa-database"></i>
+                <span class="sidebar_text" style="display: none;">快照清冊</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 主要工作區 -->
+        <main class="main_content">
+          
+          <!-- 附錄橫幅 -->
+          <div class="appendix_hero">
+            <div class="row align-items-center">
+              <div class="col-lg-6 col-md-12 mb-3 mb-lg-0">
+                <h3 class="font-weight-bold mb-2">
+                  <i class="fas fa-archive mr-2"></i> 附錄：歷史告警分析與追蹤備存庫
+                </h3>
+                <p class="mb-0" style="opacity: 0.9; font-size: 14px;">
+                  依運維管理規範，本頁面完整備存每日 07:00 ~ 17:00 各整點之異常歷史快照，支援回溯比對、復歸診斷與歷時演變趨勢分析。
+                </p>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                  <div class="hero_stat_box mr-2 mb-2">
+                    <div class="hero_stat_val" id="statTotalSnapshots">1</div>
+                    <div class="hero_stat_label">已封存整點快照</div>
+                  </div>
+                  <div class="hero_stat_box mr-2 mb-2">
+                    <div class="hero_stat_val" id="statLatestIssues">499</div>
+                    <div class="hero_stat_label">最新獨立異常量</div>
+                  </div>
+                  <div class="hero_stat_box mb-2">
+                    <div class="hero_stat_val" id="statTotalEvents">3,164</div>
+                    <div class="hero_stat_label">累計原始告警次數</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 快照切換與歷史趨勢分析區 -->
+          <div class="row mb-4">
+            
+            <!-- 歷史整點演變趨勢圖 -->
+            <div class="col-lg-8 col-md-12 mb-3">
+              <div class="stat_card">
+                <div class="stat_card_header">
+                  <div class="stat_card_title">
+                    <i class="fas fa-chart-area"></i>
+                    當日整點異常演變趨勢 (Hourly Anomaly Trend 07:00 ~ 17:00)
+                  </div>
+                  <span class="badge badge-success">即時排程同步中</span>
+                </div>
+                <div id="chartHourlyTrend" class="chart_container" style="min-height: 290px;"></div>
+              </div>
+            </div>
+
+            <!-- 歷史快照切換器與比對工具 -->
+            <div class="col-lg-4 col-md-12 mb-3">
+              <div class="stat_card">
+                <div class="stat_card_header">
+                  <div class="stat_card_title">
+                    <i class="fas fa-history"></i>
+                    歷史快照調閱器 (Snapshot Picker)
+                  </div>
+                </div>
+                <div class="p-2">
+                  <label class="font-weight-bold small text-muted mb-1">請選擇調閱之歷史整點快照：</label>
+                  <select id="snapshotSelector" class="form-control form-control-sm mb-3 font-weight-bold" style="border-color:#1976d2;">
+                    <!-- 動態載入 -->
+                  </select>
+
+                  <div class="card bg-light border-0 p-3 mb-3" style="font-size: 13px;">
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="text-muted">快照時間：</span>
+                      <b id="viewerSnapshotTime">--</b>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="text-muted">異常案場數：</span>
+                      <b id="viewerSiteCount">--</b>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="text-muted">獨立異常數：</span>
+                      <b id="viewerIssueCount">--</b>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="text-muted">主要異常屬性：</span>
+                      <b id="viewerTopType" class="text-danger">--</b>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-primary btn-sm btn-block" id="btnExportJson">
+                      <i class="fas fa-file-download mr-1"></i> 下載快照 JSON
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm btn-block mt-0 ml-2" id="btnExportCsv">
+                      <i class="fas fa-file-excel mr-1"></i> 匯出清冊 CSV
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 快照歷史總清冊表格 -->
+          <div class="table_section mb-4" id="snapshotsTable">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="font-weight-bold" style="font-size:16px; color:#2c3e50;">
+                <i class="fas fa-list-alt text-primary mr-2"></i> 歷史快照存檔清單 (Archive Index)
+              </div>
+              <div class="text-muted small">
+                自動保存於 <code>data/snapshots/</code>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="alarms_table">
+                <thead>
+                  <tr>
+                    <th>快照編號</th>
+                    <th>抓取時間 (UTC+8)</th>
+                    <th>異常案場數</th>
+                    <th>獨立異常項</th>
+                    <th>累計事件數</th>
+                    <th>最高發案場</th>
+                    <th>主要異常類型</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody id="snapshotIndexBody">
+                  <!-- 動態載入 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 快照詳細告警清冊 (檢視當前所選快照之明細) -->
+          <div class="table_section">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="font-weight-bold" style="font-size:16px; color:#2c3e50;">
+                <i class="fas fa-table text-primary mr-2"></i> 快照詳細異常告警明細 (<span id="currentViewingSnapshotLabel">最新快照</span>)
+              </div>
+              <div>
+                <input type="text" id="snapshotSearchInput" class="search_input" style="width:240px;" placeholder="搜尋此快照案場或設備...">
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="alarms_table">
+                <thead>
+                  <tr>
+                    <th>案場</th>
+                    <th>縣市</th>
+                    <th>工程師</th>
+                    <th>設備</th>
+                    <th>屬性</th>
+                    <th>開始時間</th>
+                    <th>影響</th>
+                  </tr>
+                </thead>
+                <tbody id="snapshotDetailBody">
+                  <!-- 動態載入 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </main>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/echarts.min.js"></script>
+  <script src="data/data.js"></script>
+  <script>
+    (function () {
+      let currentViewingData = null;
+      let chartTrend = null;
+
+      window.addEventListener('DOMContentLoaded', () => {
+        initAppendixSidebar();
+        initAppendix();
+      });
+
+      function initAppendixSidebar() {
+        const expandBtn = document.querySelector('.btn_sidebar_expand');
+        const sidebar = document.querySelector('.sidebar');
+        if (expandBtn && sidebar) {
+          expandBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('expanded');
+            sidebar.querySelectorAll('.sidebar_text').forEach(s => {
+              s.style.display = sidebar.classList.contains('expanded') ? 'inline-block' : 'none';
+            });
+            setTimeout(() => { if (chartTrend) chartTrend.resize(); }, 300);
+          });
+        }
+      }
+
+      function initAppendix() {
+        const snapshotsIndex = window.HISTORY_SNAPSHOTS_INDEX || [];
+        const latestData = window.LATEST_ALARM_DATA;
+
+        // 填寫頂部總計
+        document.getElementById('statTotalSnapshots').textContent = snapshotsIndex.length || 1;
+        if (latestData) {
+          document.getElementById('statLatestIssues').textContent = latestData.metadata.totalDistinctIssues || '--';
+          document.getElementById('statTotalEvents').textContent = Number(latestData.metadata.totalRawAlarms).toLocaleString() || '--';
+        }
+
+        // 填充快照選擇器
+        const selector = document.getElementById('snapshotSelector');
+        selector.innerHTML = snapshotsIndex.map(s => `
+          <option value="${s.snapshotId}">${s.updatedAt} (${s.totalDistinctIssues} 筆異常)</option>
+        `).join('');
+
+        selector.addEventListener('change', (e) => {
+          loadSelectedSnapshot(e.target.value);
+        });
+
+        // 填充歷史索引表格
+        renderIndexTable(snapshotsIndex);
+
+        // 預設載入最新資料
+        currentViewingData = latestData;
+        updateViewerSummary(latestData);
+        renderSnapshotTable(latestData.rebuildAlarms);
+
+        // 繪製趨勢圖
+        renderTrendChart(snapshotsIndex);
+
+        // 綁定下載按鈕
+        document.getElementById('btnExportJson').addEventListener('click', exportJson);
+        document.getElementById('btnExportCsv').addEventListener('click', exportCsv);
+
+        // 搜尋
+        document.getElementById('snapshotSearchInput').addEventListener('input', (e) => {
+          if (!currentViewingData) return;
+          const q = e.target.value.toLowerCase();
+          const filtered = currentViewingData.rebuildAlarms.filter(a =>
+            a.factoryName.toLowerCase().includes(q) ||
+            a.which.toLowerCase().includes(q) ||
+            a.county.toLowerCase().includes(q) ||
+            a.lastAlarmType.toLowerCase().includes(q)
+          );
+          renderSnapshotTable(filtered);
+        });
+      }
+
+      function loadSelectedSnapshot(snapshotId) {
+        // 先檢查是不是當前最新
+        if (window.LATEST_ALARM_DATA && window.LATEST_ALARM_DATA.metadata.snapshotId === snapshotId) {
+          currentViewingData = window.LATEST_ALARM_DATA;
+          updateViewerSummary(currentViewingData);
+          renderSnapshotTable(currentViewingData.rebuildAlarms);
+          return;
+        }
+
+        fetch(`data/snapshots/${snapshotId}.json`)
+          .then(res => res.json())
+          .then(data => {
+            currentViewingData = data;
+            updateViewerSummary(data);
+            renderSnapshotTable(data.rebuildAlarms);
+          })
+          .catch(err => {
+            alert('讀取該快照失敗：' + err);
+          });
+      }
+
+      function updateViewerSummary(data) {
+        if (!data) return;
+        document.getElementById('viewerSnapshotTime').textContent = data.metadata.updatedAt;
+        document.getElementById('viewerSiteCount').textContent = data.metadata.totalSitesWithAlarms + ' 案場';
+        document.getElementById('viewerIssueCount').textContent = data.metadata.totalDistinctIssues + ' 項';
+        document.getElementById('viewerTopType').textContent = (data.statistics.typeDistribution[0] || {}).type || '--';
+        document.getElementById('currentViewingSnapshotLabel').textContent = data.metadata.updatedAt;
+      }
+
+      function renderTrendChart(snapshotsIndex) {
+        const el = document.getElementById('chartHourlyTrend');
+        if (!el || !window.echarts) return;
+        chartTrend = echarts.init(el);
+
+        // 依時間升冪排序展示走勢
+        const sorted = [...snapshotsIndex].reverse();
+
+        const xData = sorted.map(s => s.updatedAt ? s.updatedAt.substring(11, 16) : s.snapshotId);
+        const yIssues = sorted.map(s => s.totalDistinctIssues);
+        const yRed = sorted.map(s => (s.severityCounts || {}).red || 0);
+        const yOrange = sorted.map(s => (s.severityCounts || {}).orange || 0);
+
+        const option = {
+          tooltip: {
+            trigger: 'axis'
+          },
+          legend: {
+            data: ['獨立異常總數', '緊急告警 (Red)', '重要告警 (Orange)'],
+            top: '2%'
+          },
+          grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            top: '15%',
+            containLabel: true
+          },
+          xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: xData.length > 0 ? xData : ['17:00']
+          },
+          yAxis: {
+            type: 'value',
+            splitLine: { lineStyle: { type: 'dashed' } }
+          },
+          series: [
+            {
+              name: '獨立異常總數',
+              type: 'line',
+              smooth: true,
+              data: yIssues.length > 0 ? yIssues : [499],
+              lineStyle: { width: 3, color: '#1976d2' },
+              itemStyle: { color: '#1976d2' },
+              areaStyle: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  { offset: 0, color: 'rgba(25,118,210,0.3)' },
+                  { offset: 1, color: 'rgba(25,118,210,0.01)' }
+                ])
+              }
+            },
+            {
+              name: '緊急告警 (Red)',
+              type: 'line',
+              smooth: true,
+              data: yRed.length > 0 ? yRed : [187],
+              lineStyle: { color: '#dc3545' },
+              itemStyle: { color: '#dc3545' }
+            },
+            {
+              name: '重要告警 (Orange)',
+              type: 'line',
+              smooth: true,
+              data: yOrange.length > 0 ? yOrange : [312],
+              lineStyle: { color: '#fd7e14' },
+              itemStyle: { color: '#fd7e14' }
+            }
+          ]
+        };
+
+        chartTrend.setOption(option);
+        window.addEventListener('resize', () => { if (chartTrend) chartTrend.resize(); });
+      }
+
+      function renderIndexTable(snapshotsIndex) {
+        const body = document.getElementById('snapshotIndexBody');
+        if (!body) return;
+
+        body.innerHTML = snapshotsIndex.map(s => `
+          <tr>
+            <td><code>${s.snapshotId}</code></td>
+            <td><b>${s.updatedAt}</b></td>
+            <td>${s.totalSitesWithAlarms}</td>
+            <td><span class="badge badge-primary">${s.totalDistinctIssues}</span></td>
+            <td>${Number(s.totalRawAlarms).toLocaleString()}</td>
+            <td>${s.topSite || '--'}</td>
+            <td>${s.topAlarmType || '--'}</td>
+            <td>
+              <button class="btn btn-outline-primary btn-sm py-0 btn_inspect_snap" data-snap="${s.snapshotId}">調閱</button>
+            </td>
+          </tr>
+        `).join('');
+
+        body.querySelectorAll('.btn_inspect_snap').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const snapId = btn.getAttribute('data-snap');
+            document.getElementById('snapshotSelector').value = snapId;
+            loadSelectedSnapshot(snapId);
+            document.getElementById('snapshotDetailBody').scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      }
+
+      function renderSnapshotTable(alarms) {
+        const body = document.getElementById('snapshotDetailBody');
+        if (!body) return;
+
+        body.innerHTML = alarms.slice(0, 50).map(item => {
+          let colorClass = 'bg_level_white';
+          if (item.lastColorLabel === 'red') colorClass = 'bg_level_red';
+          else if (item.lastColorLabel === 'orange') colorClass = 'bg_level_orange';
+
+          return `
+            <tr>
+              <td><b>${item.factoryName}</b></td>
+              <td>${item.county}</td>
+              <td>${item.maintainer}</td>
+              <td>${item.which}</td>
+              <td>${item.lastAlarmType}</td>
+              <td>${item.time}</td>
+              <td><span class="impact_badge ${colorClass}">${item.impact}</span></td>
+            </tr>
+          `;
+        }).join('');
+      }
+
+      function exportJson() {
+        if (!currentViewingData) return;
+        const blob = new Blob([JSON.stringify(currentViewingData, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `alarm_snapshot_${currentViewingData.metadata.snapshotId}.json`;
+        a.click();
+      }
+
+      function exportCsv() {
+        if (!currentViewingData) return;
+        const rows = [
+          ['案場名稱', '縣市', '工程師', '設備', '屬性', '開始時間', '影響筆數']
+        ];
+        currentViewingData.rebuildAlarms.forEach(a => {
+          rows.push([
+            `"${a.factoryName}"`,
+            `"${a.county}"`,
+            `"${a.maintainer}"`,
+            `"${a.which}"`,
+            `"${a.lastAlarmType}"`,
+            `"${a.time}"`,
+            a.impact
+          ]);
+        });
+        const csvContent = "\uFEFF" + rows.map(e => e.join(",")).join("\n");
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `alarm_records_${currentViewingData.metadata.snapshotId}.csv`;
+        a.click();
+      }
+
+    })();
+  </script>
+</body>
+</html>
