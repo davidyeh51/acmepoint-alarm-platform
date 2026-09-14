@@ -288,28 +288,11 @@ def save_data(result, snapshot_id):
         json.dump(history_index, f, ensure_ascii=False, indent=2)
     print(f"Updated index ({len(history_index)} snapshots) to {index_file}", flush=True)
 
-    # 4. 生成戰情平台 AI Agent 資深維運顧問分析 (System Prompt v1.1)
-    try:
-        from generate_ai_consultant import generate_consultant_analysis
-        ai_json, ai_md = generate_consultant_analysis(result)
-        ai_report_file = os.path.join(data_dir, "ai_agent_consultant_report.md")
-        with open(ai_report_file, "w", encoding="utf-8") as f:
-            f.write(ai_md)
-        ai_json_file = os.path.join(data_dir, "ai_agent_consultant_data.json")
-        with open(ai_json_file, "w", encoding="utf-8") as f:
-            json.dump(ai_json, f, ensure_ascii=False, indent=2)
-        print("Generated AI Consultant Report & JSON successfully.", flush=True)
-    except Exception as e:
-        print(f"Warning: Failed to generate AI consultant data: {e}", flush=True)
-        ai_json, ai_md = {}, ""
-
-    # 5. 產生 data.js 供純靜態或本地雙擊直接運行
+    # 4. 產生 data.js 供純靜態或本地雙擊直接運行
     data_js_file = os.path.join(data_dir, "data.js")
     with open(data_js_file, "w", encoding="utf-8") as f:
         f.write(f"window.LATEST_ALARM_DATA = {json.dumps(result, ensure_ascii=False)};\n")
         f.write(f"window.HISTORY_SNAPSHOTS_INDEX = {json.dumps(history_index, ensure_ascii=False)};\n")
-        f.write(f"window.AI_AGENT_CONSULTANT_JSON = {json.dumps(ai_json, ensure_ascii=False)};\n")
-        f.write(f"window.AI_AGENT_CONSULTANT_REPORT = {json.dumps(ai_md, ensure_ascii=False)};\n")
     print(f"Saved standalone script to {data_js_file}", flush=True)
 
 def main():

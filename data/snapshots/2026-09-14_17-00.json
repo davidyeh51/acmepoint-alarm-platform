@@ -1,7 +1,11 @@
 {
   "metadata": {
     "snapshotId": "2026-09-14_17-00",
+<<<<<<< HEAD
     "updatedAt": "2026-09-14 17:48:02",
+=======
+    "updatedAt": "2026-09-14 17:38:46",
+>>>>>>> 68c5f7a (revert: restore previous version format and content without Senior Consultant AI prompt)
     "totalSitesWithAlarms": 86,
     "totalDistinctIssues": 499,
     "totalRawAlarms": 3164,
