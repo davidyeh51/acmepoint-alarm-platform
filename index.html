@@ -353,11 +353,15 @@
       document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.topnav a').forEach(el => el.classList.remove('active'));
       
-      document.getElementById('view-' + targetId).classList.add('active');
-      document.getElementById('nav-' + targetId).classList.add('active');
+      const targetView = document.getElementById('view-' + targetId);
+      const targetNav = document.getElementById('nav-' + targetId);
+      if (targetView) targetView.classList.add('active');
+      if (targetNav) targetNav.classList.add('active');
       
-      lucide.createIcons();
-      window.scrollTo(0,0);
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+      window.scrollTo(0, 0);
     }
 
     // 暫存目前的派工資料
@@ -368,19 +372,24 @@
     function initPlatform() {
       // S5 資料填入
       const cloudAlarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
-      document.getElementById('s5-cloud-count').innerText = cloudAlarms.length;
+      const cloudCountEl = document.getElementById('s5-cloud-count');
+      if (cloudCountEl) cloudCountEl.innerText = cloudAlarms.length;
       
-      const lineReports = OVERVIEW_DATA?.total_daily_ops || 0;
-      document.getElementById('s5-line-count').innerText = lineReports + (OVERVIEW_DATA?.total_customer_voices || 0);
+      const lineReports = (typeof OVERVIEW_DATA !== 'undefined' ? OVERVIEW_DATA.total_daily_ops : 0) || 0;
+      const custVoices = (typeof OVERVIEW_DATA !== 'undefined' ? OVERVIEW_DATA.total_customer_voices : 0) || 0;
+      const lineCountEl = document.getElementById('s5-line-count');
+      if (lineCountEl) lineCountEl.innerText = lineReports + custVoices;
       
       // S5 案場排行表格
       const topSitesBody = document.querySelector('#s5-top-sites-table tbody');
-      if (topSitesBody && OVERVIEW_DATA?.site_risk_ranking) {
-        OVERVIEW_DATA.site_risk_ranking.slice(0,5).forEach(site => {
+      if (topSitesBody && typeof OVERVIEW_DATA !== 'undefined' && OVERVIEW_DATA.site_risk_ranking) {
+        topSitesBody.innerHTML = '';
+        OVERVIEW_DATA.site_risk_ranking.slice(0, 5).forEach(site => {
+           const info = typeof getSiteInfo === 'function' ? getSiteInfo(site.site_name) : { equipType: '未知' };
            topSitesBody.innerHTML += `
              <tr class="border-b border-slate-100 hover:bg-slate-50">
                <td class="p-2 font-bold text-slate-800">${site.site_name}</td>
-               <td class="p-2 text-xs text-slate-600">${getSiteInfo(site.site_name).equipType}</td>
+               <td class="p-2 text-xs text-slate-600">${info.equipType || '常規變流器'}</td>
                <td class="p-2 text-sm text-slate-700 font-mono">${site.ops_count + site.cust_count}</td>
                <td class="p-2">
                  <span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] font-bold rounded">P0 高風險</span>
@@ -392,14 +401,14 @@
 
       // 繪製 S5 趨勢圖 (Mock)
       const ctx = document.getElementById('s5TrendChart');
-      if (ctx) {
+      if (ctx && window.Chart) {
         new Chart(ctx, {
           type: 'line',
           data: {
             labels: ['1號','5號','10號','15號','20號','25號','30號'],
             datasets: [
-              { label: '新增異常數', data: [12, 19, 15, 25, 22, 14, 10], borderColor: '#ef4444', backgroundColor: '#fca5a5', tension: 0.3 },
-              { label: '完工結案數', data: [10, 15, 18, 20, 24, 18, 12], borderColor: '#10b981', backgroundColor: '#6ee7b7', tension: 0.3 }
+              { label: '新增異常數', data: [12, 19, 15, 25, 22, 14, 10], borderColor: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)', tension: 0.3, fill: true },
+              { label: '完工結案數', data: [10, 15, 18, 20, 24, 18, 12], borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', tension: 0.3, fill: true }
             ]
           },
           options: { responsive: true, maintainAspectRatio: false }
@@ -408,64 +417,82 @@
 
       // S1 雲端告警渲染
       const cloudList = document.getElementById('s1-cloud-list');
-      document.getElementById('s1-cloud-badge').innerText = cloudAlarms.length;
-      cloudAlarms.slice(0, 50).forEach((alarm, index) => {
-         const siteName = alarm.factoryName || "未知案場";
-         const alarmContext = alarm.lastAlarmType || "未知異常";
-         const triggerTime = alarm.time || "";
-         const desc = alarm.allAlarms && alarm.allAlarms.length > 0 ? alarm.allAlarms[0].desc : alarmContext;
+      const cloudBadge = document.getElementById('s1-cloud-badge');
+      if (cloudBadge) cloudBadge.innerText = cloudAlarms.length;
+      if (cloudList) {
+        cloudList.innerHTML = '';
+        cloudAlarms.slice(0, 50).forEach((alarm, index) => {
+           const siteName = alarm.factoryName || "未知案場";
+           const alarmContext = alarm.lastAlarmType || "未知異常";
+           const triggerTime = alarm.time || "";
+           const desc = (alarm.allAlarms && alarm.allAlarms.length > 0 && alarm.allAlarms[0].desc) ? alarm.allAlarms[0].desc : alarmContext;
 
-         cloudList.innerHTML += `
-           <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-blue-300 hover:shadow-md transition cursor-pointer" onclick="processCloudAI(${index})">
-             <div class="flex justify-between mb-1">
-               <span class="font-bold text-sm text-slate-800">${siteName}</span>
-               <span class="text-[10px] text-slate-400 font-mono">${triggerTime}</span>
+           cloudList.innerHTML += `
+             <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-blue-300 hover:shadow-md transition cursor-pointer" onclick="processCloudAI(${index})">
+               <div class="flex justify-between mb-1">
+                 <span class="font-bold text-sm text-slate-800">${siteName}</span>
+                 <span class="text-[10px] text-slate-400 font-mono">${triggerTime}</span>
+               </div>
+               <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${alarmContext}</div>
+               <p class="text-xs text-slate-600 line-clamp-2">${desc}</p>
              </div>
-             <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${alarmContext}</div>
-             <p class="text-xs text-slate-600 line-clamp-2">${desc}</p>
-           </div>
-         `;
-      });
+           `;
+        });
+      }
 
       // S1 LINE@ 告警渲染 (來自 kingsun_data.js)
       const lineList = document.getElementById('s1-line-list');
-      document.getElementById('s1-line-badge').innerText = DAILY_OPS_DATA.length;
-      DAILY_OPS_DATA.slice(0, 50).forEach((ops, index) => {
-         lineList.innerHTML += `
-           <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-green-300 hover:shadow-md transition cursor-pointer" onclick="processLineAI(${index})">
-             <div class="flex justify-between mb-1">
-               <span class="font-bold text-sm text-slate-800 flex items-center gap-1"><i data-lucide="smartphone" class="w-3 h-3 text-green-500"></i> ${ops.site_name}</span>
-               <span class="text-[10px] text-slate-400 font-mono">${ops.date}</span>
+      const lineBadge = document.getElementById('s1-line-badge');
+      const opsData = typeof DAILY_OPS_DATA !== 'undefined' ? DAILY_OPS_DATA : [];
+      if (lineBadge) lineBadge.innerText = opsData.length;
+      if (lineList) {
+        lineList.innerHTML = '';
+        opsData.slice(0, 50).forEach((ops, index) => {
+           lineList.innerHTML += `
+             <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-green-300 hover:shadow-md transition cursor-pointer" onclick="processLineAI(${index})">
+               <div class="flex justify-between mb-1">
+                 <span class="font-bold text-sm text-slate-800 flex items-center gap-1"><i data-lucide="smartphone" class="w-3 h-3 text-green-500"></i> ${ops.site_name}</span>
+                 <span class="text-[10px] text-slate-400 font-mono">${ops.date}</span>
+               </div>
+               <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${ops.issue_type}</div>
+               <p class="text-xs text-slate-600 line-clamp-2">${ops.content}</p>
              </div>
-             <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${ops.issue_type}</div>
-             <p class="text-xs text-slate-600 line-clamp-2">${ops.content}</p>
-           </div>
-         `;
-      });
-      lucide.createIcons();
+           `;
+        });
+      }
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
     }
 
     function processCloudAI(index) {
-       const alarm = window.LATEST_ALARM_DATA.rebuildAlarms[index];
+       const alarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
+       const alarm = alarms[index];
+       if (!alarm) return;
        const siteName = alarm.factoryName || "未知案場";
        const alarmContext = alarm.lastAlarmType || "未知異常";
-       const desc = alarm.allAlarms && alarm.allAlarms.length > 0 ? alarm.allAlarms[0].desc : alarmContext;
+       const desc = (alarm.allAlarms && alarm.allAlarms.length > 0 && alarm.allAlarms[0].desc) ? alarm.allAlarms[0].desc : alarmContext;
        processAI(siteName, "雲端監控系統: " + desc, alarmContext);
     }
 
     function processLineAI(index) {
-       const ops = DAILY_OPS_DATA[index];
+       const opsData = typeof DAILY_OPS_DATA !== 'undefined' ? DAILY_OPS_DATA : [];
+       const ops = opsData[index];
+       if (!ops) return;
        processAI(ops.site_name, "LINE@回報 (" + ops.reporter + "): " + ops.content, ops.issue_type);
     }
 
     // S2 AI 分析處理邏輯
     function processAI(siteName, content, type) {
        switchNav('s2');
-       document.getElementById('s2-empty-state').classList.add('hidden');
-       document.getElementById('s2-content-state').classList.remove('hidden');
+       const emptyState = document.getElementById('s2-empty-state');
+       const contentState = document.getElementById('s2-content-state');
+       if (emptyState) emptyState.classList.add('hidden');
+       if (contentState) contentState.classList.remove('hidden');
 
        // 填入 Site DB 資訊
-       const site = getSiteInfo(siteName);
+       const site = typeof getSiteInfo === 'function' ? getSiteInfo(siteName) : { name: siteName, location: '台灣', equipType: '常規變流器', engineer: '巡檢專案組', lastMaintenance: '無' };
        document.getElementById('s2-source-content').innerText = content;
        document.getElementById('s2-db-name').innerText = site.name;
        document.getElementById('s2-db-loc').innerText = site.location;
@@ -474,20 +501,31 @@
        document.getElementById('s2-db-maint').innerText = site.lastMaintenance;
 
        // 模擬 AI 生成結果 (RCA & SOP)
-       const isUrgent = content.includes('斷訊') || content.includes('停機') || content.includes('進水');
-       document.getElementById('s2-ai-priority').innerText = isUrgent ? 'P0 緊急出車' : 'P2 例行排查';
-       document.getElementById('s2-ai-priority').className = isUrgent ? 'px-2 py-0.5 bg-rose-500 text-white rounded text-xs font-bold' : 'px-2 py-0.5 bg-amber-500 text-white rounded text-xs font-bold';
+       const isUrgent = content.includes('斷訊') || content.includes('停機') || content.includes('進水') || content.includes('未連線');
+       const priEl = document.getElementById('s2-ai-priority');
+       if (priEl) {
+         priEl.innerText = isUrgent ? 'P0 緊急出車' : 'P2 例行排查';
+         priEl.className = isUrgent ? 'px-2 py-0.5 bg-rose-500 text-white rounded text-xs font-bold' : 'px-2 py-0.5 bg-amber-500 text-white rounded text-xs font-bold';
+       }
 
-       document.getElementById('s2-ai-rca').innerText = 分析結果：該案場 () 使用 。根據歷史數據與當前特徵 ""，研判極可能為【】。;
-       document.getElementById('s2-ai-sop').innerText = 1. 請工程師 [] 於 24 小時內前往 [] 進行現勘。\n2. 準備三用電表與替換用模組/備品。\n3. 確認是否需啟動原廠 RMA 流程。;
+       const rcaText = `分析結果：該案場 (${site.name}) 使用 ${site.equipType}。根據歷史數據與當前特徵 "${type}"，研判極可能為【${isUrgent ? '設備硬體失效或線路中斷' : '效能自然衰退或輕微遮蔽'}】。`;
+       const sopText = `1. 請工程師 [${site.engineer}] 於 24 小時內前往 [${site.location}] 進行現勘。\n2. 準備三用電表與替換用模組/備品。\n3. 確認是否需啟動原廠 RMA 流程。`;
+       
+       document.getElementById('s2-ai-rca').innerText = rcaText;
+       document.getElementById('s2-ai-sop').innerText = sopText;
 
        currentAIContext = {
-         id: 'WO-' + Math.floor(Math.random() * 10000),
+         id: 'WO-' + Math.floor(1000 + Math.random() * 9000),
          site: site,
          priority: isUrgent ? 'P0' : 'P2',
-         desc: document.getElementById('s2-ai-rca').innerText,
+         desc: rcaText,
+         sop: sopText,
          date: new Date().toISOString().split('T')[0]
        };
+       
+       if (window.lucide) {
+         lucide.createIcons();
+       }
     }
 
     // S3 派發工單
@@ -495,30 +533,43 @@
        if (!currentAIContext) return;
        myWorkOrders.push(currentAIContext);
        renderS3List();
-       alert('工單已成功派發至現場工程師手機端！');
+       alert('工單 ' + currentAIContext.id + ' 已成功派發至現場工程師手機端！');
        switchNav('s3');
     }
 
     function renderS3List() {
        const list = document.getElementById('s3-wo-list');
-       document.getElementById('s3-task-count').innerText = myWorkOrders.length;
+       const countEl = document.getElementById('s3-task-count');
+       if (countEl) countEl.innerText = myWorkOrders.length;
        
+       if (!list) return;
        if (myWorkOrders.length === 0) {
-         list.innerHTML = <div class="text-center text-slate-400 mt-10 text-sm"><i data-lucide="check-circle" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>目前沒有派發的工單</div>;
-       } else {
-         list.innerHTML = myWorkOrders.map(wo => 
-           <div class="wo-card ">
-             <div class="flex justify-between items-center mb-2">
-               <span class="font-bold text-sm text-slate-800"></span>
-               <span class=" px-2 py-0.5 rounded text-[10px] font-bold"></span>
-             </div>
-             <div class="text-[11px] text-slate-500 mb-2 flex items-center gap-1"><i data-lucide="map-pin" class="w-3 h-3"></i> </div>
-             <p class="text-xs text-slate-600 line-clamp-2 bg-slate-50 p-2 rounded"></p>
-             <button class="w-full mt-3 bg-blue-50 text-blue-600 py-1.5 rounded text-xs font-bold hover:bg-blue-100" onclick="openS4('')">執行回報</button>
+         list.innerHTML = `
+           <div class="text-center text-slate-400 mt-10 text-sm">
+             <i data-lucide="check-circle" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
+             目前沒有派發的工單
            </div>
-         ).join('');
+         `;
+       } else {
+         list.innerHTML = myWorkOrders.map(wo => `
+           <div class="wo-card ${wo.priority === 'P0' ? 'urgent' : ''}">
+             <div class="flex justify-between items-center mb-2">
+               <span class="font-bold text-sm text-slate-800">${wo.site.name}</span>
+               <span class="${wo.priority === 'P0' ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-700'} px-2 py-0.5 rounded text-[10px] font-bold">${wo.priority}</span>
+             </div>
+             <div class="text-[11px] text-slate-500 mb-2 flex items-center gap-1">
+               <i data-lucide="map-pin" class="w-3 h-3"></i> ${wo.site.location}
+             </div>
+             <p class="text-xs text-slate-600 line-clamp-2 bg-slate-50 p-2 rounded mb-2">${wo.desc}</p>
+             <button class="w-full bg-blue-50 text-blue-600 py-1.5 rounded text-xs font-bold hover:bg-blue-100 transition" onclick="openS4('${wo.id}')">
+               執行回報
+             </button>
+           </div>
+         `).join('');
        }
-       lucide.createIcons();
+       if (window.lucide) {
+         lucide.createIcons();
+       }
     }
 
     // S4 結案 UI
@@ -526,15 +577,20 @@
     function openS4(id) {
        activeWOId = id;
        const wo = myWorkOrders.find(w => w.id === id);
+       if (!wo) return;
+       
        document.getElementById('s4-empty-state').classList.add('hidden');
        document.getElementById('s4-active-form').classList.remove('hidden');
-       document.getElementById('s4-site-name').innerText = ${wo.site.name} ();
+       document.getElementById('s4-site-name').innerText = `${wo.site.name} (${wo.id})`;
        
        // 重設表單
        document.getElementById('mock-photo-preview').classList.add('hidden');
        document.getElementById('s4-report-text').value = '';
        
        switchNav('s4');
+       if (window.lucide) {
+         lucide.createIcons();
+       }
     }
 
     // 模擬 S4 互動
@@ -546,15 +602,19 @@
     });
 
     function submitWorkOrder() {
+       if (!activeWOId) return;
        myWorkOrders = myWorkOrders.filter(w => w.id !== activeWOId);
+       activeWOId = null;
        renderS3List();
-       alert('PDCA 資料已上傳至大數據庫！\n戰情儀表板 (S5) 之健康指標將自動更新。');
+       document.getElementById('s4-active-form').classList.add('hidden');
+       document.getElementById('s4-empty-state').classList.remove('hidden');
+       alert('PDCA 資料已上傳至大數據庫！\n戰情儀表板 (S5) 之健康指標已連動更新。');
        switchNav('s5');
     }
 
-    window.onload = () => {
+    window.addEventListener('DOMContentLoaded', () => {
       initPlatform();
-    };
+    });
   </script>
 </body>
 </html>
