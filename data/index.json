@@ -1,13 +1,13 @@
 [
   {
     "snapshotId": "2026-09-16_07-00",
-    "updatedAt": "2026-09-16 07:10:25",
+    "updatedAt": "2026-09-16 07:31:24",
     "totalSitesWithAlarms": 43,
-    "totalDistinctIssues": 160,
-    "totalRawAlarms": 163,
+    "totalDistinctIssues": 164,
+    "totalRawAlarms": 167,
     "severityCounts": {
       "red": 155,
-      "orange": 5,
+      "orange": 9,
       "white": 0
     },
     "topAlarmType": "裝置斷訊",

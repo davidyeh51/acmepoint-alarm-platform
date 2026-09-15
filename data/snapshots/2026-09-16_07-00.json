@@ -1,13 +1,13 @@
 {
   "metadata": {
     "snapshotId": "2026-09-16_07-00",
-    "updatedAt": "2026-09-16 07:10:25",
+    "updatedAt": "2026-09-16 07:31:24",
     "totalSitesWithAlarms": 43,
-    "totalDistinctIssues": 160,
-    "totalRawAlarms": 163,
+    "totalDistinctIssues": 164,
+    "totalRawAlarms": 167,
     "severityCounts": {
       "red": 155,
-      "orange": 5,
+      "orange": 9,
       "white": 0
     }
   },
@@ -16,22 +16,22 @@
       {
         "type": "裝置斷訊",
         "count": 131,
-        "percentage": 81.9
+        "percentage": 79.9
       },
       {
         "type": "發電數據異常",
-        "count": 16,
-        "percentage": 10.0
+        "count": 18,
+        "percentage": 11.0
       },
       {
         "type": "系統未連線",
         "count": 8,
-        "percentage": 5.0
+        "percentage": 4.9
       },
       {
         "type": "部份通訊異常",
-        "count": 5,
-        "percentage": 3.1
+        "count": 7,
+        "percentage": 4.3
       }
     ],
     "siteRankings": [
@@ -39,9 +39,9 @@
         "factoryName": "東哥二期",
         "county": "高雄市",
         "maintainer": "NA",
-        "distinctIssuesCount": 19,
-        "totalRawAlarms": 20,
-        "devicesCount": 19,
+        "distinctIssuesCount": 21,
+        "totalRawAlarms": 22,
+        "devicesCount": 20,
         "devicesList": [
           "ENVtemp",
           "HV_Meter",
@@ -61,13 +61,16 @@
           "Inv14",
           "Inv15",
           "Inv16",
-          "PVTemp"
+          "PVTemp",
+          "系統斷線"
         ],
         "alarmTypeCounts": {
-          "裝置斷訊": 19
+          "裝置斷訊": 19,
+          "部份通訊異常": 1,
+          "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "台南機場",
@@ -101,7 +104,7 @@
           "裝置斷訊": 19
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "新陽",
@@ -129,7 +132,7 @@
           "發電數據異常": 3
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "新大",
@@ -158,7 +161,7 @@
           "系統未連線": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "高振二期",
@@ -184,7 +187,7 @@
           "部份通訊異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "富士電子",
@@ -211,6 +214,28 @@
         "latestTime": "2026-09-16 04:30:00"
       },
       {
+        "factoryName": "彩邦界(仁德廠)",
+        "county": "台南市",
+        "maintainer": "-",
+        "distinctIssuesCount": 7,
+        "totalRawAlarms": 8,
+        "devicesCount": 5,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv03",
+          "Inv04",
+          "系統斷線"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 4,
+          "部份通訊異常": 2,
+          "發電數據異常": 1
+        },
+        "worstColor": "red",
+        "latestTime": "2026-09-16 07:30:00"
+      },
+      {
         "factoryName": "恒美",
         "county": "台南市",
         "maintainer": "維運一課",
@@ -231,28 +256,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
-      },
-      {
-        "factoryName": "彩邦界(仁德廠)",
-        "county": "台南市",
-        "maintainer": "-",
-        "distinctIssuesCount": 5,
-        "totalRawAlarms": 6,
-        "devicesCount": 5,
-        "devicesList": [
-          "Inv01",
-          "Inv02",
-          "Inv03",
-          "Inv04",
-          "系統斷線"
-        ],
-        "alarmTypeCounts": {
-          "裝置斷訊": 4,
-          "部份通訊異常": 1
-        },
-        "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "東和一期",
@@ -272,7 +276,7 @@
           "裝置斷訊": 5
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "總福塑膠",
@@ -311,7 +315,7 @@
           "部份通訊異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "嘉惠",
@@ -330,7 +334,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "FCS4期",
@@ -349,7 +353,7 @@
           "發電數據異常": 3
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "鳳山圳滯洪池",
@@ -367,7 +371,7 @@
           "裝置斷訊": 3
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "路竹王祈仁",
@@ -386,7 +390,7 @@
           "發電數據異常": 2
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "仁美商標",
@@ -405,7 +409,7 @@
           "部份通訊異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "FCS6期",
@@ -424,7 +428,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "北歐之光",
@@ -458,7 +462,7 @@
           "裝置斷訊": 2
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "海創中心",
@@ -475,7 +479,7 @@
           "發電數據異常": 2
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "BM7倉庫&BM10倉庫(一期)",
@@ -492,7 +496,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "大南方資源再生",
@@ -509,7 +513,7 @@
           "裝置斷訊": 2
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "益網-路竹三爺埤第三型",
@@ -526,7 +530,7 @@
           "裝置斷訊": 2
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "正鶴",
@@ -542,7 +546,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "福斯商旅頂立台南展示中心",
@@ -590,7 +594,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "芳生螺絲",
@@ -606,7 +610,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "安德順(裕益嘉太廠)",
@@ -638,7 +642,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "雲豹-路竹三鎮埤",
@@ -702,7 +706,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "奇樺科技",
@@ -718,7 +722,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "特力家居高雄館",
@@ -734,7 +738,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "禾豐",
@@ -766,7 +770,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "安南賴候淑貞",
@@ -782,7 +786,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "雲豹-路竹三爺埤第一型",
@@ -798,7 +802,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "新碩化工",
@@ -814,7 +818,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "宜春企業(宜春新廠)",
@@ -830,7 +834,7 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       },
       {
         "factoryName": "芳德五期",
@@ -846,34 +850,34 @@
           "裝置斷訊": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-09-16 07:00:00"
+        "latestTime": "2026-09-16 07:30:00"
       }
     ],
     "countyDistribution": [
       {
         "county": "台南市",
-        "count": 63,
-        "percentage": 39.4
+        "count": 65,
+        "percentage": 39.6
       },
       {
         "county": "高雄市",
-        "count": 53,
-        "percentage": 33.1
+        "count": 55,
+        "percentage": 33.5
       },
       {
         "county": "雲林縣",
         "count": 27,
-        "percentage": 16.9
+        "percentage": 16.5
       },
       {
         "county": "台中市",
         "count": 7,
-        "percentage": 4.4
+        "percentage": 4.3
       },
       {
         "county": "嘉義縣",
         "count": 5,
-        "percentage": 3.1
+        "percentage": 3.0
       },
       {
         "county": "台北市",
@@ -900,47 +904,47 @@
       {
         "maintainer": "維運一課",
         "count": 59,
-        "percentage": 36.9
+        "percentage": 36.0
       },
       {
         "maintainer": "羅健國",
         "count": 27,
-        "percentage": 16.9
+        "percentage": 16.5
       },
       {
         "maintainer": "NA",
-        "count": 19,
-        "percentage": 11.9
+        "count": 21,
+        "percentage": 12.8
       },
       {
         "maintainer": "-",
-        "count": 17,
-        "percentage": 10.6
+        "count": 19,
+        "percentage": 11.6
       },
       {
         "maintainer": "李孟家",
         "count": 11,
-        "percentage": 6.9
+        "percentage": 6.7
       },
       {
         "maintainer": "汪順發",
         "count": 5,
-        "percentage": 3.1
+        "percentage": 3.0
       },
       {
         "maintainer": "姜興中",
         "count": 4,
-        "percentage": 2.5
+        "percentage": 2.4
       },
       {
         "maintainer": "郭文奇",
         "count": 4,
-        "percentage": 2.5
+        "percentage": 2.4
       },
       {
         "maintainer": "王永晴",
         "count": 4,
-        "percentage": 2.5
+        "percentage": 2.4
       },
       {
         "maintainer": "李昀璁",
@@ -1155,14 +1159,14 @@
       "which": "Inv06",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 6,
-          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1176,14 +1180,14 @@
       "which": "Inv05",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 5,
-          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1197,14 +1201,14 @@
       "which": "Inv10",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 10,
-          "desc": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1218,14 +1222,14 @@
       "which": "Inv14",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 14,
-          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1239,14 +1243,14 @@
       "which": "Inv08",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 8,
-          "desc": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1275,20 +1279,41 @@
       ]
     },
     {
+      "factoryName": "彩邦界(仁德廠)",
+      "county": "台南市",
+      "maintainer": "-",
+      "which": "系統斷線",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "orange",
+      "time": "2026-09-16 07:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": null,
+          "desc": "彩邦界(仁德廠)的整場無有效發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
+          "errMsg": "彩邦界(仁德廠)的整場無有效發電",
+          "level": 2,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "恒美",
       "county": "台南市",
       "maintainer": "維運一課",
       "which": "Inv07",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 7,
-          "desc": "恒美第7台逆變器(SN碼: 施奈德TL20)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "恒美第7台逆變器(SN碼: 施奈德TL20)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "恒美第7台逆變器(SN碼: 施奈德TL20)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1302,14 +1327,14 @@
       "which": "Inv14",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 14,
-          "desc": "新大第14台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "新大第14台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "新大第14台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1323,14 +1348,14 @@
       "which": "Inv12",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 12,
-          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1344,14 +1369,14 @@
       "which": "Inv15",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 15,
-          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1365,14 +1390,14 @@
       "which": "Inv21",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 21,
-          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1386,17 +1411,38 @@
       "which": "Inv02",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 2,
-          "desc": "東和四期第2台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東和四期第2台逆變器(SN碼: N/A)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東和四期第2台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "東哥二期",
+      "county": "高雄市",
+      "maintainer": "NA",
+      "which": "系統斷線",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "orange",
+      "time": "2026-09-16 07:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": null,
+          "desc": "東哥二期的整場無有效發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
+          "errMsg": "東哥二期的整場無有效發電",
+          "level": 2,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -1407,14 +1453,14 @@
       "which": "Inv01",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 1,
-          "desc": "海創中心第1台逆變器(SN碼: 32.55kWp)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "海創中心第1台逆變器(SN碼: 32.55kWp)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "海創中心第1台逆變器(SN碼: 32.55kWp)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1428,14 +1474,14 @@
       "which": "Inv02",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 2,
-          "desc": "海創中心第2台逆變器(SN碼: 25.62kWp)變流器未發電，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "海創中心第2台逆變器(SN碼: 25.62kWp)變流器未發電，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "海創中心第2台逆變器(SN碼: 25.62kWp)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -1491,14 +1537,14 @@
       "which": "Inv06",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 6,
-          "desc": "BM7倉庫&BM10倉庫(一期) 第6台Inverter(SN碼: 69.09KWp)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "BM7倉庫&BM10倉庫(一期) 第6台Inverter(SN碼: 69.09KWp)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "BM7倉庫&BM10倉庫(一期)_inv6_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1512,14 +1558,14 @@
       "which": "Inv14",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 14,
-          "desc": "FCS4期 第14台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "FCS4期 第14台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "FCS4期_inv14_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1533,14 +1579,14 @@
       "which": "ProtectionRelay01",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "ProtectionRelay01",
-          "desc": "FCS6期 裝置ProtectionRelay01斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "FCS6期 裝置ProtectionRelay01斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "FCS6期_deviceProtectionRelay01",
           "level": 3,
           "colorLabel": "red"
@@ -1554,14 +1600,14 @@
       "which": "Shihlin SPM3",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Shihlin SPM3",
-          "desc": "FCS6期 裝置Shihlin SPM3斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "FCS6期 裝置Shihlin SPM3斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "FCS6期_deviceShihlin SPM3",
           "level": 3,
           "colorLabel": "red"
@@ -1575,14 +1621,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "仁美商標 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "仁美商標 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "仁美商標_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -1596,14 +1642,14 @@
       "which": "LV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "LV_Meter",
-          "desc": "仁美商標 裝置LV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "仁美商標 裝置LV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "仁美商標_deviceLV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -1659,14 +1705,14 @@
       "which": "Multimeters01",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Multimeters01",
-          "desc": "台南機場 裝置Multimeters01斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "台南機場 裝置Multimeters01斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "台南機場_deviceMultimeters01",
           "level": 3,
           "colorLabel": "red"
@@ -1680,14 +1726,14 @@
       "which": "Multimeters02",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Multimeters02",
-          "desc": "台南機場 裝置Multimeters02斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "台南機場 裝置Multimeters02斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "台南機場_deviceMultimeters02",
           "level": 3,
           "colorLabel": "red"
@@ -1701,14 +1747,14 @@
       "which": "Multimeters03",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Multimeters03",
-          "desc": "台南機場 裝置Multimeters03斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "台南機場 裝置Multimeters03斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "台南機場_deviceMultimeters03",
           "level": 3,
           "colorLabel": "red"
@@ -1722,14 +1768,14 @@
       "which": "Multimeters04",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Multimeters04",
-          "desc": "台南機場 裝置Multimeters04斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "台南機場 裝置Multimeters04斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "台南機場_deviceMultimeters04",
           "level": 3,
           "colorLabel": "red"
@@ -1743,14 +1789,14 @@
       "which": "Inv02",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 06:30:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T06:30:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 2,
-          "desc": "台南機場 第2台Inverter(SN碼: A2-16.64kWp亞力TOUGH)斷訊，時間: 2026-09-16 06:00 到 2026-09-16 06:30，錯誤訊息: inv",
+          "desc": "台南機場 第2台Inverter(SN碼: A2-16.64kWp亞力TOUGH)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv2_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1764,14 +1810,14 @@
       "which": "Inv03",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 3,
-          "desc": "台南機場 第3台Inverter(SN碼: B1-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "台南機場 第3台Inverter(SN碼: B1-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv3_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1785,14 +1831,14 @@
       "which": "Inv04",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 4,
-          "desc": "台南機場 第4台Inverter(SN碼: B2-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "台南機場 第4台Inverter(SN碼: B2-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv4_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1806,14 +1852,14 @@
       "which": "Inv05",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 5,
-          "desc": "台南機場 第5台Inverter(SN碼: B3-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "台南機場 第5台Inverter(SN碼: B3-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv5_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1827,14 +1873,14 @@
       "which": "Inv06",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 6,
-          "desc": "台南機場 第6台Inverter(SN碼: B4-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "台南機場 第6台Inverter(SN碼: B4-21.32kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv6_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1848,14 +1894,14 @@
       "which": "Inv07",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 7,
-          "desc": "台南機場 第7台Inverter(SN碼: B5-16.12kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "台南機場 第7台Inverter(SN碼: B5-16.12kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv7_inv",
           "level": 3,
           "colorLabel": "red"
@@ -1869,14 +1915,14 @@
       "which": "Inv08",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 8,
-          "desc": "台南機場 第8台Inverter(SN碼: B6-16.12kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "台南機場 第8台Inverter(SN碼: B6-16.12kWp施奈德 TL20000E)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv8_inv",
           "level": 3,
           "colorLabel": "red"
@@ -2037,14 +2083,14 @@
       "which": "Inv16",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 16,
-          "desc": "台南機場 第16台Inverter(SN碼: F3-17.42kWp亞力Plus)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "台南機場 第16台Inverter(SN碼: F3-17.42kWp亞力Plus)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "台南機場_inv16_inv",
           "level": 3,
           "colorLabel": "red"
@@ -2058,14 +2104,14 @@
       "which": "ADAM-4117",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "ADAM-4117",
-          "desc": "嘉惠 裝置ADAM-4117斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "嘉惠 裝置ADAM-4117斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "嘉惠_deviceADAM-4117",
           "level": 3,
           "colorLabel": "red"
@@ -2121,14 +2167,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "大南方資源再生 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "大南方資源再生 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "大南方資源再生_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -2163,14 +2209,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "奇景總部停車場 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "奇景總部停車場 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "奇景總部停車場_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -2184,14 +2230,14 @@
       "which": "ENVtemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "ENVtemp",
-          "desc": "奇樺科技 裝置ENVtemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "奇樺科技 裝置ENVtemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "奇樺科技_deviceENVtemp",
           "level": 3,
           "colorLabel": "red"
@@ -2205,14 +2251,14 @@
       "which": "PVTemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "PVTemp",
-          "desc": "安南賴候淑貞 裝置PVTemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "安南賴候淑貞 裝置PVTemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "安南賴候淑貞_devicePVTemp",
           "level": 3,
           "colorLabel": "red"
@@ -2247,14 +2293,14 @@
       "which": "LV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "LV_Meter",
-          "desc": "宜春企業(宜春新廠) 裝置LV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "宜春企業(宜春新廠) 裝置LV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "宜春企業(宜春新廠)_deviceLV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -2760,14 +2806,14 @@
       "which": "Inv14",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 14,
-          "desc": "新大 第14台Inverter(SN碼: 22.88kW 已報價換監控系統)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "新大 第14台Inverter(SN碼: 22.88kW 已報價換監控系統)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "新大_inv14_inv",
           "level": 3,
           "colorLabel": "red"
@@ -2865,14 +2911,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "新碩化工 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "新碩化工 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "新碩化工_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -2949,14 +2995,14 @@
       "which": "Inv12",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 12,
-          "desc": "新陽 第12台Inverter(SN碼: 22.88kW 已報價換監控系統)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "新陽 第12台Inverter(SN碼: 22.88kW 已報價換監控系統)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "新陽_inv12_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3012,14 +3058,14 @@
       "which": "Inv15",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 15,
-          "desc": "新陽 第15台Inverter(SN碼: 22.88kW)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "新陽 第15台Inverter(SN碼: 22.88kW)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "新陽_inv15_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3054,14 +3100,14 @@
       "which": "Inv21",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 21,
-          "desc": "新陽 第21台Inverter(SN碼: 20.8kW)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "新陽 第21台Inverter(SN碼: 20.8kW)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "新陽_inv21_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3096,14 +3142,14 @@
       "which": "ENVtemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "ENVtemp",
-          "desc": "東和一期 裝置ENVtemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東和一期 裝置ENVtemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東和一期_deviceENVtemp",
           "level": 3,
           "colorLabel": "red"
@@ -3117,14 +3163,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "東和一期 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東和一期 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東和一期_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3138,14 +3184,14 @@
       "which": "Inv01",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 1,
-          "desc": "東和一期 第1台日照計斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東和一期 第1台日照計斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東和一期_irr1",
           "level": 3,
           "colorLabel": "red"
@@ -3159,14 +3205,14 @@
       "which": "LV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "LV_Meter",
-          "desc": "東和一期 裝置LV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東和一期 裝置LV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東和一期_deviceLV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3180,14 +3226,14 @@
       "which": "PVTemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "PVTemp",
-          "desc": "東和一期 裝置PVTemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東和一期 裝置PVTemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東和一期_devicePVTemp",
           "level": 3,
           "colorLabel": "red"
@@ -3201,14 +3247,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "東和家樂福 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東和家樂福 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東和家樂福_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3222,14 +3268,14 @@
       "which": "ENVtemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "ENVtemp",
-          "desc": "東哥二期 裝置ENVtemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東哥二期 裝置ENVtemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東哥二期_deviceENVtemp",
           "level": 3,
           "colorLabel": "red"
@@ -3243,14 +3289,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "東哥二期 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東哥二期 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東哥二期_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3264,23 +3310,23 @@
       "which": "Inv01",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 1,
-          "desc": "東哥二期 第1台日照計斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東哥二期 第1台日照計斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東哥二期_irr1",
           "level": 3,
           "colorLabel": "red"
         },
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 1,
-          "desc": "東哥二期 第1台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第1台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv1_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3294,14 +3340,14 @@
       "which": "PVTemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "PVTemp",
-          "desc": "東哥二期 裝置PVTemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "東哥二期 裝置PVTemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "東哥二期_devicePVTemp",
           "level": 3,
           "colorLabel": "red"
@@ -3315,14 +3361,14 @@
       "which": "Inv02",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 2,
-          "desc": "東哥二期 第2台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第2台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv2_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3336,14 +3382,14 @@
       "which": "Inv03",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 3,
-          "desc": "東哥二期 第3台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第3台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv3_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3357,14 +3403,14 @@
       "which": "Inv04",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 4,
-          "desc": "東哥二期 第4台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第4台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv4_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3378,14 +3424,14 @@
       "which": "Inv05",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 5,
-          "desc": "東哥二期 第5台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第5台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv5_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3399,14 +3445,14 @@
       "which": "Inv06",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 6,
-          "desc": "東哥二期 第6台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第6台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv6_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3420,14 +3466,14 @@
       "which": "Inv07",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 7,
-          "desc": "東哥二期 第7台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第7台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv7_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3441,14 +3487,14 @@
       "which": "Inv08",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 8,
-          "desc": "東哥二期 第8台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第8台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv8_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3462,14 +3508,14 @@
       "which": "Inv09",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 9,
-          "desc": "東哥二期 第9台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第9台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv9_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3483,14 +3529,14 @@
       "which": "Inv10",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 10,
-          "desc": "東哥二期 第10台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第10台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv10_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3504,14 +3550,14 @@
       "which": "Inv11",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 11,
-          "desc": "東哥二期 第11台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第11台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv11_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3525,14 +3571,14 @@
       "which": "Inv12",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 12,
-          "desc": "東哥二期 第12台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第12台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv12_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3546,14 +3592,14 @@
       "which": "Inv13",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 13,
-          "desc": "東哥二期 第13台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第13台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv13_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3567,14 +3613,14 @@
       "which": "Inv14",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 14,
-          "desc": "東哥二期 第14台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第14台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv14_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3588,14 +3634,14 @@
       "which": "Inv15",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 15,
-          "desc": "東哥二期 第15台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第15台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv15_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3609,14 +3655,14 @@
       "which": "Inv16",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 16,
-          "desc": "東哥二期 第16台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "東哥二期 第16台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "東哥二期_inv16_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3630,14 +3676,14 @@
       "which": "Anemometer",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Anemometer",
-          "desc": "楠梓污水廠三期 裝置Anemometer斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "楠梓污水廠三期 裝置Anemometer斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "楠梓污水廠三期_deviceAnemometer",
           "level": 3,
           "colorLabel": "red"
@@ -3651,14 +3697,14 @@
       "which": "Inv01",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 1,
-          "desc": "正鶴 第1台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: inv",
+          "desc": "正鶴 第1台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: inv",
           "errMsg": "正鶴_inv1_inv",
           "level": 3,
           "colorLabel": "red"
@@ -3672,14 +3718,14 @@
       "which": "LV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "LV_Meter",
-          "desc": "特力家居高雄館 裝置LV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "特力家居高雄館 裝置LV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "特力家居高雄館_deviceLV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3693,14 +3739,14 @@
       "which": "Inv01",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": 1,
-          "desc": "益網-路竹三爺埤第三型 第1台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00，錯誤訊息: LV_meter",
+          "desc": "益網-路竹三爺埤第三型 第1台Inverter(SN碼: N/A)斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30，錯誤訊息: LV_meter",
           "errMsg": "益網-路竹三爺埤第三型_inv1_LV_meter",
           "level": 3,
           "colorLabel": "red"
@@ -3819,14 +3865,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "芳德五期 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "芳德五期 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "芳德五期_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3840,14 +3886,14 @@
       "which": "LV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "LV_Meter",
-          "desc": "芳生螺絲 裝置LV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "芳生螺絲 裝置LV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "芳生螺絲_deviceLV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3861,14 +3907,14 @@
       "which": "PVTemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "PVTemp",
-          "desc": "路竹王祈仁 裝置PVTemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "路竹王祈仁 裝置PVTemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "路竹王祈仁_devicePVTemp",
           "level": 3,
           "colorLabel": "red"
@@ -3882,14 +3928,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "雲豹-路竹三爺埤第一型 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "雲豹-路竹三爺埤第一型 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "雲豹-路竹三爺埤第一型_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3903,14 +3949,14 @@
       "which": "HV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "HV_Meter",
-          "desc": "雲豹-路竹三爺埤第三型 裝置HV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "雲豹-路竹三爺埤第三型 裝置HV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "雲豹-路竹三爺埤第三型_deviceHV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -3924,14 +3970,14 @@
       "which": "Waterlevel",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Waterlevel",
-          "desc": "雲豹-路竹三爺埤第三型 裝置Waterlevel斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "雲豹-路竹三爺埤第三型 裝置Waterlevel斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "雲豹-路竹三爺埤第三型_deviceWaterlevel",
           "level": 3,
           "colorLabel": "red"
@@ -4197,14 +4243,14 @@
       "which": "ENVtemp",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "ENVtemp",
-          "desc": "鳳山圳滯洪池 裝置ENVtemp斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "鳳山圳滯洪池 裝置ENVtemp斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "鳳山圳滯洪池_deviceENVtemp",
           "level": 3,
           "colorLabel": "red"
@@ -4218,14 +4264,14 @@
       "which": "LV_Meter",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "LV_Meter",
-          "desc": "鳳山圳滯洪池 裝置LV_Meter斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "鳳山圳滯洪池 裝置LV_Meter斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "鳳山圳滯洪池_deviceLV_Meter",
           "level": 3,
           "colorLabel": "red"
@@ -4239,14 +4285,14 @@
       "which": "Waterlevel",
       "lastAlarmType": "裝置斷訊",
       "lastColorLabel": "red",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "裝置斷訊",
           "inv": "Waterlevel",
-          "desc": "鳳山圳滯洪池 裝置Waterlevel斷訊，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "鳳山圳滯洪池 裝置Waterlevel斷訊，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "鳳山圳滯洪池_deviceWaterlevel",
           "level": 3,
           "colorLabel": "red"
@@ -4260,14 +4306,14 @@
       "which": "系統斷線",
       "lastAlarmType": "部份通訊異常",
       "lastColorLabel": "orange",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "部份通訊異常",
           "inv": null,
-          "desc": "仁美商標的環境溫度大於60度C，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "仁美商標的環境溫度大於60度C，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "仁美商標的環境溫度大於60度C",
           "level": 3,
           "colorLabel": "orange"
@@ -4281,24 +4327,45 @@
       "which": "系統斷線",
       "lastAlarmType": "部份通訊異常",
       "lastColorLabel": "orange",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "部份通訊異常",
           "inv": null,
-          "desc": "彩邦界(仁德廠)的模組溫度大於80度C，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "彩邦界(仁德廠)的模組溫度大於80度C，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "彩邦界(仁德廠)的模組溫度大於80度C",
           "level": 3,
           "colorLabel": "orange"
         },
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "部份通訊異常",
           "inv": null,
-          "desc": "彩邦界(仁德廠)的環境溫度大於60度C，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "彩邦界(仁德廠)的環境溫度大於60度C，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "彩邦界(仁德廠)的環境溫度大於60度C",
+          "level": 3,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "彩邦界(仁德廠)",
+      "county": "台南市",
+      "maintainer": "-",
+      "which": "Inv01",
+      "lastAlarmType": "部份通訊異常",
+      "lastColorLabel": "orange",
+      "time": "2026-09-16 07:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
+          "alarmType": "部份通訊異常",
+          "inv": 1,
+          "desc": "彩邦界(仁德廠)第1台日照計數值為0，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
+          "errMsg": "彩邦界(仁德廠)第1台日照計數值為0",
           "level": 3,
           "colorLabel": "orange"
         }
@@ -4311,15 +4378,36 @@
       "which": "系統斷線",
       "lastAlarmType": "部份通訊異常",
       "lastColorLabel": "orange",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "部份通訊異常",
           "inv": null,
-          "desc": "新陽的模組溫度大於80度C，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "新陽的模組溫度大於80度C，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "新陽的模組溫度大於80度C",
+          "level": 3,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東哥二期",
+      "county": "高雄市",
+      "maintainer": "NA",
+      "which": "Inv01",
+      "lastAlarmType": "部份通訊異常",
+      "lastColorLabel": "orange",
+      "time": "2026-09-16 07:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
+          "alarmType": "部份通訊異常",
+          "inv": 1,
+          "desc": "東哥二期第1台日照計數值為0，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
+          "errMsg": "東哥二期第1台日照計數值為0",
           "level": 3,
           "colorLabel": "orange"
         }
@@ -4332,14 +4420,14 @@
       "which": "系統斷線",
       "lastAlarmType": "部份通訊異常",
       "lastColorLabel": "orange",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "部份通訊異常",
           "inv": null,
-          "desc": "高振一期的環境溫度大於60度C，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "高振一期的環境溫度大於60度C，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "高振一期的環境溫度大於60度C",
           "level": 3,
           "colorLabel": "orange"
@@ -4353,14 +4441,14 @@
       "which": "系統斷線",
       "lastAlarmType": "部份通訊異常",
       "lastColorLabel": "orange",
-      "time": "2026-09-16 07:00:00",
+      "time": "2026-09-16 07:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-09-16T07:00:00.000+08:00",
+          "timestamp": "2026-09-16T07:30:00.000+08:00",
           "alarmType": "部份通訊異常",
           "inv": null,
-          "desc": "高振二期的環境溫度大於60度C，時間: 2026-09-16 06:30 到 2026-09-16 07:00",
+          "desc": "高振二期的環境溫度大於60度C，時間: 2026-09-16 07:00 到 2026-09-16 07:30",
           "errMsg": "高振二期的環境溫度大於60度C",
           "level": 3,
           "colorLabel": "orange"
