@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
@@ -367,7 +367,7 @@
     // 初始化渲染 S1 / S5
     function initPlatform() {
       // S5 資料填入
-      const cloudAlarms = window.ALARMS_LATEST?.rawEvents || [];
+      const cloudAlarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
       document.getElementById('s5-cloud-count').innerText = cloudAlarms.length;
       
       const lineReports = OVERVIEW_DATA?.total_daily_ops || 0;
@@ -377,16 +377,16 @@
       const topSitesBody = document.querySelector('#s5-top-sites-table tbody');
       if (topSitesBody && OVERVIEW_DATA?.site_risk_ranking) {
         OVERVIEW_DATA.site_risk_ranking.slice(0,5).forEach(site => {
-           topSitesBody.innerHTML += 
+           topSitesBody.innerHTML += `
              <tr class="border-b border-slate-100 hover:bg-slate-50">
-               <td class="p-2 font-bold text-slate-800"></td>
-               <td class="p-2 text-xs text-slate-600"></td>
-               <td class="p-2 text-sm text-slate-700 font-mono"></td>
+               <td class="p-2 font-bold text-slate-800">${site.site_name}</td>
+               <td class="p-2 text-xs text-slate-600">${getSiteInfo(site.site_name).equipType}</td>
+               <td class="p-2 text-sm text-slate-700 font-mono">${site.ops_count + site.cust_count}</td>
                <td class="p-2">
                  <span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] font-bold rounded">P0 高風險</span>
                </td>
              </tr>
-           ;
+           `;
         });
       }
 
@@ -409,36 +409,53 @@
       // S1 雲端告警渲染
       const cloudList = document.getElementById('s1-cloud-list');
       document.getElementById('s1-cloud-badge').innerText = cloudAlarms.length;
-      cloudAlarms.slice(0, 50).forEach(alarm => {
-         const site = getSiteInfo(alarm.SiteName);
-         cloudList.innerHTML += 
-           <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-blue-300 hover:shadow-md transition cursor-pointer" onclick='processAI("", "雲端監控系統: ", "設備通訊異常")'>
+      cloudAlarms.slice(0, 50).forEach((alarm, index) => {
+         const siteName = alarm.factoryName || "未知案場";
+         const alarmContext = alarm.lastAlarmType || "未知異常";
+         const triggerTime = alarm.time || "";
+         const desc = alarm.allAlarms && alarm.allAlarms.length > 0 ? alarm.allAlarms[0].desc : alarmContext;
+
+         cloudList.innerHTML += `
+           <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-blue-300 hover:shadow-md transition cursor-pointer" onclick="processCloudAI(${index})">
              <div class="flex justify-between mb-1">
-               <span class="font-bold text-sm text-slate-800"></span>
-               <span class="text-[10px] text-slate-400 font-mono"></span>
+               <span class="font-bold text-sm text-slate-800">${siteName}</span>
+               <span class="text-[10px] text-slate-400 font-mono">${triggerTime}</span>
              </div>
-             <p class="text-xs text-slate-600 line-clamp-2"></p>
+             <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${alarmContext}</div>
+             <p class="text-xs text-slate-600 line-clamp-2">${desc}</p>
            </div>
-         ;
+         `;
       });
 
       // S1 LINE@ 告警渲染 (來自 kingsun_data.js)
       const lineList = document.getElementById('s1-line-list');
       document.getElementById('s1-line-badge').innerText = DAILY_OPS_DATA.length;
-      DAILY_OPS_DATA.slice(0, 50).forEach(ops => {
-         const site = getSiteInfo(ops.site_name);
-         lineList.innerHTML += 
-           <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-green-300 hover:shadow-md transition cursor-pointer" onclick='processAI("", "LINE@回報 (): ", "")'>
+      DAILY_OPS_DATA.slice(0, 50).forEach((ops, index) => {
+         lineList.innerHTML += `
+           <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-green-300 hover:shadow-md transition cursor-pointer" onclick="processLineAI(${index})">
              <div class="flex justify-between mb-1">
-               <span class="font-bold text-sm text-slate-800 flex items-center gap-1"><i data-lucide="smartphone" class="w-3 h-3 text-green-500"></i> </span>
-               <span class="text-[10px] text-slate-400 font-mono"></span>
+               <span class="font-bold text-sm text-slate-800 flex items-center gap-1"><i data-lucide="smartphone" class="w-3 h-3 text-green-500"></i> ${ops.site_name}</span>
+               <span class="text-[10px] text-slate-400 font-mono">${ops.date}</span>
              </div>
-             <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1"></div>
-             <p class="text-xs text-slate-600 line-clamp-2"></p>
+             <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${ops.issue_type}</div>
+             <p class="text-xs text-slate-600 line-clamp-2">${ops.content}</p>
            </div>
-         ;
+         `;
       });
       lucide.createIcons();
+    }
+
+    function processCloudAI(index) {
+       const alarm = window.LATEST_ALARM_DATA.rebuildAlarms[index];
+       const siteName = alarm.factoryName || "未知案場";
+       const alarmContext = alarm.lastAlarmType || "未知異常";
+       const desc = alarm.allAlarms && alarm.allAlarms.length > 0 ? alarm.allAlarms[0].desc : alarmContext;
+       processAI(siteName, "雲端監控系統: " + desc, alarmContext);
+    }
+
+    function processLineAI(index) {
+       const ops = DAILY_OPS_DATA[index];
+       processAI(ops.site_name, "LINE@回報 (" + ops.reporter + "): " + ops.content, ops.issue_type);
     }
 
     // S2 AI 分析處理邏輯
