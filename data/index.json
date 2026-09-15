@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-09-16_07-00",
+    "updatedAt": "2026-09-16 07:10:25",
+    "totalSitesWithAlarms": 43,
+    "totalDistinctIssues": 160,
+    "totalRawAlarms": 163,
+    "severityCounts": {
+      "red": 155,
+      "orange": 5,
+      "white": 0
+    },
+    "topAlarmType": "裝置斷訊",
+    "topSite": "東哥二期",
+    "filename": "snapshots/2026-09-16_07-00.json"
+  },
+  {
     "snapshotId": "2026-09-15_21-00",
     "updatedAt": "2026-09-15 21:05:44",
     "totalSitesWithAlarms": 80,
