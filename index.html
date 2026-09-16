@@ -59,6 +59,10 @@
     </nav>
 
     <div class="meta-area">
+      <button onclick="openUploadModal()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
+        <i data-lucide="upload-cloud" class="w-4 h-4"></i>
+        <span>上傳每日處置</span>
+      </button>
       <span class="px-2 py-1 text-xs font-bold rounded bg-blue-900 text-blue-200 border border-blue-700">自動同步運行中</span>
       <span class="px-2 py-1 text-xs font-bold rounded bg-green-900 text-green-200 border border-green-700"><i class="fas fa-user mr-1"></i> 工程師視角</span>
     </div>
@@ -95,6 +99,38 @@
         <div class="text-xs font-bold text-slate-500 mb-1">本月 PDCA 修繕改善率</div>
         <div class="text-3xl font-black text-slate-800">92.4%</div>
         <div class="text-xs text-purple-500 mt-2 font-medium">相較上月提升 4.1%</div>
+      </div>
+    </div>
+
+        <!-- 上傳每日處置與資料匯入橫幅 -->
+    <div class="bg-gradient-to-r from-slate-900 via-emerald-950 to-teal-950 border border-emerald-500/30 rounded-xl p-4 mb-6 shadow-sm flex flex-wrap justify-between items-center gap-4 text-white">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
+          <i data-lucide="file-up" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-sm text-white">工程師每日處置通報匯入中心</h3>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              支援 LINE 對話 .txt / CSV / JSON
+            </span>
+          </div>
+          <p class="text-xs text-slate-300 mt-0.5">
+            目前已同步資料庫：<b class="text-emerald-400 font-mono" id="current-ops-count-label">2,483 筆</b>機況處置。可隨時上傳最新 [LINE]每日機況報這裡.txt 更新戰情。
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input type="file" id="opsFileInput" accept=".txt,.csv,.json" style="display:none;" onchange="handleOpsFileInput(event)">
+        <button onclick="document.getElementById('opsFileInput').click()" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow transition flex items-center gap-1.5 cursor-pointer">
+          <i data-lucide="folder-open" class="w-4 h-4"></i>
+          <span>選擇檔案上傳</span>
+        </button>
+        <button onclick="openUploadModal()" class="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition flex items-center gap-1.5 cursor-pointer">
+          <i data-lucide="clipboard-paste" class="w-4 h-4"></i>
+          <span>文字貼上 / 拖曳解析</span>
+        </button>
       </div>
     </div>
 
@@ -344,7 +380,76 @@
     </div>
   </div>
 
-  <script src="data/data.js"></script>
+  
+  <!-- 上傳每日處置 Modal -->
+  <div id="uploadOpsModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex justify-center items-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto space-y-4">
+      <div class="flex justify-between items-start border-b border-slate-100 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <i data-lucide="upload-cloud" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base text-slate-900">上傳工程師每日處置資料 (LINE 機況報)</h3>
+            <p class="text-xs text-slate-500">支援上傳或貼上 LINE 群組匯出之「[LINE]每日機況報這裡.txt」</p>
+          </div>
+        </div>
+        <button onclick="closeUploadModal()" class="p-1 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- 上傳區塊 1: 拖曳上傳 -->
+      <div id="dropZone" class="border-2 border-dashed border-emerald-300 hover:border-emerald-500 bg-emerald-50/40 hover:bg-emerald-50/70 rounded-xl p-6 text-center cursor-pointer transition" onclick="document.getElementById('modalFileInput').click()">
+        <input type="file" id="modalFileInput" accept=".txt,.csv,.json" style="display:none;" onchange="handleModalFileInput(event)">
+        <i data-lucide="file-text" class="w-10 h-10 mx-auto mb-2 text-emerald-600"></i>
+        <div class="font-bold text-sm text-slate-800">點擊選擇檔案 或 拖曳檔案至此</div>
+        <div class="text-xs text-slate-500 mt-1">支援格式：.txt (LINE 對話導出檔)、.csv、.json</div>
+        <div class="text-[11px] text-emerald-700 font-mono mt-2 bg-emerald-100/70 py-1 px-3 rounded-full inline-block">
+          預設檔案：[LINE]每日機況報這裡.txt
+        </div>
+      </div>
+
+      <!-- 上傳區塊 2: 直接貼上文字 -->
+      <div>
+        <div class="flex justify-between items-center mb-1.5">
+          <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+            <i data-lucide="edit-3" class="w-3.5 h-3.5 text-blue-600"></i> 或直接貼上 LINE 對話訊息：
+          </label>
+          <button onclick="loadDefaultLineFileSample()" class="text-xs text-emerald-600 hover:text-emerald-700 font-bold hover:underline">
+            ⚡ 載入預設 [LINE]每日機況報這裡.txt 範例內容
+          </button>
+        </div>
+        <textarea id="rawLineTextInput" oninput="handleRawTextInputChange()" class="w-full border border-slate-200 rounded-xl p-3 text-xs font-mono h-32 focus:ring-2 focus:ring-emerald-500 outline-none resize-none bg-slate-50" placeholder="例如：&#10;2026.04.07 星期二&#10;08:48 white(HsingChung) 台南： 安德順 4/5斷線(MOXA異常)&#10;08:59 Bryant Chen 高辦&#10;禾豐 監控斷線..."></textarea>
+      </div>
+
+      <!-- 解析即時反饋區 (預覽) -->
+      <div id="parsePreviewArea" class="hidden bg-slate-900 text-white p-4 rounded-xl space-y-2 text-xs font-mono">
+        <div class="flex justify-between items-center text-emerald-400 font-bold">
+          <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> 解析結果預覽</span>
+          <span id="previewCountBadge" class="bg-emerald-500/20 px-2 py-0.5 rounded text-[11px]">0 筆</span>
+        </div>
+        <div class="grid grid-cols-4 gap-2 text-[11px] text-slate-300 py-1 border-y border-slate-800">
+          <div>桃辦: <b id="prevRegTao" class="text-white">0</b></div>
+          <div>彰辦: <b id="prevRegZhang" class="text-white">0</b></div>
+          <div>台南: <b id="prevRegTainan" class="text-white">0</b></div>
+          <div>高辦: <b id="prevRegGao" class="text-white">0</b></div>
+        </div>
+        <div class="text-[11px] text-slate-400 truncate">第一筆範例：<span id="prevSample" class="text-slate-200"></span></div>
+      </div>
+
+      <div class="flex justify-end gap-2 pt-2 border-t border-slate-100">
+        <button onclick="closeUploadModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition">
+          關閉
+        </button>
+        <button onclick="confirmSyncLineOps()" id="btnConfirmSync" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-extrabold rounded-lg shadow-md transition flex items-center gap-1.5">
+          <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+          <span>確認同步至戰情系統</span>
+        </button>
+      </div>
+    </div>
+  </div>
+<script src="data/data.js"></script>
   <script src="data/kingsun_data.js"></script>
   <script src="data/site_db.js"></script>
   <script>
@@ -367,30 +472,57 @@
     // 暫存目前的派工資料
     let currentAIContext = null;
     let myWorkOrders = [];
+    let parsedTempRecords = [];
 
     // 初始化渲染 S1 / S5
     function initPlatform() {
+      // 檢查是否有本機自訂快取的上傳資料
+      const cached = localStorage.getItem('KINGSUN_DAILY_OPS_CUSTOM');
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            window.DAILY_OPS_DATA = parsed;
+          }
+        } catch(e) {
+          console.warn('Failed to parse cached ops data:', e);
+        }
+      }
+
+      const opsData = (typeof window.DAILY_OPS_DATA !== 'undefined') ? window.DAILY_OPS_DATA : ((typeof DAILY_OPS_DATA !== 'undefined') ? DAILY_OPS_DATA : []);
+      
+      // 更新標籤上的總筆數
+      const opsLabel = document.getElementById('current-ops-count-label');
+      if (opsLabel) opsLabel.innerText = opsData.length.toLocaleString() + ' 筆';
+
       // S5 資料填入
       const cloudAlarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
       const cloudCountEl = document.getElementById('s5-cloud-count');
       if (cloudCountEl) cloudCountEl.innerText = cloudAlarms.length;
       
-      const lineReports = (typeof OVERVIEW_DATA !== 'undefined' ? OVERVIEW_DATA.total_daily_ops : 0) || 0;
       const custVoices = (typeof OVERVIEW_DATA !== 'undefined' ? OVERVIEW_DATA.total_customer_voices : 0) || 0;
       const lineCountEl = document.getElementById('s5-line-count');
-      if (lineCountEl) lineCountEl.innerText = lineReports + custVoices;
+      if (lineCountEl) lineCountEl.innerText = opsData.length + custVoices;
       
-      // S5 案場排行表格
+      // S5 案場排行表格 (根據即時 opsData 重算)
+      const siteCounts = {};
+      opsData.forEach(r => {
+        const s = r.site_name || '其他';
+        siteCounts[s] = (siteCounts[s] || 0) + 1;
+      });
+      const sortedSites = Object.keys(siteCounts).sort((a,b) => siteCounts[b] - siteCounts[a]).slice(0, 5);
+
       const topSitesBody = document.querySelector('#s5-top-sites-table tbody');
-      if (topSitesBody && typeof OVERVIEW_DATA !== 'undefined' && OVERVIEW_DATA.site_risk_ranking) {
+      if (topSitesBody) {
         topSitesBody.innerHTML = '';
-        OVERVIEW_DATA.site_risk_ranking.slice(0, 5).forEach(site => {
-           const info = typeof getSiteInfo === 'function' ? getSiteInfo(site.site_name) : { equipType: '未知' };
+        sortedSites.forEach(siteName => {
+           const info = typeof getSiteInfo === 'function' ? getSiteInfo(siteName) : { equipType: '未知' };
+           const count = siteCounts[siteName];
            topSitesBody.innerHTML += `
              <tr class="border-b border-slate-100 hover:bg-slate-50">
-               <td class="p-2 font-bold text-slate-800">${site.site_name}</td>
+               <td class="p-2 font-bold text-slate-800">${siteName}</td>
                <td class="p-2 text-xs text-slate-600">${info.equipType || '常規變流器'}</td>
-               <td class="p-2 text-sm text-slate-700 font-mono">${site.ops_count + site.cust_count}</td>
+               <td class="p-2 text-sm text-slate-700 font-mono">${count}</td>
                <td class="p-2">
                  <span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] font-bold rounded">P0 高風險</span>
                </td>
@@ -440,10 +572,9 @@
         });
       }
 
-      // S1 LINE@ 告警渲染 (來自 kingsun_data.js)
+      // S1 LINE@ 告警渲染
       const lineList = document.getElementById('s1-line-list');
       const lineBadge = document.getElementById('s1-line-badge');
-      const opsData = typeof DAILY_OPS_DATA !== 'undefined' ? DAILY_OPS_DATA : [];
       if (lineBadge) lineBadge.innerText = opsData.length;
       if (lineList) {
         lineList.innerHTML = '';
@@ -466,6 +597,269 @@
       }
     }
 
+    // =========================================================
+    // LINE 對話日誌解析核心算法
+    // =========================================================
+    function parseLineOpsText(rawText) {
+      const lines = rawText.split(/\r?\n/);
+      const records = [];
+      let currentDate = '';
+      let currentRegion = '全區';
+      let currentReporter = '維運工務';
+
+      const dateRegex = /^(\d{4})[./-](\d{2})[./-](\d{2})/;
+      const msgWithRegionRegex = /^(\d{2}:\d{2})\s+(.+?)\s+(桃辦|彰辦|台南|南辦|高辦|高雄|台北|屏東|台中|嘉義|全區)[：:]?\s*(.*)$/;
+      const msgStandardRegex = /^(\d{2}:\d{2})\s+([^\s]+(?:\([^\)]+\))?)[：:]?\s*(.*)$/;
+      const ignorePatterns = ['圖片', '已收回訊息', '貼圖', '語音訊息', '檔案', '通話時間', 'LINE通話', '@All', '收到 感謝'];
+
+      let curTime = '09:00';
+      let seq = 1;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+
+        const dateMatch = line.match(dateRegex);
+        if (dateMatch) {
+          currentDate = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`;
+          continue;
+        }
+
+        let contentLine = line;
+        const regMatch = line.match(msgWithRegionRegex);
+        if (regMatch) {
+          curTime = regMatch[1];
+          currentReporter = regMatch[2].trim();
+          currentRegion = regMatch[3].trim();
+          if (currentRegion === '高雄') currentRegion = '高辦';
+          if (currentRegion === '南辦') currentRegion = '台南';
+          contentLine = regMatch[4] ? regMatch[4].trim() : '';
+          if (!contentLine) continue;
+        } else {
+          const stdMatch = line.match(msgStandardRegex);
+          if (stdMatch) {
+            curTime = stdMatch[1];
+            currentReporter = stdMatch[2].trim();
+            contentLine = stdMatch[3] ? stdMatch[3].trim() : '';
+            if (!contentLine) continue;
+          }
+        }
+
+        if (!contentLine) continue;
+        if (ignorePatterns.some(p => contentLine.includes(p) && contentLine.length < 15)) continue;
+        if (contentLine.startsWith('一、') || contentLine.startsWith('二、') || contentLine === '無') continue;
+
+        let siteName = '一般電廠';
+        let equipment = '逆變器/監控設備';
+        let issueType = '一般機況提報';
+        let severity = 'P2 (中度異常/一般告警)';
+        let status = '查修中';
+
+        let cleanContent = contentLine.replace(/^[\d+]+[.\-、]\s*/, '');
+        cleanContent = cleanContent.replace(/^[一二三四五六七八九十]+[、.]\s*/, '');
+        cleanContent = cleanContent.replace(/^(桃辦|彰辦|台南|高辦|高雄)[：:]\s*/, '');
+
+        const siteMatch = cleanContent.match(/^([\u4e00-\u9fa5a-zA-Z0-9_\-]+?)(?:[_\s]+INV|[_\s]+PV|[_\s]+未發電|[_\s]+斷線|[_\s]+發電異常|[_\s]+絕緣|[_\s]+監控|[：:\s])/);
+        if (siteMatch && siteMatch[1].length >= 2 && siteMatch[1].length <= 15) {
+          siteName = siteMatch[1];
+        } else {
+          const parts = cleanContent.split(/[\s,，_]/);
+          if (parts[0] && parts[0].length >= 2 && parts[0].length <= 12) {
+            siteName = parts[0];
+          }
+        }
+
+        const invMatch = cleanContent.match(/INV\s*\d+/i);
+        const pvMatch = cleanContent.match(/PV\s*\d+/i);
+        if (invMatch) equipment = invMatch[0].toUpperCase();
+        else if (pvMatch) equipment = pvMatch[0].toUpperCase();
+        else if (cleanContent.includes('MOXA')) equipment = 'MOXA';
+        else if (cleanContent.includes('風扇')) equipment = '冷卻風扇';
+        else if (cleanContent.includes('監控')) equipment = '監控通訊閘道器';
+
+        if (cleanContent.includes('斷線') || cleanContent.includes('未連線')) {
+          issueType = '監控/通訊斷線';
+          severity = cleanContent.includes('全場') ? 'P0 (最高級/即時派工)' : 'P1 (高優先級/24h)';
+        } else if (cleanContent.includes('未發電') || cleanContent.includes('停止發電')) {
+          issueType = '逆變器未發電';
+          severity = 'P0 (最高級/即時派工)';
+        } else if (cleanContent.includes('絕緣')) {
+          issueType = '絕緣阻抗異常';
+          severity = 'P1 (高優先級/24h)';
+        } else if (cleanContent.includes('發電異常') || cleanContent.includes('效率')) {
+          issueType = '發電量低下/異常';
+          severity = 'P2 (中度異常/一般告警)';
+        }
+
+        if (cleanContent.includes('修復') || cleanContent.includes('回復發電') || cleanContent.includes('併網發電')) {
+          status = '已修復';
+        } else if (cleanContent.includes('更換') || cleanContent.includes('待料') || cleanContent.includes('到貨')) {
+          status = '待料更換中';
+        }
+
+        records.push({
+          id: `OPS-${(currentDate || '20260401').replace(/-/g, '')}-${String(seq++).padStart(4, '0')}`,
+          date: currentDate || '2026-04-01',
+          time: curTime,
+          region: currentRegion,
+          reporter: currentReporter,
+          site_name: siteName,
+          equipment: equipment,
+          issue_type: issueType,
+          severity: severity,
+          status: status,
+          section: '日常報核',
+          content: cleanContent
+        });
+      }
+
+      return records;
+    }
+
+    // =========================================================
+    // 檔案上傳與 Modal 操作邏輯
+    // =========================================================
+    function openUploadModal() {
+      const modal = document.getElementById('uploadOpsModal');
+      if (modal) modal.classList.remove('hidden');
+      setupDropZone();
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeUploadModal() {
+      const modal = document.getElementById('uploadOpsModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function setupDropZone() {
+      const dropZone = document.getElementById('dropZone');
+      if (!dropZone || dropZone.dataset.setup) return;
+      dropZone.dataset.setup = 'true';
+
+      dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('border-emerald-600', 'bg-emerald-100/50');
+      });
+      dropZone.addEventListener('dragleave', () => {
+        dropZone.classList.remove('border-emerald-600', 'bg-emerald-100/50');
+      });
+      dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('border-emerald-600', 'bg-emerald-100/50');
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+          readFileAndParse(e.dataTransfer.files[0]);
+        }
+      });
+    }
+
+    function handleOpsFileInput(event) {
+      if (event.target.files && event.target.files[0]) {
+        readFileAndParse(event.target.files[0]);
+      }
+    }
+
+    function handleModalFileInput(event) {
+      if (event.target.files && event.target.files[0]) {
+        readFileAndParse(event.target.files[0]);
+      }
+    }
+
+    function readFileAndParse(file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const text = e.target.result;
+        parsedTempRecords = parseLineOpsText(text);
+        showParsePreview(parsedTempRecords);
+      };
+      reader.readAsText(file, 'utf-8');
+      openUploadModal();
+    }
+
+    function handleRawTextInputChange() {
+      const text = document.getElementById('rawLineTextInput').value;
+      if (text.trim()) {
+        parsedTempRecords = parseLineOpsText(text);
+        showParsePreview(parsedTempRecords);
+      } else {
+        document.getElementById('parsePreviewArea').classList.add('hidden');
+      }
+    }
+
+    function showParsePreview(records) {
+      const previewArea = document.getElementById('parsePreviewArea');
+      if (!previewArea) return;
+      previewArea.classList.remove('hidden');
+
+      document.getElementById('previewCountBadge').innerText = records.length + ' 筆';
+      let tao = 0, zhang = 0, tainan = 0, gao = 0;
+      records.forEach(r => {
+        if (r.region === '桃辦') tao++;
+        else if (r.region === '彰辦') zhang++;
+        else if (r.region === '台南') tainan++;
+        else if (r.region === '高辦') gao++;
+      });
+      document.getElementById('prevRegTao').innerText = tao;
+      document.getElementById('prevRegZhang').innerText = zhang;
+      document.getElementById('prevRegTainan').innerText = tainan;
+      document.getElementById('prevRegGao').innerText = gao;
+
+      if (records.length > 0) {
+        document.getElementById('prevSample').innerText = `[${records[0].region}] ${records[0].site_name} - ${records[0].content}`;
+      }
+    }
+
+    function confirmSyncLineOps() {
+      if (!parsedTempRecords || parsedTempRecords.length === 0) {
+        const txt = document.getElementById('rawLineTextInput').value;
+        if (txt.trim()) {
+          parsedTempRecords = parseLineOpsText(txt);
+        }
+      }
+
+      if (!parsedTempRecords || parsedTempRecords.length === 0) {
+        alert('請先上傳檔案或貼上對話記錄！');
+        return;
+      }
+
+      window.DAILY_OPS_DATA = parsedTempRecords;
+      try {
+        localStorage.setItem('KINGSUN_DAILY_OPS_CUSTOM', JSON.stringify(parsedTempRecords));
+      } catch(e) {
+        console.warn('LocalStorage full, skipped storage caching.');
+      }
+
+      closeUploadModal();
+      initPlatform();
+      alert(`✅ 成功匯入 ${parsedTempRecords.length} 筆機況記錄！
+戰情系統指標 (S5) 與收件匣 (S1) 已同步全面更新。`);
+      switchNav('s1');
+    }
+
+    function loadDefaultLineFileSample() {
+      const btn = event.target;
+      const originalText = btn ? btn.innerText : '';
+      if (btn) btn.innerText = '⏳ 讀取中...';
+      
+      fetch('data/line_ops_sample.txt')
+        .then(res => {
+          if (!res.ok) throw new Error('Network error');
+          return res.text();
+        })
+        .then(text => {
+          document.getElementById('rawLineTextInput').value = text;
+          handleRawTextInputChange();
+          if (btn) btn.innerText = '✅ 已成功載入本機 [LINE]每日機況報 (2,483筆)';
+          setTimeout(() => { if (btn) btn.innerText = originalText; }, 3000);
+        })
+        .catch(err => {
+          console.warn('Fallback to embedded sample:', err);
+          const sample = `2026.04.07 星期二\n08:48 white(HsingChung) 台南： 安德順 4/5斷線(MOXA異常)\n08:59 Bryant Chen 高辦\n禾豐 監控斷線\n高振一二期 監控斷線\n杰鑫 監控斷線\n09:01 andrewlu 桃辦\n1.埤塘7-1_全場修復(待客戶確認)，252串中156串待安排查修。 (暫停躉售)\n2.埤塘8-2_INV04(1)、INV07(1)、INV14(1)、INV15(1)待更換\n3.新陽全場監控斷線 (顯示正常連線無發電數據)\n09:15 健國 彰辦\n烏日高鐵 INV29 未發電\n芳德三期 INV4 未發電`;
+          document.getElementById('rawLineTextInput').value = sample;
+          handleRawTextInputChange();
+          if (btn) btn.innerText = originalText;
+        });
+    }
+
     function processCloudAI(index) {
        const alarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
        const alarm = alarms[index];
@@ -477,7 +871,7 @@
     }
 
     function processLineAI(index) {
-       const opsData = typeof DAILY_OPS_DATA !== 'undefined' ? DAILY_OPS_DATA : [];
+       const opsData = (typeof window.DAILY_OPS_DATA !== 'undefined') ? window.DAILY_OPS_DATA : ((typeof DAILY_OPS_DATA !== 'undefined') ? DAILY_OPS_DATA : []);
        const ops = opsData[index];
        if (!ops) return;
        processAI(ops.site_name, "LINE@回報 (" + ops.reporter + "): " + ops.content, ops.issue_type);
@@ -501,7 +895,7 @@
        document.getElementById('s2-db-maint').innerText = site.lastMaintenance;
 
        // 模擬 AI 生成結果 (RCA & SOP)
-       const isUrgent = content.includes('斷訊') || content.includes('停機') || content.includes('進水') || content.includes('未連線');
+       const isUrgent = content.includes('斷訊') || content.includes('停機') || content.includes('進水') || content.includes('未連線') || content.includes('未發電');
        const priEl = document.getElementById('s2-ai-priority');
        if (priEl) {
          priEl.innerText = isUrgent ? 'P0 緊急出車' : 'P2 例行排查';
