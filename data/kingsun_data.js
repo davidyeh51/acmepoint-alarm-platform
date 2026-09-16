@@ -1,9 +1,9 @@
 // 進金生能源 AI 太陽能光電運維智慧戰情中心資料庫
-// 自動同步來源：[LINE]每日機況報這裡.txt
+// 自動同步來源：[LINE]每日機況報這裡.txt & [LINE]【客服記錄】客戶聲音記錄.txt
 const OVERVIEW_DATA = {
   "total_daily_ops": 2483,
-  "total_customer_voices": 68,
-  "total_cross_check_items": 12,
+  "total_customer_voices": 149,
+  "total_cross_check_items": 8,
   "unresolved_high_risk": 8,
   "region_counts": {
     "台南": 1431,
@@ -50,8 +50,8 @@ const OVERVIEW_DATA = {
     {
       "site_name": "奇菱",
       "ops_count": 81,
-      "cust_count": 0,
-      "risk_score": 121.5,
+      "cust_count": 3,
+      "risk_score": 133.5,
       "status": "查修中"
     },
     {
@@ -34889,1445 +34889,2419 @@ const CUSTOMER_VOICE_DATA = [
   {
     "id": "CUST-20260408-001",
     "date": "2026-04-08",
-    "time": "15:01",
-    "site_name": "管理與營運總部",
+    "time": "15:06",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@傑 Evan @Lee Roy @依靜Ivy 這問題不是第一次，之前就發生過了，剛剛也有看到Lee...",
     "stakeholders": [
-      "Lee",
-      "傑",
       "明宗",
+      "傑",
+      "Lee",
       "依靜Ivy"
     ],
-    "context": "15:01 明宗: 圖片\n15:06 明宗: @傑 Evan @Lee Roy @依靜Ivy 這問題不是第一次，之前就發生過了，剛剛也有看到Lee Roy很積極的協調mis其它案場的問題未果，仕民是業主的協理，網頁告警的部份我不知道如何去回復業主這個問題，INV故障的部份明天會去檢查。",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[15:06] 明宗: @傑 Evan @Lee Roy @依靜Ivy 這問題不是第一次，之前就發生過了，剛剛也有看到Lee Roy很積極的協調mis其它案場的問題未果，仕民是業主的協理，網頁告警的部份我不知道如何去回復業主這個問題，INV故障的部份明天會去檢查。"
   },
   {
     "id": "CUST-20260409-002",
     "date": "2026-04-09",
     "time": "09:36",
-    "site_name": "管理與營運總部",
-    "equipment": "模組",
-    "request_type": "客訴與責任爭議",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "👩🏻 @明宗",
     "stakeholders": [
       "Leila.H",
-      "Lee Roy",
       "明宗"
     ],
-    "context": "09:36 Leila.H: 👩🏻 @明宗\n友達光電客服部 林's請你回電唷，想要詢問你關於模組賠片的相關事宜\n04-24608800 # 562510\n謝謝\n10:16 Lee Roy: [已收回訊息]",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:36] Leila.H: 👩🏻 @明宗"
   },
   {
     "id": "CUST-20260409-003",
     "date": "2026-04-09",
-    "time": "10:19",
-    "site_name": "富強鑫五期",
-    "equipment": "模組",
-    "request_type": "客訴與責任爭議",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "太陽能光電模組",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "友達光電客服部 林's請你回電唷，想要詢問你關於模組賠片的相關事宜",
     "stakeholders": [
-      "Leila.H",
-      "Lee",
-      "明宗"
+      "客服小幫手"
     ],
-    "context": "10:19 Lee: Roy [作業通知]MIS預計4/9~4/10 ACME DREAMS系統轉移資料庫，已跟台電端申請暫停計算\n10:19 Lee: Roy 圖片\n10:52 明宗: 剛至日煙上課，該位置收不到訊號，有看到未接來電，目前已聯絡上，預計明天會將模組（FCS5期）送達育成中心。\n10:53 Leila.H: 👩🏻 桑Q",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:00] 客服小幫手: 友達光電客服部 林's請你回電唷，想要詢問你關於模組賠片的相關事宜"
   },
   {
     "id": "CUST-20260409-004",
     "date": "2026-04-09",
-    "time": "12:06",
-    "site_name": "管理與營運總部",
+    "time": "09:00",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "04-24608800 # 562510",
     "stakeholders": [
-      "明宗"
+      "客服小幫手"
     ],
-    "context": "12:06 明宗: 更正6期",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:00] 客服小幫手: 04-24608800 # 562510"
   },
   {
     "id": "CUST-20260409-005",
     "date": "2026-04-09",
-    "time": "14:48",
-    "site_name": "富強鑫二期",
-    "equipment": "模組、INV3",
-    "request_type": "客訴與責任爭議",
+    "time": "10:19",
+    "site_name": "全區營運",
+    "equipment": "憑證中心/DREAMS閘道器",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "Roy [作業通知]MIS預計4/9~4/10 ACME DREAMS系統轉移資料庫，已跟台電端申請...",
+    "stakeholders": [
+      "Lee"
+    ],
+    "context": "[10:19] Lee: Roy [作業通知]MIS預計4/9~4/10 ACME DREAMS系統轉移資料庫，已跟台電端申請暫停計算"
+  },
+  {
+    "id": "CUST-20260409-006",
+    "date": "2026-04-09",
+    "time": "10:52",
+    "site_name": "FCS",
+    "equipment": "太陽能光電模組",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "剛至日煙上課，該位置收不到訊號，有看到未接來電，目前已聯絡上，預計明天會將模組（FCS5期）送達育成...",
+    "stakeholders": [
+      "明宗"
+    ],
+    "context": "[10:52] 明宗: 剛至日煙上課，該位置收不到訊號，有看到未接來電，目前已聯絡上，預計明天會將模組（FCS5期）送達育成中心。"
+  },
+  {
+    "id": "CUST-20260409-007",
+    "date": "2026-04-09",
+    "time": "10:53",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 桑Q",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[10:53] Leila.H: 👩🏻 桑Q"
+  },
+  {
+    "id": "CUST-20260409-008",
+    "date": "2026-04-09",
+    "time": "14:48",
+    "site_name": "FCS",
+    "equipment": "INV3",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "@依靜Ivy FCS2期INV3更換新機/維修兩種報價方式都報給業主。6期模組更換*2，跟上一次的合...",
     "stakeholders": [
       "明宗",
       "依靜Ivy"
     ],
-    "context": "14:48 明宗: @依靜Ivy FCS2期INV3更換新機/維修兩種報價方式都報給業主。6期模組更換*2，跟上一次的合併統一報價就好，會再跟友達確認是否有提供保固更換再跟你說。",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[14:48] 明宗: @依靜Ivy FCS2期INV3更換新機/維修兩種報價方式都報給業主。6期模組更換*2，跟上一次的合併統一報價就好，會再跟友達確認是否有提供保固更換再跟你說。"
   },
   {
-    "id": "CUST-20260413-006",
+    "id": "CUST-20260413-009",
     "date": "2026-04-13",
     "time": "12:38",
-    "site_name": "富強鑫六期",
-    "equipment": "模組、INV4",
-    "request_type": "客訴與責任爭議",
+    "site_name": "FCS",
+    "equipment": "INV4",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "FCS6期：今日又新增7-4-5絕緣異常，該片已bypass，目前已發電中，目前總計3片模組需更換。...",
     "stakeholders": [
-      "傑",
       "明宗",
-      "依靜Ivy"
+      "依靜Ivy",
+      "傑"
     ],
-    "context": "12:38 明宗: FCS6期：今日又新增7-4-5絕緣異常，該片已bypass，目前已發電中，目前總計3片模組需更換。 INV4 上週有問題的pypass之後早上一樣有絕緣異常，代表還有某一片有問題。 @依靜Ivy @傑 Evan",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[12:38] 明宗: FCS6期：今日又新增7-4-5絕緣異常，該片已bypass，目前已發電中，目前總計3片模組需更換。 INV4 上週有問題的pypass之後早上一樣有絕緣異常，代表還有某一片有問題。 @依靜Ivy @傑 Evan"
   },
   {
-    "id": "CUST-20260413-007",
+    "id": "CUST-20260413-010",
     "date": "2026-04-13",
-    "time": "12:43",
-    "site_name": "史谷脫",
+    "time": "09:00",
+    "site_name": "全區營運",
     "equipment": "INV1",
-    "request_type": "核心發電中斷與換機報價",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "史谷脫變流器故障停機卡在 Check DC，電性絕緣正常，申請更換新機報價",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "INV1故障未發電，卡在Check DC ，查故障代碼都沒有紀錄，AC/DC電性、絕緣都正常，重開機...",
     "stakeholders": [
-      "明宗",
+      "客服小幫手",
       "依靜Ivy"
     ],
-    "context": "12:43 明宗: 史谷脫:\nINV1故障未發電，卡在Check DC ，查故障代碼都沒有紀錄，AC/DC電性、絕緣都正常，重開機一樣不發電，業主表示要更換新機，請我司報價。 @依靜Ivy ",
-    "rca": "直流側檢測迴路硬體損壞，無法開機發電，需汰換為台達 M30A",
-    "suggested_action": "依靜與 Leila 快速向供應鏈詢價並發出報價單，追蹤備品到貨吊掛進場",
-    "status": "報價完成並安排更換"
+    "context": "[09:00] 客服小幫手: INV1故障未發電，卡在Check DC ，查故障代碼都沒有紀錄，AC/DC電性、絕緣都正常，重開機一樣不發電，業主表示要更換新機，請我司報價。 @依靜Ivy"
   },
   {
-    "id": "CUST-20260413-008",
+    "id": "CUST-20260413-011",
     "date": "2026-04-13",
     "time": "17:04",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "Roy [批量案場]ACME雲端監控無法開啟待MIS確認故障問題",
+    "stakeholders": [
+      "Lee"
+    ],
+    "context": "[17:04] Lee: Roy [批量案場]ACME雲端監控無法開啟待MIS確認故障問題"
+  },
+  {
+    "id": "CUST-20260413-012",
+    "date": "2026-04-13",
+    "time": "17:07",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "已結案",
+    "summary": "Roy @andrewlu MIS回報已修復恢復運作",
     "stakeholders": [
       "Lee",
       "andrewlu"
     ],
-    "context": "17:04 Lee: Roy [批量案場]ACME雲端監控無法開啟待MIS確認故障問題\n17:04 Lee: Roy 圖片\n17:07 Lee: Roy @andrewlu MIS回報已修復恢復運作",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[17:07] Lee: Roy @andrewlu MIS回報已修復恢復運作"
   },
   {
-    "id": "CUST-20260415-009",
+    "id": "CUST-20260415-013",
     "date": "2026-04-15",
     "time": "16:21",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@依靜Ivy",
     "stakeholders": [
       "明宗",
       "依靜Ivy"
     ],
-    "context": "16:21 明宗: 圖片\n16:21 明宗: @依靜Ivy",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[16:21] 明宗: @依靜Ivy"
   },
   {
-    "id": "CUST-20260415-010",
+    "id": "CUST-20260415-014",
     "date": "2026-04-15",
     "time": "16:22",
     "site_name": "長榮大園",
-    "equipment": "案場系統組件",
-    "request_type": "客戶發電效益檢討與電費爭議",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "長榮大園電費單回饋，業主催促回覆發電量檢討報告",
+    "equipment": "計量電表/發電數據",
+    "request_type": "發電績效與合約檢討",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "👩🏻 @里包恩😑 長榮大園,的電費單  林小姐已提供，再麻煩於下周二前回覆發電量檢討信件",
     "stakeholders": [
       "Leila.H",
-      "里包恩"
+      "里包恩😑"
     ],
-    "context": "16:22 Leila.H: 👩🏻 @里包恩😑 長榮大園,的電費單  林小姐已提供，再麻煩於下周二前回覆發電量檢討信件\n16:22 Leila.H: 👩🏻 謝謝~\n16:23 里包恩😑: 貼圖",
-    "rca": "業主對發電度數與台電電費極度敏感，現場跳脫事件需對應數據分析",
-    "suggested_action": "工務比對發電數據與日照歷史，於期限內回覆發電量檢討分析信件",
-    "status": "已完成檢討信發送"
+    "context": "[16:22] Leila.H: 👩🏻 @里包恩😑 長榮大園,的電費單  林小姐已提供，再麻煩於下周二前回覆發電量檢討信件"
   },
   {
-    "id": "CUST-20260416-011",
-    "date": "2026-04-16",
-    "time": "08:35",
-    "site_name": "管理與營運總部",
+    "id": "CUST-20260415-015",
+    "date": "2026-04-15",
+    "time": "16:22",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "👩🏻 謝謝~",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[16:22] Leila.H: 👩🏻 謝謝~"
+  },
+  {
+    "id": "CUST-20260416-016",
+    "date": "2026-04-16",
+    "time": "08:36",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "三部的工務已經處理完畢, Gordon訊息有誤植 是八廠",
     "stakeholders": [
       "Allen"
     ],
-    "context": "08:35 Allen: 圖片\n08:36 Allen: 三部的工務已經處理完畢, Gordon訊息有誤植 是八廠",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[08:36] Allen: 三部的工務已經處理完畢, Gordon訊息有誤植 是八廠"
   },
   {
-    "id": "CUST-20260417-012",
+    "id": "CUST-20260417-017",
     "date": "2026-04-17",
-    "time": "09:40",
-    "site_name": "管理與營運總部",
+    "time": "09:42",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@Lee Roy 改這個，小白有影片教學，但沒帳密，另昨日又說更改要有權限的人，所以現在？",
     "stakeholders": [
-      "Lee",
-      "明宗"
+      "明宗",
+      "Lee"
     ],
-    "context": "09:40 明宗: 圖片\n09:42 明宗: @Lee Roy 改這個，小白有影片教學，但沒帳密，另昨日又說更改要有權限的人，所以現在？\n09:43 明宗: 另目前有別的案場也有這樣的狀況",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:42] 明宗: @Lee Roy 改這個，小白有影片教學，但沒帳密，另昨日又說更改要有權限的人，所以現在？"
   },
   {
-    "id": "CUST-20260417-013",
+    "id": "CUST-20260417-018",
     "date": "2026-04-17",
-    "time": "09:44",
-    "site_name": "鉅橡2期",
+    "time": "09:43",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "另目前有別的案場也有這樣的狀況",
     "stakeholders": [
       "明宗"
     ],
-    "context": "09:44 明宗: 鉅橡2期",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:43] 明宗: 另目前有別的案場也有這樣的狀況"
   },
   {
-    "id": "CUST-20260417-014",
+    "id": "CUST-20260417-019",
     "date": "2026-04-17",
     "time": "14:12",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "Roy 目前流程為寄送案場監控設備異動資訊給MIS，MSI會依照資訊修改，日後MIS會整合統一在維運...",
     "stakeholders": [
-      "Lee",
-      "明宗"
+      "Lee"
     ],
-    "context": "14:12 Lee: Roy 目前流程為寄送案場監控設備異動資訊給MIS，MSI會依照資訊修改，日後MIS會整合統一在維運管理系統中的案場裝置主檔設定頁面修改。\n14:12 Lee: Roy 圖片\n14:24 明宗: 收到感謝",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[14:12] Lee: Roy 目前流程為寄送案場監控設備異動資訊給MIS，MSI會依照資訊修改，日後MIS會整合統一在維運管理系統中的案場裝置主檔設定頁面修改。"
   },
   {
-    "id": "CUST-20260421-015",
+    "id": "CUST-20260421-020",
     "date": "2026-04-21",
     "time": "10:46",
-    "site_name": "奇景光電一期",
-    "equipment": "模組、模組\n11",
-    "request_type": "環保法規與廢棄物清運爭議",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "奇景光電一期模組單片破片無法清運，業主催促報價並質疑無單片先例",
+    "site_name": "奇景光電",
+    "equipment": "太陽能光電模組",
+    "request_type": "環保法規與廢棄物清運",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@傑 Evan @鈺祺Mina @Leila.H 👩🏻 各位主管 抱歉打擾一下 關於奇景光電一期更換...",
     "stakeholders": [
-      "Leila.H",
       "洪阿凱",
-      "傑",
-      "鈺祺Mina"
-    ],
-    "context": "10:46 洪阿凱: @傑 Evan @鈺祺Mina @Leila.H 👩🏻 各位主管 抱歉打擾一下 關於奇景光電一期更換模組後處理破片的問題，由於公司無法幫客戶清運單片的破片，今早我告知客戶情況後 客戶有再打電話來確認先前都沒有處理單片的先例嗎\n客戶請我跟公司反應此問題，真的無法報價處理嗎\n11:01 傑: Evan 1.環境部 有3C1R 8步驟的 清運流程 可以請業主參考\n2.不走環境部的話 找清運機構 須取得主管機關核發廢棄物清除處理許可證 廢棄物代碼：D-2528；廢棄物名稱：裝置使用後廢棄之太陽能光電模組\n11:01 傑: Evan https://pvis.moenv.gov.tw/pvis/info/QnA\n11:02 傑: Evan 這有機構名\n11:02 傑: Evan Hank底下的廠商也能代操此項目 可以與他討論\n11:04 傑: Evan 有分 清除機構 跟 處理機構\n11:05 傑: Evan 以處理機構為主\n11:06 傑: Evan 有的客戶會先自己暫存 比較多量時 才一次處理\n11:14 洪阿凱: 阿傑 我了解你的意思，只是客戶目前案場的狀況其實是沒有空間能夠存放破片的\n加上客戶主要的訴求是希望公司能一併報價處理\n11:15 傑: Evan OK 請洽Hank詢商\n11:17 傑: Evan Hank應該會找機電廠商代操此項目\n11:20 洪阿凱: 貼圖\n11:36 傑: Evan 我先幫你跟Hank預告了 後續你們再討論即可\n11:37 洪阿凱: 好的 感謝",
-    "rca": "單片廢棄模組清運處理成本高昂，原缺乏標準化零星廢棄物報價代操機制",
-    "suggested_action": "依環境部 3C1R 8步驟合規流程，洽 Hank 合作之合格 D-2528 清除處理機構報價統包清運",
-    "status": "協調合格代操廠商報價中"
-  },
-  {
-    "id": "CUST-20260422-016",
-    "date": "2026-04-22",
-    "time": "13:32",
-    "site_name": "正隆后里",
-    "equipment": "案場系統組件",
-    "request_type": "跨年度工單延宕與權責釐清",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "正隆后里再生能源憑證中心上傳異常查修，跨年度未執行責任釐清",
-    "stakeholders": [
-      "Leila.H",
-      "傑"
-    ],
-    "context": "13:32 Leila.H: 👩🏻 @傑 Evan 阿傑，正隆后里有個詢價是關於二期太陽能再生能源憑證中心上傳異常查修\n經確認，去年正隆后里也有下這張訂單，客服這邊內部訂單也有key in\n但是不知道何種原因當時這項工作未執行，所以今年需要補執行給客戶\n有分別詢問肉哥跟發哥是否為此項任務的主導人物\n但目前我這邊達到的答案是兩邊都表示他們不清楚，也非執行任務的key person\n所以想跟你確認下，關於正隆后里的憑證中心上傳異常查修部分，該由哪個單位負責執行呢?\n13:33 Leila.H: 👩🏻 圖片",
-    "rca": "去年 Dreams 查修已由廠商執行但未請款結案；今年綠能憑證已過保，權責窗口交接斷層",
-    "suggested_action": "由 Lee Roy 提供去年驗收單請款；今年綠能憑證查修由里包恩派廠商檢測並報價",
-    "status": "已釐清權責並派工"
-  },
-  {
-    "id": "CUST-20260423-017",
-    "date": "2026-04-23",
-    "time": "13:16",
-    "site_name": "正隆后里",
-    "equipment": "綠能憑證",
-    "request_type": "跨年度工單延宕與權責釐清",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "正隆后里再生能源憑證中心上傳異常查修，跨年度未執行責任釐清",
-    "stakeholders": [
-      "Lee",
-      "傑",
-      "Leila.H",
-      "里包恩",
-      "黃昱超"
-    ],
-    "context": "13:16 Leila.H: 👩🏻 @傑 Evan 正隆后里的部分，肉哥確認後告知去年的異常查修是dreams的部分，當時有過去處理，廠商也有提供相關報告，目前會請 @Lee Roy 提供驗收單給業務這邊請款結案\n今年的異常查修是綠能憑證的部分，目前確認已過保，需派廠商過去確認後並報價給業主，這部分再麻煩 @里包恩😑 聯絡廠商主導處理，目前肉哥告知下個月阿超要過去正隆后里進行清洗作業，是否要請阿超協助，這部分再麻煩發哥聯絡安排\n13:25 傑: Evan OK 但我看清洗是明天 阿超只是剛好有過去先了解而已 後續請阿發執行後續\n13:42 Leila.H: 👩🏻 收到~\n13:43 Leila.H: 👩🏻 @黃昱超 明天過去前 再麻煩連絡郭先生 0937754444\n@里包恩😑 這是主要負責人的電話   也麻煩你記一下\n13:45 里包恩😑: 好的",
-    "rca": "去年 Dreams 查修已由廠商執行但未請款結案；今年綠能憑證已過保，權責窗口交接斷層",
-    "suggested_action": "由 Lee Roy 提供去年驗收單請款；今年綠能憑證查修由里包恩派廠商檢測並報價",
-    "status": "已釐清權責並派工"
-  },
-  {
-    "id": "CUST-20260430-018",
-    "date": "2026-04-30",
-    "time": "10:50",
-    "site_name": "長榮大園",
-    "equipment": "案場系統組件",
-    "request_type": "客戶發電效益檢討與電費爭議",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "長榮大園電費單回饋，業主催促回覆發電量檢討報告",
-    "stakeholders": [
-      "Leila.H",
-      "里包恩",
-      "andrewlu"
-    ],
-    "context": "10:50 Leila.H: 👩🏻 @里包恩😑 @andrewlu\n長榮大元的電費單回饋，今天可以回覆mail給業主嗎?\n10:50 Leila.H: 👩🏻 圖片",
-    "rca": "業主對發電度數與台電電費極度敏感，現場跳脫事件需對應數據分析",
-    "suggested_action": "工務比對發電數據與日照歷史，於期限內回覆發電量檢討分析信件",
-    "status": "已完成檢討信發送"
-  },
-  {
-    "id": "CUST-20260506-019",
-    "date": "2026-05-06",
-    "time": "10:17",
-    "site_name": "奇美",
-    "equipment": "案場系統組件",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "奇美 配合業主進行工安火災演練或空拍熱顯巡檢",
-    "stakeholders": [
-      "Bryant",
-      "傑 Evan",
       "傑",
       "鈺祺Mina",
-      "洪阿凱",
-      "黃昱超"
+      "Leila.H"
     ],
-    "context": "10:17 黃昱超: @傑 Evan @洪阿凱 @Bryant Chen @鈺祺Mina\n奇美羅大哥請我司5/29出人參加勝利廠區的火災安全演練\n10:24 傑 Evan: [已收回訊息]\n10:25 傑: Evan 好的 當天有月會\n我跟他聯絡",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
+    "context": "[10:46] 洪阿凱: @傑 Evan @鈺祺Mina @Leila.H 👩🏻 各位主管 抱歉打擾一下 關於奇景光電一期更換模組後處理破片的問題，由於公司無法幫客戶清運單片的破片，今早我告知客戶情況後 客戶有再打電話來確認先前都沒有處理單片的先例嗎"
   },
   {
-    "id": "CUST-20260518-020",
-    "date": "2026-05-18",
-    "time": "10:40",
-    "site_name": "奇菱風管部",
+    "id": "CUST-20260421-021",
+    "date": "2026-04-21",
+    "time": "09:00",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "客戶請我跟公司反應此問題，真的無法報價處理嗎",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 客戶請我跟公司反應此問題，真的無法報價處理嗎"
+  },
+  {
+    "id": "CUST-20260421-022",
+    "date": "2026-04-21",
+    "time": "11:01",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "環保法規與廢棄物清運",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
-    "stakeholders": [
-      "洪阿凱",
-      "傑",
-      "黃昱超"
-    ],
-    "context": "10:40 黃昱超: @洪阿凱 @傑 Evan\n奇菱風管部\n希望我們提供一把開盤體的鑰匙給業主",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
-  },
-  {
-    "id": "CUST-20260521-021",
-    "date": "2026-05-21",
-    "time": "17:07",
-    "site_name": "晶碩光電",
-    "equipment": "飾板",
-    "request_type": "工程施作瑕疵 vs 保固範疇爭議",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "晶碩光電 6 樓光電涼亭飾板累計掉落 2 次，業主要求一次性徹底完善重設",
-    "stakeholders": [
-      "傑",
-      "鈺祺Mina",
-      "andrewlu"
-    ],
-    "context": "17:07 andrewlu: @傑 Evan @鈺祺Mina 晶碩光電反應6樓辦公區光電涼亭飾板掉落，建置至今已掉落2次，希望能一次完善處理。經詢問為我司工程建置時安裝，是否能協請工程接續處理？\n17:09 andrewlu: 圖片\n17:09 andrewlu: 圖片\n17:49 傑: Evan 處理方法是什麼\n17:49 傑: Evan 事故調查原因\n17:56 傑: Evan 已公司的角度 保固內就是幫他修好 沒有重設這回事\n17:59 傑: Evan 案子在完成的過程中\n會經歷 設計審圖>工程驗收 才開始保固\n如果每個保固都要回頭討論設計跟驗收就不太妥",
-    "rca": "建置期結構固定施工可能受強風或公差影響，業主將工務修復擴大為重設爭議",
-    "suggested_action": "堅守工程審圖與驗收保固邊界：保固期內依約進行結構加固修繕，非無限制重設",
-    "status": "安排工程加固修復"
-  },
-  {
-    "id": "CUST-20260608-022",
-    "date": "2026-06-08",
-    "time": "17:26",
-    "site_name": "奇菱風管",
-    "equipment": "案場系統組件",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "奇菱風管 配合業主進行工安火災演練或空拍熱顯巡檢",
-    "stakeholders": [
-      "洪阿凱",
-      "傑",
-      "黃昱超"
-    ],
-    "context": "17:26 黃昱超: @洪阿凱 @傑 Evan\n奇菱風管希望我們提供上次巡檢的報告與熱顯照片給他，供他製作業主內部的自主檢查表，0963-489-267\n這隻電話號碼可搜尋到他的LINE",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
-  },
-  {
-    "id": "CUST-20260608-023",
-    "date": "2026-06-08",
-    "time": "18:28",
-    "site_name": "管理與營運總部",
-    "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "Evan 1.環境部 有3C1R 8步驟的 清運流程 可以請業主參考",
     "stakeholders": [
       "傑"
     ],
-    "context": "18:28 傑: Evan 收到",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[11:01] 傑: Evan 1.環境部 有3C1R 8步驟的 清運流程 可以請業主參考"
   },
   {
-    "id": "CUST-20260610-024",
-    "date": "2026-06-10",
-    "time": "09:42",
-    "site_name": "管理與營運總部",
+    "id": "CUST-20260421-023",
+    "date": "2026-04-21",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "太陽能光電模組",
+    "request_type": "環保法規與廢棄物清運",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "2.不走環境部的話 找清運機構 須取得主管機關核發廢棄物清除處理許可證 廢棄物代碼：D-2528；廢...",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 2.不走環境部的話 找清運機構 須取得主管機關核發廢棄物清除處理許可證 廢棄物代碼：D-2528；廢棄物名稱：裝置使用後廢棄之太陽能光電模組"
+  },
+  {
+    "id": "CUST-20260421-024",
+    "date": "2026-04-21",
+    "time": "11:01",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "管理與營運總部 配合業主進行工安火災演練或空拍熱顯巡檢",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan https://pvis.moenv.gov.tw/pvis/info/QnA",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:01] 傑: Evan https://pvis.moenv.gov.tw/pvis/info/QnA"
+  },
+  {
+    "id": "CUST-20260421-025",
+    "date": "2026-04-21",
+    "time": "11:02",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 這有機構名",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:02] 傑: Evan 這有機構名"
+  },
+  {
+    "id": "CUST-20260421-026",
+    "date": "2026-04-21",
+    "time": "11:02",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan Hank底下的廠商也能代操此項目 可以與他討論",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:02] 傑: Evan Hank底下的廠商也能代操此項目 可以與他討論"
+  },
+  {
+    "id": "CUST-20260421-027",
+    "date": "2026-04-21",
+    "time": "11:04",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 有分 清除機構 跟 處理機構",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:04] 傑: Evan 有分 清除機構 跟 處理機構"
+  },
+  {
+    "id": "CUST-20260421-028",
+    "date": "2026-04-21",
+    "time": "11:05",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 以處理機構為主",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:05] 傑: Evan 以處理機構為主"
+  },
+  {
+    "id": "CUST-20260421-029",
+    "date": "2026-04-21",
+    "time": "11:06",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 有的客戶會先自己暫存 比較多量時 才一次處理",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:06] 傑: Evan 有的客戶會先自己暫存 比較多量時 才一次處理"
+  },
+  {
+    "id": "CUST-20260421-030",
+    "date": "2026-04-21",
+    "time": "11:14",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "環保法規與廢棄物清運",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "阿傑 我了解你的意思，只是客戶目前案場的狀況其實是沒有空間能夠存放破片的",
     "stakeholders": [
       "洪阿凱"
     ],
-    "context": "09:42 洪阿凱: 昨天已提供巡檢報告喔",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
+    "context": "[11:14] 洪阿凱: 阿傑 我了解你的意思，只是客戶目前案場的狀況其實是沒有空間能夠存放破片的"
   },
   {
-    "id": "CUST-20260611-025",
+    "id": "CUST-20260421-031",
+    "date": "2026-04-21",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "加上客戶主要的訴求是希望公司能一併報價處理",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 加上客戶主要的訴求是希望公司能一併報價處理"
+  },
+  {
+    "id": "CUST-20260421-032",
+    "date": "2026-04-21",
+    "time": "11:15",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "Evan OK 請洽Hank詢商",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:15] 傑: Evan OK 請洽Hank詢商"
+  },
+  {
+    "id": "CUST-20260421-033",
+    "date": "2026-04-21",
+    "time": "11:17",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan Hank應該會找機電廠商代操此項目",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:17] 傑: Evan Hank應該會找機電廠商代操此項目"
+  },
+  {
+    "id": "CUST-20260421-034",
+    "date": "2026-04-21",
+    "time": "11:36",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 我先幫你跟Hank預告了 後續你們再討論即可",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:36] 傑: Evan 我先幫你跟Hank預告了 後續你們再討論即可"
+  },
+  {
+    "id": "CUST-20260421-035",
+    "date": "2026-04-21",
+    "time": "11:37",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "好的 感謝",
+    "stakeholders": [
+      "洪阿凱"
+    ],
+    "context": "[11:37] 洪阿凱: 好的 感謝"
+  },
+  {
+    "id": "CUST-20260422-036",
+    "date": "2026-04-22",
+    "time": "13:32",
+    "site_name": "正隆后里",
+    "equipment": "憑證中心/DREAMS閘道器",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "👩🏻 @傑 Evan 阿傑，正隆后里有個詢價是關於二期太陽能再生能源憑證中心上傳異常查修",
+    "stakeholders": [
+      "Leila.H",
+      "傑"
+    ],
+    "context": "[13:32] Leila.H: 👩🏻 @傑 Evan 阿傑，正隆后里有個詢價是關於二期太陽能再生能源憑證中心上傳異常查修"
+  },
+  {
+    "id": "CUST-20260422-037",
+    "date": "2026-04-22",
+    "time": "09:00",
+    "site_name": "正隆后里",
+    "equipment": "案場系統組件",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "經確認，去年正隆后里也有下這張訂單，客服這邊內部訂單也有key in",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 經確認，去年正隆后里也有下這張訂單，客服這邊內部訂單也有key in"
+  },
+  {
+    "id": "CUST-20260422-038",
+    "date": "2026-04-22",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "但是不知道何種原因當時這項工作未執行，所以今年需要補執行給客戶",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 但是不知道何種原因當時這項工作未執行，所以今年需要補執行給客戶"
+  },
+  {
+    "id": "CUST-20260422-039",
+    "date": "2026-04-22",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "有分別詢問肉哥跟發哥是否為此項任務的主導人物",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 有分別詢問肉哥跟發哥是否為此項任務的主導人物"
+  },
+  {
+    "id": "CUST-20260422-040",
+    "date": "2026-04-22",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "但目前我這邊達到的答案是兩邊都表示他們不清楚，也非執行任務的key person",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 但目前我這邊達到的答案是兩邊都表示他們不清楚，也非執行任務的key person"
+  },
+  {
+    "id": "CUST-20260422-041",
+    "date": "2026-04-22",
+    "time": "09:00",
+    "site_name": "正隆后里",
+    "equipment": "憑證中心/DREAMS閘道器",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "所以想跟你確認下，關於正隆后里的憑證中心上傳異常查修部分，該由哪個單位負責執行呢?",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 所以想跟你確認下，關於正隆后里的憑證中心上傳異常查修部分，該由哪個單位負責執行呢?"
+  },
+  {
+    "id": "CUST-20260423-042",
+    "date": "2026-04-23",
+    "time": "13:16",
+    "site_name": "正隆后里",
+    "equipment": "案場系統組件",
+    "request_type": "保固責任認定",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "已結案",
+    "summary": "👩🏻 @傑 Evan 正隆后里的部分，肉哥確認後告知去年的異常查修是dreams的部分，當時有過去處...",
+    "stakeholders": [
+      "Leila.H",
+      "傑",
+      "Lee"
+    ],
+    "context": "[13:16] Leila.H: 👩🏻 @傑 Evan 正隆后里的部分，肉哥確認後告知去年的異常查修是dreams的部分，當時有過去處理，廠商也有提供相關報告，目前會請 @Lee Roy 提供驗收單給業務這邊請款結案"
+  },
+  {
+    "id": "CUST-20260423-043",
+    "date": "2026-04-23",
+    "time": "09:00",
+    "site_name": "正隆后里",
+    "equipment": "憑證中心/DREAMS閘道器",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "今年的異常查修是綠能憑證的部分，目前確認已過保，需派廠商過去確認後並報價給業主，這部分再麻煩 @里包...",
+    "stakeholders": [
+      "客服小幫手",
+      "里包恩😑"
+    ],
+    "context": "[09:00] 客服小幫手: 今年的異常查修是綠能憑證的部分，目前確認已過保，需派廠商過去確認後並報價給業主，這部分再麻煩 @里包恩😑 聯絡廠商主導處理，目前肉哥告知下個月阿超要過去正隆后里進行清洗作業，是否要請阿超協助，這部分再麻煩發哥聯絡安排"
+  },
+  {
+    "id": "CUST-20260423-044",
+    "date": "2026-04-23",
+    "time": "13:25",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan OK 但我看清洗是明天 阿超只是剛好有過去先了解而已 後續請阿發執行後續",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[13:25] 傑: Evan OK 但我看清洗是明天 阿超只是剛好有過去先了解而已 後續請阿發執行後續"
+  },
+  {
+    "id": "CUST-20260423-045",
+    "date": "2026-04-23",
+    "time": "13:42",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 收到~",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[13:42] Leila.H: 👩🏻 收到~"
+  },
+  {
+    "id": "CUST-20260423-046",
+    "date": "2026-04-23",
+    "time": "13:43",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 @黃昱超 明天過去前 再麻煩連絡郭先生 0937754444",
+    "stakeholders": [
+      "Leila.H",
+      "黃昱超"
+    ],
+    "context": "[13:43] Leila.H: 👩🏻 @黃昱超 明天過去前 再麻煩連絡郭先生 0937754444"
+  },
+  {
+    "id": "CUST-20260423-047",
+    "date": "2026-04-23",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@里包恩😑 這是主要負責人的電話   也麻煩你記一下",
+    "stakeholders": [
+      "客服小幫手",
+      "里包恩😑"
+    ],
+    "context": "[09:00] 客服小幫手: @里包恩😑 這是主要負責人的電話   也麻煩你記一下"
+  },
+  {
+    "id": "CUST-20260430-048",
+    "date": "2026-04-30",
+    "time": "10:50",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 @里包恩😑 @andrewlu",
+    "stakeholders": [
+      "Leila.H",
+      "里包恩😑",
+      "andrewlu"
+    ],
+    "context": "[10:50] Leila.H: 👩🏻 @里包恩😑 @andrewlu"
+  },
+  {
+    "id": "CUST-20260430-049",
+    "date": "2026-04-30",
+    "time": "09:00",
+    "site_name": "長榮大園",
+    "equipment": "計量電表/發電數據",
+    "request_type": "發電績效與合約檢討",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "長榮大元的電費單回饋，今天可以回覆mail給業主嗎?",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 長榮大元的電費單回饋，今天可以回覆mail給業主嗎?"
+  },
+  {
+    "id": "CUST-20260506-050",
+    "date": "2026-05-06",
+    "time": "10:17",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@傑 Evan @洪阿凱 @Bryant Chen @鈺祺Mina",
+    "stakeholders": [
+      "黃昱超",
+      "傑",
+      "洪阿凱",
+      "Bryant",
+      "鈺祺Mina"
+    ],
+    "context": "[10:17] 黃昱超: @傑 Evan @洪阿凱 @Bryant Chen @鈺祺Mina"
+  },
+  {
+    "id": "CUST-20260506-051",
+    "date": "2026-05-06",
+    "time": "09:00",
+    "site_name": "奇美",
+    "equipment": "案場系統組件",
+    "request_type": "客訴與責任爭議",
+    "severity": "P0 (最高級/即時派工)",
+    "status": "處理中",
+    "summary": "奇美羅大哥請我司5/29出人參加勝利廠區的火災安全演練",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 奇美羅大哥請我司5/29出人參加勝利廠區的火災安全演練"
+  },
+  {
+    "id": "CUST-20260506-052",
+    "date": "2026-05-06",
+    "time": "10:25",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 好的 當天有月會",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[10:25] 傑: Evan 好的 當天有月會"
+  },
+  {
+    "id": "CUST-20260506-053",
+    "date": "2026-05-06",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "我跟他聯絡",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 我跟他聯絡"
+  },
+  {
+    "id": "CUST-20260518-054",
+    "date": "2026-05-18",
+    "time": "10:40",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@洪阿凱 @傑 Evan",
+    "stakeholders": [
+      "黃昱超",
+      "洪阿凱",
+      "傑"
+    ],
+    "context": "[10:40] 黃昱超: @洪阿凱 @傑 Evan"
+  },
+  {
+    "id": "CUST-20260518-055",
+    "date": "2026-05-18",
+    "time": "09:00",
+    "site_name": "奇菱",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "奇菱風管部",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 奇菱風管部"
+  },
+  {
+    "id": "CUST-20260518-056",
+    "date": "2026-05-18",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "希望我們提供一把開盤體的鑰匙給業主",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 希望我們提供一把開盤體的鑰匙給業主"
+  },
+  {
+    "id": "CUST-20260521-057",
+    "date": "2026-05-21",
+    "time": "17:07",
+    "site_name": "晶碩光電",
+    "equipment": "光電涼亭結構飾板",
+    "request_type": "客訴與責任爭議",
+    "severity": "P0 (最高級/即時派工)",
+    "status": "處理中",
+    "summary": "@傑 Evan @鈺祺Mina 晶碩光電反應6樓辦公區光電涼亭飾板掉落，建置至今已掉落2次，希望能一...",
+    "stakeholders": [
+      "andrewlu",
+      "傑",
+      "鈺祺Mina"
+    ],
+    "context": "[17:07] andrewlu: @傑 Evan @鈺祺Mina 晶碩光電反應6樓辦公區光電涼亭飾板掉落，建置至今已掉落2次，希望能一次完善處理。經詢問為我司工程建置時安裝，是否能協請工程接續處理？"
+  },
+  {
+    "id": "CUST-20260521-058",
+    "date": "2026-05-21",
+    "time": "17:49",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 處理方法是什麼",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[17:49] 傑: Evan 處理方法是什麼"
+  },
+  {
+    "id": "CUST-20260521-059",
+    "date": "2026-05-21",
+    "time": "17:49",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 事故調查原因",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[17:49] 傑: Evan 事故調查原因"
+  },
+  {
+    "id": "CUST-20260521-060",
+    "date": "2026-05-21",
+    "time": "17:56",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "保固責任認定",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 已公司的角度 保固內就是幫他修好 沒有重設這回事",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[17:56] 傑: Evan 已公司的角度 保固內就是幫他修好 沒有重設這回事"
+  },
+  {
+    "id": "CUST-20260521-061",
+    "date": "2026-05-21",
+    "time": "17:59",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 案子在完成的過程中",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[17:59] 傑: Evan 案子在完成的過程中"
+  },
+  {
+    "id": "CUST-20260521-062",
+    "date": "2026-05-21",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "保固責任認定",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "會經歷 設計審圖>工程驗收 才開始保固",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 會經歷 設計審圖>工程驗收 才開始保固"
+  },
+  {
+    "id": "CUST-20260521-063",
+    "date": "2026-05-21",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "保固責任認定",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "如果每個保固都要回頭討論設計跟驗收就不太妥",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 如果每個保固都要回頭討論設計跟驗收就不太妥"
+  },
+  {
+    "id": "CUST-20260608-064",
+    "date": "2026-06-08",
+    "time": "17:26",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@洪阿凱 @傑 Evan",
+    "stakeholders": [
+      "黃昱超",
+      "洪阿凱",
+      "傑"
+    ],
+    "context": "[17:26] 黃昱超: @洪阿凱 @傑 Evan"
+  },
+  {
+    "id": "CUST-20260608-065",
+    "date": "2026-06-08",
+    "time": "09:00",
+    "site_name": "奇菱",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "奇菱風管希望我們提供上次巡檢的報告與熱顯照片給他，供他製作業主內部的自主檢查表，0963-489-2...",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 奇菱風管希望我們提供上次巡檢的報告與熱顯照片給他，供他製作業主內部的自主檢查表，0963-489-267"
+  },
+  {
+    "id": "CUST-20260608-066",
+    "date": "2026-06-08",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "這隻電話號碼可搜尋到他的LINE",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 這隻電話號碼可搜尋到他的LINE"
+  },
+  {
+    "id": "CUST-20260608-067",
+    "date": "2026-06-08",
+    "time": "18:28",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 收到",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[18:28] 傑: Evan 收到"
+  },
+  {
+    "id": "CUST-20260610-068",
+    "date": "2026-06-10",
+    "time": "09:42",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "昨天已提供巡檢報告喔",
+    "stakeholders": [
+      "洪阿凱"
+    ],
+    "context": "[09:42] 洪阿凱: 昨天已提供巡檢報告喔"
+  },
+  {
+    "id": "CUST-20260611-069",
     "date": "2026-06-11",
     "time": "10:35",
     "site_name": "順益中壢",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "👩🏻 @里包恩😑 順益中壢本周日早上需進行全面斷電，再麻煩協助安排人員到現場進行斷電，謝謝",
     "stakeholders": [
       "Leila.H",
-      "里包恩"
+      "里包恩😑"
     ],
-    "context": "10:35 Leila.H: 👩🏻 @里包恩😑 順益中壢本周日早上需進行全面斷電，再麻煩協助安排人員到現場進行斷電，謝謝\n10:35 Leila.H: 👩🏻 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[10:35] Leila.H: 👩🏻 @里包恩😑 順益中壢本周日早上需進行全面斷電，再麻煩協助安排人員到現場進行斷電，謝謝"
   },
   {
-    "id": "CUST-20260612-026",
+    "id": "CUST-20260612-070",
     "date": "2026-06-12",
     "time": "14:13",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@Bryant Chen 群創八廠業主回報CCTV［7］［22］故障，再麻煩協助處理，謝謝。(bow...",
     "stakeholders": [
-      "依靜Ivy"
+      "依靜Ivy",
+      "Bryant"
     ],
-    "context": "14:13 依靜Ivy: 圖片\n14:13 依靜Ivy: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[14:13] 依靜Ivy: @Bryant Chen 群創八廠業主回報CCTV［7］［22］故障，再麻煩協助處理，謝謝。(bow)"
   },
   {
-    "id": "CUST-20260612-027",
-    "date": "2026-06-12",
-    "time": "14:13",
-    "site_name": "群創八廠",
-    "equipment": "CCTV",
-    "request_type": "客訴與責任爭議",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
-    "stakeholders": [
-      "Bryant",
-      "依靜Ivy"
-    ],
-    "context": "14:13 依靜Ivy: @Bryant Chen 群創八廠業主回報CCTV［7］［22］故障，再麻煩協助處理，謝謝。(bow)\n14:14 Bryant: Chen 貼圖",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
-  },
-  {
-    "id": "CUST-20260615-028",
-    "date": "2026-06-15",
-    "time": "16:43",
-    "site_name": "管理與營運總部",
-    "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
-    "stakeholders": [
-      "依靜Ivy"
-    ],
-    "context": "16:43 依靜Ivy: 圖片\n16:43 依靜Ivy: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
-  },
-  {
-    "id": "CUST-20260615-029",
+    "id": "CUST-20260615-071",
     "date": "2026-06-15",
     "time": "16:44",
-    "site_name": "奇景總部",
-    "equipment": "變流器",
-    "request_type": "客訴與責任爭議",
+    "site_name": "奇景",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@洪阿凱  奇景業主回報奇景總部變流器異常，再麻煩協助確認，謝謝。(please)",
     "stakeholders": [
-      "洪阿凱",
-      "依靜Ivy"
+      "依靜Ivy",
+      "洪阿凱"
     ],
-    "context": "16:44 依靜Ivy: @洪阿凱  奇景業主回報奇景總部變流器異常，再麻煩協助確認，謝謝。(please)\n16:48 洪阿凱: 好喔 我們剛從那裡回來",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[16:44] 依靜Ivy: @洪阿凱  奇景業主回報奇景總部變流器異常，再麻煩協助確認，謝謝。(please)"
   },
   {
-    "id": "CUST-20260616-030",
+    "id": "CUST-20260615-072",
+    "date": "2026-06-15",
+    "time": "16:48",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "好喔 我們剛從那裡回來",
+    "stakeholders": [
+      "洪阿凱"
+    ],
+    "context": "[16:48] 洪阿凱: 好喔 我們剛從那裡回來"
+  },
+  {
+    "id": "CUST-20260616-073",
     "date": "2026-06-16",
     "time": "11:44",
-    "site_name": "鉅橡1-2期",
+    "site_name": "鉅橡",
     "equipment": "INV16",
-    "request_type": "變流器批次壽命到期與改裝報價",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "鉅橡1-2期 施奈德變流器故障，需改裝背架更換台達 M20A 報價",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "鉅橡1-2期：INV16(8)故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A ...",
     "stakeholders": [
-      "傑",
       "明宗",
+      "傑",
       "依靜Ivy"
     ],
-    "context": "11:44 明宗: 鉅橡1-2期：INV16(8)故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A @傑 Evan @依靜Ivy 再",
-    "rca": "原廠施奈德 20k 停產且機身規格不同，換新機須包含結構背架改裝工料",
-    "suggested_action": "商務部依現場量測規格報價；建議業務向業主提出全廠預防性整批換裝方案",
-    "status": "已提供階梯報價"
+    "context": "[11:44] 明宗: 鉅橡1-2期：INV16(8)故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A @傑 Evan @依靜Ivy 再"
   },
   {
-    "id": "CUST-20260618-031",
+    "id": "CUST-20260618-074",
     "date": "2026-06-18",
     "time": "17:22",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@依靜Ivy @鈺祺Mina",
     "stakeholders": [
       "明宗",
       "依靜Ivy",
       "鈺祺Mina"
     ],
-    "context": "17:22 明宗: 圖片\n17:22 明宗: @依靜Ivy @鈺祺Mina\n17:26 依靜Ivy: 收到，下週處理~",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[17:22] 明宗: @依靜Ivy @鈺祺Mina"
   },
   {
-    "id": "CUST-20260622-032",
+    "id": "CUST-20260618-075",
+    "date": "2026-06-18",
+    "time": "17:26",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "收到，下週處理~",
+    "stakeholders": [
+      "依靜Ivy"
+    ],
+    "context": "[17:26] 依靜Ivy: 收到，下週處理~"
+  },
+  {
+    "id": "CUST-20260622-076",
     "date": "2026-06-22",
     "time": "10:52",
-    "site_name": "晁雍伸港",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "👩🏻 @健國 彰化伸港_晁雍斷線，再麻煩處理",
     "stakeholders": [
       "Leila.H",
       "健國"
     ],
-    "context": "10:52 Leila.H: 👩🏻 @健國 彰化伸港_晁雍斷線，再麻煩處理\n10:52 Leila.H: 👩🏻 圖片\n10:53 健國: 有的 在路上囉\n10:53 健國: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[10:52] Leila.H: 👩🏻 @健國 彰化伸港_晁雍斷線，再麻煩處理"
   },
   {
-    "id": "CUST-20260622-033",
+    "id": "CUST-20260622-077",
     "date": "2026-06-22",
     "time": "10:53",
-    "site_name": "大舜板金",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "有的 在路上囉",
     "stakeholders": [
       "健國"
     ],
-    "context": "10:53 健國: 大舜板金 有提出展示畫面異常\n剛我不小心接起小幫手的電話了",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[10:53] 健國: 有的 在路上囉"
   },
   {
-    "id": "CUST-20260622-034",
+    "id": "CUST-20260622-078",
+    "date": "2026-06-22",
+    "time": "10:53",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "大舜板金 有提出展示畫面異常",
+    "stakeholders": [
+      "健國"
+    ],
+    "context": "[10:53] 健國: 大舜板金 有提出展示畫面異常"
+  },
+  {
+    "id": "CUST-20260622-079",
+    "date": "2026-06-22",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "剛我不小心接起小幫手的電話了",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 剛我不小心接起小幫手的電話了"
+  },
+  {
+    "id": "CUST-20260622-080",
     "date": "2026-06-22",
     "time": "11:13",
-    "site_name": "大舜1期",
-    "equipment": "MOXA、IPC",
-    "request_type": "客訴與責任爭議",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@傑 Evan @Lee Roy 大舜1期，目前仍使用IPC，監控跟展示螢幕是用同一台，監控的程式都...",
     "stakeholders": [
-      "Lee",
+      "明宗",
       "傑",
+      "Lee"
+    ],
+    "context": "[11:13] 明宗: @傑 Evan @Lee Roy 大舜1期，目前仍使用IPC，監控跟展示螢幕是用同一台，監控的程式都會跑出來遮住展示畫面，上星期我已經遠端幫忙重新用一次，研判是有可能他們重開機（因為監控的電源現在是用延長線接到停車場的插座）目前已經在案場無法協助遠端控制。是否將展示螢幕跟監控分開？"
+  },
+  {
+    "id": "CUST-20260622-081",
+    "date": "2026-06-22",
+    "time": "11:14",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "原本監控也是要改成MOXA，後來就沒有後續了",
+    "stakeholders": [
       "明宗"
     ],
-    "context": "11:13 明宗: @傑 Evan @Lee Roy 大舜1期，目前仍使用IPC，監控跟展示螢幕是用同一台，監控的程式都會跑出來遮住展示畫面，上星期我已經遠端幫忙重新用一次，研判是有可能他們重開機（因為監控的電源現在是用延長線接到停車場的插座）目前已經在案場無法協助遠端控制。是否將展示螢幕跟監控分開？\n11:14 明宗: 原本監控也是要改成MOXA，後來就沒有後續了\n11:15 傑: Evan 短解，我請辦公室的人幫你重開\nMOXA我找MIS\n11:22 明宗: MIS應該是無解,沒有any的位置\n11:23 明宗: 位址\n11:32 Lee: Roy 1.短解:遠端重啟恢復當機Sitemonitor程式 2.長解:轉MIS後續將現場既有的IPC架構切換成MOXA\n11:33 Lee: Roy 圖片\n11:33 Lee: Roy 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[11:14] 明宗: 原本監控也是要改成MOXA，後來就沒有後續了"
   },
   {
-    "id": "CUST-20260622-035",
+    "id": "CUST-20260622-082",
+    "date": "2026-06-22",
+    "time": "11:15",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan 短解，我請辦公室的人幫你重開",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[11:15] 傑: Evan 短解，我請辦公室的人幫你重開"
+  },
+  {
+    "id": "CUST-20260622-083",
+    "date": "2026-06-22",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "MOXA我找MIS",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: MOXA我找MIS"
+  },
+  {
+    "id": "CUST-20260622-084",
+    "date": "2026-06-22",
+    "time": "11:22",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "MIS應該是無解,沒有any的位置",
+    "stakeholders": [
+      "明宗"
+    ],
+    "context": "[11:22] 明宗: MIS應該是無解,沒有any的位置"
+  },
+  {
+    "id": "CUST-20260622-085",
+    "date": "2026-06-22",
+    "time": "11:32",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Roy 1.短解:遠端重啟恢復當機Sitemonitor程式 2.長解:轉MIS後續將現場既有的IP...",
+    "stakeholders": [
+      "Lee"
+    ],
+    "context": "[11:32] Lee: Roy 1.短解:遠端重啟恢復當機Sitemonitor程式 2.長解:轉MIS後續將現場既有的IPC架構切換成MOXA"
+  },
+  {
+    "id": "CUST-20260622-086",
     "date": "2026-06-22",
     "time": "11:44",
-    "site_name": "晁雍",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "晁雍 網路斷線已重開恢復連線，再麻煩幫忙回覆",
     "stakeholders": [
-      "Leila.H",
       "健國"
     ],
-    "context": "11:44 健國: 晁雍 網路斷線已重開恢復連線，再麻煩幫忙回覆\n感謝\n11:45 Leila.H: 👩🏻 貼圖",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[11:44] 健國: 晁雍 網路斷線已重開恢復連線，再麻煩幫忙回覆"
   },
   {
-    "id": "CUST-20260622-036",
+    "id": "CUST-20260622-087",
     "date": "2026-06-22",
     "time": "12:01",
-    "site_name": "鉅橡1-2期",
+    "site_name": "鉅橡",
     "equipment": "INV19",
-    "request_type": "變流器批次壽命到期與改裝報價",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "鉅橡1-2期 施奈德變流器故障，需改裝背架更換台達 M20A 報價",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "鉅橡1-2期：INV19-20(現11-12)故障需更換新機，背架要改裝（工、料）。原施奈德20 k...",
     "stakeholders": [
-      "傑",
       "明宗",
+      "傑",
       "依靜Ivy"
     ],
-    "context": "12:01 明宗: 鉅橡1-2期：INV19-20(現11-12)故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A @傑 Evan @依靜Ivy",
-    "rca": "原廠施奈德 20k 停產且機身規格不同，換新機須包含結構背架改裝工料",
-    "suggested_action": "商務部依現場量測規格報價；建議業務向業主提出全廠預防性整批換裝方案",
-    "status": "已提供階梯報價"
+    "context": "[12:01] 明宗: 鉅橡1-2期：INV19-20(現11-12)故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A @傑 Evan @依靜Ivy"
   },
   {
-    "id": "CUST-20260706-037",
+    "id": "CUST-20260625-088",
+    "date": "2026-06-25",
+    "time": "08:17",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "薇薇已邀請痞子晴加入群組，等對方加入再一起聊天吧！",
+    "stakeholders": [
+      "薇薇"
+    ],
+    "context": "[08:17] 薇薇: 薇薇已邀請痞子晴加入群組，等對方加入再一起聊天吧！"
+  },
+  {
+    "id": "CUST-20260625-089",
+    "date": "2026-06-25",
+    "time": "08:33",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "痞子晴已加入群組。",
+    "stakeholders": [
+      "痞子晴"
+    ],
+    "context": "[08:33] 痞子晴: 痞子晴已加入群組。"
+  },
+  {
+    "id": "CUST-20260706-090",
     "date": "2026-07-06",
     "time": "09:15",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@痞子晴 東和業主回報目前東和二三期監控異常，再麻煩協助處理，謝謝～(bow)",
     "stakeholders": [
-      "依靜Ivy"
+      "依靜Ivy",
+      "痞子晴"
     ],
-    "context": "09:15 依靜Ivy: 圖片\n09:15 依靜Ivy: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:15] 依靜Ivy: @痞子晴 東和業主回報目前東和二三期監控異常，再麻煩協助處理，謝謝～(bow)"
   },
   {
-    "id": "CUST-20260706-038",
-    "date": "2026-07-06",
-    "time": "09:15",
-    "site_name": "東和二三期",
-    "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
-    "stakeholders": [
-      "痞子晴",
-      "依靜Ivy"
-    ],
-    "context": "09:15 依靜Ivy: @痞子晴 東和業主回報目前東和二三期監控異常，再麻煩協助處理，謝謝～(bow)",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
-  },
-  {
-    "id": "CUST-20260707-039",
+    "id": "CUST-20260707-091",
     "date": "2026-07-07",
     "time": "09:33",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "管理與營運總部 配合業主進行工安火災演練或空拍熱顯巡檢",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 @里包恩😑 再麻煩安排中科矽品的颱風前巡檢唷",
     "stakeholders": [
       "Leila.H",
-      "里包恩"
+      "里包恩😑"
     ],
-    "context": "09:33 Leila.H: 👩🏻 @里包恩😑 再麻煩安排中科矽品的颱風前巡檢唷\n09:33 Leila.H: 👩🏻 圖片\n09:33 Leila.H: 👩🏻 圖片\n09:36 里包恩😑: 禮拜四\n09:37 Leila.H: 👩🏻 好的~雲豹群組有提供巡檢表格式   再麻煩下載完成\n09:37 里包恩😑: 好的",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
+    "context": "[09:33] Leila.H: 👩🏻 @里包恩😑 再麻煩安排中科矽品的颱風前巡檢唷"
   },
   {
-    "id": "CUST-20260707-040",
+    "id": "CUST-20260707-092",
+    "date": "2026-07-07",
+    "time": "09:37",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 好的~雲豹群組有提供巡檢表格式   再麻煩下載完成",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[09:37] Leila.H: 👩🏻 好的~雲豹群組有提供巡檢表格式   再麻煩下載完成"
+  },
+  {
+    "id": "CUST-20260707-093",
     "date": "2026-07-07",
     "time": "09:38",
     "site_name": "烏日高鐵",
     "equipment": "案場系統組件",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "烏日高鐵 配合業主進行工安火災演練或空拍熱顯巡檢",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "今天會去烏日高鐵颱風前巡檢",
     "stakeholders": [
-      "里包恩"
+      "里包恩😑"
     ],
-    "context": "09:38 里包恩😑: 今天會去烏日高鐵颱風前巡檢",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
+    "context": "[09:38] 里包恩😑: 今天會去烏日高鐵颱風前巡檢"
   },
   {
-    "id": "CUST-20260707-041",
+    "id": "CUST-20260707-094",
     "date": "2026-07-07",
     "time": "11:47",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "👩🏻 @andrewlu @里包恩😑 8-2保發&維運費用問題，新日光需要的資料本周四前可以回填好提...",
     "stakeholders": [
       "Leila.H",
-      "里包恩",
-      "andrewlu"
+      "andrewlu",
+      "里包恩😑"
     ],
-    "context": "11:47 Leila.H: 👩🏻 @andrewlu @里包恩😑 8-2保發&維運費用問題，新日光需要的資料本周四前可以回填好提供嗎?",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[11:47] Leila.H: 👩🏻 @andrewlu @里包恩😑 8-2保發&維運費用問題，新日光需要的資料本周四前可以回填好提供嗎?"
   },
   {
-    "id": "CUST-20260708-042",
+    "id": "CUST-20260708-095",
     "date": "2026-07-08",
     "time": "15:34",
-    "site_name": "奇美",
-    "equipment": "模組",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "奇美 配合業主進行工安火災演練或空拍熱顯巡檢",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@傑 Evan",
     "stakeholders": [
-      "傑",
-      "黃昱超"
+      "黃昱超",
+      "傑"
     ],
-    "context": "15:34 黃昱超: @傑 Evan\n奇美因配合業主自己的空拍熱顯\n要求將原定7月中的巡檢/清洗延後至八月初執行。\n目前碰到的問題是原定是下週進廠，颱風剛過不太可能說服其他業主同意下週清洗模組",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
+    "context": "[15:34] 黃昱超: @傑 Evan"
   },
   {
-    "id": "CUST-20260709-043",
+    "id": "CUST-20260708-096",
+    "date": "2026-07-08",
+    "time": "09:00",
+    "site_name": "奇美",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "奇美因配合業主自己的空拍熱顯",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 奇美因配合業主自己的空拍熱顯"
+  },
+  {
+    "id": "CUST-20260708-097",
+    "date": "2026-07-08",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "要求將原定7月中的巡檢/清洗延後至八月初執行。",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 要求將原定7月中的巡檢/清洗延後至八月初執行。"
+  },
+  {
+    "id": "CUST-20260708-098",
+    "date": "2026-07-08",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "太陽能光電模組",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "目前碰到的問題是原定是下週進廠，颱風剛過不太可能說服其他業主同意下週清洗模組",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 目前碰到的問題是原定是下週進廠，颱風剛過不太可能說服其他業主同意下週清洗模組"
+  },
+  {
+    "id": "CUST-20260709-099",
     "date": "2026-07-09",
     "time": "10:30",
-    "site_name": "益張",
-    "equipment": "日照計",
-    "request_type": "監控月報系統空白客訴",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "益張業主投訴每月發電報表空白，因轉慧景監控與現場日照計故障爆值",
+    "status": "處理中",
+    "summary": "👩🏻 @Lee Roy @健國",
     "stakeholders": [
       "Leila.H",
       "Lee",
-      "健國",
-      "里包恩"
+      "健國"
     ],
-    "context": "10:30 Leila.H: 👩🏻 @Lee Roy @健國\n益張反饋每月發電報表中的資料都是空白的，請協助處理，謝謝\n10:31 Leila.H: 👩🏻 圖片\n10:45 Lee: Roy @健國@里包恩😑  此案益張已轉慧景監控，請MIS BEN移除ACME益張月報寄送即可，並須提醒業主觀看慧景月報為主，但目前現場日照計故障問題尚未修復，請留意該慧景數據錯誤爆直的問題\n10:45 Lee: Roy 圖片\n10:45 Lee: Roy 圖片",
-    "rca": "現場日照計故障未修導致 PR 無法計算，加上 ACME 與慧景切換未關閉舊月報寄送",
-    "suggested_action": "MIS 移除 ACME 寄送並引導業主查看慧景；現場工務儘速排查日照計",
-    "status": "監控系統設定修正中"
+    "context": "[10:30] Leila.H: 👩🏻 @Lee Roy @健國"
   },
   {
-    "id": "CUST-20260710-044",
+    "id": "CUST-20260709-100",
+    "date": "2026-07-09",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "益張反饋每月發電報表中的資料都是空白的，請協助處理，謝謝",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 益張反饋每月發電報表中的資料都是空白的，請協助處理，謝謝"
+  },
+  {
+    "id": "CUST-20260709-101",
+    "date": "2026-07-09",
+    "time": "10:45",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Roy @健國@里包恩😑  此案益張已轉慧景監控，請MIS BEN移除ACME益張月報寄送即可，並須...",
+    "stakeholders": [
+      "Lee",
+      "健國",
+      "里包恩😑"
+    ],
+    "context": "[10:45] Lee: Roy @健國@里包恩😑  此案益張已轉慧景監控，請MIS BEN移除ACME益張月報寄送即可，並須提醒業主觀看慧景月報為主，但目前現場日照計故障問題尚未修復，請留意該慧景數據錯誤爆直的問題"
+  },
+  {
+    "id": "CUST-20260710-102",
     "date": "2026-07-10",
     "time": "15:50",
-    "site_name": "鉅橡1期",
+    "site_name": "鉅橡",
     "equipment": "INV8",
-    "request_type": "變流器批次壽命到期與改裝報價",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "鉅橡1期 施奈德變流器故障，需改裝背架更換台達 M20A 報價",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "鉅橡1期：INV8故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A @依靜Ivy",
     "stakeholders": [
       "明宗",
       "依靜Ivy"
     ],
-    "context": "15:50 明宗: 鉅橡1期：INV8故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A @依靜Ivy",
-    "rca": "原廠施奈德 20k 停產且機身規格不同，換新機須包含結構背架改裝工料",
-    "suggested_action": "商務部依現場量測規格報價；建議業務向業主提出全廠預防性整批換裝方案",
-    "status": "已提供階梯報價"
+    "context": "[15:50] 明宗: 鉅橡1期：INV8故障需更換新機，背架要改裝（工、料）。原施奈德20 k更換M20 A @依靜Ivy"
   },
   {
-    "id": "CUST-20260721-045",
+    "id": "CUST-20260721-103",
     "date": "2026-07-21",
     "time": "15:15",
     "site_name": "史谷脫",
     "equipment": "INV4",
-    "request_type": "核心發電中斷與換機報價",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "史谷脫變流器故障停機卡在 Check DC，電性絕緣正常，申請更換新機報價",
-    "stakeholders": [
-      "Leila.H",
-      "明宗",
-      "依靜Ivy"
-    ],
-    "context": "15:15 明宗: 史谷脫：INV4故障需更換新機（業主已同意），1樓搬至2樓（3人次）半天。舊台達換台達 M30A\n15:15 明宗: @依靜Ivy\n15:16 Leila.H: 👩🏻 Ivy今天病假，行事曆有key唷\n15:18 Leila.H: 👩🏻 INV的部分   我會先向供應鏈詢價處理\n15:29 Leila.H: 👩🏻 @明宗 史谷脫INV已報價，請知悉\n15:29 Leila.H: 👩🏻 圖片\n15:34 明宗: @Leila.H 👩🏻 剛剛才加你好友，換INV的細項要詢問一下",
-    "rca": "直流側檢測迴路硬體損壞，無法開機發電，需汰換為台達 M30A",
-    "suggested_action": "依靜與 Leila 快速向供應鏈詢價並發出報價單，追蹤備品到貨吊掛進場",
-    "status": "報價完成並安排更換"
-  },
-  {
-    "id": "CUST-20260727-046",
-    "date": "2026-07-27",
-    "time": "09:26",
-    "site_name": "管理與營運總部",
-    "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "史谷脫：INV4故障需更換新機（業主已同意），1樓搬至2樓（3人次）半天。舊台達換台達 M30A",
     "stakeholders": [
       "明宗"
     ],
-    "context": "09:26 明宗: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[15:15] 明宗: 史谷脫：INV4故障需更換新機（業主已同意），1樓搬至2樓（3人次）半天。舊台達換台達 M30A"
   },
   {
-    "id": "CUST-20260727-047",
+    "id": "CUST-20260721-104",
+    "date": "2026-07-21",
+    "time": "15:15",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@依靜Ivy",
+    "stakeholders": [
+      "明宗",
+      "依靜Ivy"
+    ],
+    "context": "[15:15] 明宗: @依靜Ivy"
+  },
+  {
+    "id": "CUST-20260721-105",
+    "date": "2026-07-21",
+    "time": "15:16",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 Ivy今天病假，行事曆有key唷",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[15:16] Leila.H: 👩🏻 Ivy今天病假，行事曆有key唷"
+  },
+  {
+    "id": "CUST-20260721-106",
+    "date": "2026-07-21",
+    "time": "15:18",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "處理中",
+    "summary": "👩🏻 INV的部分   我會先向供應鏈詢價處理",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[15:18] Leila.H: 👩🏻 INV的部分   我會先向供應鏈詢價處理"
+  },
+  {
+    "id": "CUST-20260721-107",
+    "date": "2026-07-21",
+    "time": "15:29",
+    "site_name": "史谷脫",
+    "equipment": "案場系統組件",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "👩🏻 @明宗 史谷脫INV已報價，請知悉",
+    "stakeholders": [
+      "Leila.H",
+      "明宗"
+    ],
+    "context": "[15:29] Leila.H: 👩🏻 @明宗 史谷脫INV已報價，請知悉"
+  },
+  {
+    "id": "CUST-20260721-108",
+    "date": "2026-07-21",
+    "time": "15:34",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@Leila.H 👩🏻 剛剛才加你好友，換INV的細項要詢問一下",
+    "stakeholders": [
+      "明宗",
+      "Leila.H"
+    ],
+    "context": "[15:34] 明宗: @Leila.H 👩🏻 剛剛才加你好友，換INV的細項要詢問一下"
+  },
+  {
+    "id": "CUST-20260727-109",
     "date": "2026-07-27",
     "time": "09:27",
-    "site_name": "東原國中",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "@依靜Ivy @鈺祺Mina 東原國中的業主公司名稱已更改，不知是否會影響合約要重新簽訂？",
     "stakeholders": [
       "明宗",
       "依靜Ivy",
       "鈺祺Mina"
     ],
-    "context": "09:27 明宗: @依靜Ivy @鈺祺Mina 東原國中的業主公司名稱已更改，不知是否會影響合約要重新簽訂？",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:27] 明宗: @依靜Ivy @鈺祺Mina 東原國中的業主公司名稱已更改，不知是否會影響合約要重新簽訂？"
   },
   {
-    "id": "CUST-20260727-048",
+    "id": "CUST-20260727-110",
     "date": "2026-07-27",
     "time": "14:13",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "已處理中，謝謝明宗提醒。",
     "stakeholders": [
       "鈺祺Mina"
     ],
-    "context": "14:13 鈺祺Mina: 已處理中，謝謝明宗提醒。",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[14:13] 鈺祺Mina: 已處理中，謝謝明宗提醒。"
   },
   {
-    "id": "CUST-20260728-049",
+    "id": "CUST-20260728-111",
     "date": "2026-07-28",
     "time": "09:50",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "已與法務確認過，合約不需重新簽訂。",
     "stakeholders": [
       "依靜Ivy"
     ],
-    "context": "09:50 依靜Ivy: 已與法務確認過，合約不需重新簽訂。",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[09:50] 依靜Ivy: 已與法務確認過，合約不需重新簽訂。"
   },
   {
-    "id": "CUST-20260806-050",
-    "date": "2026-08-06",
-    "time": "07:40",
-    "site_name": "管理與營運總部",
-    "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
-    "stakeholders": [
-      "鈺祺Mina"
-    ],
-    "context": "07:40 鈺祺Mina: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
-  },
-  {
-    "id": "CUST-20260806-051",
+    "id": "CUST-20260806-112",
     "date": "2026-08-06",
     "time": "07:41",
     "site_name": "奇景",
-    "equipment": "風扇、INV5、INV9",
-    "request_type": "原廠關鍵耗材長期缺料停機風險",
-    "severity": "P1 (高風險/發電中斷)",
-    "summary": "奇景停車場變流器散熱風扇故障，代理商盛齊原廠缺料，暫以 bypass 應急發電",
+    "equipment": "INV5",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "請問一下奇景INV5有異常嗎？",
     "stakeholders": [
-      "洪阿凱",
       "鈺祺Mina"
     ],
-    "context": "07:41 鈺祺Mina: 請問一下奇景INV5有異常嗎？\n07:58 洪阿凱: 有喔，昨天下午發生的機況\n這有請盛齊確認是INV5子機風扇故障 會先安排時間過去將風扇bypass 並重啟 應該就會和INV9一樣回復發電狀態\n只是目前風扇原廠告知為缺貨狀態需再追蹤\n08:00 洪阿凱: 圖片\n08:05 鈺祺Mina: OK 請再提供要進場處理INV5的日期 謝謝~\n08:31 洪阿凱: 貼圖\n08:35 洪阿凱: 預計今天過去處理",
-    "rca": "進口零件全球缺料供應鏈週期長達 2 個月，現場先 bypass 防降載",
-    "suggested_action": "持續每週催促盛齊備品交期；採購建立通用規格風扇安全庫存",
-    "status": "應急 bypass 併網，持續催料"
+    "context": "[07:41] 鈺祺Mina: 請問一下奇景INV5有異常嗎？"
   },
   {
-    "id": "CUST-20260806-052",
+    "id": "CUST-20260806-113",
     "date": "2026-08-06",
-    "time": "14:06",
-    "site_name": "管理與營運總部",
+    "time": "07:58",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "有喔，昨天下午發生的機況",
     "stakeholders": [
-      "李昀璁"
+      "洪阿凱"
     ],
-    "context": "14:06 李昀璁: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[07:58] 洪阿凱: 有喔，昨天下午發生的機況"
   },
   {
-    "id": "CUST-20260806-053",
+    "id": "CUST-20260806-114",
+    "date": "2026-08-06",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "INV5",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "這有請盛齊確認是INV5子機風扇故障 會先安排時間過去將風扇bypass 並重啟 應該就會和INV9...",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 這有請盛齊確認是INV5子機風扇故障 會先安排時間過去將風扇bypass 並重啟 應該就會和INV9一樣回復發電狀態"
+  },
+  {
+    "id": "CUST-20260806-115",
+    "date": "2026-08-06",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "只是目前風扇原廠告知為缺貨狀態需再追蹤",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 只是目前風扇原廠告知為缺貨狀態需再追蹤"
+  },
+  {
+    "id": "CUST-20260806-116",
+    "date": "2026-08-06",
+    "time": "08:05",
+    "site_name": "全區營運",
+    "equipment": "INV5",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "OK 請再提供要進場處理INV5的日期 謝謝~",
+    "stakeholders": [
+      "鈺祺Mina"
+    ],
+    "context": "[08:05] 鈺祺Mina: OK 請再提供要進場處理INV5的日期 謝謝~"
+  },
+  {
+    "id": "CUST-20260806-117",
+    "date": "2026-08-06",
+    "time": "08:35",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "預計今天過去處理",
+    "stakeholders": [
+      "洪阿凱"
+    ],
+    "context": "[08:35] 洪阿凱: 預計今天過去處理"
+  },
+  {
+    "id": "CUST-20260806-118",
     "date": "2026-08-06",
     "time": "14:07",
-    "site_name": "欣銓",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "欣銓 配合業主進行工安火災演練或空拍熱顯巡檢",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "@Leila.H 👩🏻 欣銓案場負責人對於報價內容不太明瞭，再請協助與她說明，謝謝",
     "stakeholders": [
-      "Leila.H",
-      "李昀璁"
+      "李昀璁",
+      "Leila.H"
     ],
-    "context": "14:07 李昀璁: @Leila.H 👩🏻 欣銓案場負責人對於報價內容不太明瞭，再請協助與她說明，謝謝\n14:10 Leila.H: 👩🏻 稍早淦哥有跟他解釋過了喔~\n14:10 Leila.H: 👩🏻 先前是因為他們無法確定要更換的片數\n14:11 Leila.H: 👩🏻 所以提供了階梯價給他\n14:11 Leila.H: 👩🏻 稍後淦哥會發巡檢報告",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
+    "context": "[14:07] 李昀璁: @Leila.H 👩🏻 欣銓案場負責人對於報價內容不太明瞭，再請協助與她說明，謝謝"
   },
   {
-    "id": "CUST-20260810-054",
-    "date": "2026-08-10",
-    "time": "12:37",
-    "site_name": "管理與營運總部",
+    "id": "CUST-20260806-119",
+    "date": "2026-08-06",
+    "time": "14:10",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "👩🏻 稍早淦哥有跟他解釋過了喔~",
     "stakeholders": [
-      "李昀璁"
+      "Leila.H"
     ],
-    "context": "12:37 李昀璁: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[14:10] Leila.H: 👩🏻 稍早淦哥有跟他解釋過了喔~"
   },
   {
-    "id": "CUST-20260810-055",
+    "id": "CUST-20260806-120",
+    "date": "2026-08-06",
+    "time": "14:10",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 先前是因為他們無法確定要更換的片數",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[14:10] Leila.H: 👩🏻 先前是因為他們無法確定要更換的片數"
+  },
+  {
+    "id": "CUST-20260806-121",
+    "date": "2026-08-06",
+    "time": "14:11",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 所以提供了階梯價給他",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[14:11] Leila.H: 👩🏻 所以提供了階梯價給他"
+  },
+  {
+    "id": "CUST-20260806-122",
+    "date": "2026-08-06",
+    "time": "14:11",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "👩🏻 稍後淦哥會發巡檢報告",
+    "stakeholders": [
+      "Leila.H"
+    ],
+    "context": "[14:11] Leila.H: 👩🏻 稍後淦哥會發巡檢報告"
+  },
+  {
+    "id": "CUST-20260810-123",
     "date": "2026-08-10",
     "time": "12:40",
     "site_name": "長榮大園",
     "equipment": "案場系統組件",
-    "request_type": "綠電轉供與商務改建工程諮詢",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "長榮大園業主主動洽詢太陽能躉售改自用工程發包窗口",
+    "status": "處理中",
+    "summary": "@傑 Evan @鈺祺Mina @里包恩😑 長榮大園詢問躉售改自用的問題，此工程要由維運自行發包嗎？...",
     "stakeholders": [
+      "李昀璁",
       "傑",
       "鈺祺Mina",
-      "里包恩",
-      "李昀璁"
+      "里包恩😑"
     ],
-    "context": "12:40 李昀璁: @傑 Evan @鈺祺Mina @里包恩😑 長榮大園詢問躉售改自用的問題，此工程要由維運自行發包嗎？再請指示，謝謝。",
-    "rca": "企業 RE100 與減碳需求，評估自發自用經濟效益",
-    "suggested_action": "維運轉介中區 BU 業務窗口建立正式專案接洽評估",
-    "status": "已轉介中區業務接洽"
+    "context": "[12:40] 李昀璁: @傑 Evan @鈺祺Mina @里包恩😑 長榮大園詢問躉售改自用的問題，此工程要由維運自行發包嗎？再請指示，謝謝。"
   },
   {
-    "id": "CUST-20260810-056",
+    "id": "CUST-20260810-124",
     "date": "2026-08-10",
     "time": "14:52",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "這我再發信給中區BU，請他們安排窗口接洽，謝謝(感謝)",
     "stakeholders": [
       "鈺祺Mina"
     ],
-    "context": "14:52 鈺祺Mina: 這我再發信給中區BU，請他們安排窗口接洽，謝謝(感謝)",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[14:52] 鈺祺Mina: 這我再發信給中區BU，請他們安排窗口接洽，謝謝(感謝)"
   },
   {
-    "id": "CUST-20260812-057",
+    "id": "CUST-20260812-125",
     "date": "2026-08-12",
     "time": "14:55",
     "site_name": "長榮大園",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "👩🏻 @李昀璁 長榮大園反映監視器連不上線",
     "stakeholders": [
       "Leila.H",
       "李昀璁"
     ],
-    "context": "14:55 Leila.H: 👩🏻 @李昀璁 長榮大園反映監視器連不上線\n14:55 Leila.H: 👩🏻 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[14:55] Leila.H: 👩🏻 @李昀璁 長榮大園反映監視器連不上線"
   },
   {
-    "id": "CUST-20260812-058",
+    "id": "CUST-20260812-126",
     "date": "2026-08-12",
     "time": "15:46",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "已回覆近期會安排時間查修",
     "stakeholders": [
       "李昀璁"
     ],
-    "context": "15:46 李昀璁: 已回覆近期會安排時間查修",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[15:46] 李昀璁: 已回覆近期會安排時間查修"
   },
   {
-    "id": "CUST-20260824-059",
+    "id": "CUST-20260824-127",
     "date": "2026-08-24",
     "time": "13:36",
-    "site_name": "路達",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "民航法規與無人機特種作業合規",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "國泰要求台暉及路達空拍照，工務因缺乏無人機專業證照無法執行",
+    "status": "處理中",
+    "summary": "👩🏻 @傑 Evan 國泰要求提供台暉及路達的空拍照，因高雄組這邊沒有相關證照可以執行，這個部分的話...",
     "stakeholders": [
       "Leila.H",
       "傑"
     ],
-    "context": "13:36 Leila.H: 👩🏻 @傑 Evan 國泰要求提供台暉及路達的空拍照，因高雄組這邊沒有相關證照可以執行，這個部分的話可以請求誰協助呢？ 謝謝(感謝)\n13:36 Leila.H: 👩🏻 圖片\n13:56 傑: Evan 空拍這個業務有灰色地帶，先講依規矩做的答案\n1.代表公司去執行業務性質的空拍，就必須有專業操作證\n但如果是娛樂性質的，只要空拍機2公斤以下，在綠區使用就沒有規定專業操作證\n專業操作證 工程中心的小花跟Joes有",
-    "rca": "代表公司執行業務性質空拍，依法必須持有民航局專業操作證，不可無證飛行",
-    "suggested_action": "由工程中心具備合法專業操作證人員（小花、Joes）跨部門支援執行",
-    "status": "協調具照人員跨部門支援"
+    "context": "[13:36] Leila.H: 👩🏻 @傑 Evan 國泰要求提供台暉及路達的空拍照，因高雄組這邊沒有相關證照可以執行，這個部分的話可以請求誰協助呢？ 謝謝(感謝)"
   },
   {
-    "id": "CUST-20260826-060",
-    "date": "2026-08-26",
-    "time": "08:50",
-    "site_name": "管理與營運總部",
+    "id": "CUST-20260824-128",
+    "date": "2026-08-24",
+    "time": "13:56",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "Evan 空拍這個業務有灰色地帶，先講依規矩做的答案",
     "stakeholders": [
-      "黃昱超"
+      "傑"
     ],
-    "context": "08:50 黃昱超: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[13:56] 傑: Evan 空拍這個業務有灰色地帶，先講依規矩做的答案"
   },
   {
-    "id": "CUST-20260826-061",
+    "id": "CUST-20260824-129",
+    "date": "2026-08-24",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "1.代表公司去執行業務性質的空拍，就必須有專業操作證",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 1.代表公司去執行業務性質的空拍，就必須有專業操作證"
+  },
+  {
+    "id": "CUST-20260824-130",
+    "date": "2026-08-24",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "但如果是娛樂性質的，只要空拍機2公斤以下，在綠區使用就沒有規定專業操作證",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 但如果是娛樂性質的，只要空拍機2公斤以下，在綠區使用就沒有規定專業操作證"
+  },
+  {
+    "id": "CUST-20260824-131",
+    "date": "2026-08-24",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "專業操作證 工程中心的小花跟Joes有",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 專業操作證 工程中心的小花跟Joes有"
+  },
+  {
+    "id": "CUST-20260826-132",
     "date": "2026-08-26",
     "time": "08:52",
-    "site_name": "樹谷奇菱",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "工安演練與客戶端設備稽核陪同",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "樹谷奇菱 配合業主進行工安火災演練或空拍熱顯巡檢",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@傑 Evan @鈺祺Mina",
     "stakeholders": [
+      "黃昱超",
       "傑",
-      "鈺祺Mina",
-      "黃昱超"
+      "鈺祺Mina"
     ],
-    "context": "08:52 黃昱超: @傑 Evan @鈺祺Mina\n奇美業主8/31（一）有設備稽核\n時間為11-12點\n希望我司派人員陪同參加\n樹谷奇菱與特化廠",
-    "rca": "年度廠區安全規範與第三方驗證要求",
-    "suggested_action": "調派合格工務人員（黃昱超、洪阿凱）依排程到場陪檢",
-    "status": "已排程出席"
+    "context": "[08:52] 黃昱超: @傑 Evan @鈺祺Mina"
   },
   {
-    "id": "CUST-20260827-062",
+    "id": "CUST-20260826-133",
+    "date": "2026-08-26",
+    "time": "09:00",
+    "site_name": "奇美",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "奇美業主8/31（一）有設備稽核",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 奇美業主8/31（一）有設備稽核"
+  },
+  {
+    "id": "CUST-20260826-134",
+    "date": "2026-08-26",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "時間為11-12點",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 時間為11-12點"
+  },
+  {
+    "id": "CUST-20260826-135",
+    "date": "2026-08-26",
+    "time": "09:00",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "希望我司派人員陪同參加",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 希望我司派人員陪同參加"
+  },
+  {
+    "id": "CUST-20260826-136",
+    "date": "2026-08-26",
+    "time": "09:00",
+    "site_name": "奇菱",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "樹谷奇菱與特化廠",
+    "stakeholders": [
+      "客服小幫手"
+    ],
+    "context": "[09:00] 客服小幫手: 樹谷奇菱與特化廠"
+  },
+  {
+    "id": "CUST-20260827-137",
     "date": "2026-08-27",
     "time": "16:05",
-    "site_name": "管理與營運總部",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "規格書_PM060MH7_TC_2022_CC_ol_Isc Voc.pdf",
     "stakeholders": [
       "明宗"
     ],
-    "context": "16:05 明宗: 規格書_PM060MH7_TC_2022_CC_ol_Isc Voc.pdf",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[16:05] 明宗: 規格書_PM060MH7_TC_2022_CC_ol_Isc Voc.pdf"
   },
   {
-    "id": "CUST-20260827-063",
+    "id": "CUST-20260827-138",
     "date": "2026-08-27",
     "time": "16:08",
-    "site_name": "奇加",
-    "equipment": "模組",
-    "request_type": "客訴與責任爭議",
+    "site_name": "全區營運",
+    "equipment": "太陽能光電模組",
+    "request_type": "商務報價與採購協調",
+    "severity": "P1 (高優先級/24h)",
+    "status": "待業務報價",
+    "summary": "奇加：模組更換*2，一樓搬至三樓，舊模組因當時為我是無償提供需運回我司置放，2人工一日工時，協請 @...",
+    "stakeholders": [
+      "明宗",
+      "依靜Ivy"
+    ],
+    "context": "[16:08] 明宗: 奇加：模組更換*2，一樓搬至三樓，舊模組因當時為我是無償提供需運回我司置放，2人工一日工時，協請 @依靜Ivy 報價"
+  },
+  {
+    "id": "CUST-20260827-139",
+    "date": "2026-08-27",
+    "time": "16:09",
+    "site_name": "全區營運",
+    "equipment": "太陽能光電模組",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "模組再找 @傑 Evan",
+    "stakeholders": [
+      "明宗",
+      "傑"
+    ],
+    "context": "[16:09] 明宗: 模組再找 @傑 Evan"
+  },
+  {
+    "id": "CUST-20260827-140",
+    "date": "2026-08-27",
+    "time": "16:11",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan @黃昱超 @洪阿凱 兩位當天有空嗎",
     "stakeholders": [
       "傑",
-      "依靜Ivy",
-      "洪阿凱",
-      "明宗",
-      "黃昱超"
+      "黃昱超",
+      "洪阿凱"
     ],
-    "context": "16:08 明宗: 奇加：模組更換*2，一樓搬至三樓，舊模組因當時為我是無償提供需運回我司置放，2人工一日工時，協請 @依靜Ivy 報價\n16:09 明宗: 模組再找 @傑 Evan\n16:11 傑: Evan @黃昱超 @洪阿凱 兩位當天有空嗎\n16:16 傑: Evan 供應鏈有多給我幾個型號，我會再挑一下\n16:23 明宗: 收到",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[16:11] 傑: Evan @黃昱超 @洪阿凱 兩位當天有空嗎"
   },
   {
-    "id": "CUST-20260828-064",
-    "date": "2026-08-28",
-    "time": "08:45",
-    "site_name": "管理與營運總部",
+    "id": "CUST-20260827-141",
+    "date": "2026-08-27",
+    "time": "16:16",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客訴與責任爭議",
+    "request_type": "一般客戶反饋",
     "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "status": "處理中",
+    "summary": "Evan 供應鏈有多給我幾個型號，我會再挑一下",
     "stakeholders": [
-      "明宗"
+      "傑"
     ],
-    "context": "08:45 明宗: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[16:16] 傑: Evan 供應鏈有多給我幾個型號，我會再挑一下"
   },
   {
-    "id": "CUST-20260828-065",
+    "id": "CUST-20260828-142",
     "date": "2026-08-28",
     "time": "08:48",
     "site_name": "正隆燕巢",
     "equipment": "案場系統組件",
-    "request_type": "保固責任爭議與商務違約危機",
-    "severity": "P0 (緊急停機/重大爭議)",
-    "summary": "正隆燕巢保固期內 INV 修繕責任爭議，業主每日電話威脅罰款及沒收保固金",
+    "request_type": "保固責任認定",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@傑 Evan @鈺祺Mina 旭鑫張中綺表示正隆燕巢工程保固內，INV修繕都應我司負責，幾乎每天都...",
     "stakeholders": [
-      "洪阿凱",
-      "傑",
       "明宗",
+      "傑",
       "鈺祺Mina"
     ],
-    "context": "08:48 明宗: @傑 Evan @鈺祺Mina 旭鑫張中綺表示正隆燕巢工程保固內，INV修繕都應我司負責，幾乎每天都打電話來追問我，我已多次表示這非我權限可以答覆內容，他請我司發正式文件告知後續INV修繕由誰負責。\n08:50 明宗: 每次打來就說一堆商務面罰款、沒收保固金之類的，我已不知如何應對了，再請協助。\n08:54 鈺祺Mina: 好的 今日會以合約內容發信給中美\n09:17 洪阿凱: 當天有空\n09:28 傑: Evan OK，我有看到阿超的行事曆，那阿凱你也一起負責",
-    "rca": "業主與合約商務權責邊界不清，業主直接向第一線現場工務施加高壓商務訴求",
-    "suggested_action": "由管理部及法務正式以合約條款發公文函覆中美，建立商務防火牆，保護第一線同仁免受騷擾",
-    "status": "高階管理部發函處理中"
+    "context": "[08:48] 明宗: @傑 Evan @鈺祺Mina 旭鑫張中綺表示正隆燕巢工程保固內，INV修繕都應我司負責，幾乎每天都打電話來追問我，我已多次表示這非我權限可以答覆內容，他請我司發正式文件告知後續INV修繕由誰負責。"
   },
   {
-    "id": "CUST-20260828-066",
+    "id": "CUST-20260828-143",
     "date": "2026-08-28",
-    "time": "16:01",
-    "site_name": "管理與營運總部",
+    "time": "08:50",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
     "request_type": "客訴與責任爭議",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "維運協調事項",
+    "severity": "P0 (最高級/即時派工)",
+    "status": "處理中",
+    "summary": "每次打來就說一堆商務面罰款、沒收保固金之類的，我已不知如何應對了，再請協助。",
     "stakeholders": [
       "明宗"
     ],
-    "context": "16:01 明宗: 圖片",
-    "rca": "現場巡檢排查與商務對接",
-    "suggested_action": "依既定維運流程排查並由業務回覆",
-    "status": "處理中"
+    "context": "[08:50] 明宗: 每次打來就說一堆商務面罰款、沒收保固金之類的，我已不知如何應對了，再請協助。"
   },
   {
-    "id": "CUST-20260828-067",
+    "id": "CUST-20260828-144",
+    "date": "2026-08-28",
+    "time": "08:54",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "好的 今日會以合約內容發信給中美",
+    "stakeholders": [
+      "鈺祺Mina"
+    ],
+    "context": "[08:54] 鈺祺Mina: 好的 今日會以合約內容發信給中美"
+  },
+  {
+    "id": "CUST-20260828-145",
+    "date": "2026-08-28",
+    "time": "09:28",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "Evan OK，我有看到阿超的行事曆，那阿凱你也一起負責",
+    "stakeholders": [
+      "傑"
+    ],
+    "context": "[09:28] 傑: Evan OK，我有看到阿超的行事曆，那阿凱你也一起負責"
+  },
+  {
+    "id": "CUST-20260828-146",
     "date": "2026-08-28",
     "time": "16:02",
     "site_name": "日煙",
     "equipment": "案場系統組件",
-    "request_type": "行政請款與發票進度確認",
-    "severity": "P3 (例行巡檢/行政演練)",
-    "summary": "日煙 承辦人詢問維運服務請款與發票開立進度",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "@依靜Ivy 日煙，有要請款了嗎？發票對方沒給嗎？這個是負責的承辦人在詢問。",
     "stakeholders": [
       "明宗",
       "依靜Ivy"
     ],
-    "context": "16:02 明宗: @依靜Ivy 日煙，有要請款了嗎？發票對方沒給嗎？這個是負責的承辦人在詢問。\n16:03 依靜Ivy: 好 我這邊稍後會與他聯繫 謝謝",
-    "rca": "例行工單驗收請款流程確認",
-    "suggested_action": "依靜聯繫業主承辦人核對發票與匯款進度",
-    "status": "已聯繫對帳"
+    "context": "[16:02] 明宗: @依靜Ivy 日煙，有要請款了嗎？發票對方沒給嗎？這個是負責的承辦人在詢問。"
   },
   {
-    "id": "CUST-20260910-068",
+    "id": "CUST-20260828-147",
+    "date": "2026-08-28",
+    "time": "16:03",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "好 我這邊稍後會與他聯繫 謝謝",
+    "stakeholders": [
+      "依靜Ivy"
+    ],
+    "context": "[16:03] 依靜Ivy: 好 我這邊稍後會與他聯繫 謝謝"
+  },
+  {
+    "id": "CUST-20260910-148",
     "date": "2026-09-10",
     "time": "15:50",
-    "site_name": "受興",
+    "site_name": "全區營運",
     "equipment": "案場系統組件",
-    "request_type": "客戶催促報價與資訊進度落差",
-    "severity": "P2 (中度異常/一般告警)",
-    "summary": "受興業主催促絕緣異常改善報價未收到，工務向商務確認進度",
+    "request_type": "客訴與責任爭議",
+    "severity": "P0 (最高級/即時派工)",
+    "status": "待業務報價",
+    "summary": "@依靜Ivy 受興業主在詢問絕緣異常改善的報價，他們都還沒收到。",
     "stakeholders": [
       "明宗",
       "依靜Ivy"
     ],
-    "context": "15:50 明宗: @依靜Ivy 受興業主在詢問絕緣異常改善的報價，他們都還沒收到。\n16:02 依靜Ivy: 上週五已提供，稍早已提醒業主",
-    "rca": "商務報價已於上週發出，但未電話追蹤業主窗口確認收取，造成時間落差",
-    "suggested_action": "商務即刻致電業主承辦人再次確認並說明報價內容",
-    "status": "已再次提醒業主"
+    "context": "[15:50] 明宗: @依靜Ivy 受興業主在詢問絕緣異常改善的報價，他們都還沒收到。"
+  },
+  {
+    "id": "CUST-20260910-149",
+    "date": "2026-09-10",
+    "time": "16:02",
+    "site_name": "全區營運",
+    "equipment": "案場系統組件",
+    "request_type": "一般客戶反饋",
+    "severity": "P2 (中度異常/一般告警)",
+    "status": "處理中",
+    "summary": "上週五已提供，稍早已提醒業主",
+    "stakeholders": [
+      "依靜Ivy"
+    ],
+    "context": "[16:02] 依靜Ivy: 上週五已提供，稍早已提醒業主"
   }
 ];
 
 const CROSS_CHECK_DATA = [
   {
-    "id": "XCHK-01",
-    "site_name": "正隆燕巢",
-    "equipment": "INV10、INV27、INV34、INV38、INV44、INV45",
-    "daily_ops_summary": "4/8起累計65次提報！INV連續發生絕緣異常、MPPT少一半、Relay短路、電路故障。自7/9起每天機況報均列『點交缺失待改善』，掛單長達2個多月。",
-    "daily_ops_first_date": "2026-04-08",
-    "daily_ops_count": 62,
-    "daily_ops_status": "點交缺失改善中，INV38/INV34等報修修繕進行中",
-    "customer_voice_summary": "8/28 08:48 明宗急報：旭鑫張中綺表示保固期內修繕皆應我司負責，天天致電逼問，並威脅扣罰款、沒收保固金，第一線工務不知如何應對。",
-    "customer_voice_date": "2026-08-28",
-    "customer_stakeholder": "旭鑫張中綺、中美、明宗、鈺祺Mina、傑 Evan",
-    "latency_days": 142,
-    "cross_category": "高壓保固爭議 (工務被苛責 vs 商務邊界不清)",
-    "severity": "P0 (緊急停機/重大爭議)",
-    "gap_analysis": "【權責脫節與資訊孤島】工務端連續數月在機況群記錄點交缺失，但商務端未及時向業主發出具有法律效力之合約保固認定函。業主繞過業務直接對一線技術人員進行商務面罰款與沒收保固金威脅，導致工務承擔巨大情緒壓力與應對癱瘓。",
-    "governance_action": "【商務防火牆制度】建立一線工務保護機制：點交及保固爭議一律由商務/管理部接管並正式發函，嚴禁業主對現場維運人員施壓；工務發現缺失跨週未決者，強制升級法務與商務召開三方協調會。"
-  },
-  {
-    "id": "XCHK-02",
+    "id": "CROSS-001",
     "site_name": "史谷脫",
-    "equipment": "INV1、INV4 (台達 M30A)",
-    "daily_ops_summary": "4/13 INV1 故障停機卡在 Check DC，4/17 待新機到貨，延宕至 5/4 更換完成（停機長達21天）；7/21 INV4 故障停機，待換台達 M30A，7/31 仍在待更換名單（停機10+天）。",
-    "daily_ops_first_date": "2026-04-13",
-    "daily_ops_count": 13,
-    "daily_ops_status": "INV1於5/4完工併網；INV4於7/31備品到貨更換",
-    "customer_voice_summary": "4/13 12:43 明宗提報業主同意換新機並請依靜報價；7/21 15:15 報 INV4 故障需3人次半天搬運至2樓，Leila於14分鐘內完成詢價報價。",
-    "customer_voice_date": "2026-04-13",
-    "customer_stakeholder": "明宗、依靜Ivy、Leila.H、業主窗口",
-    "latency_days": 21,
-    "cross_category": "響應週期延遲 (機況掛單長達數週至數月才修復)",
-    "severity": "P1 (高風險/發電中斷)",
-    "gap_analysis": "【供應鏈備品週轉與停機損失】現場於4/13即判定硬體損壞，但經過報價審查、客戶請購回簽、供應鏈出貨、吊車及工務排程，導致核心變流器停機長達21天。7/21的INV4雖客服14分鐘內報價，但備品調料仍耗費逾10天，凸顯進口或大容量變流器缺乏安全庫存。",
-    "governance_action": "【關鍵備品安全庫存】針對常規主力機型（如台達 M30A/M20A）建立區域週轉庫存（如中部/南部發貨中心存放各1台）；與代理商簽訂48小時急修備品合約，將停機損失壓至3天以內。"
+    "equipment": "INV1 (Check DC故障)",
+    "hit_type": "TRIPLE_HIT",
+    "cross_category": "設備停機 + 業主催報價",
+    "severity": "P0 (最高急迫/即刻出車)",
+    "urgency_score": 98,
+    "cloud_status": "裝置離線/無發電量 (0 kWh)",
+    "daily_ops_summary": "INV1 Check DC故障未發電，AC/DC電性正常，已巡檢2次無代碼，等待新機更換。",
+    "customer_voice_summary": "業主表示要更換新機，請我司立即報價，持續延宕將觸發發電量保證違約罰款。",
+    "governance_action": "由採購處啟動緊急庫存調撥 (台達備機)，業務處24小時內出具正式換裝報價單。"
   },
   {
-    "id": "XCHK-03",
-    "site_name": "奇景光電",
-    "equipment": "INV2、INV7 (交流盤/定製NFB)、優化器 (5,7,8 / 1,6,14)、散熱風扇 (INV5/INV9)",
-    "daily_ops_summary": "累計170次提報（全系統第一高頻）！INV2待修報價長達1.5個月；INV7交流盤燒損定製NFB等候7~10天；INV5及INV9風扇故障，因原廠盛齊缺貨，工務僅能bypass應急，掛單超過65天！",
-    "daily_ops_first_date": "2026-04-21",
-    "daily_ops_count": 103,
-    "daily_ops_status": "優化器更換完成；風扇持續催料中；INV7更換完成",
-    "customer_voice_summary": "4/21 洪阿凱反映更換模組後單片破片公司無法清運，業主質疑公司服務完整性並要求報價；8/6 鈺祺主管詢問INV5風扇進度，阿凱解釋原廠缺貨先bypass發電。",
-    "customer_voice_date": "2026-04-21",
-    "customer_stakeholder": "洪阿凱、傑 Evan、鈺祺Mina、Leila.H、盛齊原廠、Hank代操廠商",
-    "latency_days": 65,
-    "cross_category": "備品斷料瓶頸 (原廠缺料導致一線無法完工)",
-    "severity": "P1 (高風險/發電中斷)",
-    "gap_analysis": "【供應商單點瓶頸與廢棄物法規困境】盛齊代理之原廠耗材（4PIN風扇、優化器）全球斷料，工務天天重複提報掛單無能為力；同時客戶案場無處存放單片破片，公司原無零星模組代操報價SOP，差點導致客戶關係破裂。",
-    "governance_action": "【法規代操包套與供應商KPI】1. 依環境部3C1R與D-2528建立標準化單片/少量破片代操合約套裝方案。2. 將盛齊備品交期納入採購合約考核，並於每年Q2防汛高溫期前備妥風扇易損耗材。"
+    "id": "CROSS-002",
+    "site_name": "正隆燕巢",
+    "equipment": "INV27 (絕緣異常/保固爭議)",
+    "hit_type": "TRIPLE_HIT",
+    "cross_category": "現場絕緣反覆 + 商務扣款威脅",
+    "severity": "P0 (最高急迫/商務防線)",
+    "urgency_score": 95,
+    "cloud_status": "絕緣阻抗告警，每日上午延遲併網",
+    "daily_ops_summary": "INV27絕緣反覆異常，上午09:30才回復發電，現場排查串列絕緣阻抗中。",
+    "customer_voice_summary": "業主以沒收保固金威脅一線工務，要求立即徹底查清並出具原廠保固承諾書。",
+    "governance_action": "管理部與法務正式公函築起「商務防火牆」，工務攜帶高阻計全面排查地下管路受潮。"
   },
   {
-    "id": "XCHK-04",
-    "site_name": "鉅橡",
-    "equipment": "INV8、INV12、INV14、INV16、INV19、INV20 (施奈德 20k ➔ 台達 M20A)",
-    "daily_ops_summary": "累計62次提報！INV12、INV16、INV19、INV20、INV8連續損壞；施奈德原廠停產，換機均需現場工務改裝結構背架；8/20更發生地主挖斷光纖全場斷線事件。",
-    "daily_ops_first_date": "2026-04-08",
-    "daily_ops_count": 26,
-    "daily_ops_status": "INV8待換新機，背架改裝施工中",
-    "customer_voice_summary": "6/16、6/22、7/10 明宗三次在客服群提報：施奈德20k故障換M20A背架要改裝（工、料），協請依靜報價；4/17向MIS詢問設定權限無帳密。",
-    "customer_voice_date": "2026-06-16",
-    "customer_stakeholder": "明宗、依靜Ivy、傑 Evan、Lee Roy、鉅橡業主",
-    "latency_days": 75,
-    "cross_category": "硬體通病與工法重構 (施奈德/進水/背架/接頭)",
-    "severity": "P1 (高風險/發電中斷)",
-    "gap_analysis": "【批次老舊設備邊際維修成本失控】施奈德機型進入故障好發期，每損壞一台就必須重新量測、設計背架、報價、叫吊車施工，單台維修之人力與機具成本極高，且造成工務在機況清冊中反覆懸掛數十天。",
-    "governance_action": "【整案主動汰換商務專案】商務部應化被動為主動，向業主提報『鉅橡全廠變流器一體化預防汰換方案』，爭取一次性批量改裝背架，分攤吊掛出工成本，並以長約綁定發電效能。"
+    "id": "CROSS-003",
+    "site_name": "FCS富強鑫",
+    "equipment": "INV4/INV11 (進水/友達模組破片)",
+    "hit_type": "TRIPLE_HIT",
+    "cross_category": "逆變器進水 + 友達模組賠片",
+    "severity": "P0 (最高急迫/批次性硬體風險)",
+    "urgency_score": 93,
+    "cloud_status": "多期變流器斷訊與發電突降",
+    "daily_ops_summary": "5期INV11、6期INV4絕緣異常；7-4-5串列模組損壞bypass，總計多片模組待更換。",
+    "customer_voice_summary": "友達光電客服部林's洽詢模組賠片事宜，已將模組送達育成中心，業主催促報價。",
+    "governance_action": "由工務總監會同友達原廠鑑定模組破裂責任，針對變流器外殼防水墊圈全面更換防進水。"
   },
   {
-    "id": "XCHK-05",
-    "site_name": "受興",
-    "equipment": "受興2期 MOXA 閘道器、受興1期 INV2 (2-8 串列絕緣)",
-    "daily_ops_summary": "4/27 受興2期 MOXA 故障全場斷線，寄送高辦檢測更換耗時長達16天（5/13才安裝復歸）；8/24 受興1期 INV2 未發電，8/25 工務將 2-8 絕緣異常迴路退出隔離，持續掛單至 9/14。",
-    "daily_ops_first_date": "2026-04-27",
-    "daily_ops_count": 20,
-    "daily_ops_status": "2-8迴路已退出隔離發電中，待業主確認報價進場修繕",
-    "customer_voice_summary": "9/10 15:50 明宗在客服群反映：受興業主詢問絕緣異常改善報價未收到；依靜回覆上週五已提供，稍早已提醒業主。",
-    "customer_voice_date": "2026-09-10",
-    "customer_stakeholder": "明宗、依靜Ivy、Lee Roy、MIS Joe、受興業主",
-    "latency_days": 16,
-    "cross_category": "報價與客戶確認落差 (工務報價已給但客戶催促)",
-    "severity": "P2 (中度異常/一般告警)",
-    "gap_analysis": "【商務回饋缺乏雙向閉環確認】工務8/25即退出異常迴路等待報價，商務9/4即發出報價信，但因未電話向業主承辦人追蹤確認，導致業主9/10仍向現場工程師抱怨『沒收到報價』，引發不必要的客戶抱怨。",
-    "governance_action": "【報價雙向確認SOP】報價單寄出後24小時內，業務端必須執行『電話/LINE 雙向確認』，並在維運系統登記『業主承辦已收訖確認中』，杜絕工務被動受質疑。"
+    "id": "CROSS-004",
+    "site_name": "埤塘7-1",
+    "equipment": "水面型浮台 (156串停運)",
+    "hit_type": "DOUBLE_HIT",
+    "cross_category": "大規模停售 + 浮台老化",
+    "severity": "P0 (重大發電失血)",
+    "urgency_score": 91,
+    "cloud_status": "發電量損失 > 60%，全場通訊斷線",
+    "daily_ops_summary": "全場修復待客戶確認，252串中高達156串停運長達數月，持續暫停躉售。",
+    "customer_voice_summary": "客戶多次催促修復進度與復電時程，詢問台電躉售計價補償責任歸屬。",
+    "governance_action": "成立「水面型攻堅特勤隊」，引進浮台抗UV高拉力扣件與快拆防水跳線縮短工期。"
   },
   {
-    "id": "XCHK-06",
-    "site_name": "益張",
-    "equipment": "日照計 (氣象站感測器)、INV14 (絕緣阻抗異常)",
-    "daily_ops_summary": "4/9、6/9 INV14發電異常；7/6 Lee Roy提醒：保PR案場益張日照計故障爆值，導致慧景監控無法計算PR數據。",
-    "daily_ops_first_date": "2026-04-09",
-    "daily_ops_count": 9,
-    "daily_ops_status": "已切換慧景監控，日照計待查修校正",
-    "customer_voice_summary": "7/9 10:30 Leila.H 客服緊急通報：益張反饋每月發電報表中的資料都是空白的，請協助處理！Lee Roy要求MIS移除ACME月報並通知業主看慧景。",
-    "customer_voice_date": "2026-07-09",
-    "customer_stakeholder": "Leila.H、Lee Roy、健國、里包恩、MIS BEN、益張業主",
-    "latency_days": 3,
-    "cross_category": "監控與資料斷鏈 (日照計爆值/IPC當機引發客訴)",
-    "severity": "P2 (中度異常/一般告警)",
-    "gap_analysis": "【連鎖數據崩潰引爆客訴】氣象傳感器故障導致軟體演算法無法計算PR指標，系統竟直接產出整份空白月報寄送給業主，直接引發高階客訴，損害專業形象。",
-    "governance_action": "【報表防呆稽核機制】監控月報系統設定自動校驗規則：若月報核心欄位出現空白或PR超出合理範圍（如大於100%或為0），系統自動暫停寄發並發送警報予監控負責人手動核閱。"
-  },
-  {
-    "id": "XCHK-07",
-    "site_name": "大舜板金",
-    "equipment": "IPC 工業電腦、展示螢幕、延長線插座",
-    "daily_ops_summary": "4/27 整場斷線；6/16 大舜3期斷線；7/27 大舜2期 INV2 未發電。",
-    "daily_ops_first_date": "2026-04-27",
-    "daily_ops_count": 5,
-    "daily_ops_status": "遠端重開機恢復；架構待升級",
-    "customer_voice_summary": "6/22 健國、明宗反映展示螢幕被當機程式遮蔽。明宗揭露監控與展示螢幕共用老舊IPC，電源甚至拉延長線到停車場插座，常因踢掉或跳電當機。Lee Roy提出短解（遠端重啟）與長解（轉MIS改MOXA）。",
-    "customer_voice_date": "2026-06-22",
-    "customer_stakeholder": "健國、明宗、傑 Evan、Lee Roy、大舜業主",
-    "latency_days": 56,
-    "cross_category": "硬體架構妥協引發長期維運負擔",
-    "severity": "P2 (中度異常/一般告警)",
-    "gap_analysis": "【基礎設施妥協反噬日常維運】建置期將監控與展示螢幕共用一台IPC，電源以延長線接至停車場非穩壓迴路，導致只要廠房微小波動就造成監控當機，維運人員頻繁遠端重開奔波。",
-    "governance_action": "【監控硬體標準化升級】編列預算將老舊IPC全面汰換為工業級無風扇 MOXA 閘道器，並將展示螢幕獨立供電，配備微型不斷電系統 (UPS)，徹底根絕客訴。"
-  },
-  {
-    "id": "XCHK-08",
+    "id": "CROSS-005",
     "site_name": "長榮大園",
-    "equipment": "INV05 (基板損壞)、INV09 (少1串/DC9)、高壓 LBF 開關、CCTV 監視器",
-    "daily_ops_summary": "4/8 少1串；4/22 更換高壓LBF開關；7/24 INV09 DC9未併網；8/31 INV5 基板損壞停機，待備機更換延宕至9/10才更換整新機恢復併網（停機10天）。",
-    "daily_ops_first_date": "2026-04-08",
-    "daily_ops_count": 14,
-    "daily_ops_status": "9/10 INV5更換整新機恢復發電",
-    "customer_voice_summary": "4/15、4/30 Leila.H 兩度急催長榮大園電費單檢討信回覆；8/10 業主詢問躉售改自用維運能否自行發包；8/12 反映監視器斷線，李昀璁回覆安排查修。",
-    "customer_voice_date": "2026-04-15",
-    "customer_stakeholder": "Leila.H、里包恩、andrewlu、李昀璁、鈺祺Mina、中區BU",
-    "latency_days": 10,
-    "cross_category": "客戶高敏感度發電檢討與綠電轉供商機",
-    "severity": "P1 (高風險/發電中斷)",
-    "gap_analysis": "【業主財務敏感度高與跨售商機捕捉】長榮大園高度重視電費單發電度數與電費損失，現場每次跳脫都會引發正式檢討信要求。業主主動探詢『躉售改自用』，為高價值綠電轉供工程商機，需業務密切跟進。",
-    "governance_action": "【重要客戶專屬SLA與業務協同】對長榮等高產值敏感案場提供發電報告預警機制；針對自用改建工程，成立維運與中區BU聯合工作小組，一站式承接改建專案。"
+    "equipment": "INV07/09 (少串發電/LBF開關)",
+    "hit_type": "TRIPLE_HIT",
+    "cross_category": "串列少發電 + 業主追查電費單",
+    "severity": "P1 (業主關注/高合約風險)",
+    "urgency_score": 88,
+    "cloud_status": "發電效率低下，比對相鄰案場衰減15%",
+    "daily_ops_summary": "INV09 PV01少1串發電；INV07(5)、INV09(5)未發電，安排更換高壓LBF開關。",
+    "customer_voice_summary": "業主林小姐提供最新電費單，限期下周二前回覆發電量短少檢討報告。",
+    "governance_action": "維運分析師即刻調取近半年日照-發電PR曲線，由客服專員於下周一前正式函覆業主。"
   },
   {
-    "id": "XCHK-09",
-    "site_name": "富強鑫",
-    "equipment": "INV2、INV4、INV5、INV8、INV10、INV13、INV14 (設備進水/DC RL)",
-    "daily_ops_summary": "累計86次提報！四期INV10、INV5、INV13發電異常(DC RL)全面性報修；9/10痞子晴特別註記：『INV14因設備進水全面性回報原廠，持續追蹤進度』；六期INV8、五期通訊異常。",
-    "daily_ops_first_date": "2026-04-08",
-    "daily_ops_count": 122,
-    "daily_ops_status": "原廠全面性修繕中，待業主回簽與原廠進度追蹤",
-    "customer_voice_summary": "4/9 友達客服林's詢問賠片；4/9 FCS 2期及6期換機報價；6/22 Lee Roy提醒六期INV2多天無發電紀錄。",
-    "customer_voice_date": "2026-04-09",
-    "customer_stakeholder": "痞子晴、明宗、Lee Roy、依靜Ivy、友達客服林's、全面性原廠",
-    "latency_days": 120,
-    "cross_category": "設備結構進水通病與原廠保固漫長",
-    "severity": "P1 (高風險/發電中斷)",
-    "gap_analysis": "【防水設計缺陷導致批量進水短路】多期多台變流器發生繼電器故障與機體內部進水，顯示廠區環境受潮或外殼密封設計存在批次缺陷，原廠檢修與備品週期漫長，嚴重侵蝕電量。",
-    "governance_action": "【全場變流器防水分級專案】雨季前實施機箱防水膠條與進出線孔發泡密封檢查；針對進水機台，由法務商務向設備製造商提出批次品質瑕疵擔保索賠。"
+    "id": "CROSS-006",
+    "site_name": "新陽",
+    "equipment": "全場逆變器 (48串列效率低下)",
+    "hit_type": "DOUBLE_HIT",
+    "cross_category": "雲端監控重災區 + 全網告警榜首",
+    "severity": "P1 (全網告警最多)",
+    "urgency_score": 85,
+    "cloud_status": "進能服系統高達 48 筆發電效率不佳告警",
+    "daily_ops_summary": "全場監控斷線，顯示正常連線但無發電數據，工務排查英茂通訊箱中。",
+    "customer_voice_summary": "日常巡檢與監控連線查修列管案場。",
+    "governance_action": "安排無人機紅外線空拍診斷熱斑，清洗工班進場全面清除積塵與鳥糞。"
   },
   {
-    "id": "XCHK-08-2",
-    "site_name": "埤塘7-1與8-2",
-    "equipment": "浮台結構、跳線、PV模組接頭、252串中156串",
-    "daily_ops_summary": "累計提報達188次！4/7至9/14整整5個月機況均顯示：『埤塘7-1全場修復，252串中156串待安排查修，全場暫停躉售』；8-2累積25串待修、更換模組20+片。",
-    "daily_ops_first_date": "2026-04-07",
-    "daily_ops_count": 188,
-    "daily_ops_status": "初驗完成，系統跳線更換完成，待安排串列查修復電",
-    "customer_voice_summary": "7/7 Leila.H 催促 8-2 保發電量與維運費用回填提供新日光；4/10 台電停電排查復電。",
-    "customer_voice_date": "2026-07-07",
-    "customer_stakeholder": "andrewlu、李昀璁、Leila.H、里包恩、新日光業主",
-    "latency_days": 150,
-    "cross_category": "水面型大型工程延宕與長期躉售中斷",
-    "severity": "P0 (緊急停機/重大爭議)",
-    "gap_analysis": "【全公司最大發電損失黑洞】水面型浮台損壞、跳線全面老化、接頭受潮絕緣不良，造成156串長期停運，躉售中斷長達5個月，停發損失極其可觀，且水上施工風險與難度極高。",
-    "governance_action": "【水面型光電攻堅特勤隊】整合工程、工安與專案包商，建立水上浮動平台標準作業平台；導入耐候防水接頭與快速絕緣定位儀器，縮減查修週期。"
+    "id": "CROSS-007",
+    "site_name": "台南機場",
+    "equipment": "32台變流器 (通訊總線斷訊)",
+    "hit_type": "DOUBLE_HIT",
+    "cross_category": "全場大面積失聯 + 雲端斷訊集中",
+    "severity": "P1 (監控斷訊最多)",
+    "urgency_score": 83,
+    "cloud_status": "進能服系統 32 筆裝置斷訊，全場失聯",
+    "daily_ops_summary": "通訊總線中斷，現場確認工規4G路由器供電與RS485隔離中繼器狀態。",
+    "customer_voice_summary": "列管於南辦責任監控清單。",
+    "governance_action": "更換 RS485 光電隔離中繼器與終端電阻 120Ω，重整菊花鏈接線防干擾。"
   },
   {
-    "id": "XCHK-11",
-    "site_name": "晶碩光電 & 國泰",
-    "equipment": "6樓光電涼亭飾板 (晶碩) / 無人機空拍機 (國泰台暉路達)",
-    "daily_ops_summary": "工務部日常反映晶碩飾板掉落兩次；高雄組無空拍專業證照無法執行國泰案場空拍。",
-    "daily_ops_first_date": "2026-05-21",
-    "daily_ops_count": 5,
-    "daily_ops_status": "晶碩加固處理；國泰指派專業證照同仁支援",
-    "customer_voice_summary": "5/21 andrewlu 報晶碩光電飾板掉落2次，傑 Evan 明確界定審圖驗收保固邊界，禁止無上限重設；8/24 國泰索取空拍照，傑 Evan 指派具備民航局專業操作證之小花與Joes執行。",
-    "customer_voice_date": "2026-05-21",
-    "customer_stakeholder": "andrewlu、傑 Evan、鈺祺Mina、Leila.H、工程中心小花/Joes",
-    "latency_days": 0,
-    "cross_category": "工程保固邊界防守與特種作業法規合規",
-    "severity": "P0 (緊急停機/重大爭議)",
-    "gap_analysis": "【合約邊界清析與無人機空拍合規】維運若無原則承攬客戶所有設計修改要求，將導致保固責任無限放大；無人機商業空拍無證操作將面臨民航法重罰，主管果斷把關建立合規標竿。",
-    "governance_action": "【法規與合約標準化指引】1. 恪遵『設計審圖➔工程驗收➔保固修復』之責任邊界。2. 公司無人機業務嚴格造冊管理，僅限具備民航局專業操作證人員簽派飛行。"
-  },
-  {
-    "id": "XCHK-12",
-    "site_name": "全案場系統設施 (DREAMS / 雲電源)",
-    "equipment": "台電 DREAMS 2FA、Google Home、易聯網雲端開關、MOXA",
-    "daily_ops_summary": "4/17 鉅橡改設定沒帳密；6/26 明宗在機況群爆發反映：台電 DREAMS 雙重認證共用帳號管理混亂、公司電腦無法登個人gmail；Google Home 綁定雲開關限5人，人員離職後帳號密碼全失聯，維運三年多缺乏統管。",
-    "daily_ops_first_date": "2026-04-17",
-    "daily_ops_count": 15,
-    "daily_ops_status": "MIS與Roy收斂盤點，推動個人企業網域帳號",
-    "customer_voice_summary": "4/9 MIS轉移資料庫申請台電暫停計算；6/26 傑 Evan 與 Lee Roy 指示共用帳號盤點，減少共用，推動個人企業帳號與TP-Link企業雲開關方案。",
-    "customer_voice_date": "2026-06-26",
-    "customer_stakeholder": "明宗、傑 Evan、Lee Roy、痞子晴、里包恩、MIS",
-    "latency_days": 70,
-    "cross_category": "組織資訊架構痛點與數位資產交接風險",
-    "severity": "P2 (中度異常/一般告警)",
-    "gap_analysis": "【企業級身分識別 (IAM) 缺位】長期依賴口耳相傳的公用 gmail 及個人手機綁定案場硬體，人員離職即造成維運數位資產中斷，嚴重威脅遠端監控安全。",
-    "governance_action": "【企業維運數位資產集中管理】由 MIS 統籌導入企業級單一登入 (SSO) 與維運網域帳號；案場雲端開關全面改用支援多管理員分享之企業架構（如 TP-Link 或 Industrial Router）。"
+    "id": "CROSS-008",
+    "site_name": "奇景光電",
+    "equipment": "破片模組 (廢棄物清運問題)",
+    "hit_type": "DOUBLE_HIT",
+    "cross_category": "現場無存放空間 + 環境部清運法規",
+    "severity": "P2 (法規環保協調)",
+    "urgency_score": 79,
+    "cloud_status": "總部停車場監控斷線已排查",
+    "daily_ops_summary": "總部停車場監控斷線重啟中，模組更換已完成。",
+    "customer_voice_summary": "業主無空間存放單片破片，要求我司依環境部3C1R廢棄物D-2528代碼報價清運。",
+    "governance_action": "委託合格之太陽能板甲級清除處理機構代操，訂立標準廢棄模組清運報價SOP。"
   }
 ];

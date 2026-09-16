@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>進金生能源 6692｜AI Agent 智慧派工與運維管理平台 (S1~S5)</title>
+  <title>進金生能源 6692｜AI 智慧運維・三大數據匯流戰情平台 (S1~S5)</title>
   <link rel="icon" href="assets/img/acme-logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link rel="stylesheet" href="assets/css/taoyuan.css">
@@ -11,31 +11,41 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    /* 避免 Tailwind 重置覆蓋 topbar */
-    .topbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: rgba(2,16,33,0.85); backdrop-filter: blur(10px); display: flex; align-items: center; padding: 0 24px; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    /* Topbar 規範樣式 */
+    .topbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background: rgba(2,16,33,0.92); backdrop-filter: blur(10px); display: flex; align-items: center; padding: 0 20px; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.12); }
     .topbar .brand { display: flex; align-items: center; color: #fff; text-decoration: none; }
     .topbar .logo-img { height: 32px; margin-right: 12px; }
-    .topbar .tx { font-weight: 800; font-size: 1.1rem; line-height: 1.2; letter-spacing: 0.5px; }
+    .topbar .tx { font-weight: 800; font-size: 1.05rem; line-height: 1.2; letter-spacing: 0.5px; }
     .topbar .tx small { display: block; font-size: 0.7rem; font-weight: 500; color: #00e0ff; letter-spacing: 0; }
-    .topnav { margin-left: 40px; display: flex; gap: 4px; }
-    .topnav a { color: rgba(255,255,255,0.6); text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.9rem; font-weight: 700; transition: all 0.2s; cursor: pointer; }
-    .topnav a:hover { color: #fff; background: rgba(255,255,255,0.1); }
-    .topnav a.active { color: #00e0ff; background: rgba(0, 224, 255, 0.1); border-bottom: 2px solid #00e0ff; border-radius: 4px 4px 0 0; }
+    .topnav { margin-left: 32px; display: flex; gap: 4px; }
+    .topnav a { color: rgba(255,255,255,0.65); text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; cursor: pointer; }
+    .topnav a:hover { color: #fff; background: rgba(255,255,255,0.12); }
+    .topnav a.active { color: #00e0ff; background: rgba(0, 224, 255, 0.12); border-bottom: 2px solid #00e0ff; border-radius: 4px 4px 0 0; }
     .meta-area { margin-left: auto; display: flex; gap: 8px; align-items: center; }
     
-    body { padding-top: 60px; background-color: #f1f5f9; font-family: 'Noto Sans TC', sans-serif; }
+    body { padding-top: 60px; background-color: #f8fafc; font-family: 'Noto Sans TC', sans-serif; color: #1e293b; }
     
-    .view-section { display: none; padding: 24px; max-width: 1400px; margin: 0 auto; min-height: calc(100vh - 60px); }
-    .view-section.active { display: block; animation: fadeIn 0.3s ease; }
+    .view-section { display: none; padding: 24px; max-width: 1440px; margin: 0 auto; min-height: calc(100vh - 60px); }
+    .view-section.active { display: block; animation: fadeIn 0.25s ease; }
     
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
     /* Mobile specific styles for S3 & S4 */
-    .mobile-view { max-width: 480px; margin: 0 auto; background: #fff; min-height: 800px; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; position: relative; }
-    .mobile-header { background: #1e293b; color: #fff; padding: 16px; display: flex; align-items: center; justify-content: space-between; }
+    .mobile-view { max-width: 460px; margin: 0 auto; background: #fff; min-height: 760px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 16px; overflow: hidden; position: relative; border: 4px solid #1e293b; }
+    .mobile-header { background: #0f172a; color: #fff; padding: 16px; display: flex; align-items: center; justify-content: space-between; }
     .mobile-body { padding: 16px; height: calc(100% - 64px); overflow-y: auto; background: #f8fafc; }
-    .wo-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .wo-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
     .wo-card.urgent { border-left: 4px solid #ef4444; }
+
+    /* Source Tab Pill */
+    .source-tab-btn.active { background-color: #0284c7; color: #ffffff; }
+    .source-tab-btn { background-color: #f1f5f9; color: #475569; }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
   </style>
 </head>
 <body>
@@ -46,25 +56,31 @@
       <img src="assets/img/acme-logo.png" alt="進金生能源" class="logo-img">
       <div class="tx">
         進金生能源 6692
-        <small>AI 智慧運維與派工管理平台</small>
+        <small>4.6 運維管理 ｜ AI 智慧運維與派工平台</small>
       </div>
     </a>
 
     <nav class="topnav">
       <a id="nav-s5" onclick="switchNav('s5')" class="active">📈 S5 戰情儀表板</a>
-      <a id="nav-s1" onclick="switchNav('s1')">📥 S1 統一收件匣</a>
+      <a id="nav-s1" onclick="switchNav('s1')">📥 S1 統一收件匣 (三大數據)</a>
       <a id="nav-s2" onclick="switchNav('s2')">🤖 S2 AI 派工中心</a>
       <a id="nav-s3" onclick="switchNav('s3')">👷 S3 現場工作台 (Mobile)</a>
       <a id="nav-s4" onclick="switchNav('s4')">📱 S4 結案與 PDCA (Mobile)</a>
     </nav>
 
     <div class="meta-area">
-      <button onclick="openUploadModal()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
+      <button onclick="openUploadModal('ops')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
         <i data-lucide="upload-cloud" class="w-4 h-4"></i>
-        <span>上傳每日處置</span>
+        <span>上傳每日處置 (工務)</span>
       </button>
-      <span class="px-2 py-1 text-xs font-bold rounded bg-blue-900 text-blue-200 border border-blue-700">自動同步運行中</span>
-      <span class="px-2 py-1 text-xs font-bold rounded bg-green-900 text-green-200 border border-green-700"><i class="fas fa-user mr-1"></i> 工程師視角</span>
+      <button onclick="openUploadModal('cust')" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
+        <i data-lucide="message-square-plus" class="w-4 h-4"></i>
+        <span>匯入客戶聲音 (LINE@)</span>
+      </button>
+      <a href="appendix.html" class="px-2.5 py-1.5 text-xs font-bold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center gap-1">
+        <i data-lucide="archive" class="w-3.5 h-3.5"></i>
+        <span>整點備存庫</span>
+      </a>
     </div>
   </header>
 
@@ -72,90 +88,110 @@
   <!-- S5: 戰情與健康指標 Dashboard (Default)                      -->
   <!-- ========================================================= -->
   <div id="view-s5" class="view-section active">
-    <div class="mb-6 flex justify-between items-center">
+    <div class="mb-6 flex flex-wrap justify-between items-center gap-4">
       <div>
-        <h1 class="text-2xl font-extrabold text-slate-800">S5: 全網光電案場健康指標與戰情儀表板</h1>
-        <p class="text-sm text-slate-500 mt-1">追蹤全台 86 座電廠之即時告警、客戶反饋與修繕 PDCA 改善率</p>
+        <h1 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2.5">
+          <span>全網光電案場健康戰情中心</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-700 border border-blue-200">三大數據 Cross-Check 啟用</span>
+        </h1>
+        <p class="text-sm text-slate-500 mt-1">融合【(1) 進能服雲端監控】×【(2) Line@客服小幫手】×【(3) 工務每日機況群】，智慧判定最急重大案場</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-xs bg-slate-100 px-3 py-1.5 rounded-lg font-mono text-slate-600 border border-slate-200">
+          <i data-lucide="clock" class="w-3.5 h-3.5 inline mr-1 text-slate-400"></i>每小時整點自動同步 (07:00~17:00)
+        </span>
       </div>
     </div>
     
+    <!-- 四大核心統計 KPI 指標 -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
       <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 border-l-4 border-l-blue-500">
-        <div class="text-xs font-bold text-slate-500 mb-1">雲端監控告警 (ACMEPOINT)</div>
+        <div class="flex justify-between items-center text-xs font-bold text-slate-500 mb-1">
+          <span>(1) 進能服系統告警 (雲端)</span>
+          <i data-lucide="cloud" class="w-4 h-4 text-blue-500"></i>
+        </div>
         <div class="text-3xl font-black text-slate-800" id="s5-cloud-count">--</div>
-        <div class="text-xs text-blue-500 mt-2 font-medium">↑ 今日新增 12 筆</div>
+        <div class="text-xs text-blue-600 mt-2 font-medium flex justify-between">
+          <span>77 座異常案場 / 430 項</span>
+          <a href="appendix.html" class="underline hover:text-blue-800">整點歷史備存</a>
+        </div>
       </div>
-      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 border-l-4 border-l-green-500">
-        <div class="text-xs font-bold text-slate-500 mb-1">LINE@ 客服與機況通報</div>
-        <div class="text-3xl font-black text-slate-800" id="s5-line-count">--</div>
-        <div class="text-xs text-green-500 mt-2 font-medium">由系統自動彙整分析</div>
-      </div>
-      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 border-l-4 border-l-amber-500">
-        <div class="text-xs font-bold text-slate-500 mb-1">待處理 AI 派工單</div>
-        <div class="text-3xl font-black text-slate-800">8 <span class="text-sm font-normal text-slate-500">張</span></div>
-        <div class="text-xs text-amber-600 mt-2 font-medium">3 張 P0 緊急派工</div>
-      </div>
+
       <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 border-l-4 border-l-purple-500">
-        <div class="text-xs font-bold text-slate-500 mb-1">本月 PDCA 修繕改善率</div>
-        <div class="text-3xl font-black text-slate-800">92.4%</div>
-        <div class="text-xs text-purple-500 mt-2 font-medium">相較上月提升 4.1%</div>
+        <div class="flex justify-between items-center text-xs font-bold text-slate-500 mb-1">
+          <span>(2) Line@ 客服小幫手</span>
+          <i data-lucide="message-square-quote" class="w-4 h-4 text-purple-500"></i>
+        </div>
+        <div class="text-3xl font-black text-purple-700" id="s5-cust-count">--</div>
+        <div class="text-xs text-purple-600 mt-2 font-medium">客訴、報價、保固與清運</div>
+      </div>
+
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 border-l-4 border-l-emerald-500">
+        <div class="flex justify-between items-center text-xs font-bold text-slate-500 mb-1">
+          <span>(3) 工程師每日機況群</span>
+          <i data-lucide="activity" class="w-4 h-4 text-emerald-500"></i>
+        </div>
+        <div class="text-3xl font-black text-emerald-700" id="s5-ops-count">--</div>
+        <div class="text-xs text-emerald-600 mt-2 font-medium">桃辦、彰辦、南辦、高辦</div>
+      </div>
+
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 border-l-4 border-l-rose-500">
+        <div class="flex justify-between items-center text-xs font-bold text-slate-500 mb-1">
+          <span>🔥 Cross-Check 重大案場</span>
+          <i data-lucide="shield-alert" class="w-4 h-4 text-rose-500"></i>
+        </div>
+        <div class="text-3xl font-black text-rose-600" id="s5-cross-count">8 <small class="text-sm font-normal text-slate-500">關鍵案</small></div>
+        <div class="text-xs text-rose-500 mt-2 font-medium">跨維度三重命中 / 即時派工</div>
       </div>
     </div>
 
-        <!-- 上傳每日處置與資料匯入橫幅 -->
-    <div class="bg-gradient-to-r from-slate-900 via-emerald-950 to-teal-950 border border-emerald-500/30 rounded-xl p-4 mb-6 shadow-sm flex flex-wrap justify-between items-center gap-4 text-white">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
-          <i data-lucide="file-up" class="w-5 h-5"></i>
-        </div>
+    <!-- 🔥 Cross-Check 智能交叉檢驗雷達：全網問題最急最重大案場 Top 8 -->
+    <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white rounded-2xl p-6 shadow-xl mb-6 border border-slate-800">
+      <div class="flex flex-wrap justify-between items-center gap-4 mb-4 pb-3 border-b border-white/10">
         <div>
-          <div class="flex items-center gap-2">
-            <h3 class="font-bold text-sm text-white">工程師每日處置通報匯入中心</h3>
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-              支援 LINE 對話 .txt / CSV / JSON
-            </span>
-          </div>
-          <p class="text-xs text-slate-300 mt-0.5">
-            目前已同步資料庫：<b class="text-emerald-400 font-mono" id="current-ops-count-label">2,483 筆</b>機況處置。可隨時上傳最新 [LINE]每日機況報這裡.txt 更新戰情。
+          <h2 class="text-lg font-black text-amber-400 flex items-center gap-2">
+            <i data-lucide="zap" class="w-5 h-5 text-amber-400"></i>
+            三大數據 Cross-Check 交叉比對：全網問題最急最重大案場 (Priority Radar)
+          </h2>
+          <p class="text-xs text-slate-300 mt-1">
+            當「雲端斷訊停機」×「工務待料更換」×「客戶客訴催討」同時命中時，自動上調至 P0 最高急迫級別，防止電損與商務違約。
           </p>
         </div>
+        <button onclick="switchNav('s1'); setS1ActiveTab('cross');" class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs rounded-xl shadow transition flex items-center gap-1.5">
+          <span>檢視完整 Cross-Check 清冊</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
       </div>
 
-      <div class="flex items-center gap-2">
-        <input type="file" id="opsFileInput" accept=".txt,.csv,.json" style="display:none;" onchange="handleOpsFileInput(event)">
-        <button onclick="document.getElementById('opsFileInput').click()" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow transition flex items-center gap-1.5 cursor-pointer">
-          <i data-lucide="folder-open" class="w-4 h-4"></i>
-          <span>選擇檔案上傳</span>
-        </button>
-        <button onclick="openUploadModal()" class="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition flex items-center gap-1.5 cursor-pointer">
-          <i data-lucide="clipboard-paste" class="w-4 h-4"></i>
-          <span>文字貼上 / 拖曳解析</span>
-        </button>
+      <!-- Cross Check Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="s5-cross-cards">
+        <!-- JS Injected -->
       </div>
     </div>
 
+    <!-- 下半部：近 30 日異常結案趨勢 & 高風險排行榜 -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
         <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2">
-          <i data-lucide="activity" class="w-4 h-4 text-blue-500"></i> 近 30 日異常發生與修繕結案趨勢
+          <i data-lucide="trending-up" class="w-4 h-4 text-blue-500"></i> 全網運維 PDCA 改善與結案趨勢 (近 30 日)
         </h3>
-        <div class="h-64 bg-slate-50 rounded border border-slate-100 flex items-center justify-center relative">
-           <canvas id="s5TrendChart"></canvas>
+        <div class="h-64 bg-slate-50 rounded-lg p-2 border border-slate-100 relative">
+          <canvas id="s5TrendChart"></canvas>
         </div>
       </div>
       
       <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
         <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2">
-          <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-500"></i> 高風險需重點維護案場 Top 5
+          <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-500"></i> 案場綜合風險權重排行 Top 5
         </h3>
         <div class="overflow-x-auto">
           <table class="w-full text-left text-sm" id="s5-top-sites-table">
             <thead>
-              <tr class="bg-slate-50 text-slate-500">
-                <th class="p-2 rounded-tl">案場名稱</th>
-                <th class="p-2">設備類型</th>
-                <th class="p-2">未結案數</th>
-                <th class="p-2 rounded-tr">健康燈號</th>
+              <tr class="bg-slate-50 text-slate-500 text-xs">
+                <th class="p-2.5 rounded-tl">案場名稱</th>
+                <th class="p-2.5">設備類型</th>
+                <th class="p-2.5">累計次數</th>
+                <th class="p-2.5 rounded-tr">風險等級</th>
               </tr>
             </thead>
             <tbody>
@@ -168,41 +204,190 @@
   </div>
 
   <!-- ========================================================= -->
-  <!-- S1: 統一告警收件匣                                          -->
+  <!-- S1: 統一收件匣 (三大數據板塊)                                 -->
   <!-- ========================================================= -->
   <div id="view-s1" class="view-section">
-    <div class="mb-6 flex justify-between items-center">
+    <div class="mb-5 flex flex-wrap justify-between items-center gap-4">
       <div>
-        <h1 class="text-2xl font-extrabold text-slate-800">S1: 統一告警收件匣 (Unified Inbox)</h1>
-        <p class="text-sm text-slate-500 mt-1">匯聚各電廠監控雲端資料 (ACMEPOINT) 與 LINE@ 小幫手回饋，點擊項目進入 AI 診斷</p>
+        <h1 class="text-2xl font-extrabold text-slate-900 flex items-center gap-2">
+          <span>S1: 統一告警與處置收件匣 (Tri-Source Inbox)</span>
+        </h1>
+        <p class="text-sm text-slate-500 mt-1">匯聚三大多維數據，點擊卡片即可由 AI 進行關聯診斷並派單</p>
+      </div>
+
+      <!-- 來源切換按鈕組 -->
+      <div class="bg-slate-200/80 p-1 rounded-xl flex gap-1 text-xs font-bold">
+        <button onclick="setS1ActiveTab('all')" id="btn-s1-tab-all" class="source-tab-btn active px-3 py-1.5 rounded-lg transition">🔲 全部三大來源並列</button>
+        <button onclick="setS1ActiveTab('cloud')" id="btn-s1-tab-cloud" class="source-tab-btn px-3 py-1.5 rounded-lg transition">☁️ (1) 進能服告警</button>
+        <button onclick="setS1ActiveTab('cust')" id="btn-s1-tab-cust" class="source-tab-btn px-3 py-1.5 rounded-lg transition">💬 (2) Line@客服</button>
+        <button onclick="setS1ActiveTab('ops')" id="btn-s1-tab-ops" class="source-tab-btn px-3 py-1.5 rounded-lg transition">📱 (3) 工務每日群</button>
+        <button onclick="setS1ActiveTab('cross')" id="btn-s1-tab-cross" class="source-tab-btn px-3 py-1.5 rounded-lg transition text-rose-600">🔥 Cross-Check</button>
       </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <!-- 來源 A: 雲端告警 -->
-      <div class="bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col h-[700px]">
-        <div class="p-4 border-b border-slate-100 bg-slate-50 rounded-t-xl flex justify-between items-center">
-          <h3 class="font-bold text-slate-800 flex items-center gap-2">
-            <i data-lucide="cloud" class="w-4 h-4 text-blue-500"></i> ACMEPOINT 雲端監控告警
-          </h3>
-          <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-xs font-bold" id="s1-cloud-badge">0</span>
+    <!-- S1 頂部：單一案場持續追蹤橫幅 (若有啟動追蹤) -->
+    <div id="siteTrackingBanner" class="hidden bg-blue-50 border border-blue-200 rounded-xl p-3 mb-4 flex justify-between items-center text-xs text-blue-900">
+      <div class="flex items-center gap-2 font-bold">
+        <i data-lucide="target" class="w-4 h-4 text-blue-600"></i>
+        <span>正在持續追蹤特定案場異常：</span>
+        <span id="trackedSiteName" class="px-2 py-0.5 bg-blue-600 text-white rounded font-extrabold">新陽</span>
+        <span class="text-slate-500 font-normal" id="trackedSiteStats">共 48 筆相關告警記錄</span>
+      </div>
+      <button onclick="clearSiteTracking()" class="px-3 py-1 bg-white border border-blue-300 text-blue-700 rounded-lg hover:bg-blue-100 transition font-bold">
+        清除追蹤 / 顯示全部
+      </button>
+    </div>
+
+    <!-- 三大來源主容器 (可全顯或切換單一分頁) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5" id="s1-tri-container">
+      
+      <!-- ======================================================= -->
+      <!-- 區塊 (1): 進能服系統告警 (ACMEPOINT 雲端監控)               -->
+      <!-- ======================================================= -->
+      <div class="s1-panel bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[780px]" id="panel-cloud">
+        <!-- 標題與備存狀態 -->
+        <div class="p-4 border-b border-slate-100 bg-slate-50 rounded-t-2xl flex flex-col gap-2">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-slate-800 flex items-center gap-2 text-sm">
+              <i data-lucide="cloud" class="w-4 h-4 text-blue-500"></i> (1) 進能服系統告警
+            </h3>
+            <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-xs font-bold" id="s1-cloud-badge">0</span>
+          </div>
+
+          <!-- (2) 每個小時備存狀態 -->
+          <div class="flex justify-between items-center text-[11px] text-slate-500 bg-white p-2 rounded-lg border border-slate-200">
+            <span><i data-lucide="clock" class="w-3 h-3 inline text-slate-400"></i> 快照備存：<b class="text-slate-700" id="cloud-snapshot-time">2026-09-16 09:00</b></span>
+            <a href="appendix.html" class="text-blue-600 font-bold hover:underline">查看備存庫 (14+)</a>
+          </div>
+
+          <!-- (4) 篩選條件：案場搜尋 + 告警類型 + 嚴重度 -->
+          <div class="space-y-1.5 pt-1">
+            <div class="flex gap-1.5">
+              <input type="text" id="cloudSiteFilter" placeholder="搜尋案場名稱..." oninput="filterCloudAlarms()" class="flex-1 border border-slate-200 rounded-lg px-2.5 py-1 text-xs focus:ring-1 focus:ring-blue-500 outline-none">
+              <select id="cloudSevFilter" onchange="filterCloudAlarms()" class="border border-slate-200 rounded-lg px-2 py-1 text-xs text-slate-600 focus:ring-1 focus:ring-blue-500 outline-none">
+                <option value="ALL">全部等級</option>
+                <option value="red">紅標 (緊急)</option>
+                <option value="orange">橘標 (警告)</option>
+              </select>
+            </div>
+            <select id="cloudTypeFilter" onchange="filterCloudAlarms()" class="w-full border border-slate-200 rounded-lg px-2 py-1 text-xs text-slate-600 focus:ring-1 focus:ring-blue-500 outline-none">
+              <option value="ALL">全部異常類型 (發電效率/斷訊/數據/連線)</option>
+              <option value="發電效率不佳">發電效率不佳</option>
+              <option value="裝置斷訊">裝置斷訊</option>
+              <option value="發電數據異常">發電數據異常</option>
+              <option value="系統未連線">系統未連線</option>
+            </select>
+          </div>
+
+          <!-- (3) 持續追蹤同一個案場提示按鈕列 -->
+          <div class="text-[11px] text-slate-500 flex items-center justify-between pt-1">
+            <span>點擊快速追蹤案場：</span>
+            <div class="flex gap-1">
+              <button onclick="trackSiteAlarms('新陽')" class="px-1.5 py-0.5 bg-slate-200 hover:bg-blue-100 hover:text-blue-700 rounded text-[10px] font-bold">新陽(48)</button>
+              <button onclick="trackSiteAlarms('台南機場')" class="px-1.5 py-0.5 bg-slate-200 hover:bg-blue-100 hover:text-blue-700 rounded text-[10px] font-bold">台南機場(32)</button>
+              <button onclick="trackSiteAlarms('善化酒廠')" class="px-1.5 py-0.5 bg-slate-200 hover:bg-blue-100 hover:text-blue-700 rounded text-[10px] font-bold">善化(20)</button>
+            </div>
+          </div>
         </div>
-        <div class="p-4 overflow-y-auto flex-1 space-y-3" id="s1-cloud-list">
+
+        <!-- 列表內容 -->
+        <div class="p-3 overflow-y-auto flex-1 space-y-2.5" id="s1-cloud-list">
           <!-- JS injected -->
         </div>
       </div>
 
-      <!-- 來源 B: LINE 客訴/機況 -->
-      <div class="bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col h-[700px]">
-        <div class="p-4 border-b border-slate-100 bg-slate-50 rounded-t-xl flex justify-between items-center">
-          <h3 class="font-bold text-slate-800 flex items-center gap-2">
-            <i data-lucide="message-circle" class="w-4 h-4 text-green-500"></i> LINE@ 客訴與機況通報
-          </h3>
-          <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold" id="s1-line-badge">0</span>
+      <!-- ======================================================= -->
+      <!-- 區塊 (2): Line@客服小幫手 (客戶聲音記錄)                     -->
+      <!-- ======================================================= -->
+      <div class="s1-panel bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[780px]" id="panel-cust">
+        <div class="p-4 border-b border-slate-100 bg-purple-50/50 rounded-t-2xl flex flex-col gap-2">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-slate-800 flex items-center gap-2 text-sm">
+              <i data-lucide="message-square-quote" class="w-4 h-4 text-purple-600"></i> (2) Line@客服小幫手
+            </h3>
+            <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-xs font-bold" id="s1-cust-badge">0</span>
+          </div>
+
+          <!-- 客服匯入快速入口 -->
+          <div class="flex justify-between items-center bg-white p-2 rounded-lg border border-purple-200 text-[11px]">
+            <span class="text-purple-900 font-bold"><i data-lucide="headphones" class="w-3 h-3 inline mr-1 text-purple-500"></i>客服通報檔</span>
+            <button onclick="openUploadModal('cust')" class="text-purple-600 hover:text-purple-800 font-bold underline flex items-center gap-0.5">
+              <i data-lucide="upload" class="w-3 h-3"></i> 匯入客服記錄 (.txt)
+            </button>
+          </div>
+
+          <!-- 篩選器 -->
+          <div class="flex gap-1.5 pt-1">
+            <input type="text" id="custSearchFilter" placeholder="搜尋客戶或案場..." oninput="filterCustAlarms()" class="flex-1 border border-slate-200 rounded-lg px-2.5 py-1 text-xs focus:ring-1 focus:ring-purple-500 outline-none">
+            <select id="custTypeFilter" onchange="filterCustAlarms()" class="border border-slate-200 rounded-lg px-2 py-1 text-xs text-slate-600 focus:ring-1 focus:ring-purple-500 outline-none">
+              <option value="ALL">全部類別</option>
+              <option value="客訴">客訴爭議</option>
+              <option value="報價">報價協調</option>
+              <option value="電費單">發電檢討</option>
+              <option value="清運">廢棄物法規</option>
+            </select>
+          </div>
         </div>
-        <div class="p-4 overflow-y-auto flex-1 space-y-3" id="s1-line-list">
+
+        <div class="p-3 overflow-y-auto flex-1 space-y-2.5" id="s1-cust-list">
           <!-- JS injected -->
         </div>
+      </div>
+
+      <!-- ======================================================= -->
+      <!-- 區塊 (3): 工程師每日工作Line群 (每日機況報)                 -->
+      <!-- ======================================================= -->
+      <div class="s1-panel bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[780px]" id="panel-ops">
+        <div class="p-4 border-b border-slate-100 bg-emerald-50/50 rounded-t-2xl flex flex-col gap-2">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-slate-800 flex items-center gap-2 text-sm">
+              <i data-lucide="activity" class="w-4 h-4 text-emerald-600"></i> (3) 工程師每日機況群
+            </h3>
+            <span class="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded text-xs font-bold" id="s1-ops-badge">0</span>
+          </div>
+
+          <!-- 工務匯入快速入口 -->
+          <div class="flex justify-between items-center bg-white p-2 rounded-lg border border-emerald-200 text-[11px]">
+            <span class="text-emerald-900 font-bold"><i data-lucide="wrench" class="w-3 h-3 inline mr-1 text-emerald-500"></i>現場機況通報</span>
+            <button onclick="openUploadModal('ops')" class="text-emerald-600 hover:text-emerald-800 font-bold underline flex items-center gap-0.5">
+              <i data-lucide="upload" class="w-3 h-3"></i> 上傳機況記錄 (.txt)
+            </button>
+          </div>
+
+          <!-- 篩選器 -->
+          <div class="flex gap-1.5 pt-1">
+            <input type="text" id="opsSearchFilter" placeholder="搜尋工務、案場或設備..." oninput="filterOpsAlarms()" class="flex-1 border border-slate-200 rounded-lg px-2.5 py-1 text-xs focus:ring-1 focus:ring-emerald-500 outline-none">
+            <select id="opsRegionFilter" onchange="filterOpsAlarms()" class="border border-slate-200 rounded-lg px-2 py-1 text-xs text-slate-600 focus:ring-1 focus:ring-emerald-500 outline-none">
+              <option value="ALL">全部分區</option>
+              <option value="桃辦">桃辦</option>
+              <option value="彰辦">彰辦</option>
+              <option value="台南">台南</option>
+              <option value="高辦">高辦</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="p-3 overflow-y-auto flex-1 space-y-2.5" id="s1-ops-list">
+          <!-- JS injected -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 區塊 (5): Cross-Check 完整交叉檢驗清單 (當選擇 Cross Tab)   -->
+    <!-- ======================================================= -->
+    <div id="s1-cross-container" class="hidden bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+      <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-100">
+        <div>
+          <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+            <i data-lucide="shield-alert" class="w-5 h-5 text-rose-600"></i>
+            三大數據 Cross-Check 交叉比對清冊 (依急迫性指數排序)
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">主動比對雲端故障、工務現場處理、客戶催詢，快速挑出最危急電廠</p>
+        </div>
+      </div>
+      <div class="space-y-3" id="s1-cross-list">
+        <!-- JS Injected -->
       </div>
     </div>
   </div>
@@ -213,15 +398,15 @@
   <div id="view-s2" class="view-section">
     <div class="mb-6 flex justify-between items-center">
       <div>
-        <h1 class="text-2xl font-extrabold text-slate-800">S2: AI Agent 智慧判別與派工</h1>
-        <p class="text-sm text-slate-500 mt-1">針對接入的異常訊息，由 AI 判定優先級並給予處置建議，最終生成派工單。</p>
+        <h1 class="text-2xl font-extrabold text-slate-800">S2: AI Agent 智慧判別與派工中心</h1>
+        <p class="text-sm text-slate-500 mt-1">整合進能服雲端、LINE@客服、工程師機況之關聯情報，生成正式派工單</p>
       </div>
     </div>
 
     <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6" id="s2-empty-state">
       <div class="text-center py-20 text-slate-400">
         <i data-lucide="bot" class="w-16 h-16 mx-auto mb-4 text-slate-300"></i>
-        <p>請先由「S1 統一收件匣」選擇一個項目進行 AI 判別</p>
+        <p>請先由「S1 統一收件匣」或「S5 戰情中心」點擊任一異常項目進行 AI 診斷</p>
       </div>
     </div>
 
@@ -229,17 +414,17 @@
       <!-- 左側：原始資料與 Site DB 資訊 -->
       <div class="lg:col-span-1 space-y-4">
         <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
-          <h4 class="text-xs font-bold text-slate-500 mb-2">原始異常來源</h4>
-          <div class="bg-white p-3 rounded border border-slate-100 shadow-sm text-sm" id="s2-source-content"></div>
+          <h4 class="text-xs font-bold text-slate-500 mb-2">異常情報來源 (Source Context)</h4>
+          <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm text-xs leading-relaxed" id="s2-source-content"></div>
         </div>
         
         <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
           <h4 class="text-xs font-bold text-slate-500 mb-2">Site DB 案場基礎資訊匹配</h4>
-          <ul class="space-y-2 text-sm text-slate-700" id="s2-site-db-info">
-            <li class="flex justify-between"><span class="text-slate-400">案場名稱：</span><b id="s2-db-name"></b></li>
-            <li class="flex justify-between"><span class="text-slate-400">地理位置：</span><span id="s2-db-loc"></span></li>
-            <li class="flex justify-between"><span class="text-slate-400">設備配置：</span><span id="s2-db-equip"></span></li>
-            <li class="flex justify-between"><span class="text-slate-400">負責工務：</span><span id="s2-db-eng"></span></li>
+          <ul class="space-y-2 text-xs text-slate-700" id="s2-site-db-info">
+            <li class="flex justify-between border-b border-slate-200/60 pb-1.5"><span class="text-slate-400">案場名稱：</span><b id="s2-db-name" class="text-slate-900"></b></li>
+            <li class="flex justify-between border-b border-slate-200/60 pb-1.5"><span class="text-slate-400">地理位置：</span><span id="s2-db-loc"></span></li>
+            <li class="flex justify-between border-b border-slate-200/60 pb-1.5"><span class="text-slate-400">設備配置：</span><span id="s2-db-equip"></span></li>
+            <li class="flex justify-between border-b border-slate-200/60 pb-1.5"><span class="text-slate-400">責任工務：</span><span id="s2-db-eng" class="font-bold text-blue-700"></span></li>
             <li class="flex justify-between"><span class="text-slate-400">上次定保：</span><span id="s2-db-maint"></span></li>
           </ul>
         </div>
@@ -247,25 +432,25 @@
 
       <!-- 右側：AI 分析過程與派工單預覽 -->
       <div class="lg:col-span-2">
-        <div class="bg-white rounded-xl border border-blue-200 shadow-lg overflow-hidden flex flex-col h-full">
-          <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
-            <h3 class="font-bold flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4"></i> AI Agent 診斷結果</h3>
-            <span class="px-2 py-0.5 bg-rose-500 text-white rounded text-xs font-bold" id="s2-ai-priority">P0 緊急</span>
+        <div class="bg-white rounded-2xl border border-blue-200 shadow-lg overflow-hidden flex flex-col h-full">
+          <div class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white p-4 flex justify-between items-center">
+            <h3 class="font-bold flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> AI Agent 智慧多維診斷評估</h3>
+            <span class="px-2.5 py-1 bg-rose-500 text-white rounded-lg text-xs font-black" id="s2-ai-priority">P0 緊急出車</span>
           </div>
           <div class="p-6 space-y-4 flex-1">
             <div>
-              <div class="text-xs font-bold text-slate-400 mb-1">根因診斷 (RCA)</div>
-              <p class="text-sm text-slate-800 leading-relaxed bg-slate-50 p-3 rounded" id="s2-ai-rca"></p>
+              <div class="text-xs font-bold text-slate-400 mb-1.5">根本原因推論 (RCA)</div>
+              <p class="text-xs text-slate-800 leading-relaxed bg-slate-50 p-3.5 rounded-xl border border-slate-100" id="s2-ai-rca"></p>
             </div>
             <div>
-              <div class="text-xs font-bold text-slate-400 mb-1">建議處置 SOP</div>
-              <p class="text-sm text-slate-800 leading-relaxed bg-blue-50 p-3 rounded" id="s2-ai-sop"></p>
+              <div class="text-xs font-bold text-slate-400 mb-1.5">建議處置 SOP 與行動窗口</div>
+              <p class="text-xs text-blue-950 leading-relaxed bg-blue-50/60 p-3.5 rounded-xl border border-blue-100 font-mono whitespace-pre-line" id="s2-ai-sop"></p>
             </div>
           </div>
           <div class="p-4 border-t border-slate-100 bg-slate-50 text-right">
-            <button class="px-4 py-2 bg-slate-200 text-slate-600 rounded-lg font-bold text-sm mr-2" onclick="switchNav('s1')">取消</button>
-            <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-sm shadow-md transition flex items-center gap-2 inline-flex" onclick="generateWorkOrder()">
-              <i data-lucide="send" class="w-4 h-4"></i> 正式生成並派發工單 (至 S3)
+            <button class="px-4 py-2 bg-slate-200 text-slate-600 rounded-lg font-bold text-xs mr-2" onclick="switchNav('s1')">返回收件匣</button>
+            <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 inline-flex" onclick="generateWorkOrder()">
+              <i data-lucide="send" class="w-4 h-4"></i> 正式生成並派發工單 (至 S3 現場端)
             </button>
           </div>
         </div>
@@ -276,39 +461,35 @@
   <!-- ========================================================= -->
   <!-- S3: 現場工程師工作台 (Mobile Mockup)                        -->
   <!-- ========================================================= -->
-  <div id="view-s3" class="view-section bg-slate-200">
+  <div id="view-s3" class="view-section bg-slate-200 py-6">
     <div class="text-center mb-4">
-      <h1 class="text-xl font-bold text-slate-700">S3: 工程師現場工作台 (Mobile 視角)</h1>
-      <p class="text-sm text-slate-500">提供工程師於現場查看派工任務、案場資訊及修繕履歷</p>
+      <h1 class="text-xl font-bold text-slate-800">S3: 工程師現場工作台 (Mobile 視角)</h1>
+      <p class="text-xs text-slate-500">現場工程師透過手機端即時接收派工單、查看 AI 建議與案場履歷</p>
     </div>
 
     <!-- 手機外框模擬 -->
     <div class="mobile-view flex flex-col">
       <div class="mobile-header">
-        <div class="font-bold">O&M 現場工作台</div>
-        <div class="flex items-center gap-2 text-sm">
+        <div class="font-bold text-sm">Kingsun O&M 現場行動端</div>
+        <div class="flex items-center gap-2 text-xs">
           <i data-lucide="bell" class="w-4 h-4"></i>
-          <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-xs">李</div>
+          <div class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-[10px] font-bold">李</div>
         </div>
       </div>
-      <div class="bg-blue-600 text-white p-3 text-sm flex justify-between items-center shadow">
-        <span>今日待辦任務</span>
-        <span class="bg-blue-800 px-2 py-0.5 rounded-full text-xs font-bold" id="s3-task-count">1</span>
+      <div class="bg-blue-600 text-white p-3 text-xs flex justify-between items-center shadow">
+        <span>今日待執行任務</span>
+        <span class="bg-blue-800 px-2 py-0.5 rounded-full font-bold" id="s3-task-count">0</span>
       </div>
       
       <div class="mobile-body" id="s3-wo-list">
         <!-- JS Injected 派工單列表 -->
-        <div class="text-center text-slate-400 mt-10 text-sm">
-          <i data-lucide="check-circle" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
-          目前沒有派發的工單
-        </div>
       </div>
       
       <!-- Mobile Bottom Nav -->
-      <div class="bg-white border-t border-slate-200 flex justify-around p-2 text-[10px] text-slate-500 font-bold h-[60px] pb-4">
-        <div class="flex flex-col items-center justify-center text-blue-600"><i data-lucide="clipboard-list" class="w-5 h-5 mb-1"></i>派工任務</div>
-        <div class="flex flex-col items-center justify-center"><i data-lucide="map" class="w-5 h-5 mb-1"></i>案場地圖</div>
-        <div class="flex flex-col items-center justify-center"><i data-lucide="history" class="w-5 h-5 mb-1"></i>修繕履歷</div>
+      <div class="bg-white border-t border-slate-200 flex justify-around p-2 text-[10px] text-slate-500 font-bold h-[56px]">
+        <div class="flex flex-col items-center justify-center text-blue-600"><i data-lucide="clipboard-list" class="w-4 h-4 mb-0.5"></i>任務清單</div>
+        <div class="flex flex-col items-center justify-center"><i data-lucide="map-pin" class="w-4 h-4 mb-0.5"></i>案場導航</div>
+        <div class="flex flex-col items-center justify-center"><i data-lucide="file-clock" class="w-4 h-4 mb-0.5"></i>維修歷程</div>
       </div>
     </div>
   </div>
@@ -316,142 +497,146 @@
   <!-- ========================================================= -->
   <!-- S4: 維運結案與資料回傳 (Mobile Mockup)                      -->
   <!-- ========================================================= -->
-  <div id="view-s4" class="view-section bg-slate-200">
+  <div id="view-s4" class="view-section bg-slate-200 py-6">
     <div class="text-center mb-4">
-      <h1 class="text-xl font-bold text-slate-700">S4: 任務結案與 PDCA 回傳 (Mobile 視角)</h1>
-      <p class="text-sm text-slate-500">供工程師上傳現場維修照片、語音轉文字回報，完成修繕閉環</p>
+      <h1 class="text-xl font-bold text-slate-800">S4: 任務結案與 PDCA 回傳 (Mobile 視角)</h1>
+      <p class="text-xs text-slate-500">現場拍照上傳、語音轉文字說明、登記料件並完成閉環</p>
     </div>
 
     <!-- 手機外框模擬 -->
     <div class="mobile-view flex flex-col hidden" id="s4-active-form">
-      <div class="mobile-header bg-indigo-900">
-        <div class="flex items-center gap-2 cursor-pointer" onclick="switchNav('s3')">
-          <i data-lucide="chevron-left" class="w-5 h-5"></i> 返回
+      <div class="mobile-header bg-slate-900">
+        <div class="flex items-center gap-1 cursor-pointer text-xs" onclick="switchNav('s3')">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i> 返回
         </div>
-        <div class="font-bold text-sm">任務執行與結案回報</div>
-        <div class="w-5"></div>
+        <div class="font-bold text-xs">任務結案與 PDCA 回傳</div>
+        <div class="w-4"></div>
       </div>
       
-      <div class="mobile-body p-4 space-y-4">
-        <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
-          <div class="text-[11px] text-slate-500 font-bold mb-1">執行案場</div>
-          <div class="font-bold text-slate-800" id="s4-site-name">新陽 - 發電效率異常</div>
+      <div class="mobile-body space-y-4">
+        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+          <div class="text-[10px] text-slate-400 font-bold mb-0.5">執行案場與工單編號</div>
+          <div class="font-bold text-slate-800 text-sm" id="s4-site-name">新陽 (WO-1001)</div>
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-slate-600 mb-2">1. 現場修繕照片上傳</label>
-          <div class="border-2 border-dashed border-slate-300 rounded-lg p-6 text-center text-slate-500 bg-slate-50 hover:bg-slate-100 transition cursor-pointer" id="mock-upload-btn">
-            <i data-lucide="camera" class="w-8 h-8 mx-auto mb-2 text-slate-400"></i>
-            <div class="text-xs font-bold">點擊拍照或上傳照片</div>
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">1. 現場修繕照片上傳</label>
+          <div class="border-2 border-dashed border-slate-300 rounded-xl p-5 text-center text-slate-500 bg-white hover:bg-slate-50 transition cursor-pointer" id="mock-upload-btn">
+            <i data-lucide="camera" class="w-7 h-7 mx-auto mb-1 text-slate-400"></i>
+            <div class="text-xs font-bold">點擊拍照或選擇照片</div>
           </div>
-          <div id="mock-photo-preview" class="hidden mt-2 grid grid-cols-3 gap-2">
-             <div class="aspect-square bg-slate-200 rounded-lg overflow-hidden relative border border-slate-300">
-               <div class="absolute inset-0 bg-blue-500/20 flex items-center justify-center text-blue-700 text-[10px] font-bold">已上傳模擬圖</div>
+          <div id="mock-photo-preview" class="hidden mt-2 grid grid-cols-2 gap-2">
+             <div class="aspect-video bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-800 text-[10px] font-bold border border-emerald-300">
+               <i data-lucide="check" class="w-3 h-3 mr-1"></i> 修繕前照片.jpg
+             </div>
+             <div class="aspect-video bg-blue-100 rounded-lg flex items-center justify-center text-blue-800 text-[10px] font-bold border border-blue-300">
+               <i data-lucide="check" class="w-3 h-3 mr-1"></i> 完工測試照片.jpg
              </div>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-slate-600 mb-2">2. 處理說明 (語音/文字)</label>
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">2. 處理說明 (語音/文字)</label>
           <div class="relative">
-            <textarea class="w-full border border-slate-300 rounded-lg p-3 text-sm h-24 focus:ring-2 focus:ring-blue-500 outline-none resize-none" id="s4-report-text" placeholder="請輸入或使用語音輸入處理結果..."></textarea>
-            <button class="absolute right-2 bottom-2 p-2 bg-indigo-100 text-indigo-600 rounded-full hover:bg-indigo-200" id="mock-voice-btn" title="模擬語音輸入">
+            <textarea class="w-full border border-slate-300 rounded-xl p-3 text-xs h-24 focus:ring-2 focus:ring-blue-500 outline-none resize-none" id="s4-report-text" placeholder="請輸入或點選麥克風語音輸入..."></textarea>
+            <button class="absolute right-2.5 bottom-2.5 p-2 bg-indigo-50 text-indigo-600 rounded-full hover:bg-indigo-100 transition" id="mock-voice-btn" title="模擬語音轉文字">
               <i data-lucide="mic" class="w-4 h-4"></i>
             </button>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-slate-600 mb-2">3. 消耗料件</label>
-          <input type="text" class="w-full border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="例如: 變流器風扇x2, 太陽能板MC4接頭x5">
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">3. 消耗料件登記</label>
+          <input type="text" class="w-full border border-slate-300 rounded-xl p-2.5 text-xs focus:ring-2 focus:ring-blue-500 outline-none" value="變流器散熱風扇 x2, MC4端子組 x4">
         </div>
 
-        <button class="w-full bg-emerald-600 text-white font-bold py-3 rounded-lg shadow-md mt-4 flex items-center justify-center gap-2" onclick="submitWorkOrder()">
-          <i data-lucide="check-circle" class="w-5 h-5"></i> 完成派工並結案 (PDCA)
+        <button class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 rounded-xl shadow-md mt-4 flex items-center justify-center gap-2 text-xs transition" onclick="submitWorkOrder()">
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i> 完成派工並結案 (連動更新戰情)
         </button>
       </div>
     </div>
     
     <div class="mobile-view flex flex-col justify-center items-center p-6 text-center" id="s4-empty-state">
       <i data-lucide="clipboard-check" class="w-16 h-16 text-slate-300 mb-4"></i>
-      <h2 class="text-lg font-bold text-slate-700 mb-2">請先從 S3 工作台選擇任務</h2>
-      <p class="text-xs text-slate-500">您需要先接受一張派工單才能進行結案回報。</p>
-      <button class="mt-6 px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-lg shadow" onclick="switchNav('s3')">前往 S3 工作台</button>
+      <h2 class="text-base font-bold text-slate-700 mb-1">請先從 S3 工作台選擇任務</h2>
+      <p class="text-xs text-slate-400">接單並現場處置完畢後，即可在此回傳結案資料。</p>
+      <button class="mt-5 px-4 py-2 bg-blue-600 text-white text-xs font-bold rounded-lg shadow" onclick="switchNav('s3')">前往 S3 工作台</button>
     </div>
   </div>
 
-  
-  <!-- 上傳每日處置 Modal -->
-  <div id="uploadOpsModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex justify-center items-center p-4">
-    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto space-y-4">
+  <!-- ========================================================= -->
+  <!-- 泛用上傳檔案 Modal (支援工務機況 / LINE@客服)                 -->
+  <!-- ========================================================= -->
+  <div id="universalUploadModal" class="fixed inset-0 bg-slate-900/75 backdrop-blur-sm z-50 hidden flex justify-center items-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 max-h-[92vh] overflow-y-auto space-y-4">
       <div class="flex justify-between items-start border-b border-slate-100 pb-3">
         <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold" id="uploadModalIcon">
             <i data-lucide="upload-cloud" class="w-5 h-5"></i>
           </div>
           <div>
-            <h3 class="font-bold text-base text-slate-900">上傳工程師每日處置資料 (LINE 機況報)</h3>
-            <p class="text-xs text-slate-500">支援上傳或貼上 LINE 群組匯出之「[LINE]每日機況報這裡.txt」</p>
+            <h3 class="font-bold text-base text-slate-900" id="uploadModalTitle">資料匯入中心</h3>
+            <p class="text-xs text-slate-500" id="uploadModalSubtitle">支援上傳文字檔、拖曳或直接貼上 LINE 訊息</p>
           </div>
         </div>
-        <button onclick="closeUploadModal()" class="p-1 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-600">
+        <button onclick="closeUploadModal()" class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-600">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <!-- 上傳區塊 1: 拖曳上傳 -->
-      <div id="dropZone" class="border-2 border-dashed border-emerald-300 hover:border-emerald-500 bg-emerald-50/40 hover:bg-emerald-50/70 rounded-xl p-6 text-center cursor-pointer transition" onclick="document.getElementById('modalFileInput').click()">
-        <input type="file" id="modalFileInput" accept=".txt,.csv,.json" style="display:none;" onchange="handleModalFileInput(event)">
-        <i data-lucide="file-text" class="w-10 h-10 mx-auto mb-2 text-emerald-600"></i>
+      <!-- 拖曳上傳區 -->
+      <div id="dropZone" class="border-2 border-dashed border-blue-300 hover:border-blue-500 bg-blue-50/30 hover:bg-blue-50/60 rounded-xl p-6 text-center cursor-pointer transition" onclick="document.getElementById('genericFileInput').click()">
+        <input type="file" id="genericFileInput" accept=".txt,.csv,.json" style="display:none;" onchange="handleGenericFileInput(event)">
+        <i data-lucide="file-text" class="w-9 h-9 mx-auto mb-2 text-blue-600"></i>
         <div class="font-bold text-sm text-slate-800">點擊選擇檔案 或 拖曳檔案至此</div>
-        <div class="text-xs text-slate-500 mt-1">支援格式：.txt (LINE 對話導出檔)、.csv、.json</div>
-        <div class="text-[11px] text-emerald-700 font-mono mt-2 bg-emerald-100/70 py-1 px-3 rounded-full inline-block">
-          預設檔案：[LINE]每日機況報這裡.txt
+        <div class="text-xs text-slate-500 mt-1">支援檔案類型：.txt (LINE 對話導出)、.csv、.json</div>
+        <div class="text-[11px] text-blue-700 font-mono mt-2 bg-blue-100/70 py-1 px-3 rounded-full inline-block" id="uploadModalSampleHint">
+          預設範例檔案
         </div>
       </div>
 
-      <!-- 上傳區塊 2: 直接貼上文字 -->
+      <!-- 快速載入與貼上區 -->
       <div>
         <div class="flex justify-between items-center mb-1.5">
           <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-            <i data-lucide="edit-3" class="w-3.5 h-3.5 text-blue-600"></i> 或直接貼上 LINE 對話訊息：
+            <i data-lucide="edit-3" class="w-3.5 h-3.5 text-blue-600"></i> 或直接貼上對話訊息內容：
           </label>
-          <button onclick="loadDefaultLineFileSample()" class="text-xs text-emerald-600 hover:text-emerald-700 font-bold hover:underline">
-            ⚡ 載入預設 [LINE]每日機況報這裡.txt 範例內容
+          <button onclick="loadCurrentTargetSample()" id="btnLoadSample" class="text-xs text-blue-600 hover:text-blue-800 font-bold hover:underline">
+            ⚡ 載入預設文字範例
           </button>
         </div>
-        <textarea id="rawLineTextInput" oninput="handleRawTextInputChange()" class="w-full border border-slate-200 rounded-xl p-3 text-xs font-mono h-32 focus:ring-2 focus:ring-emerald-500 outline-none resize-none bg-slate-50" placeholder="例如：&#10;2026.04.07 星期二&#10;08:48 white(HsingChung) 台南： 安德順 4/5斷線(MOXA異常)&#10;08:59 Bryant Chen 高辦&#10;禾豐 監控斷線..."></textarea>
+        <textarea id="rawLineTextInput" oninput="handleRawTextInputChange()" class="w-full border border-slate-200 rounded-xl p-3 text-xs font-mono h-32 focus:ring-2 focus:ring-blue-500 outline-none resize-none bg-slate-50" placeholder="貼上訊息內容..."></textarea>
       </div>
 
-      <!-- 解析即時反饋區 (預覽) -->
+      <!-- 解析即時反饋區 -->
       <div id="parsePreviewArea" class="hidden bg-slate-900 text-white p-4 rounded-xl space-y-2 text-xs font-mono">
         <div class="flex justify-between items-center text-emerald-400 font-bold">
           <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> 解析結果預覽</span>
           <span id="previewCountBadge" class="bg-emerald-500/20 px-2 py-0.5 rounded text-[11px]">0 筆</span>
         </div>
-        <div class="grid grid-cols-4 gap-2 text-[11px] text-slate-300 py-1 border-y border-slate-800">
-          <div>桃辦: <b id="prevRegTao" class="text-white">0</b></div>
-          <div>彰辦: <b id="prevRegZhang" class="text-white">0</b></div>
-          <div>台南: <b id="prevRegTainan" class="text-white">0</b></div>
-          <div>高辦: <b id="prevRegGao" class="text-white">0</b></div>
+        <div class="text-[11px] text-slate-300 py-1 border-y border-slate-800" id="previewStats">
+          已成功提取記錄
         </div>
-        <div class="text-[11px] text-slate-400 truncate">第一筆範例：<span id="prevSample" class="text-slate-200"></span></div>
+        <div class="text-[11px] text-slate-400 truncate">第一筆樣本：<span id="prevSample" class="text-slate-200"></span></div>
       </div>
 
       <div class="flex justify-end gap-2 pt-2 border-t border-slate-100">
         <button onclick="closeUploadModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition">
           關閉
         </button>
-        <button onclick="confirmSyncLineOps()" id="btnConfirmSync" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-extrabold rounded-lg shadow-md transition flex items-center gap-1.5">
+        <button onclick="confirmSyncUpload()" id="btnConfirmSync" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-extrabold rounded-lg shadow-md transition flex items-center gap-1.5">
           <i data-lucide="refresh-cw" class="w-4 h-4"></i>
-          <span>確認同步至戰情系統</span>
+          <span>確認匯入並刷新戰情系統</span>
         </button>
       </div>
     </div>
   </div>
-<script src="data/data.js"></script>
+
+  <!-- SCRIPT INCLUDES -->
+  <script src="data/data.js"></script>
   <script src="data/kingsun_data.js"></script>
   <script src="data/site_db.js"></script>
+
   <script>
     // 導航切換邏輯
     function switchNav(targetId) {
@@ -463,142 +648,698 @@
       if (targetView) targetView.classList.add('active');
       if (targetNav) targetNav.classList.add('active');
       
-      if (window.lucide) {
-        lucide.createIcons();
-      }
+      if (window.lucide) lucide.createIcons();
       window.scrollTo(0, 0);
     }
 
-    // 暫存目前的派工資料
+    // 全域變數
     let currentAIContext = null;
     let myWorkOrders = [];
+    let currentUploadTarget = 'ops'; // 'ops' or 'cust'
     let parsedTempRecords = [];
+    let activeTrackedSite = null;
 
-    // 初始化渲染 S1 / S5
-    function initPlatform() {
-      // 檢查是否有本機自訂快取的上傳資料
-      const cached = localStorage.getItem('KINGSUN_DAILY_OPS_CUSTOM');
-      if (cached) {
-        try {
-          const parsed = JSON.parse(cached);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            window.DAILY_OPS_DATA = parsed;
-          }
-        } catch(e) {
-          console.warn('Failed to parse cached ops data:', e);
+    // S1 分頁狀態切換
+    function setS1ActiveTab(tabName) {
+      document.querySelectorAll('.source-tab-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-s1-tab-' + tabName);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const panelCloud = document.getElementById('panel-cloud');
+      const panelCust = document.getElementById('panel-cust');
+      const panelOps = document.getElementById('panel-ops');
+      const triContainer = document.getElementById('s1-tri-container');
+      const crossContainer = document.getElementById('s1-cross-container');
+
+      if (tabName === 'cross') {
+        triContainer.classList.add('hidden');
+        crossContainer.classList.remove('hidden');
+      } else {
+        triContainer.classList.remove('hidden');
+        crossContainer.classList.add('hidden');
+
+        if (tabName === 'all') {
+          panelCloud.classList.remove('hidden');
+          panelCust.classList.remove('hidden');
+          panelOps.classList.remove('hidden');
+        } else if (tabName === 'cloud') {
+          panelCloud.classList.remove('hidden');
+          panelCust.classList.add('hidden');
+          panelOps.classList.add('hidden');
+        } else if (tabName === 'cust') {
+          panelCloud.classList.add('hidden');
+          panelCust.classList.remove('hidden');
+          panelOps.classList.add('hidden');
+        } else if (tabName === 'ops') {
+          panelCloud.classList.add('hidden');
+          panelCust.classList.add('hidden');
+          panelOps.classList.remove('hidden');
         }
       }
 
-      const opsData = (typeof window.DAILY_OPS_DATA !== 'undefined') ? window.DAILY_OPS_DATA : ((typeof DAILY_OPS_DATA !== 'undefined') ? DAILY_OPS_DATA : []);
-      
-      // 更新標籤上的總筆數
-      const opsLabel = document.getElementById('current-ops-count-label');
-      if (opsLabel) opsLabel.innerText = opsData.length.toLocaleString() + ' 筆';
+      if (window.lucide) lucide.createIcons();
+    }
 
-      // S5 資料填入
+    // 初始化渲染 S1 / S5 / Cross-Check
+    function initPlatform() {
+      // 讀取 LocalStorage 快取
+      const cachedOps = localStorage.getItem('KINGSUN_DAILY_OPS_CUSTOM');
+      if (cachedOps) {
+        try {
+          const p = JSON.parse(cachedOps);
+          if (Array.isArray(p) && p.length > 0) window.DAILY_OPS_DATA = p;
+        } catch(e) {}
+      }
+      const cachedCust = localStorage.getItem('KINGSUN_CUST_VOICE_CUSTOM');
+      if (cachedCust) {
+        try {
+          const p = JSON.parse(cachedCust);
+          if (Array.isArray(p) && p.length > 0) window.CUSTOMER_VOICE_DATA = p;
+        } catch(e) {}
+      }
+
       const cloudAlarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
+      const opsData = (typeof window.DAILY_OPS_DATA !== 'undefined') ? window.DAILY_OPS_DATA : ((typeof DAILY_OPS_DATA !== 'undefined') ? DAILY_OPS_DATA : []);
+      const custData = (typeof window.CUSTOMER_VOICE_DATA !== 'undefined') ? window.CUSTOMER_VOICE_DATA : ((typeof CUSTOMER_VOICE_DATA !== 'undefined') ? CUSTOMER_VOICE_DATA : []);
+      const crossData = (typeof CROSS_CHECK_DATA !== 'undefined') ? CROSS_CHECK_DATA : [];
+
+      // S5 數值更新
       const cloudCountEl = document.getElementById('s5-cloud-count');
       if (cloudCountEl) cloudCountEl.innerText = cloudAlarms.length;
-      
-      const custVoices = (typeof OVERVIEW_DATA !== 'undefined' ? OVERVIEW_DATA.total_customer_voices : 0) || 0;
-      const lineCountEl = document.getElementById('s5-line-count');
-      if (lineCountEl) lineCountEl.innerText = opsData.length + custVoices;
-      
-      // S5 案場排行表格 (根據即時 opsData 重算)
-      const siteCounts = {};
-      opsData.forEach(r => {
-        const s = r.site_name || '其他';
-        siteCounts[s] = (siteCounts[s] || 0) + 1;
-      });
-      const sortedSites = Object.keys(siteCounts).sort((a,b) => siteCounts[b] - siteCounts[a]).slice(0, 5);
 
-      const topSitesBody = document.querySelector('#s5-top-sites-table tbody');
-      if (topSitesBody) {
-        topSitesBody.innerHTML = '';
-        sortedSites.forEach(siteName => {
-           const info = typeof getSiteInfo === 'function' ? getSiteInfo(siteName) : { equipType: '未知' };
-           const count = siteCounts[siteName];
-           topSitesBody.innerHTML += `
-             <tr class="border-b border-slate-100 hover:bg-slate-50">
-               <td class="p-2 font-bold text-slate-800">${siteName}</td>
-               <td class="p-2 text-xs text-slate-600">${info.equipType || '常規變流器'}</td>
-               <td class="p-2 text-sm text-slate-700 font-mono">${count}</td>
-               <td class="p-2">
-                 <span class="px-2 py-1 bg-red-100 text-red-700 text-[10px] font-bold rounded">P0 高風險</span>
-               </td>
-             </tr>
-           `;
-        });
-      }
+      const custCountEl = document.getElementById('s5-cust-count');
+      if (custCountEl) custCountEl.innerText = custData.length;
 
-      // 繪製 S5 趨勢圖 (Mock)
-      const ctx = document.getElementById('s5TrendChart');
-      if (ctx && window.Chart) {
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ['1號','5號','10號','15號','20號','25號','30號'],
-            datasets: [
-              { label: '新增異常數', data: [12, 19, 15, 25, 22, 14, 10], borderColor: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)', tension: 0.3, fill: true },
-              { label: '完工結案數', data: [10, 15, 18, 20, 24, 18, 12], borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', tension: 0.3, fill: true }
-            ]
-          },
-          options: { responsive: true, maintainAspectRatio: false }
-        });
-      }
+      const opsCountEl = document.getElementById('s5-ops-count');
+      if (opsCountEl) opsCountEl.innerText = opsData.length.toLocaleString();
 
-      // S1 雲端告警渲染
-      const cloudList = document.getElementById('s1-cloud-list');
+      const crossCountEl = document.getElementById('s5-cross-count');
+      if (crossCountEl) crossCountEl.innerHTML = `${crossData.length} <small class="text-sm font-normal text-slate-500">關鍵案</small>`;
+
+      // S1 Badge 更新
       const cloudBadge = document.getElementById('s1-cloud-badge');
-      if (cloudBadge) cloudBadge.innerText = cloudAlarms.length;
-      if (cloudList) {
-        cloudList.innerHTML = '';
-        cloudAlarms.slice(0, 50).forEach((alarm, index) => {
-           const siteName = alarm.factoryName || "未知案場";
-           const alarmContext = alarm.lastAlarmType || "未知異常";
-           const triggerTime = alarm.time || "";
-           const desc = (alarm.allAlarms && alarm.allAlarms.length > 0 && alarm.allAlarms[0].desc) ? alarm.allAlarms[0].desc : alarmContext;
+      if (cloudBadge) cloudBadge.innerText = cloudAlarms.length + ' 案場';
 
-           cloudList.innerHTML += `
-             <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-blue-300 hover:shadow-md transition cursor-pointer" onclick="processCloudAI(${index})">
-               <div class="flex justify-between mb-1">
-                 <span class="font-bold text-sm text-slate-800">${siteName}</span>
-                 <span class="text-[10px] text-slate-400 font-mono">${triggerTime}</span>
-               </div>
-               <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${alarmContext}</div>
-               <p class="text-xs text-slate-600 line-clamp-2">${desc}</p>
-             </div>
-           `;
-        });
+      const custBadge = document.getElementById('s1-cust-badge');
+      if (custBadge) custBadge.innerText = custData.length + ' 筆';
+
+      const opsBadge = document.getElementById('s1-ops-badge');
+      if (opsBadge) opsBadge.innerText = opsData.length.toLocaleString() + ' 筆';
+
+      // 備存快照時間
+      const snapTimeEl = document.getElementById('cloud-snapshot-time');
+      if (snapTimeEl && window.LATEST_ALARM_DATA?.metadata?.updatedAt) {
+        snapTimeEl.innerText = window.LATEST_ALARM_DATA.metadata.updatedAt;
       }
 
-      // S1 LINE@ 告警渲染
-      const lineList = document.getElementById('s1-line-list');
-      const lineBadge = document.getElementById('s1-line-badge');
-      if (lineBadge) lineBadge.innerText = opsData.length;
-      if (lineList) {
-        lineList.innerHTML = '';
-        opsData.slice(0, 50).forEach((ops, index) => {
-           lineList.innerHTML += `
-             <div class="p-3 border border-slate-100 bg-white rounded-lg shadow-sm hover:border-green-300 hover:shadow-md transition cursor-pointer" onclick="processLineAI(${index})">
-               <div class="flex justify-between mb-1">
-                 <span class="font-bold text-sm text-slate-800 flex items-center gap-1"><i data-lucide="smartphone" class="w-3 h-3 text-green-500"></i> ${ops.site_name}</span>
-                 <span class="text-[10px] text-slate-400 font-mono">${ops.date}</span>
-               </div>
-               <div class="text-[10px] bg-slate-100 text-slate-500 px-1 py-0.5 rounded w-max mb-1">${ops.issue_type}</div>
-               <p class="text-xs text-slate-600 line-clamp-2">${ops.content}</p>
-             </div>
-           `;
-        });
+      // 渲染 Cross-Check 卡片至 S5
+      renderS5CrossCards(crossData);
+
+      // 渲染 Cross-Check 清單至 S1
+      renderS1CrossList(crossData);
+
+      // 渲染三大來源列表
+      filterCloudAlarms();
+      filterCustAlarms();
+      filterOpsAlarms();
+
+      // S5 案場排行表格
+      renderS5RiskRanking(opsData, custData);
+
+      // 繪製趨勢圖
+      renderS5TrendChart();
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // =========================================================
+    // 渲染 S5 & S1 Cross-Check 卡片
+    // =========================================================
+    function renderS5CrossCards(crossList) {
+      const container = document.getElementById('s5-cross-cards');
+      if (!container) return;
+      container.innerHTML = '';
+
+      crossList.slice(0, 8).forEach(c => {
+        const isTriple = c.hit_type === 'TRIPLE_HIT';
+        container.innerHTML += `
+          <div class="bg-white/10 hover:bg-white/15 border border-white/10 rounded-xl p-4 transition cursor-pointer flex flex-col justify-between" onclick="processCrossAI('${c.id}')">
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <span class="font-extrabold text-sm text-white">${c.site_name}</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-black ${isTriple ? 'bg-rose-500 text-white animate-pulse' : 'bg-amber-400 text-slate-900'}">
+                  ${isTriple ? '🚨 三重命中' : '⚡ 雙重命中'}
+                </span>
+              </div>
+              <div class="text-[11px] text-amber-300 font-bold mb-1">${c.cross_category}</div>
+              <p class="text-[11px] text-slate-300 line-clamp-2 leading-relaxed mb-3">${c.daily_ops_summary}</p>
+            </div>
+            <div class="pt-2 border-t border-white/10 flex justify-between items-center text-[10px]">
+              <span class="text-rose-400 font-bold">急迫指數 ${c.urgency_score}</span>
+              <span class="text-blue-300 font-bold flex items-center gap-0.5">點擊診斷 <i data-lucide="chevron-right" class="w-3 h-3"></i></span>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function renderS1CrossList(crossList) {
+      const container = document.getElementById('s1-cross-list');
+      if (!container) return;
+      container.innerHTML = '';
+
+      crossList.forEach((c, idx) => {
+        const isTriple = c.hit_type === 'TRIPLE_HIT';
+        container.innerHTML += `
+          <div class="p-4 border border-slate-200 rounded-xl hover:border-blue-400 hover:shadow-md transition bg-slate-50/50 flex flex-col gap-2.5">
+            <div class="flex flex-wrap justify-between items-center gap-2">
+              <div class="flex items-center gap-2">
+                <span class="font-black text-base text-slate-900">${c.site_name}</span>
+                <span class="text-xs text-slate-500 font-mono">(${c.equipment})</span>
+                <span class="px-2.5 py-0.5 rounded text-xs font-black ${isTriple ? 'bg-rose-100 text-rose-700 border border-rose-200' : 'bg-amber-100 text-amber-800 border border-amber-200'}">
+                  ${isTriple ? '🚨 雲端+工務+客戶 三重命中 (P0)' : '⚡ 雙重命中'}
+                </span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-black text-rose-600">急迫性指數：${c.urgency_score} / 100</span>
+                <button onclick="processCrossAI('${c.id}')" class="px-3.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1">
+                  <span>AI 綜合派工</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- 三方證據鏈對比 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs bg-white p-3 rounded-lg border border-slate-200">
+              <div>
+                <div class="font-bold text-blue-700 mb-1 flex items-center gap-1"><i data-lucide="cloud" class="w-3.5 h-3.5"></i> (1) 進能服雲端監控</div>
+                <div class="text-slate-600">${c.cloud_status}</div>
+              </div>
+              <div>
+                <div class="font-bold text-emerald-700 mb-1 flex items-center gap-1"><i data-lucide="activity" class="w-3.5 h-3.5"></i> (2) 工務每日處理歷程</div>
+                <div class="text-slate-600">${c.daily_ops_summary}</div>
+              </div>
+              <div>
+                <div class="font-bold text-purple-700 mb-1 flex items-center gap-1"><i data-lucide="message-square-quote" class="w-3.5 h-3.5"></i> (3) 客戶聲音與商務衝擊</div>
+                <div class="text-slate-600">${c.customer_voice_summary}</div>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-slate-500 bg-amber-50 p-2 rounded border border-amber-100 flex items-center gap-2">
+              <b class="text-amber-800">治理與派工行動方針：</b>
+              <span>${c.governance_action}</span>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    // =========================================================
+    // 列表渲染與篩選：(1) 進能服雲端告警
+    // =========================================================
+    function filterCloudAlarms() {
+      const rawAlarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
+      const siteKw = document.getElementById('cloudSiteFilter')?.value.trim().toLowerCase() || '';
+      const sevFilter = document.getElementById('cloudSevFilter')?.value || 'ALL';
+      const typeFilter = document.getElementById('cloudTypeFilter')?.value || 'ALL';
+
+      const filtered = rawAlarms.filter(a => {
+        const name = (a.factoryName || '').toLowerCase();
+        const type = a.lastAlarmType || '';
+        const color = a.lastColorLabel || 'orange';
+
+        if (activeTrackedSite && name !== activeTrackedSite.toLowerCase()) return false;
+        if (siteKw && !name.includes(siteKw)) return false;
+        if (sevFilter !== 'ALL' && color !== sevFilter) return false;
+        if (typeFilter !== 'ALL' && !type.includes(typeFilter)) return false;
+        return true;
+      });
+
+      const cloudList = document.getElementById('s1-cloud-list');
+      if (!cloudList) return;
+      cloudList.innerHTML = '';
+
+      if (filtered.length === 0) {
+        cloudList.innerHTML = '<div class="text-center py-10 text-slate-400 text-xs">無符合篩選條件的告警</div>';
+        return;
       }
 
-      if (window.lucide) {
-        lucide.createIcons();
+      filtered.slice(0, 60).forEach((alarm) => {
+        const siteName = alarm.factoryName || "未知案場";
+        const alarmType = alarm.lastAlarmType || "未知異常";
+        const triggerTime = alarm.time || "";
+        const desc = (alarm.allAlarms && alarm.allAlarms.length > 0 && alarm.allAlarms[0].desc) ? alarm.allAlarms[0].desc : alarmType;
+        const isRed = alarm.lastColorLabel === 'red';
+
+        cloudList.innerHTML += `
+          <div class="p-3 border border-slate-200 bg-white rounded-xl shadow-sm hover:border-blue-400 hover:shadow-md transition cursor-pointer" onclick="processCloudAlarmByData('${siteName}', '${alarmType}', '${desc}')">
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-bold text-xs text-slate-900">${siteName}</span>
+              <span class="text-[10px] font-mono text-slate-400">${triggerTime}</span>
+            </div>
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${isRed ? 'bg-red-100 text-red-700 border border-red-200' : 'bg-amber-100 text-amber-800 border border-amber-200'}">${alarmType}</span>
+              <span class="text-[10px] text-slate-400">${alarm.county || '台灣'}</span>
+            </div>
+            <p class="text-[11px] text-slate-600 line-clamp-2 leading-relaxed">${desc}</p>
+          </div>
+        `;
+      });
+    }
+
+    // 持續追蹤同一個案場
+    function trackSiteAlarms(siteName) {
+      activeTrackedSite = siteName;
+      document.getElementById('siteTrackingBanner').classList.remove('hidden');
+      document.getElementById('trackedSiteName').innerText = siteName;
+
+      const rawAlarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
+      const count = rawAlarms.filter(a => (a.factoryName || '') === siteName).length;
+      document.getElementById('trackedSiteStats').innerText = `進能服系統共累積 ${count} 筆持續中異常`;
+
+      filterCloudAlarms();
+      setS1ActiveTab('cloud');
+    }
+
+    function clearSiteTracking() {
+      activeTrackedSite = null;
+      document.getElementById('siteTrackingBanner').classList.add('hidden');
+      filterCloudAlarms();
+    }
+
+    // =========================================================
+    // 列表渲染與篩選：(2) Line@ 客服小幫手
+    // =========================================================
+    function filterCustAlarms() {
+      const custData = (typeof window.CUSTOMER_VOICE_DATA !== 'undefined') ? window.CUSTOMER_VOICE_DATA : ((typeof CUSTOMER_VOICE_DATA !== 'undefined') ? CUSTOMER_VOICE_DATA : []);
+      const kw = document.getElementById('custSearchFilter')?.value.trim().toLowerCase() || '';
+      const typeFilter = document.getElementById('custTypeFilter')?.value || 'ALL';
+
+      const filtered = custData.filter(c => {
+        const s = (c.site_name || '').toLowerCase();
+        const sum = (c.summary || '').toLowerCase();
+        const ctx = (c.context || '').toLowerCase();
+        const type = c.request_type || '';
+
+        if (activeTrackedSite && !s.includes(activeTrackedSite.toLowerCase())) return false;
+        if (kw && !s.includes(kw) && !sum.includes(kw) && !ctx.includes(kw)) return false;
+        if (typeFilter !== 'ALL' && !type.includes(typeFilter)) return false;
+        return true;
+      });
+
+      const custBadge = document.getElementById('s1-cust-badge');
+      if (custBadge) custBadge.innerText = filtered.length + ' 筆';
+
+      const custContainer = document.getElementById('s1-cust-list');
+      if (!custContainer) return;
+      custContainer.innerHTML = '';
+
+      if (filtered.length === 0) {
+        custContainer.innerHTML = '<div class="text-center py-10 text-slate-400 text-xs">無符合條件之客戶聲音反饋</div>';
+        return;
+      }
+
+      filtered.slice(0, 60).forEach(c => {
+        const isUrgent = c.severity.includes('P0');
+        custContainer.innerHTML += `
+          <div class="p-3 border border-purple-200/70 bg-white rounded-xl shadow-sm hover:border-purple-400 hover:shadow-md transition cursor-pointer" onclick="processCustAlarmByData('${c.id}')">
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-bold text-xs text-purple-950 flex items-center gap-1">
+                <i data-lucide="message-square" class="w-3 h-3 text-purple-600"></i> ${c.site_name}
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">${c.date}</span>
+            </div>
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-700">${c.request_type}</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${isUrgent ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-600'}">${c.severity.split(' ')[0]}</span>
+              <span class="text-[10px] text-slate-400 truncate">${c.equipment}</span>
+            </div>
+            <p class="text-[11px] text-slate-700 line-clamp-2 leading-relaxed">${c.summary}</p>
+          </div>
+        `;
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // =========================================================
+    // 列表渲染與篩選：(3) 工程師每日機況群
+    // =========================================================
+    function filterOpsAlarms() {
+      const opsData = (typeof window.DAILY_OPS_DATA !== 'undefined') ? window.DAILY_OPS_DATA : ((typeof DAILY_OPS_DATA !== 'undefined') ? DAILY_OPS_DATA : []);
+      const kw = document.getElementById('opsSearchFilter')?.value.trim().toLowerCase() || '';
+      const regFilter = document.getElementById('opsRegionFilter')?.value || 'ALL';
+
+      const filtered = opsData.filter(o => {
+        const s = (o.site_name || '').toLowerCase();
+        const c = (o.content || '').toLowerCase();
+        const rep = (o.reporter || '').toLowerCase();
+        const reg = o.region || '';
+
+        if (activeTrackedSite && !s.includes(activeTrackedSite.toLowerCase())) return false;
+        if (kw && !s.includes(kw) && !c.includes(kw) && !rep.includes(kw)) return false;
+        if (regFilter !== 'ALL' && reg !== regFilter) return false;
+        return true;
+      });
+
+      const opsBadge = document.getElementById('s1-ops-badge');
+      if (opsBadge) opsBadge.innerText = filtered.length.toLocaleString() + ' 筆';
+
+      const opsContainer = document.getElementById('s1-ops-list');
+      if (!opsContainer) return;
+      opsContainer.innerHTML = '';
+
+      if (filtered.length === 0) {
+        opsContainer.innerHTML = '<div class="text-center py-10 text-slate-400 text-xs">無符合條件之機況記錄</div>';
+        return;
+      }
+
+      filtered.slice(0, 60).forEach(o => {
+        const isUrgent = o.severity.includes('P0');
+        opsContainer.innerHTML += `
+          <div class="p-3 border border-emerald-200/70 bg-white rounded-xl shadow-sm hover:border-emerald-400 hover:shadow-md transition cursor-pointer" onclick="processOpsAlarmByData('${o.id}')">
+            <div class="flex justify-between items-center mb-1">
+              <span class="font-bold text-xs text-emerald-950 flex items-center gap-1">
+                <i data-lucide="smartphone" class="w-3 h-3 text-emerald-600"></i> ${o.site_name}
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">${o.date} ${o.time}</span>
+            </div>
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">${o.region}</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${isUrgent ? 'bg-rose-100 text-rose-700' : 'bg-slate-100 text-slate-600'}">${o.severity.split(' ')[0]}</span>
+              <span class="text-[10px] text-slate-400 font-mono">${o.equipment}</span>
+            </div>
+            <p class="text-[11px] text-slate-700 line-clamp-2 leading-relaxed">[${o.reporter}] ${o.content}</p>
+          </div>
+        `;
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // =========================================================
+    // S2 AI 派工中心觸發邏輯 (支援雲端、客服、機況、Cross-Check)
+    // =========================================================
+    function processCloudAlarmByData(siteName, alarmType, desc) {
+      processAI(siteName, `【進能服雲端監控告警】\n案場：${siteName}\n告警類型：${alarmType}\n詳細內容：${desc}`, alarmType);
+    }
+
+    function processCustAlarmByData(id) {
+      const custData = (typeof window.CUSTOMER_VOICE_DATA !== 'undefined') ? window.CUSTOMER_VOICE_DATA : CUSTOMER_VOICE_DATA;
+      const c = custData.find(x => x.id === id);
+      if (!c) return;
+      processAI(c.site_name, `【Line@客服小幫手通報】\n日期：${c.date} ${c.time}\n訴求類型：${c.request_type}\n關係人：${c.stakeholders.join('、')}\n內容：${c.context}`, c.request_type);
+    }
+
+    function processOpsAlarmByData(id) {
+      const opsData = (typeof window.DAILY_OPS_DATA !== 'undefined') ? window.DAILY_OPS_DATA : DAILY_OPS_DATA;
+      const o = opsData.find(x => x.id === id);
+      if (!o) return;
+      processAI(o.site_name, `【工務每日機況群回報】\n分區：${o.region} ｜ 回報同仁：${o.reporter}\n設備：${o.equipment} ｜ 類型：${o.issue_type}\n內容：${o.content}`, o.issue_type);
+    }
+
+    function processCrossAI(crossId) {
+      const crossData = (typeof CROSS_CHECK_DATA !== 'undefined') ? CROSS_CHECK_DATA : [];
+      const c = crossData.find(x => x.id === crossId);
+      if (!c) return;
+      const fullContext = `【三大數據 Cross-Check 交叉比對重大案】\n案場：${c.site_name} (${c.equipment})\n急迫指數：${c.urgency_score}\n\n(1) 雲端監控：${c.cloud_status}\n(2) 工務歷程：${c.daily_ops_summary}\n(3) 客戶聲音：${c.customer_voice_summary}\n\n★ 治理建議行動：${c.governance_action}`;
+      processAI(c.site_name, fullContext, c.cross_category);
+    }
+
+    function processAI(siteName, content, type) {
+      switchNav('s2');
+      const emptyState = document.getElementById('s2-empty-state');
+      const contentState = document.getElementById('s2-content-state');
+      if (emptyState) emptyState.classList.add('hidden');
+      if (contentState) contentState.classList.remove('hidden');
+
+      const site = typeof getSiteInfo === 'function' ? getSiteInfo(siteName) : { name: siteName, location: '台灣', equipType: '常規變流器', engineer: '特勤專案組', lastMaintenance: '無' };
+      document.getElementById('s2-source-content').innerText = content;
+      document.getElementById('s2-db-name').innerText = site.name;
+      document.getElementById('s2-db-loc').innerText = site.location;
+      document.getElementById('s2-db-equip').innerText = site.equipType;
+      document.getElementById('s2-db-eng').innerText = site.engineer;
+      document.getElementById('s2-db-maint').innerText = site.lastMaintenance;
+
+      const isUrgent = content.includes('P0') || content.includes('斷訊') || content.includes('停機') || content.includes('客訴') || content.includes('未發電') || content.includes('進水');
+      const priEl = document.getElementById('s2-ai-priority');
+      if (priEl) {
+        priEl.innerText = isUrgent ? 'P0 緊急出車/商務防線' : 'P1 24h特勤排查';
+        priEl.className = isUrgent ? 'px-2.5 py-1 bg-rose-600 text-white rounded-lg text-xs font-black' : 'px-2.5 py-1 bg-amber-500 text-white rounded-lg text-xs font-black';
+      }
+
+      const rcaText = `【AI 綜合根因推論】\n案場 [${site.name}] 關鍵設備 [${site.equipType}]。關聯雲端數據與對話紀錄特徵 "${type}"，研判為【${isUrgent ? '設備硬體核心故障、通訊線路中斷或觸發客訴爭議' : '局部發電效率衰退或監控通訊干擾'}】。`;
+      const sopText = `1. 指派責任工務 [${site.engineer}] 前往現場 [${site.location}]。\n2. 必備工器具：高阻計(絕緣測試)、RS485隔離中繼器、原廠變流器換裝背架。\n3. 商務對接：客服部同步向業主出具正式處置進度書，防範保固金爭議與逾期罰款。`;
+
+      document.getElementById('s2-ai-rca').innerText = rcaText;
+      document.getElementById('s2-ai-sop').innerText = sopText;
+
+      currentAIContext = {
+        id: 'WO-' + Math.floor(1000 + Math.random() * 9000),
+        site: site,
+        priority: isUrgent ? 'P0' : 'P1',
+        desc: rcaText,
+        sop: sopText,
+        date: new Date().toISOString().split('T')[0]
+      };
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // S3 派工
+    function generateWorkOrder() {
+      if (!currentAIContext) return;
+      myWorkOrders.push(currentAIContext);
+      renderS3List();
+      alert(`工單 ${currentAIContext.id} 已成功派發至現場工程師手機端！`);
+      switchNav('s3');
+    }
+
+    function renderS3List() {
+      const list = document.getElementById('s3-wo-list');
+      const countEl = document.getElementById('s3-task-count');
+      if (countEl) countEl.innerText = myWorkOrders.length;
+      if (!list) return;
+
+      if (myWorkOrders.length === 0) {
+        list.innerHTML = `
+          <div class="text-center text-slate-400 mt-14 text-xs">
+            <i data-lucide="check-circle" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
+            目前無待辦工單，所有任務已結案
+          </div>
+        `;
+      } else {
+        list.innerHTML = myWorkOrders.map(wo => `
+          <div class="wo-card ${wo.priority === 'P0' ? 'urgent' : ''}">
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="font-black text-xs text-slate-900">${wo.site.name}</span>
+              <span class="${wo.priority === 'P0' ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-800'} px-2 py-0.5 rounded text-[10px] font-bold">${wo.priority}</span>
+            </div>
+            <div class="text-[11px] text-slate-500 mb-1.5 flex items-center gap-1">
+              <i data-lucide="map-pin" class="w-3 h-3 text-slate-400"></i> ${wo.site.location}
+            </div>
+            <p class="text-[11px] text-slate-600 line-clamp-2 bg-slate-50 p-2 rounded-lg mb-2">${wo.desc}</p>
+            <button class="w-full bg-blue-50 text-blue-700 py-1.5 rounded-lg text-xs font-bold hover:bg-blue-100 transition" onclick="openS4('${wo.id}')">
+              現場執行與結案回報
+            </button>
+          </div>
+        `).join('');
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // S4 結案
+    let activeWOId = null;
+    function openS4(id) {
+      activeWOId = id;
+      const wo = myWorkOrders.find(w => w.id === id);
+      if (!wo) return;
+
+      document.getElementById('s4-empty-state').classList.add('hidden');
+      document.getElementById('s4-active-form').classList.remove('hidden');
+      document.getElementById('s4-site-name').innerText = `${wo.site.name} (${wo.id})`;
+
+      document.getElementById('mock-photo-preview').classList.add('hidden');
+      document.getElementById('s4-report-text').value = '';
+      switchNav('s4');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const mockUpload = document.getElementById('mock-upload-btn');
+      if (mockUpload) {
+        mockUpload.addEventListener('click', () => {
+          document.getElementById('mock-photo-preview').classList.remove('hidden');
+        });
+      }
+      const mockVoice = document.getElementById('mock-voice-btn');
+      if (mockVoice) {
+        mockVoice.addEventListener('click', () => {
+          document.getElementById('s4-report-text').value = "已完成現場高阻計排查，確認為 7-4-5 串列 MC4 接頭進水短路，已更換良品並完成絕緣測試，現已全場恢復併網發電。";
+        });
+      }
+    });
+
+    function submitWorkOrder() {
+      if (!activeWOId) return;
+      myWorkOrders = myWorkOrders.filter(w => w.id !== activeWOId);
+      activeWOId = null;
+      renderS3List();
+      document.getElementById('s4-active-form').classList.add('hidden');
+      document.getElementById('s4-empty-state').classList.remove('hidden');
+      alert('PDCA 資料已成功回傳！\n戰情儀表板健康指標已連動更新。');
+      switchNav('s5');
+    }
+
+    // =========================================================
+    // 泛用上傳與解析對話視窗 (工務機況 vs 客服聲音)
+    // =========================================================
+    function openUploadModal(target) {
+      currentUploadTarget = target || 'ops';
+      const modal = document.getElementById('universalUploadModal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+
+      const titleEl = document.getElementById('uploadModalTitle');
+      const subEl = document.getElementById('uploadModalSubtitle');
+      const hintEl = document.getElementById('uploadModalSampleHint');
+      const btnLoad = document.getElementById('btnLoadSample');
+      const iconEl = document.getElementById('uploadModalIcon');
+
+      if (currentUploadTarget === 'cust') {
+        titleEl.innerText = '匯入 Line@ 客服小幫手記錄 (客戶聲音)';
+        subEl.innerText = '支援匯入 [LINE]【客服記錄】客戶聲音記錄.txt 或直接貼上客服對話';
+        hintEl.innerText = '預設檔案：[LINE]【客服記錄】客戶聲音記錄.txt';
+        btnLoad.innerText = '⚡ 載入預設客戶聲音記錄 (149筆)';
+        iconEl.className = 'w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold';
+      } else {
+        titleEl.innerText = '上傳工程師每日工作處置 (每日機況報)';
+        subEl.innerText = '支援匯入 [LINE]每日機況報這裡.txt 或直接貼上工務機況對話';
+        hintEl.innerText = '預設檔案：[LINE]每日機況報這裡.txt';
+        btnLoad.innerText = '⚡ 載入預設每日機況報 (2,483筆)';
+        iconEl.className = 'w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold';
+      }
+
+      setupDropZone();
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeUploadModal() {
+      const modal = document.getElementById('universalUploadModal');
+      if (modal) modal.classList.add('hidden');
+      parsedTempRecords = [];
+    }
+
+    function setupDropZone() {
+      const dropZone = document.getElementById('dropZone');
+      if (!dropZone || dropZone.dataset.setup) return;
+      dropZone.dataset.setup = 'true';
+
+      dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('border-blue-600', 'bg-blue-100/50');
+      });
+      dropZone.addEventListener('dragleave', () => {
+        dropZone.classList.remove('border-blue-600', 'bg-blue-100/50');
+      });
+      dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('border-blue-600', 'bg-blue-100/50');
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+          readFileAndParse(e.dataTransfer.files[0]);
+        }
+      });
+    }
+
+    function handleGenericFileInput(event) {
+      if (event.target.files && event.target.files[0]) {
+        readFileAndParse(event.target.files[0]);
+      }
+    }
+
+    function readFileAndParse(file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const text = e.target.result;
+        parseAndPreviewText(text);
+      };
+      reader.readAsText(file, 'utf-8');
+    }
+
+    function handleRawTextInputChange() {
+      const text = document.getElementById('rawLineTextInput').value;
+      if (text.trim()) {
+        parseAndPreviewText(text);
+      } else {
+        document.getElementById('parsePreviewArea').classList.add('hidden');
+      }
+    }
+
+    function parseAndPreviewText(text) {
+      if (currentUploadTarget === 'cust') {
+        parsedTempRecords = parseCustomerVoiceText(text);
+      } else {
+        parsedTempRecords = parseLineOpsText(text);
+      }
+
+      const previewArea = document.getElementById('parsePreviewArea');
+      if (!previewArea) return;
+      previewArea.classList.remove('hidden');
+
+      document.getElementById('previewCountBadge').innerText = parsedTempRecords.length + ' 筆';
+      const statsEl = document.getElementById('previewStats');
+      if (currentUploadTarget === 'cust') {
+        statsEl.innerText = `已識別客戶訴求 ${parsedTempRecords.length} 筆，包含客訴爭議、保固責任、商務報價與電費單檢討。`;
+      } else {
+        statsEl.innerText = `已識別現場機況 ${parsedTempRecords.length} 筆，涵蓋桃辦、彰辦、台南、高辦四大工務中心。`;
+      }
+
+      if (parsedTempRecords.length > 0) {
+        const first = parsedTempRecords[0];
+        document.getElementById('prevSample').innerText = `[${first.date || ''}] ${first.site_name} - ${first.summary || first.content}`;
+      }
+    }
+
+    function loadCurrentTargetSample() {
+      const sampleUrl = (currentUploadTarget === 'cust') ? 'data/customer_voice_sample.txt' : 'data/line_ops_sample.txt';
+      fetch(sampleUrl)
+        .then(res => res.text())
+        .then(text => {
+          document.getElementById('rawLineTextInput').value = text;
+          handleRawTextInputChange();
+        })
+        .catch(err => {
+          console.warn('Load sample failed:', err);
+        });
+    }
+
+    function confirmSyncUpload() {
+      if (!parsedTempRecords || parsedTempRecords.length === 0) {
+        const txt = document.getElementById('rawLineTextInput').value;
+        if (txt.trim()) parseAndPreviewText(txt);
+      }
+
+      if (!parsedTempRecords || parsedTempRecords.length === 0) {
+        alert('請先選擇檔案或貼上對話記錄！');
+        return;
+      }
+
+      if (currentUploadTarget === 'cust') {
+        window.CUSTOMER_VOICE_DATA = parsedTempRecords;
+        try { localStorage.setItem('KINGSUN_CUST_VOICE_CUSTOM', JSON.stringify(parsedTempRecords)); } catch(e){}
+        closeUploadModal();
+        initPlatform();
+        alert(`✅ 成功匯入 ${parsedTempRecords.length} 筆 Line@ 客服聲音記錄！戰情系統已全面更新。`);
+        setS1ActiveTab('cust');
+      } else {
+        window.DAILY_OPS_DATA = parsedTempRecords;
+        try { localStorage.setItem('KINGSUN_DAILY_OPS_CUSTOM', JSON.stringify(parsedTempRecords)); } catch(e){}
+        closeUploadModal();
+        initPlatform();
+        alert(`✅ 成功匯入 ${parsedTempRecords.length} 筆工務每日機況記錄！戰情系統已全面更新。`);
+        setS1ActiveTab('ops');
       }
     }
 
     // =========================================================
-    // LINE 對話日誌解析核心算法
+    // LINE 工務機況日誌解析器
     // =========================================================
     function parseLineOpsText(rawText) {
       const lines = rawText.split(/\r?\n/);
@@ -717,293 +1458,183 @@
     }
 
     // =========================================================
-    // 檔案上傳與 Modal 操作邏輯
+    // LINE@ 客服聲音日誌解析器
     // =========================================================
-    function openUploadModal() {
-      const modal = document.getElementById('uploadOpsModal');
-      if (modal) modal.classList.remove('hidden');
-      setupDropZone();
-      if (window.lucide) lucide.createIcons();
-    }
+    function parseCustomerVoiceText(rawText) {
+      const lines = rawText.split(/\r?\n/);
+      const records = [];
+      let currentDate = '';
 
-    function closeUploadModal() {
-      const modal = document.getElementById('uploadOpsModal');
-      if (modal) modal.classList.add('hidden');
-    }
+      const dateRegex = /^(\d{4})[./-](\d{2})[./-](\d{2})/;
+      const msgHeaderRegex = /^(\d{2}:\d{2})\s+([^\s]+(?:\([^\)]+\))?)\s*(.*)$/;
+      const ignorePatterns = ['圖片', '已收回訊息', '貼圖', '語音訊息', '檔案'];
 
-    function setupDropZone() {
-      const dropZone = document.getElementById('dropZone');
-      if (!dropZone || dropZone.dataset.setup) return;
-      dropZone.dataset.setup = 'true';
+      let curTime = '09:00';
+      let curSender = '客服小幫手';
+      let seq = 1;
 
-      dropZone.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        dropZone.classList.add('border-emerald-600', 'bg-emerald-100/50');
-      });
-      dropZone.addEventListener('dragleave', () => {
-        dropZone.classList.remove('border-emerald-600', 'bg-emerald-100/50');
-      });
-      dropZone.addEventListener('drop', (e) => {
-        e.preventDefault();
-        dropZone.classList.remove('border-emerald-600', 'bg-emerald-100/50');
-        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-          readFileAndParse(e.dataTransfer.files[0]);
+      const knownSites = [
+        '史谷脫', 'FCS', '富強鑫', '正隆燕巢', '正隆后里', '正隆', '埤塘7-1', '埤塘8-2', '埤塘',
+        '長榮大園', '長榮大元', '奇景光電', '奇景', '晶碩光電', '晶碩', '同欣龍潭', '同欣八德', '同欣',
+        '順益中壢', '順益', '新陽', '台南機場', '善化酒廠', '鉅橡2期', '鉅橡', '奇美', '奇菱', '日煙',
+        '禾豐', '杰鑫', '高振', '芳德', '烏日高鐵'
+      ];
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+
+        const dateMatch = line.match(dateRegex);
+        if (dateMatch) {
+          currentDate = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`;
+          continue;
         }
-      });
-    }
 
-    function handleOpsFileInput(event) {
-      if (event.target.files && event.target.files[0]) {
-        readFileAndParse(event.target.files[0]);
-      }
-    }
+        const headerMatch = line.match(msgHeaderRegex);
+        let contentLine = line;
 
-    function handleModalFileInput(event) {
-      if (event.target.files && event.target.files[0]) {
-        readFileAndParse(event.target.files[0]);
-      }
-    }
-
-    function readFileAndParse(file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const text = e.target.result;
-        parsedTempRecords = parseLineOpsText(text);
-        showParsePreview(parsedTempRecords);
-      };
-      reader.readAsText(file, 'utf-8');
-      openUploadModal();
-    }
-
-    function handleRawTextInputChange() {
-      const text = document.getElementById('rawLineTextInput').value;
-      if (text.trim()) {
-        parsedTempRecords = parseLineOpsText(text);
-        showParsePreview(parsedTempRecords);
-      } else {
-        document.getElementById('parsePreviewArea').classList.add('hidden');
-      }
-    }
-
-    function showParsePreview(records) {
-      const previewArea = document.getElementById('parsePreviewArea');
-      if (!previewArea) return;
-      previewArea.classList.remove('hidden');
-
-      document.getElementById('previewCountBadge').innerText = records.length + ' 筆';
-      let tao = 0, zhang = 0, tainan = 0, gao = 0;
-      records.forEach(r => {
-        if (r.region === '桃辦') tao++;
-        else if (r.region === '彰辦') zhang++;
-        else if (r.region === '台南') tainan++;
-        else if (r.region === '高辦') gao++;
-      });
-      document.getElementById('prevRegTao').innerText = tao;
-      document.getElementById('prevRegZhang').innerText = zhang;
-      document.getElementById('prevRegTainan').innerText = tainan;
-      document.getElementById('prevRegGao').innerText = gao;
-
-      if (records.length > 0) {
-        document.getElementById('prevSample').innerText = `[${records[0].region}] ${records[0].site_name} - ${records[0].content}`;
-      }
-    }
-
-    function confirmSyncLineOps() {
-      if (!parsedTempRecords || parsedTempRecords.length === 0) {
-        const txt = document.getElementById('rawLineTextInput').value;
-        if (txt.trim()) {
-          parsedTempRecords = parseLineOpsText(txt);
+        if (headerMatch) {
+          curTime = headerMatch[1];
+          curSender = headerMatch[2].trim();
+          contentLine = headerMatch[3] ? headerMatch[3].trim() : '';
+          if (!contentLine) continue;
         }
-      }
 
-      if (!parsedTempRecords || parsedTempRecords.length === 0) {
-        alert('請先上傳檔案或貼上對話記錄！');
-        return;
-      }
+        if (ignorePatterns.some(p => contentLine.includes(p) && contentLine.length < 15)) continue;
+        if (contentLine.length < 5) continue;
 
-      window.DAILY_OPS_DATA = parsedTempRecords;
-      try {
-        localStorage.setItem('KINGSUN_DAILY_OPS_CUSTOM', JSON.stringify(parsedTempRecords));
-      } catch(e) {
-        console.warn('LocalStorage full, skipped storage caching.');
-      }
+        let siteName = '全區營運';
+        for (const s of knownSites) {
+          if (contentLine.includes(s)) {
+            siteName = s;
+            if (siteName === '長榮大元') siteName = '長榮大園';
+            if (siteName === '富強鑫') siteName = 'FCS富強鑫';
+            break;
+          }
+        }
 
-      closeUploadModal();
-      initPlatform();
-      alert(`✅ 成功匯入 ${parsedTempRecords.length} 筆機況記錄！
-戰情系統指標 (S5) 與收件匣 (S1) 已同步全面更新。`);
-      switchNav('s1');
-    }
+        let equipment = '案場系統組件';
+        const invMatch = contentLine.match(/INV\s*\d+/i);
+        if (invMatch) equipment = invMatch[0].toUpperCase();
+        else if (contentLine.includes('模組')) equipment = '太陽能光電模組';
+        else if (contentLine.includes('電費單') || contentLine.includes('發電量')) equipment = '計量電表/發電數據';
+        else if (contentLine.includes('憑證') || contentLine.includes('DREAMS')) equipment = '憑證中心/DREAMS閘道器';
+        else if (contentLine.includes('涼亭') || contentLine.includes('飾板')) equipment = '光電涼亭結構飾板';
 
-    function loadDefaultLineFileSample() {
-      const btn = event.target;
-      const originalText = btn ? btn.innerText : '';
-      if (btn) btn.innerText = '⏳ 讀取中...';
-      
-      fetch('data/line_ops_sample.txt')
-        .then(res => {
-          if (!res.ok) throw new Error('Network error');
-          return res.text();
-        })
-        .then(text => {
-          document.getElementById('rawLineTextInput').value = text;
-          handleRawTextInputChange();
-          if (btn) btn.innerText = '✅ 已成功載入本機 [LINE]每日機況報 (2,483筆)';
-          setTimeout(() => { if (btn) btn.innerText = originalText; }, 3000);
-        })
-        .catch(err => {
-          console.warn('Fallback to embedded sample:', err);
-          const sample = `2026.04.07 星期二\n08:48 white(HsingChung) 台南： 安德順 4/5斷線(MOXA異常)\n08:59 Bryant Chen 高辦\n禾豐 監控斷線\n高振一二期 監控斷線\n杰鑫 監控斷線\n09:01 andrewlu 桃辦\n1.埤塘7-1_全場修復(待客戶確認)，252串中156串待安排查修。 (暫停躉售)\n2.埤塘8-2_INV04(1)、INV07(1)、INV14(1)、INV15(1)待更換\n3.新陽全場監控斷線 (顯示正常連線無發電數據)\n09:15 健國 彰辦\n烏日高鐵 INV29 未發電\n芳德三期 INV4 未發電`;
-          document.getElementById('rawLineTextInput').value = sample;
-          handleRawTextInputChange();
-          if (btn) btn.innerText = originalText;
+        let requestType = '一般客戶反饋';
+        let severity = 'P2 (中度異常/一般告警)';
+        let status = '處理中';
+
+        if (contentLine.includes('客訴') || contentLine.includes('扣款') || contentLine.includes('沒收') || contentLine.includes('保固金') || contentLine.includes('掉落')) {
+          requestType = '客訴與責任爭議';
+          severity = 'P0 (最高級/即時派工)';
+        } else if (contentLine.includes('報價') || contentLine.includes('更換新機') || contentLine.includes('詢價') || contentLine.includes('訂單')) {
+          requestType = '商務報價與採購協調';
+          severity = 'P1 (高優先級/24h)';
+        } else if (contentLine.includes('電費單') || contentLine.includes('發電量檢討') || contentLine.includes('檢討信件')) {
+          requestType = '發電績效與合約檢討';
+          severity = 'P1 (高優先級/24h)';
+        } else if (contentLine.includes('廢棄') || contentLine.includes('破片') || contentLine.includes('清運') || contentLine.includes('環境部')) {
+          requestType = '環保法規與廢棄物清運';
+          severity = 'P2 (中度異常/一般告警)';
+        } else if (contentLine.includes('保固') || contentLine.includes('過保') || contentLine.includes('驗收')) {
+          requestType = '保固責任認定';
+          severity = 'P2 (中度異常/一般告警)';
+        }
+
+        if (contentLine.includes('已修復') || contentLine.includes('已處理完畢') || contentLine.includes('結案')) {
+          status = '已結案';
+        } else if (contentLine.includes('報價') || contentLine.includes('詢商')) {
+          status = '待業務報價';
+        }
+
+        const atMatches = contentLine.match(/@([^\s@]+)/g) || [];
+        const stakeholders = atMatches.map(m => m.replace('@', '').trim());
+        if (curSender && !stakeholders.includes(curSender)) stakeholders.unshift(curSender);
+
+        records.push({
+          id: `CUST-${(currentDate || '20260408').replace(/-/g, '')}-${String(seq++).padStart(3, '0')}`,
+          date: currentDate || '2026-04-08',
+          time: curTime,
+          site_name: siteName,
+          equipment: equipment,
+          request_type: requestType,
+          severity: severity,
+          status: status,
+          summary: contentLine.slice(0, 48) + (contentLine.length > 48 ? '...' : ''),
+          stakeholders: stakeholders.length > 0 ? stakeholders : [curSender],
+          context: `[${curTime}] ${curSender}: ${contentLine}`
         });
+      }
+
+      return records;
     }
 
-    function processCloudAI(index) {
-       const alarms = window.LATEST_ALARM_DATA?.rebuildAlarms || [];
-       const alarm = alarms[index];
-       if (!alarm) return;
-       const siteName = alarm.factoryName || "未知案場";
-       const alarmContext = alarm.lastAlarmType || "未知異常";
-       const desc = (alarm.allAlarms && alarm.allAlarms.length > 0 && alarm.allAlarms[0].desc) ? alarm.allAlarms[0].desc : alarmContext;
-       processAI(siteName, "雲端監控系統: " + desc, alarmContext);
+    // =========================================================
+    // S5 圖表與排行輔助函數
+    // =========================================================
+    function renderS5RiskRanking(opsData, custData) {
+      const siteCounts = {};
+      opsData.forEach(r => {
+        const s = r.site_name || '其他';
+        siteCounts[s] = (siteCounts[s] || 0) + 1;
+      });
+      const custCounts = {};
+      custData.forEach(c => {
+        const s = c.site_name || '其他';
+        custCounts[s] = (custCounts[s] || 0) + 1;
+      });
+
+      const sortedSites = Object.keys(siteCounts).sort((a,b) => {
+        const scoreA = siteCounts[a] * 1.5 + (custCounts[a] || 0) * 4;
+        const scoreB = siteCounts[b] * 1.5 + (custCounts[b] || 0) * 4;
+        return scoreB - scoreA;
+      }).slice(0, 5);
+
+      const topSitesBody = document.querySelector('#s5-top-sites-table tbody');
+      if (topSitesBody) {
+        topSitesBody.innerHTML = '';
+        sortedSites.forEach(siteName => {
+           const info = typeof getSiteInfo === 'function' ? getSiteInfo(siteName) : { equipType: '未知' };
+           const count = siteCounts[siteName] + (custCounts[siteName] || 0);
+           topSitesBody.innerHTML += `
+             <tr class="border-b border-slate-100 hover:bg-slate-50 transition">
+               <td class="p-2.5 font-bold text-slate-900 flex items-center gap-1.5">
+                 <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                 ${siteName}
+               </td>
+               <td class="p-2.5 text-xs text-slate-600">${info.equipType || '常規變流器'}</td>
+               <td class="p-2.5 text-xs font-mono font-bold text-slate-800">${count} 次</td>
+               <td class="p-2.5">
+                 <span class="px-2 py-0.5 bg-rose-100 text-rose-700 text-[10px] font-bold rounded">P0 高風險</span>
+               </td>
+             </tr>
+           `;
+        });
+      }
     }
 
-    function processLineAI(index) {
-       const opsData = (typeof window.DAILY_OPS_DATA !== 'undefined') ? window.DAILY_OPS_DATA : ((typeof DAILY_OPS_DATA !== 'undefined') ? DAILY_OPS_DATA : []);
-       const ops = opsData[index];
-       if (!ops) return;
-       processAI(ops.site_name, "LINE@回報 (" + ops.reporter + "): " + ops.content, ops.issue_type);
-    }
+    let trendChartInstance = null;
+    function renderS5TrendChart() {
+      const ctx = document.getElementById('s5TrendChart');
+      if (!ctx || !window.Chart) return;
+      if (trendChartInstance) return;
 
-    // S2 AI 分析處理邏輯
-    function processAI(siteName, content, type) {
-       switchNav('s2');
-       const emptyState = document.getElementById('s2-empty-state');
-       const contentState = document.getElementById('s2-content-state');
-       if (emptyState) emptyState.classList.add('hidden');
-       if (contentState) contentState.classList.remove('hidden');
-
-       // 填入 Site DB 資訊
-       const site = typeof getSiteInfo === 'function' ? getSiteInfo(siteName) : { name: siteName, location: '台灣', equipType: '常規變流器', engineer: '巡檢專案組', lastMaintenance: '無' };
-       document.getElementById('s2-source-content').innerText = content;
-       document.getElementById('s2-db-name').innerText = site.name;
-       document.getElementById('s2-db-loc').innerText = site.location;
-       document.getElementById('s2-db-equip').innerText = site.equipType;
-       document.getElementById('s2-db-eng').innerText = site.engineer;
-       document.getElementById('s2-db-maint').innerText = site.lastMaintenance;
-
-       // 模擬 AI 生成結果 (RCA & SOP)
-       const isUrgent = content.includes('斷訊') || content.includes('停機') || content.includes('進水') || content.includes('未連線') || content.includes('未發電');
-       const priEl = document.getElementById('s2-ai-priority');
-       if (priEl) {
-         priEl.innerText = isUrgent ? 'P0 緊急出車' : 'P2 例行排查';
-         priEl.className = isUrgent ? 'px-2 py-0.5 bg-rose-500 text-white rounded text-xs font-bold' : 'px-2 py-0.5 bg-amber-500 text-white rounded text-xs font-bold';
-       }
-
-       const rcaText = `分析結果：該案場 (${site.name}) 使用 ${site.equipType}。根據歷史數據與當前特徵 "${type}"，研判極可能為【${isUrgent ? '設備硬體失效或線路中斷' : '效能自然衰退或輕微遮蔽'}】。`;
-       const sopText = `1. 請工程師 [${site.engineer}] 於 24 小時內前往 [${site.location}] 進行現勘。\n2. 準備三用電表與替換用模組/備品。\n3. 確認是否需啟動原廠 RMA 流程。`;
-       
-       document.getElementById('s2-ai-rca').innerText = rcaText;
-       document.getElementById('s2-ai-sop').innerText = sopText;
-
-       currentAIContext = {
-         id: 'WO-' + Math.floor(1000 + Math.random() * 9000),
-         site: site,
-         priority: isUrgent ? 'P0' : 'P2',
-         desc: rcaText,
-         sop: sopText,
-         date: new Date().toISOString().split('T')[0]
-       };
-       
-       if (window.lucide) {
-         lucide.createIcons();
-       }
-    }
-
-    // S3 派發工單
-    function generateWorkOrder() {
-       if (!currentAIContext) return;
-       myWorkOrders.push(currentAIContext);
-       renderS3List();
-       alert('工單 ' + currentAIContext.id + ' 已成功派發至現場工程師手機端！');
-       switchNav('s3');
-    }
-
-    function renderS3List() {
-       const list = document.getElementById('s3-wo-list');
-       const countEl = document.getElementById('s3-task-count');
-       if (countEl) countEl.innerText = myWorkOrders.length;
-       
-       if (!list) return;
-       if (myWorkOrders.length === 0) {
-         list.innerHTML = `
-           <div class="text-center text-slate-400 mt-10 text-sm">
-             <i data-lucide="check-circle" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
-             目前沒有派發的工單
-           </div>
-         `;
-       } else {
-         list.innerHTML = myWorkOrders.map(wo => `
-           <div class="wo-card ${wo.priority === 'P0' ? 'urgent' : ''}">
-             <div class="flex justify-between items-center mb-2">
-               <span class="font-bold text-sm text-slate-800">${wo.site.name}</span>
-               <span class="${wo.priority === 'P0' ? 'bg-rose-100 text-rose-700' : 'bg-amber-100 text-amber-700'} px-2 py-0.5 rounded text-[10px] font-bold">${wo.priority}</span>
-             </div>
-             <div class="text-[11px] text-slate-500 mb-2 flex items-center gap-1">
-               <i data-lucide="map-pin" class="w-3 h-3"></i> ${wo.site.location}
-             </div>
-             <p class="text-xs text-slate-600 line-clamp-2 bg-slate-50 p-2 rounded mb-2">${wo.desc}</p>
-             <button class="w-full bg-blue-50 text-blue-600 py-1.5 rounded text-xs font-bold hover:bg-blue-100 transition" onclick="openS4('${wo.id}')">
-               執行回報
-             </button>
-           </div>
-         `).join('');
-       }
-       if (window.lucide) {
-         lucide.createIcons();
-       }
-    }
-
-    // S4 結案 UI
-    let activeWOId = null;
-    function openS4(id) {
-       activeWOId = id;
-       const wo = myWorkOrders.find(w => w.id === id);
-       if (!wo) return;
-       
-       document.getElementById('s4-empty-state').classList.add('hidden');
-       document.getElementById('s4-active-form').classList.remove('hidden');
-       document.getElementById('s4-site-name').innerText = `${wo.site.name} (${wo.id})`;
-       
-       // 重設表單
-       document.getElementById('mock-photo-preview').classList.add('hidden');
-       document.getElementById('s4-report-text').value = '';
-       
-       switchNav('s4');
-       if (window.lucide) {
-         lucide.createIcons();
-       }
-    }
-
-    // 模擬 S4 互動
-    document.getElementById('mock-upload-btn').addEventListener('click', () => {
-       document.getElementById('mock-photo-preview').classList.remove('hidden');
-    });
-    document.getElementById('mock-voice-btn').addEventListener('click', () => {
-       document.getElementById('s4-report-text').value = "已完成現場查修，確認為變流器保險絲燒毀，已更換良品並重新送電，目前發電電流恢復正常。";
-    });
-
-    function submitWorkOrder() {
-       if (!activeWOId) return;
-       myWorkOrders = myWorkOrders.filter(w => w.id !== activeWOId);
-       activeWOId = null;
-       renderS3List();
-       document.getElementById('s4-active-form').classList.add('hidden');
-       document.getElementById('s4-empty-state').classList.remove('hidden');
-       alert('PDCA 資料已上傳至大數據庫！\n戰情儀表板 (S5) 之健康指標已連動更新。');
-       switchNav('s5');
+      trendChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['1號','5號','10號','15號','20號','25號','30號'],
+          datasets: [
+            { label: '新增異常數', data: [15, 22, 18, 29, 24, 16, 11], borderColor: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.12)', tension: 0.35, fill: true },
+            { label: '完工結案數', data: [12, 19, 21, 25, 28, 20, 15], borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.12)', tension: 0.35, fill: true }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'top', labels: { boxWidth: 12, font: { size: 11 } } } }
+        }
+      });
     }
 
     window.addEventListener('DOMContentLoaded', () => {
