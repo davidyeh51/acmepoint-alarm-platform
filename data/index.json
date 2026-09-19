@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-09-19_08-00",
+    "updatedAt": "2026-09-19 08:55:34",
+    "totalSitesWithAlarms": 68,
+    "totalDistinctIssues": 342,
+    "totalRawAlarms": 1227,
+    "severityCounts": {
+      "red": 155,
+      "orange": 187,
+      "white": 0
+    },
+    "topAlarmType": "發電效率不佳",
+    "topSite": "台瑞電氣",
+    "filename": "snapshots/2026-09-19_08-00.json"
+  },
+  {
     "snapshotId": "2026-09-18_18-00",
     "updatedAt": "2026-09-18 18:28:12",
     "totalSitesWithAlarms": 83,
