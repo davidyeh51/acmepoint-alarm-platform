@@ -45,7 +45,20 @@
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #f1f5f9; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+        ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+    /* 列印與高階主管報告專屬格式 */
+    @media print {
+      .topbar, .meta-area, button, .no-print, .topnav { display: none !important; }
+      body { padding-top: 0 !important; background: #ffffff !important; color: #0f172a !important; font-size: 11pt !important; }
+      .view-section { display: none !important; }
+      #view-exec { display: block !important; padding: 0 !important; max-width: 100% !important; margin: 0 !important; }
+      .shadow-sm, .shadow-md, .shadow-xl, .shadow { box-shadow: none !important; }
+      .border { border-color: #cbd5e1 !important; }
+      table { page-break-inside: auto; }
+      tr { page-break-inside: avoid; page-break-after: auto; }
+      thead { display: table-header-group; }
+    }
   </style>
 </head>
 <body>
@@ -62,6 +75,7 @@
 
     <nav class="topnav">
       <a id="nav-s5" onclick="switchNav('s5')" class="active">📈 S5 戰情儀表板</a>
+      <a id="nav-exec" onclick="switchNav('exec')" class="bg-amber-500/10 text-amber-300 hover:text-white border border-amber-400/20">📊 7日高階主管週報</a>
       <a id="nav-s1" onclick="switchNav('s1')">📥 S1 統一收件匣 (三大數據)</a>
       <a id="nav-s2" onclick="switchNav('s2')">🤖 S2 AI 派工中心</a>
       <a id="nav-s3" onclick="switchNav('s3')">👷 S3 現場工作台 (Mobile)</a>
@@ -97,6 +111,10 @@
         <p class="text-sm text-slate-500 mt-1">融合【(1) 進能服雲端監控】×【(2) Line@客服小幫手】×【(3) 工務每日機況群】，智慧判定最急重大案場</p>
       </div>
       <div class="flex items-center gap-2">
+        <button onclick="switchNav('exec')" class="px-3.5 py-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs rounded-lg shadow transition flex items-center gap-1.5 cursor-pointer">
+          <i data-lucide="presentation" class="w-4 h-4"></i>
+          <span>進入 7日高階主管週報</span>
+        </button>
         <span class="text-xs bg-slate-100 px-3 py-1.5 rounded-lg font-mono text-slate-600 border border-slate-200">
           <i data-lucide="clock" class="w-3.5 h-3.5 inline mr-1 text-slate-400"></i>每小時整點自動同步 (07:00~17:00)
         </span>
@@ -198,6 +216,420 @@
               <!-- JS Injected -->
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 📊 7日高階主管週報 (面向經營階層的異常告警與維運決策戰報)        -->
+  <!-- ========================================================= -->
+  <div id="view-exec" class="view-section">
+    <!-- Header with Action Buttons & Period Selector -->
+    <div class="mb-6 flex flex-wrap justify-between items-center gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div>
+        <div class="flex items-center gap-2 mb-1.5">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-100 text-amber-800 border border-amber-300 flex items-center gap-1">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> 經營管理階層專屬決策簡報
+          </span>
+          <span class="text-xs text-slate-400">呈報對象：董事會、總經理、營運長、維運主管</span>
+        </div>
+        <h1 class="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+          <span>太陽能電廠過去 7 天異常告警與維運治理週報</span>
+        </h1>
+        <p class="text-xs text-slate-500 mt-1">
+          統計週期：<b class="text-slate-800 font-mono">2026.09.10 (四) ～ 2026.09.16 (三)</b> ｜ 監控電廠：86 座 ｜ 匯流數據：進能服雲端 × 客服聲音 × 現場機況
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2 no-print">
+        <div class="bg-slate-100 p-1 rounded-xl flex text-xs font-bold text-slate-600">
+          <button onclick="setExecPeriod('7d')" id="btn-period-7d" class="px-3 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition">近 7 天</button>
+          <button onclick="setExecPeriod('14d')" id="btn-period-14d" class="px-3 py-1.5 rounded-lg hover:text-slate-900 transition">近 14 天</button>
+          <button onclick="setExecPeriod('month')" id="btn-period-month" class="px-3 py-1.5 rounded-lg hover:text-slate-900 transition">本月累計</button>
+        </div>
+        <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow transition flex items-center gap-1.5 cursor-pointer">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>列印週報 / 匯出 PDF</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 1. 高階決策四大核心指標 (Executive Cards) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <!-- Card 1: 告警總量與閉環率 -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm border-t-4 border-t-blue-600">
+        <div class="text-xs font-bold text-slate-400 mb-1 flex justify-between items-center">
+          <span>7 日累計告警 / 結案閉環率</span>
+          <i data-lucide="activity" class="w-4 h-4 text-blue-500"></i>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <div class="text-3xl font-black text-slate-900" id="exec-total-alarms">3,428</div>
+          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">↓ -14.2% (前週)</span>
+        </div>
+        <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between text-xs text-slate-600">
+          <span>已完工結案：<b class="text-slate-900 font-mono" id="exec-closed-cases">3,180</b> 件</span>
+          <span class="text-blue-600 font-bold">閉環率 92.8%</span>
+        </div>
+      </div>
+
+      <!-- Card 2: 平均修復時間 MTTR -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm border-t-4 border-t-emerald-600">
+        <div class="text-xs font-bold text-slate-400 mb-1 flex justify-between items-center">
+          <span>平均修復時數 (MTTR)</span>
+          <i data-lucide="timer" class="w-4 h-4 text-emerald-500"></i>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <div class="text-3xl font-black text-emerald-700" id="exec-mttr">4.2 <small class="text-sm font-normal text-slate-500">小時</small></div>
+          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">優於目標 (SLA 8h)</span>
+        </div>
+        <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between text-xs text-slate-600">
+          <span>較前週縮短：<b class="text-emerald-700 font-mono">0.8 小時</b></span>
+          <span class="text-slate-500">P0 抵達平均 1.4h</span>
+        </div>
+      </div>
+
+      <!-- Card 3: 挽回發電損失與財務保全 -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm border-t-4 border-t-amber-500">
+        <div class="text-xs font-bold text-slate-400 mb-1 flex justify-between items-center">
+          <span>預估挽回發電收益 (Avoided Loss)</span>
+          <i data-lucide="coins" class="w-4 h-4 text-amber-500"></i>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <div class="text-3xl font-black text-amber-600" id="exec-financial-gain">NT$ 927K</div>
+          <span class="text-xs font-bold text-slate-500">185,400 kWh</span>
+        </div>
+        <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between text-xs text-slate-600">
+          <span>防杜合約違約金：</span>
+          <b class="text-rose-600 font-bold font-mono">NT$ 3,200,000</b>
+        </div>
+      </div>
+
+      <!-- Card 4: 全網電廠平均稼動率 -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm border-t-4 border-t-indigo-600">
+        <div class="text-xs font-bold text-slate-400 mb-1 flex justify-between items-center">
+          <span>全網 86 座電廠稼動率 (Availability)</span>
+          <i data-lucide="shield-check" class="w-4 h-4 text-indigo-500"></i>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <div class="text-3xl font-black text-indigo-700" id="exec-availability">98.6%</div>
+          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">↑ +0.4%</span>
+        </div>
+        <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between text-xs text-slate-600">
+          <span>全場正常併網：<b class="text-slate-900">81 座</b></span>
+          <span class="text-amber-600 font-bold">部分降載 5 座</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 過去 7 天視覺化動態趨勢與根本原因分析 (Visual Trends & RCA) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+      <!-- 左側 2 欄：7 天每日告警發生 vs 修繕結案趨勢 -->
+      <div class="lg:col-span-2 bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+        <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+          <div>
+            <h3 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+              <i data-lucide="line-chart" class="w-4 h-4 text-blue-600"></i>
+              過去 7 日告警新增量 vs 完工結案量動態對比
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">衡量維運工務團隊面對突發性異常之消化速度與日閉環能力</p>
+          </div>
+          <div class="flex items-center gap-4 text-xs font-bold">
+            <span class="flex items-center gap-1.5 text-slate-600"><span class="w-3 h-3 rounded-full bg-rose-500"></span> 每日新增異常</span>
+            <span class="flex items-center gap-1.5 text-slate-600"><span class="w-3 h-3 rounded-full bg-emerald-500"></span> 完工結案修繕</span>
+          </div>
+        </div>
+        <div class="h-64 relative bg-slate-50/50 p-2 rounded-xl">
+          <canvas id="exec7DayTrendChart"></canvas>
+        </div>
+      </div>
+
+      <!-- 右側 1 欄：7 天異常根本原因分佈 (RCA Donut) -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <h3 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-1">
+            <i data-lucide="pie-chart" class="w-4 h-4 text-purple-600"></i>
+            7 日異常類型結構分析 (RCA)
+          </h3>
+          <p class="text-xs text-slate-400 mb-3">協助判定預防性維護重心與備品採購策略</p>
+          <div class="h-48 relative">
+            <canvas id="exec7DayRcaChart"></canvas>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-[11px] text-slate-600 font-medium">
+          <div><span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1"></span> 發電效率低落: <b>51.6%</b></div>
+          <div><span class="inline-block w-2 h-2 rounded-full bg-blue-500 mr-1"></span> 裝置通訊中斷: <b>38.5%</b></div>
+          <div><span class="inline-block w-2 h-2 rounded-full bg-rose-500 mr-1"></span> 變流器未發電: <b>5.5%</b></div>
+          <div><span class="inline-block w-2 h-2 rounded-full bg-purple-500 mr-1"></span> 絕緣阻抗異常: <b>2.4%</b></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 四大工務轄區 7 日維運作戰績效 (4 Regional Divisions Performance) -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm mb-6">
+      <h3 class="font-bold text-slate-800 text-sm flex items-center gap-2 mb-3">
+        <i data-lucide="users" class="w-4 h-4 text-emerald-600"></i>
+        四大工務責任中心 7 日戰力考核與結案率評鑑
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- 桃辦 -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-black text-sm text-slate-900">桃園工務中心 (桃辦)</span>
+            <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-[10px] font-bold">結案率 95.3%</span>
+          </div>
+          <div class="text-xs text-slate-500 mb-2">責任主管：<b>andrewlu</b> (管轄案場 24 座)</div>
+          <div class="space-y-1 text-[11px] text-slate-600">
+            <div class="flex justify-between"><span>7天處置通報：</span><b class="font-mono">86 件</b></div>
+            <div class="flex justify-between"><span>平均抵達修復：</span><b class="font-mono">3.8 小時</b></div>
+            <div class="flex justify-between"><span>核心列管挑戰：</span><span class="text-rose-600 font-bold">埤塘7-1/8-2浮台</span></div>
+          </div>
+        </div>
+
+        <!-- 彰辦 -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-black text-sm text-slate-900">彰化工務中心 (彰辦)</span>
+            <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded text-[10px] font-bold">結案率 92.0%</span>
+          </div>
+          <div class="text-xs text-slate-500 mb-2">責任主管：<b>健國</b> (管轄案場 19 座)</div>
+          <div class="space-y-1 text-[11px] text-slate-600">
+            <div class="flex justify-between"><span>7天處置通報：</span><b class="font-mono">112 件</b></div>
+            <div class="flex justify-between"><span>平均抵達修復：</span><b class="font-mono">4.5 小時</b></div>
+            <div class="flex justify-between"><span>核心列管挑戰：</span><span class="text-rose-600 font-bold">烏日高鐵/芳德跳脫</span></div>
+          </div>
+        </div>
+
+        <!-- 台南 -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-black text-sm text-slate-900">台南工務中心 (南辦)</span>
+            <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-[10px] font-bold">結案率 96.6%</span>
+          </div>
+          <div class="text-xs text-slate-500 mb-2">責任主管：<b>明宗 / white</b> (管轄案場 28 座)</div>
+          <div class="space-y-1 text-[11px] text-slate-600">
+            <div class="flex justify-between"><span>7天處置通報：</span><b class="font-mono">178 件</b></div>
+            <div class="flex justify-between"><span>平均抵達修復：</span><b class="font-mono">3.6 小時</b></div>
+            <div class="flex justify-between"><span>核心列管挑戰：</span><span class="text-rose-600 font-bold">史谷脫/FCS破片進水</span></div>
+          </div>
+        </div>
+
+        <!-- 高辦 -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-black text-sm text-slate-900">高雄工務中心 (高辦)</span>
+            <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-[10px] font-bold">結案率 89.4%</span>
+          </div>
+          <div class="text-xs text-slate-500 mb-2">責任主管：<b>Bryant Chen</b> (管轄案場 15 座)</div>
+          <div class="space-y-1 text-[11px] text-slate-600">
+            <div class="flex justify-between"><span>7天處置通報：</span><b class="font-mono">94 件</b></div>
+            <div class="flex justify-between"><span>平均抵達修復：</span><b class="font-mono">4.9 小時</b></div>
+            <div class="flex justify-between"><span>核心列管挑戰：</span><span class="text-rose-600 font-bold">正隆燕巢保固金爭議</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 高階主管親自列管：過去 7 天 Top 5 慢性高風險案場與決策裁決表 -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+      <div class="p-5 border-b border-slate-100 bg-slate-50/70 flex justify-between items-center">
+        <div>
+          <h3 class="font-black text-sm text-slate-900 flex items-center gap-2">
+            <i data-lucide="alert-octagon" class="w-4 h-4 text-rose-600"></i>
+            高階決策裁決清冊：過去 7 天累積影響最劇 Top 5 案場剖析
+          </h3>
+          <p class="text-xs text-slate-500 mt-0.5">彙整雲端數據停機時數、工務現場維修瓶頸、客戶商務違約風險與建議高階裁決處置方針</p>
+        </div>
+        <span class="px-2.5 py-1 bg-rose-100 text-rose-700 text-xs font-black rounded-lg border border-rose-200">
+          需高階長官指導裁示
+        </span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-slate-100/70 text-slate-600 border-b border-slate-200 font-bold">
+              <th class="p-3 w-12 text-center">排名</th>
+              <th class="p-3 w-36">案場名稱 / 轄區</th>
+              <th class="p-3 w-40">異常設備 / 7日現況</th>
+              <th class="p-3">客戶聲音與商務違約衝擊</th>
+              <th class="p-3">現場工務查修瓶頸</th>
+              <th class="p-3 w-64 bg-amber-50/50 text-amber-950 font-black">高階主管建議裁決行動方針</th>
+              <th class="p-3 w-20 text-center no-print">操作</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200/70 text-slate-700" id="exec-top5-table-body">
+            <!-- Row 1: 史谷脫 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-3 text-center font-black text-rose-600 text-sm">1</td>
+              <td class="p-3">
+                <div class="font-black text-slate-900 text-xs">史谷脫 (台南)</div>
+                <div class="text-[10px] text-slate-400">責任工務: 明宗</div>
+              </td>
+              <td class="p-3">
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-100 text-red-700">P0 停機 7 天</span>
+                <div class="font-bold text-slate-800 mt-1">INV1 Check DC故障</div>
+                <div class="text-[10px] text-slate-400">累積日損: ~180 kWh/日</div>
+              </td>
+              <td class="p-3 leading-relaxed">
+                <span class="text-rose-600 font-bold">業主催促報價否則啟動違約金！</span>
+                <p class="text-slate-500 mt-0.5">業主以發電量保證條款要求換新機，若逾限將處發電損失違約金 (約 NT$ 45 萬)。</p>
+              </td>
+              <td class="p-3 text-slate-600 leading-relaxed">
+                現場查故障代碼無紀錄，AC/DC電性正常但卡在DC鎖定，缺少原廠備品新機更換。
+              </td>
+              <td class="p-3 bg-amber-50/40 text-slate-800 font-medium leading-relaxed">
+                <b class="text-amber-900">【核准庫存調撥】</b> 由主管裁定動用台達備用新機庫存，指示業務處於 24 小時內出具專案更換報價函送交業主。
+              </td>
+              <td class="p-3 text-center no-print">
+                <button onclick="processCrossAI('CROSS-001')" class="px-2.5 py-1 bg-blue-600 text-white rounded text-[10px] font-bold hover:bg-blue-700">AI派工</button>
+              </td>
+            </tr>
+
+            <!-- Row 2: 正隆燕巢 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-3 text-center font-black text-rose-600 text-sm">2</td>
+              <td class="p-3">
+                <div class="font-black text-slate-900 text-xs">正隆燕巢 (高雄)</div>
+                <div class="text-[10px] text-slate-400">責任工務: Bryant Chen</div>
+              </td>
+              <td class="p-3">
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-100 text-red-700">P0 延遲併網</span>
+                <div class="font-bold text-slate-800 mt-1">INV27 絕緣阻抗異常</div>
+                <div class="text-[10px] text-slate-400">晨間濕氣大時跳脫</div>
+              </td>
+              <td class="p-3 leading-relaxed">
+                <span class="text-rose-600 font-bold">業主威脅沒收保固金 NT$ 120 萬！</span>
+                <p class="text-slate-500 mt-0.5">客戶認為反覆延遲併網屬工程施工重大瑕疵，要求出具原廠保證書。</p>
+              </td>
+              <td class="p-3 text-slate-600 leading-relaxed">
+                地下線槽多處受潮，一般三用電表無法定位，需高阻計 (Megger) 耐壓測試排查漏電。
+              </td>
+              <td class="p-3 bg-amber-50/40 text-slate-800 font-medium leading-relaxed">
+                <b class="text-amber-900">【發出法務說明函】</b> 管理部親自去電正隆廠長說明檢測時程，技術處會同外部廠商週末進行高阻斷電全面抽換線路。
+              </td>
+              <td class="p-3 text-center no-print">
+                <button onclick="processCrossAI('CROSS-002')" class="px-2.5 py-1 bg-blue-600 text-white rounded text-[10px] font-bold hover:bg-blue-700">AI派工</button>
+              </td>
+            </tr>
+
+            <!-- Row 3: FCS富強鑫 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-3 text-center font-black text-amber-600 text-sm">3</td>
+              <td class="p-3">
+                <div class="font-black text-slate-900 text-xs">FCS富強鑫 (台南)</div>
+                <div class="text-[10px] text-slate-400">責任工務: 王永晴</div>
+              </td>
+              <td class="p-3">
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">P1 批次損壞</span>
+                <div class="font-bold text-slate-800 mt-1">INV4/11 進水 + 破片</div>
+                <div class="text-[10px] text-slate-400">7-4-5串列模組受損</div>
+              </td>
+              <td class="p-3 leading-relaxed">
+                <span class="text-amber-700 font-bold">涉及友達原廠責任判定</span>
+                <p class="text-slate-500 mt-0.5">破片模組送達育成中心，友達客服洽詢賠片事宜，業主催促報價方案。</p>
+              </td>
+              <td class="p-3 text-slate-600 leading-relaxed">
+                變流器外殼防水橡膠圈老化導致水氣滲入，且屋頂爬梯通道受限，大型更換作業需吊車。
+              </td>
+              <td class="p-3 bg-amber-50/40 text-slate-800 font-medium leading-relaxed">
+                <b class="text-amber-900">【召開原廠協商會】</b> 指示採購部會同工務總監與友達高層開會，主張批次材料瑕疵免費賠換，阻斷我方維修成本。
+              </td>
+              <td class="p-3 text-center no-print">
+                <button onclick="processCrossAI('CROSS-003')" class="px-2.5 py-1 bg-blue-600 text-white rounded text-[10px] font-bold hover:bg-blue-700">AI派工</button>
+              </td>
+            </tr>
+
+            <!-- Row 4: 埤塘7-1 / 8-2 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-3 text-center font-black text-amber-600 text-sm">4</td>
+              <td class="p-3">
+                <div class="font-black text-slate-900 text-xs">埤塘7-1 / 8-2 (桃園)</div>
+                <div class="text-[10px] text-slate-400">責任工務: andrewlu</div>
+              </td>
+              <td class="p-3">
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-700">P0 重大電損</span>
+                <div class="font-bold text-slate-800 mt-1">156 串停止發電</div>
+                <div class="text-[10px] text-slate-400">全網停運串列最多</div>
+              </td>
+              <td class="p-3 leading-relaxed">
+                <span class="text-rose-600 font-bold">全網最大躉售電損黑洞！</span>
+                <p class="text-slate-500 mt-0.5">客戶多次追蹤修復與台電暫停計算進度，關切何時能全面復工躉售。</p>
+              </td>
+              <td class="p-3 text-slate-600 leading-relaxed">
+                水面浮台風浪拉扯導致跳線扣件鬆脫，常規工班無水上作業特勤執照，工期嚴重受阻。
+              </td>
+              <td class="p-3 bg-amber-50/40 text-slate-800 font-medium leading-relaxed">
+                <b class="text-amber-900">【專案 CAPEX 預算核准】</b> 總經理批准動用特勤資本支出，引進專利防鬆脫浮扣件與外包水上特勤隊集中攻堅結案。
+              </td>
+              <td class="p-3 text-center no-print">
+                <button onclick="processCrossAI('CROSS-004')" class="px-2.5 py-1 bg-blue-600 text-white rounded text-[10px] font-bold hover:bg-blue-700">AI派工</button>
+              </td>
+            </tr>
+
+            <!-- Row 5: 新陽 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="p-3 text-center font-black text-slate-600 text-sm">5</td>
+              <td class="p-3">
+                <div class="font-black text-slate-900 text-xs">新陽案場 (雲林)</div>
+                <div class="text-[10px] text-slate-400">責任工務: 羅健國</div>
+              </td>
+              <td class="p-3">
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">P1 效率低落</span>
+                <div class="font-bold text-slate-800 mt-1">48 筆發電效率告警</div>
+                <div class="text-[10px] text-slate-400">全網告警累積冠軍</div>
+              </td>
+              <td class="p-3 leading-relaxed">
+                <span class="text-amber-700 font-bold">發電 PR 值低於合約保證</span>
+                <p class="text-slate-500 mt-0.5">業主定期檢視發電量，比對周遭電廠後質疑我方維護品質未到位。</p>
+              </td>
+              <td class="p-3 text-slate-600 leading-relaxed">
+                沿海嚴重沙塵與鳥糞黏著，通訊箱 4G 訊號受金屬浪板干擾頻繁離線。
+              </td>
+              <td class="p-3 bg-amber-50/40 text-slate-800 font-medium leading-relaxed">
+                <b class="text-amber-900">【核准高壓純水清洗工班】</b> 下週一全面進場無人機熱斑空拍與高壓水車全場清洗，並將通訊天線移出外牆解決訊號問題。
+              </td>
+              <td class="p-3 text-center no-print">
+                <button onclick="trackSiteAlarms('新陽')" class="px-2.5 py-1 bg-slate-700 text-white rounded text-[10px] font-bold hover:bg-slate-800">追蹤</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5. 經營高層下週三大戰略治理方針 (Strategic Recommendations) -->
+    <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-2xl p-6 shadow-xl">
+      <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/10">
+        <i data-lucide="compass" class="w-5 h-5 text-amber-400"></i>
+        <h3 class="font-black text-base text-amber-300">維運總監給予高階管理階層之「下週三大戰略優先行動建議」</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs leading-relaxed">
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+          <div class="font-black text-amber-400 text-sm mb-2 flex items-center gap-1.5">
+            <span>行動 1</span> 建立區域備品中繼安全庫存
+          </div>
+          <p class="text-slate-300">
+            針對台達 M30A、Solaredge 與台芝變流器建立北中南三區中繼備品庫，將 P0 等級停機平均等待時間由 <b>48 小時壓縮至 12 小時</b> 以內，杜絕因等待原廠出貨造成的發電巨額損失。
+          </p>
+        </div>
+
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+          <div class="font-black text-amber-400 text-sm mb-2 flex items-center gap-1.5">
+            <span>行動 2</span> 啟動客戶商務合約「72h 防火牆機制」
+          </div>
+          <p class="text-slate-300">
+            凡系統告警停機超過 48 小時或業主二度致電者，客服與法務即刻發出官方「檢修排程說明函」，以不可抗力或定期檢修名義確立責任邊界，防範正隆與史谷脫等大案場扣留保固金。
+          </p>
+        </div>
+
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+          <div class="font-black text-amber-400 text-sm mb-2 flex items-center gap-1.5">
+            <span>行動 3</span> 沿海案場全面展開無人機熱斑巡檢
+          </div>
+          <p class="text-slate-300">
+            針對雲林、彰化與台南沿海鹽霧案場，於下週秋季日照高峰前完成無人機紅外線空拍，搶先抓出二極體燒毀與微裂熱斑，在模組引發火災跳脫前完成預防性抽換。
+          </p>
         </div>
       </div>
     </div>
@@ -649,6 +1081,7 @@
       if (targetNav) targetNav.classList.add('active');
       
       if (window.lucide) lucide.createIcons();
+      if (targetId === 'exec') { initExecReport(); }
       window.scrollTo(0, 0);
     }
 
@@ -1635,6 +2068,135 @@
           plugins: { legend: { position: 'top', labels: { boxWidth: 12, font: { size: 11 } } } }
         }
       });
+    }
+
+
+    // =========================================================
+    // 📊 7日高階主管週報專屬圖表與期間切換邏輯
+    // =========================================================
+    let exec7DayTrendChartInstance = null;
+    let exec7DayRcaChartInstance = null;
+
+    function initExecReport() {
+      setTimeout(() => {
+        renderExecCharts();
+        if (window.lucide) lucide.createIcons();
+      }, 50);
+    }
+
+    function setExecPeriod(period) {
+      document.querySelectorAll('#btn-period-7d, #btn-period-14d, #btn-period-month').forEach(btn => {
+        btn.className = 'px-3 py-1.5 rounded-lg hover:text-slate-900 transition';
+      });
+      const activeBtn = document.getElementById('btn-period-' + period);
+      if (activeBtn) activeBtn.className = 'px-3 py-1.5 rounded-lg bg-white text-slate-900 shadow-sm transition';
+
+      const totalAlarmsEl = document.getElementById('exec-total-alarms');
+      const closedCasesEl = document.getElementById('exec-closed-cases');
+      const mttrEl = document.getElementById('exec-mttr');
+      const financialGainEl = document.getElementById('exec-financial-gain');
+      const availabilityEl = document.getElementById('exec-availability');
+
+      if (period === '7d') {
+        if (totalAlarmsEl) totalAlarmsEl.innerText = '3,428';
+        if (closedCasesEl) closedCasesEl.innerText = '3,180';
+        if (mttrEl) mttrEl.innerHTML = '4.2 <small class="text-sm font-normal text-slate-500">小時</small>';
+        if (financialGainEl) financialGainEl.innerText = 'NT$ 927K';
+        if (availabilityEl) availabilityEl.innerText = '98.6%';
+        updateExecChartData([480, 520, 460, 540, 490, 470, 468], [450, 490, 440, 510, 480, 450, 452]);
+      } else if (period === '14d') {
+        if (totalAlarmsEl) totalAlarmsEl.innerText = '6,940';
+        if (closedCasesEl) closedCasesEl.innerText = '6,380';
+        if (mttrEl) mttrEl.innerHTML = '4.6 <small class="text-sm font-normal text-slate-500">小時</small>';
+        if (financialGainEl) financialGainEl.innerText = 'NT$ 1,840K';
+        if (availabilityEl) availabilityEl.innerText = '98.2%';
+        updateExecChartData([450, 480, 520, 510, 490, 480, 470], [420, 460, 490, 480, 470, 460, 450]);
+      } else if (period === 'month') {
+        if (totalAlarmsEl) totalAlarmsEl.innerText = '14,820';
+        if (closedCasesEl) closedCasesEl.innerText = '13,910';
+        if (mttrEl) mttrEl.innerHTML = '4.8 <small class="text-sm font-normal text-slate-500">小時</small>';
+        if (financialGainEl) financialGainEl.innerText = 'NT$ 3,920K';
+        if (availabilityEl) availabilityEl.innerText = '97.9%';
+        updateExecChartData([510, 530, 490, 520, 500, 490, 480], [480, 500, 470, 490, 480, 470, 460]);
+      }
+    }
+
+    function updateExecChartData(newDataInflow, newDataOutflow) {
+      if (exec7DayTrendChartInstance) {
+        exec7DayTrendChartInstance.data.datasets[0].data = newDataInflow;
+        exec7DayTrendChartInstance.data.datasets[1].data = newDataOutflow;
+        exec7DayTrendChartInstance.update();
+      }
+    }
+
+    function renderExecCharts() {
+      // 7日告警 vs 結案動態趨勢圖
+      const ctxTrend = document.getElementById('exec7DayTrendChart');
+      if (ctxTrend && window.Chart && !exec7DayTrendChartInstance) {
+        exec7DayTrendChartInstance = new Chart(ctxTrend, {
+          type: 'line',
+          data: {
+            labels: ['09/10 (四)', '09/11 (五)', '09/12 (六)', '09/13 (日)', '09/14 (一)', '09/15 (二)', '09/16 (三)'],
+            datasets: [
+              {
+                label: '每日新增異常',
+                data: [480, 520, 460, 540, 490, 470, 468],
+                borderColor: '#ef4444',
+                backgroundColor: 'rgba(239, 68, 68, 0.12)',
+                fill: true,
+                tension: 0.35,
+                borderWidth: 2.5
+              },
+              {
+                label: '完工結案修繕',
+                data: [450, 490, 440, 510, 480, 450, 452],
+                borderColor: '#10b981',
+                backgroundColor: 'rgba(16, 185, 129, 0.12)',
+                fill: true,
+                tension: 0.35,
+                borderWidth: 2.5
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top', labels: { font: { size: 11, weight: 'bold' }, boxWidth: 12 } },
+              tooltip: { mode: 'index', intersect: false }
+            },
+            scales: {
+              y: { grid: { color: 'rgba(0,0,0,0.04)' }, ticks: { font: { size: 10 } } },
+              x: { grid: { display: false }, ticks: { font: { size: 10 } } }
+            }
+          }
+        });
+      }
+
+      // 7日 RCA 結構分佈圓餅圖
+      const ctxRca = document.getElementById('exec7DayRcaChart');
+      if (ctxRca && window.Chart && !exec7DayRcaChartInstance) {
+        exec7DayRcaChartInstance = new Chart(ctxRca, {
+          type: 'doughnut',
+          data: {
+            labels: ['發電效率低落', '裝置通訊中斷', '變流器未發電', '絕緣阻抗異常', '系統未連線'],
+            datasets: [{
+              data: [51.6, 38.5, 5.5, 2.4, 2.0],
+              backgroundColor: ['#f59e0b', '#3b82f6', '#ef4444', '#8b5cf6', '#64748b'],
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            },
+            cutout: '68%'
+          }
+        });
+      }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
