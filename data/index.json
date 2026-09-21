@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-09-21_19-00",
+    "updatedAt": "2026-09-21 19:51:25",
+    "totalSitesWithAlarms": 76,
+    "totalDistinctIssues": 455,
+    "totalRawAlarms": 3331,
+    "severityCounts": {
+      "red": 161,
+      "orange": 294,
+      "white": 0
+    },
+    "topAlarmType": "發電效率不佳",
+    "topSite": "台南機場",
+    "filename": "snapshots/2026-09-21_19-00.json"
+  },
+  {
     "snapshotId": "2026-09-21_13-00",
     "updatedAt": "2026-09-21 13:50:11",
     "totalSitesWithAlarms": 74,
