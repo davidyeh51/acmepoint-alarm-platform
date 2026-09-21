@@ -1082,6 +1082,9 @@
       
       if (window.lucide) lucide.createIcons();
       if (targetId === 'exec') { initExecReport(); }
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, '#' + targetId);
+      }
       window.scrollTo(0, 0);
     }
 
@@ -2201,6 +2204,16 @@
 
     window.addEventListener('DOMContentLoaded', () => {
       initPlatform();
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['s5', 's1', 's2', 's3', 's4', 'exec'].includes(hash)) {
+        switchNav(hash);
+      }
+    });
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['s5', 's1', 's2', 's3', 's4', 'exec'].includes(hash)) {
+        switchNav(hash);
+      }
     });
   </script>
 </body>
