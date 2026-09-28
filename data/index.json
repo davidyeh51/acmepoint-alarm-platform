@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-09-29_01-00",
+    "updatedAt": "2026-09-29 01:18:04",
+    "totalSitesWithAlarms": 42,
+    "totalDistinctIssues": 128,
+    "totalRawAlarms": 130,
+    "severityCounts": {
+      "red": 122,
+      "orange": 6,
+      "white": 0
+    },
+    "topAlarmType": "裝置斷訊",
+    "topSite": "台南機場",
+    "filename": "snapshots/2026-09-29_01-00.json"
+  },
+  {
     "snapshotId": "2026-09-28_16-00",
     "updatedAt": "2026-09-28 16:09:09",
     "totalSitesWithAlarms": 94,
