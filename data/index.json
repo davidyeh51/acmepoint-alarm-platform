@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-10-13_11-00",
+    "updatedAt": "2026-10-13 11:19:56",
+    "totalSitesWithAlarms": 77,
+    "totalDistinctIssues": 447,
+    "totalRawAlarms": 3387,
+    "severityCounts": {
+      "red": 151,
+      "orange": 296,
+      "white": 0
+    },
+    "topAlarmType": "發電效率不佳",
+    "topSite": "新陽",
+    "filename": "snapshots/2026-10-13_11-00.json"
+  },
+  {
     "snapshotId": "2026-10-12_18-00",
     "updatedAt": "2026-10-12 18:09:17",
     "totalSitesWithAlarms": 88,
