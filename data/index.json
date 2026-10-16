@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-10-16_08-00",
+    "updatedAt": "2026-10-16 08:58:56",
+    "totalSitesWithAlarms": 71,
+    "totalDistinctIssues": 396,
+    "totalRawAlarms": 1401,
+    "severityCounts": {
+      "red": 184,
+      "orange": 212,
+      "white": 0
+    },
+    "topAlarmType": "發電效率不佳",
+    "topSite": "益網雙拋測試_東和二",
+    "filename": "snapshots/2026-10-16_08-00.json"
+  },
+  {
     "snapshotId": "2026-10-15_20-00",
     "updatedAt": "2026-10-15 20:25:29",
     "totalSitesWithAlarms": 85,
