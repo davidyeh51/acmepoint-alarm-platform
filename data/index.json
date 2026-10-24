@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-10-24_19-00",
+    "updatedAt": "2026-10-24 19:49:27",
+    "totalSitesWithAlarms": 67,
+    "totalDistinctIssues": 318,
+    "totalRawAlarms": 1199,
+    "severityCounts": {
+      "red": 206,
+      "orange": 112,
+      "white": 0
+    },
+    "topAlarmType": "裝置斷訊",
+    "topSite": "Chemik Y1-2A",
+    "filename": "snapshots/2026-10-24_19-00.json"
+  },
+  {
     "snapshotId": "2026-10-24_14-00",
     "updatedAt": "2026-10-24 14:49:56",
     "totalSitesWithAlarms": 65,
