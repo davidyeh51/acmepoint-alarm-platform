@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "snapshotId": "2026-10-28_16-00",
-    "updatedAt": "2026-10-28 16:16:52",
+    "snapshotId": "2026-10-28_23-00",
+    "updatedAt": "2026-10-28 23:42:09",
     "totalSitesWithAlarms": 86,
-    "totalDistinctIssues": 497,
-    "totalRawAlarms": 3374,
+    "totalDistinctIssues": 506,
+    "totalRawAlarms": 3661,
     "severityCounts": {
-      "red": 161,
-      "orange": 336,
+      "red": 163,
+      "orange": 343,
       "white": 0
     }
   },
@@ -15,18 +15,18 @@
     "typeDistribution": [
       {
         "type": "發電效率不佳",
-        "count": 325,
-        "percentage": 65.4
+        "count": 332,
+        "percentage": 65.6
       },
       {
         "type": "裝置斷訊",
-        "count": 119,
-        "percentage": 23.9
+        "count": 120,
+        "percentage": 23.7
       },
       {
         "type": "發電數據異常",
-        "count": 28,
-        "percentage": 5.6
+        "count": 29,
+        "percentage": 5.7
       },
       {
         "type": "系統未連線",
@@ -110,6 +110,46 @@
         "latestTime": "2026-10-28 15:30:00"
       },
       {
+        "factoryName": "生利二期13區",
+        "county": "屏東縣",
+        "maintainer": "李孟家",
+        "distinctIssuesCount": 25,
+        "totalRawAlarms": 363,
+        "devicesCount": 25,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv03",
+          "Inv04",
+          "Inv05",
+          "Inv06",
+          "Inv07",
+          "Inv08",
+          "Inv09",
+          "Inv10",
+          "Inv11",
+          "Inv12",
+          "Inv13",
+          "Inv14",
+          "Inv15",
+          "Inv16",
+          "Inv17",
+          "Inv18",
+          "Inv19",
+          "Inv20",
+          "Inv21",
+          "Inv22",
+          "Inv23",
+          "Inv24",
+          "Inv25"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 25
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-10-28 16:30:00"
+      },
+      {
         "factoryName": "台瑞電氣",
         "county": "台中市",
         "maintainer": "汪順發",
@@ -174,39 +214,6 @@
         },
         "worstColor": "orange",
         "latestTime": "2026-10-28 10:30:00"
-      },
-      {
-        "factoryName": "生利二期13區",
-        "county": "屏東縣",
-        "maintainer": "李孟家",
-        "distinctIssuesCount": 18,
-        "totalRawAlarms": 82,
-        "devicesCount": 18,
-        "devicesList": [
-          "Inv01",
-          "Inv04",
-          "Inv05",
-          "Inv06",
-          "Inv07",
-          "Inv08",
-          "Inv09",
-          "Inv10",
-          "Inv11",
-          "Inv12",
-          "Inv13",
-          "Inv14",
-          "Inv15",
-          "Inv16",
-          "Inv17",
-          "Inv19",
-          "Inv20",
-          "Inv25"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 18
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-10-28 08:30:00"
       },
       {
         "factoryName": "矽品-中科廠",
@@ -782,7 +789,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-10-28 16:00:00"
+        "latestTime": "2026-10-28 16:30:00"
       },
       {
         "factoryName": "東和三期",
@@ -872,6 +879,27 @@
         "latestTime": "2026-10-28 09:00:00"
       },
       {
+        "factoryName": "日煙國際",
+        "county": "台南市",
+        "maintainer": "維運一課",
+        "distinctIssuesCount": 6,
+        "totalRawAlarms": 7,
+        "devicesCount": 4,
+        "devicesList": [
+          "Inv02",
+          "Inv03",
+          "Inv09",
+          "Inv10"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 2,
+          "發電數據異常": 2,
+          "發電效率不佳": 2
+        },
+        "worstColor": "red",
+        "latestTime": "2026-10-28 16:30:00"
+      },
+      {
         "factoryName": "雲豹-路竹三爺埤第三型",
         "county": "高雄市",
         "maintainer": "李孟家",
@@ -951,26 +979,6 @@
         },
         "worstColor": "red",
         "latestTime": "2026-10-28 15:30:00"
-      },
-      {
-        "factoryName": "日煙國際",
-        "county": "台南市",
-        "maintainer": "維運一課",
-        "distinctIssuesCount": 4,
-        "totalRawAlarms": 5,
-        "devicesCount": 3,
-        "devicesList": [
-          "Inv02",
-          "Inv03",
-          "Inv10"
-        ],
-        "alarmTypeCounts": {
-          "裝置斷訊": 1,
-          "發電數據異常": 1,
-          "發電效率不佳": 2
-        },
-        "worstColor": "red",
-        "latestTime": "2026-10-28 16:00:00"
       },
       {
         "factoryName": "FCS6期",
@@ -1241,7 +1249,7 @@
         "county": "新竹縣",
         "maintainer": "汪順發",
         "distinctIssuesCount": 2,
-        "totalRawAlarms": 5,
+        "totalRawAlarms": 8,
         "devicesCount": 2,
         "devicesList": [
           "Inv02",
@@ -1252,7 +1260,7 @@
           "發電效率不佳": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-10-28 15:30:00"
+        "latestTime": "2026-10-28 22:45:00"
       },
       {
         "factoryName": "裕益竹北廠",
@@ -1303,7 +1311,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-10-28 16:00:00"
+        "latestTime": "2026-10-28 17:00:00"
       },
       {
         "factoryName": "大南方資源再生",
@@ -1369,6 +1377,22 @@
         },
         "worstColor": "orange",
         "latestTime": "2026-10-28 09:30:00"
+      },
+      {
+        "factoryName": "富士電子",
+        "county": "台南市",
+        "maintainer": "-",
+        "distinctIssuesCount": 1,
+        "totalRawAlarms": 2,
+        "devicesCount": 1,
+        "devicesList": [
+          "系統斷線"
+        ],
+        "alarmTypeCounts": {
+          "系統未連線": 1
+        },
+        "worstColor": "red",
+        "latestTime": "2026-10-28 21:00:00"
       },
       {
         "factoryName": "東毓",
@@ -1438,22 +1462,6 @@
         "factoryName": "富強鑫一期東側重建",
         "county": "台南市",
         "maintainer": "林遠香",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "系統斷線"
-        ],
-        "alarmTypeCounts": {
-          "系統未連線": 1
-        },
-        "worstColor": "red",
-        "latestTime": "2026-10-28 00:00:00"
-      },
-      {
-        "factoryName": "富士電子",
-        "county": "台南市",
-        "maintainer": "-",
         "distinctIssuesCount": 1,
         "totalRawAlarms": 1,
         "devicesCount": 1,
@@ -1806,38 +1814,38 @@
     "countyDistribution": [
       {
         "county": "台南市",
-        "count": 180,
-        "percentage": 36.2
+        "count": 182,
+        "percentage": 36.0
       },
       {
         "county": "彰化縣",
         "count": 100,
-        "percentage": 20.1
+        "percentage": 19.8
       },
       {
         "county": "高雄市",
         "count": 65,
-        "percentage": 13.1
+        "percentage": 12.8
       },
       {
         "county": "台中市",
         "count": 52,
-        "percentage": 10.5
+        "percentage": 10.3
       },
       {
         "county": "雲林縣",
         "count": 33,
-        "percentage": 6.6
+        "percentage": 6.5
       },
       {
         "county": "嘉義縣",
         "count": 26,
-        "percentage": 5.2
+        "percentage": 5.1
       },
       {
         "county": "屏東縣",
-        "count": 18,
-        "percentage": 3.6
+        "count": 25,
+        "percentage": 4.9
       },
       {
         "county": "桃園市",
@@ -1868,38 +1876,38 @@
     "maintainerDistribution": [
       {
         "maintainer": "維運一課",
-        "count": 129,
-        "percentage": 26.0
+        "count": 131,
+        "percentage": 25.9
       },
       {
         "maintainer": "維運二課",
         "count": 112,
-        "percentage": 22.5
+        "percentage": 22.1
       },
       {
         "maintainer": "李孟家",
-        "count": 45,
-        "percentage": 9.1
+        "count": 52,
+        "percentage": 10.3
       },
       {
         "maintainer": "汪順發",
         "count": 44,
-        "percentage": 8.9
+        "percentage": 8.7
       },
       {
         "maintainer": "羅健國",
         "count": 39,
-        "percentage": 7.8
+        "percentage": 7.7
       },
       {
         "maintainer": "郭文奇",
         "count": 30,
-        "percentage": 6.0
+        "percentage": 5.9
       },
       {
         "maintainer": "張晏誠",
         "count": 24,
-        "percentage": 4.8
+        "percentage": 4.7
       },
       {
         "maintainer": "姜興中",
@@ -2034,14 +2042,23 @@
       "which": "系統斷線",
       "lastAlarmType": "系統未連線",
       "lastColorLabel": "red",
-      "time": "2026-10-28 00:00:00",
-      "impact": 1,
+      "time": "2026-10-28 21:00:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T00:00:00.029+08:00",
           "alarmType": "系統未連線",
           "inv": null,
           "desc": "富士電子 斷線，最後一筆資料時間為2026-10-27 20:20",
+          "errMsg": "",
+          "level": 6,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-10-28T21:00:00.023+08:00",
+          "alarmType": "系統未連線",
+          "inv": null,
+          "desc": "富士電子 斷線，最後一筆資料時間為2026-10-28 20:20",
           "errMsg": "",
           "level": 6,
           "colorLabel": "red"
@@ -2253,8 +2270,8 @@
       "which": "系統斷線",
       "lastAlarmType": "系統未連線",
       "lastColorLabel": "red",
-      "time": "2026-10-28 15:30:00",
-      "impact": 4,
+      "time": "2026-10-28 22:45:00",
+      "impact": 7,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T10:15:00.011+08:00",
@@ -2288,6 +2305,33 @@
           "alarmType": "系統未連線",
           "inv": null,
           "desc": "欣銓科技鼎興廠TSP1 斷線，最後一筆資料時間為2026-10-28 15:00",
+          "errMsg": "",
+          "level": 6,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.017+08:00",
+          "alarmType": "系統未連線",
+          "inv": null,
+          "desc": "欣銓科技鼎興廠TSP1 斷線，最後一筆資料時間為2026-10-28 15:58",
+          "errMsg": "",
+          "level": 6,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-10-28T17:45:00.010+08:00",
+          "alarmType": "系統未連線",
+          "inv": null,
+          "desc": "欣銓科技鼎興廠TSP1 斷線，最後一筆資料時間為2026-10-28 17:04",
+          "errMsg": "",
+          "level": 6,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-10-28T22:45:00.997+08:00",
+          "alarmType": "系統未連線",
+          "inv": null,
+          "desc": "欣銓科技鼎興廠TSP1 斷線，最後一筆資料時間為2026-10-28 22:07",
           "errMsg": "",
           "level": 6,
           "colorLabel": "red"
@@ -2385,14 +2429,14 @@
       "which": "Inv06",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-10-28 16:00:00",
+      "time": "2026-10-28 17:00:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 6,
-          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2431,10 +2475,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 5,
-          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2461,10 +2505,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 10,
-          "desc": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2491,10 +2535,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 13,
-          "desc": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2521,10 +2565,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 14,
-          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2551,10 +2595,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 8,
-          "desc": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2602,10 +2646,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 8,
-          "desc": "台瑞電氣第8台逆變器(SN碼: 亞力 Tough)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "台瑞電氣第8台逆變器(SN碼: 亞力 Tough)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "台瑞電氣第8台逆變器(SN碼: 亞力 Tough)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2751,14 +2795,14 @@
       "which": "系統斷線",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 16:00:00",
+      "time": "2026-10-28 16:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": null,
-          "desc": "彩邦界(仁德廠)的整場無有效發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "彩邦界(仁德廠)的整場無有效發電，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
           "errMsg": "彩邦界(仁德廠)的整場無有效發電",
           "level": 2,
           "colorLabel": "orange"
@@ -2776,10 +2820,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 12,
-          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2806,10 +2850,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 15,
-          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2836,10 +2880,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 21,
-          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-10-28 16:30 到 2026-10-28 17:00",
           "errMsg": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2862,15 +2906,36 @@
       "which": "Inv10",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-10-28 16:00:00",
+      "time": "2026-10-28 16:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-10-28T16:00:00.000+08:00",
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 10,
-          "desc": "日煙國際第10台逆變器(SN碼: 23.4KWp)變流器未發電，時間: 2026-10-28 15:30 到 2026-10-28 16:00",
+          "desc": "日煙國際第10台逆變器(SN碼: 23.4KWp)變流器未發電，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
           "errMsg": "日煙國際第10台逆變器(SN碼: 23.4KWp)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "日煙國際",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv09",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "red",
+      "time": "2026-10-28 16:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 9,
+          "desc": "日煙國際第9台逆變器(SN碼: 26.975KWp)變流器未發電，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "日煙國際第9台逆變器(SN碼: 26.975KWp)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         }
@@ -4683,6 +4748,27 @@
           "inv": 10,
           "desc": "日煙國際 第10台Inverter(SN碼: 23.4KWp)斷訊，時間: 2026-10-28 15:30 到 2026-10-28 16:00，錯誤訊息: inv",
           "errMsg": "日煙國際_inv10_inv",
+          "level": 3,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "日煙國際",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv09",
+      "lastAlarmType": "裝置斷訊",
+      "lastColorLabel": "red",
+      "time": "2026-10-28 16:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "裝置斷訊",
+          "inv": 9,
+          "desc": "日煙國際 第9台Inverter(SN碼: 26.975KWp)斷訊，時間: 2026-10-28 16:00 到 2026-10-28 16:30，錯誤訊息: inv",
+          "errMsg": "日煙國際_inv9_inv",
           "level": 3,
           "colorLabel": "red"
         }
@@ -35511,14 +35597,140 @@
       "which": "Inv01",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 1,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
           "alarmType": "發電效率不佳",
           "inv": 1,
           "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 08:00 到 2026-10-28 08:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
           "errMsg": "生利二期13區第1台逆變器(SN碼: 115.5kW-INV253 )日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
@@ -35532,8 +35744,8 @@
       "which": "Inv04",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 3,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -35561,6 +35773,114 @@
           "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第4台逆變器(SN碼: 115.5kW-INV257)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35571,8 +35891,8 @@
       "which": "Inv05",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 6,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -35627,6 +35947,87 @@
           "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第5台逆變器(SN碼: 115.5kW-INV258)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35637,8 +36038,8 @@
       "which": "Inv06",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 4,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -35675,6 +36076,105 @@
           "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第6台逆變器(SN碼: 115.5kW-INV259)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35685,8 +36185,8 @@
       "which": "Inv07",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 11,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -35786,6 +36286,42 @@
           "errMsg": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第7台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35796,14 +36332,140 @@
       "which": "Inv08",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 1,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
           "alarmType": "發電效率不佳",
           "inv": 8,
           "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 08:00 到 2026-10-28 08:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
           "errMsg": "生利二期13區第8台逆變器(SN碼: 115.5kW-INV262)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
@@ -35817,8 +36479,8 @@
       "which": "Inv09",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 2,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -35837,6 +36499,123 @@
           "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第9台逆變器(SN碼: 115.5kW-INV263)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35847,8 +36626,8 @@
       "which": "Inv10",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 4,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -35885,6 +36664,105 @@
           "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第10台逆變器(SN碼: 115.5kW-INV264)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35895,8 +36773,8 @@
       "which": "Inv11",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 9,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -35978,6 +36856,60 @@
           "errMsg": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第11台逆變器(SN碼: 115.5kW-INV265)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35988,8 +36920,8 @@
       "which": "Inv12",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 4,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -36026,6 +36958,105 @@
           "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第12台逆變器(SN碼: 115.5kW-INV266)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -36036,8 +37067,8 @@
       "which": "Inv13",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 5,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -36083,6 +37114,96 @@
           "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第13台逆變器(SN碼: 115.5kW-INV267)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -36093,8 +37214,8 @@
       "which": "Inv14",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 3,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -36122,6 +37243,114 @@
           "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第14台逆變器(SN碼: 115.5kW-INV268)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -36132,8 +37361,8 @@
       "which": "Inv15",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 7,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -36197,6 +37426,78 @@
           "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第15台逆變器(SN碼: 115.5kW-INV269)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -36207,14 +37508,140 @@
       "which": "Inv16",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 1,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
           "alarmType": "發電效率不佳",
           "inv": 16,
           "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 08:00 到 2026-10-28 08:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
           "errMsg": "生利二期13區第16台逆變器(SN碼: 115.5kW-INV ?)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
@@ -36228,14 +37655,140 @@
       "which": "Inv17",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 1,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
           "alarmType": "發電效率不佳",
           "inv": 17,
           "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 08:00 到 2026-10-28 08:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
           "errMsg": "生利二期13區第17台逆變器(SN碼: 115.5kW-INV270序號ES20C0091136)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
@@ -36249,8 +37802,8 @@
       "which": "Inv19",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 13,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -36368,6 +37921,24 @@
           "errMsg": "生利二期13區第19台逆變器(SN碼: 115.5kW-INV273)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 19,
+          "desc": "生利二期13區第19台逆變器(SN碼: 115.5kW-INV273)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第19台逆變器(SN碼: 115.5kW-INV273)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 19,
+          "desc": "生利二期13區第19台逆變器(SN碼: 115.5kW-INV273)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第19台逆變器(SN碼: 115.5kW-INV273)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -36378,14 +37949,140 @@
       "which": "Inv20",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 1,
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
           "alarmType": "發電效率不佳",
           "inv": 20,
           "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 08:00 到 2026-10-28 08:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 20,
+          "desc": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
           "errMsg": "生利二期13區第20台逆變器(SN碼: 115.5kW-INV274)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
@@ -36399,8 +38096,8 @@
       "which": "Inv25",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-10-28 08:30:00",
-      "impact": 6,
+      "time": "2026-10-28 16:30:00",
+      "impact": 10,
       "allAlarms": [
         {
           "timestamp": "2026-10-28T08:30:00.000+08:00",
@@ -36453,6 +38150,1008 @@
           "inv": 25,
           "desc": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2，電流小於2A(第11串)，時間: 2026-10-28 08:00 到 2026-10-28 08:30",
           "errMsg": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 25,
+          "desc": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 25,
+          "desc": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 25,
+          "desc": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 25,
+          "desc": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第25台逆變器(SN碼: 77kW-INV279)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "生利二期13區",
+      "county": "屏東縣",
+      "maintainer": "李孟家",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第2台逆變器(SN碼: 115.5kW-INV254)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "生利二期13區",
+      "county": "屏東縣",
+      "maintainer": "李孟家",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第3台逆變器(SN碼: 115.5kW-INV256)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "生利二期13區",
+      "county": "屏東縣",
+      "maintainer": "李孟家",
+      "which": "Inv18",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-10-28 16:30:00",
+      "impact": 15,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第18台逆變器(SN碼: 115.5kW-INV272 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "生利二期13區",
+      "county": "屏東縣",
+      "maintainer": "李孟家",
+      "which": "Inv21",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-10-28 16:30:00",
+      "impact": 14,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第21台逆變器(SN碼: 107.8kW-INV275)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "生利二期13區",
+      "county": "屏東縣",
+      "maintainer": "李孟家",
+      "which": "Inv22",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-10-28 16:30:00",
+      "impact": 14,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 22,
+          "desc": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第22台逆變器(SN碼: 107.8kW-INV276 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "生利二期13區",
+      "county": "屏東縣",
+      "maintainer": "李孟家",
+      "which": "Inv23",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-10-28 16:30:00",
+      "impact": 13,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第23台逆變器(SN碼: 100.1kW-INV277 ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "生利二期13區",
+      "county": "屏東縣",
+      "maintainer": "李孟家",
+      "which": "Inv24",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-10-28 16:30:00",
+      "impact": 12,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第14串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第16串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-10-28T16:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 24,
+          "desc": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-10-28 16:00 到 2026-10-28 16:30",
+          "errMsg": "生利二期13區第24台逆變器(SN碼: 92.4kW- ?)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
