@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "snapshotId": "2026-10-31_16-00",
-    "updatedAt": "2026-10-31 16:08:29",
+    "snapshotId": "2026-10-31_22-00",
+    "updatedAt": "2026-10-31 22:58:42",
     "totalSitesWithAlarms": 85,
-    "totalDistinctIssues": 450,
-    "totalRawAlarms": 3440,
+    "totalDistinctIssues": 452,
+    "totalRawAlarms": 3442,
     "severityCounts": {
-      "red": 134,
+      "red": 136,
       "orange": 316,
       "white": 0
     }
@@ -16,17 +16,17 @@
       {
         "type": "發電效率不佳",
         "count": 308,
-        "percentage": 68.4
+        "percentage": 68.1
       },
       {
         "type": "裝置斷訊",
         "count": 100,
-        "percentage": 22.2
+        "percentage": 22.1
       },
       {
         "type": "發電數據異常",
-        "count": 24,
-        "percentage": 5.3
+        "count": 26,
+        "percentage": 5.8
       },
       {
         "type": "系統未連線",
@@ -84,8 +84,8 @@
         "factoryName": "台南機場",
         "county": "台南市",
         "maintainer": "維運一課",
-        "distinctIssuesCount": 27,
-        "totalRawAlarms": 34,
+        "distinctIssuesCount": 28,
+        "totalRawAlarms": 35,
         "devicesCount": 16,
         "devicesList": [
           "Inv01",
@@ -107,10 +107,11 @@
         ],
         "alarmTypeCounts": {
           "裝置斷訊": 15,
+          "發電數據異常": 1,
           "發電效率不佳": 12
         },
         "worstColor": "red",
-        "latestTime": "2026-10-31 15:30:00"
+        "latestTime": "2026-10-31 17:00:00"
       },
       {
         "factoryName": "台瑞電氣",
@@ -144,8 +145,8 @@
         "factoryName": "Chemik Y1-2A",
         "county": "彰化縣",
         "maintainer": "維運二課",
-        "distinctIssuesCount": 15,
-        "totalRawAlarms": 444,
+        "distinctIssuesCount": 16,
+        "totalRawAlarms": 445,
         "devicesCount": 14,
         "devicesList": [
           "Inv01",
@@ -164,11 +165,11 @@
           "Inv14"
         ],
         "alarmTypeCounts": {
-          "發電數據異常": 1,
+          "發電數據異常": 2,
           "發電效率不佳": 14
         },
         "worstColor": "red",
-        "latestTime": "2026-10-31 12:30:00"
+        "latestTime": "2026-10-31 17:00:00"
       },
       {
         "factoryName": "Chemik Y1-3A",
@@ -759,7 +760,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-10-31 16:00:00"
+        "latestTime": "2026-10-31 16:30:00"
       },
       {
         "factoryName": "恒美",
@@ -1260,7 +1261,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-10-31 16:00:00"
+        "latestTime": "2026-10-31 17:00:00"
       },
       {
         "factoryName": "大南方資源再生",
@@ -1749,13 +1750,13 @@
     "countyDistribution": [
       {
         "county": "台南市",
-        "count": 137,
-        "percentage": 30.4
+        "count": 138,
+        "percentage": 30.5
       },
       {
         "county": "彰化縣",
-        "count": 107,
-        "percentage": 23.8
+        "count": 108,
+        "percentage": 23.9
       },
       {
         "county": "高雄市",
@@ -1765,7 +1766,7 @@
       {
         "county": "台中市",
         "count": 49,
-        "percentage": 10.9
+        "percentage": 10.8
       },
       {
         "county": "雲林縣",
@@ -1775,7 +1776,7 @@
       {
         "county": "嘉義縣",
         "count": 25,
-        "percentage": 5.6
+        "percentage": 5.5
       },
       {
         "county": "桃園市",
@@ -1811,13 +1812,13 @@
     "maintainerDistribution": [
       {
         "maintainer": "維運二課",
-        "count": 118,
-        "percentage": 26.2
+        "count": 119,
+        "percentage": 26.3
       },
       {
         "maintainer": "維運一課",
-        "count": 100,
-        "percentage": 22.2
+        "count": 101,
+        "percentage": 22.3
       },
       {
         "maintainer": "汪順發",
@@ -1832,7 +1833,7 @@
       {
         "maintainer": "李孟家",
         "count": 34,
-        "percentage": 7.6
+        "percentage": 7.5
       },
       {
         "maintainer": "郭文奇",
@@ -2187,14 +2188,14 @@
       "which": "Inv06",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-10-31 16:00:00",
+      "time": "2026-10-31 17:00:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 6,
-          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2238,6 +2239,27 @@
           "inv": 10,
           "desc": "Chemik Y1-2A第10台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 08:00 到 2026-10-31 08:30",
           "errMsg": "Chemik Y1-2A第10台逆變器(SN碼: N/A)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "Chemik Y1-2A",
+      "county": "彰化縣",
+      "maintainer": "維運二課",
+      "which": "Inv06",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "red",
+      "time": "2026-10-31 17:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 6,
+          "desc": "Chemik Y1-2A第6台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
+          "errMsg": "Chemik Y1-2A第6台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         }
@@ -2317,10 +2339,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 5,
-          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2347,10 +2369,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 10,
-          "desc": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "FCS4期第10台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2377,10 +2399,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 13,
-          "desc": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2407,10 +2429,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 14,
-          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2437,10 +2459,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 8,
-          "desc": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "FCS6期第8台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2474,6 +2496,27 @@
           "errMsg": "凱聖工業的有日照值但未發電",
           "level": 2,
           "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "台南機場",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv13",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "red",
+      "time": "2026-10-31 17:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 13,
+          "desc": "台南機場第13台逆變器(SN碼: E1-17.42kWp亞力TOUGH)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
+          "errMsg": "台南機場第13台逆變器(SN碼: E1-17.42kWp亞力TOUGH)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
         }
       ]
     },
@@ -2586,14 +2629,14 @@
       "which": "系統斷線",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "orange",
-      "time": "2026-10-31 16:00:00",
+      "time": "2026-10-31 16:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T16:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": null,
-          "desc": "彩邦界(仁德廠)的整場無有效發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "彩邦界(仁德廠)的整場無有效發電，時間: 2026-10-31 16:00 到 2026-10-31 16:30",
           "errMsg": "彩邦界(仁德廠)的整場無有效發電",
           "level": 2,
           "colorLabel": "orange"
@@ -2611,10 +2654,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 12,
-          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2641,10 +2684,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 15,
-          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2671,10 +2714,10 @@
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-10-31T16:00:00.000+08:00",
+          "timestamp": "2026-10-31T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 21,
-          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-10-31 15:30 到 2026-10-31 16:00",
+          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-10-31 16:30 到 2026-10-31 17:00",
           "errMsg": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
