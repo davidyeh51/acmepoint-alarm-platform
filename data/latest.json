@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "snapshotId": "2026-11-04_10-00",
-    "updatedAt": "2026-11-04 10:52:15",
-    "totalSitesWithAlarms": 81,
-    "totalDistinctIssues": 422,
-    "totalRawAlarms": 3259,
+    "snapshotId": "2026-11-04_18-00",
+    "updatedAt": "2026-11-04 18:22:21",
+    "totalSitesWithAlarms": 91,
+    "totalDistinctIssues": 514,
+    "totalRawAlarms": 3478,
     "severityCounts": {
-      "red": 137,
-      "orange": 285,
+      "red": 144,
+      "orange": 370,
       "white": 0
     }
   },
@@ -15,27 +15,27 @@
     "typeDistribution": [
       {
         "type": "發電效率不佳",
-        "count": 278,
-        "percentage": 65.9
+        "count": 361,
+        "percentage": 70.2
       },
       {
         "type": "裝置斷訊",
-        "count": 108,
-        "percentage": 25.6
+        "count": 110,
+        "percentage": 21.4
       },
       {
         "type": "發電數據異常",
-        "count": 21,
-        "percentage": 5.0
+        "count": 25,
+        "percentage": 4.9
       },
       {
         "type": "系統未連線",
-        "count": 10,
-        "percentage": 2.4
+        "count": 12,
+        "percentage": 2.3
       },
       {
         "type": "部份通訊異常",
-        "count": 5,
+        "count": 6,
         "percentage": 1.2
       }
     ],
@@ -44,10 +44,11 @@
         "factoryName": "新陽",
         "county": "雲林縣",
         "maintainer": "羅健國",
-        "distinctIssuesCount": 31,
-        "totalRawAlarms": 69,
-        "devicesCount": 18,
+        "distinctIssuesCount": 36,
+        "totalRawAlarms": 77,
+        "devicesCount": 22,
         "devicesList": [
+          "Inv02",
           "Inv03",
           "Inv04",
           "Inv05",
@@ -56,11 +57,14 @@
           "Inv08",
           "Inv09",
           "Inv10",
+          "Inv11",
           "Inv12",
           "Inv13",
           "Inv14",
           "Inv15",
           "Inv16",
+          "Inv17",
+          "Inv18",
           "Inv19",
           "Inv20",
           "Inv21",
@@ -71,17 +75,18 @@
           "裝置斷訊": 10,
           "部份通訊異常": 1,
           "發電數據異常": 3,
-          "發電效率不佳": 17
+          "系統未連線": 1,
+          "發電效率不佳": 21
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:30:00"
+        "latestTime": "2026-11-04 13:30:00"
       },
       {
         "factoryName": "台南機場",
         "county": "台南市",
         "maintainer": "維運一課",
-        "distinctIssuesCount": 24,
-        "totalRawAlarms": 30,
+        "distinctIssuesCount": 28,
+        "totalRawAlarms": 35,
         "devicesCount": 16,
         "devicesList": [
           "Inv01",
@@ -103,10 +108,10 @@
         ],
         "alarmTypeCounts": {
           "裝置斷訊": 15,
-          "發電效率不佳": 9
+          "發電效率不佳": 13
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:00:00"
+        "latestTime": "2026-11-04 15:30:00"
       },
       {
         "factoryName": "台瑞電氣",
@@ -176,7 +181,7 @@
         "county": "彰化縣",
         "maintainer": "維運二課",
         "distinctIssuesCount": 15,
-        "totalRawAlarms": 441,
+        "totalRawAlarms": 443,
         "devicesCount": 14,
         "devicesList": [
           "Inv01",
@@ -199,14 +204,14 @@
           "發電效率不佳": 14
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:00:00"
+        "latestTime": "2026-11-04 12:30:00"
       },
       {
         "factoryName": "Chemik Y1-3B",
         "county": "彰化縣",
         "maintainer": "維運二課",
         "distinctIssuesCount": 15,
-        "totalRawAlarms": 370,
+        "totalRawAlarms": 382,
         "devicesCount": 14,
         "devicesList": [
           "Inv01",
@@ -229,7 +234,7 @@
           "發電效率不佳": 14
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:00:00"
+        "latestTime": "2026-11-04 11:30:00"
       },
       {
         "factoryName": "Chemik Y1-3A",
@@ -265,7 +270,7 @@
         "county": "彰化縣",
         "maintainer": "維運二課",
         "distinctIssuesCount": 14,
-        "totalRawAlarms": 397,
+        "totalRawAlarms": 399,
         "devicesCount": 14,
         "devicesList": [
           "Inv01",
@@ -287,7 +292,65 @@
           "發電效率不佳": 14
         },
         "worstColor": "orange",
-        "latestTime": "2026-11-04 10:00:00"
+        "latestTime": "2026-11-04 11:30:00"
+      },
+      {
+        "factoryName": "矽品-中科廠",
+        "county": "台中市",
+        "maintainer": "維運二課",
+        "distinctIssuesCount": 14,
+        "totalRawAlarms": 45,
+        "devicesCount": 14,
+        "devicesList": [
+          "Anemometer",
+          "Inv01",
+          "Inv02",
+          "Inv03",
+          "Inv05",
+          "Inv14",
+          "Inv15",
+          "Inv21",
+          "Inv23",
+          "Inv40",
+          "Inv41",
+          "Inv52",
+          "Inv56",
+          "Inv57"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 1,
+          "發電效率不佳": 13
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "東和二期",
+        "county": "台南市",
+        "maintainer": "王永晴",
+        "distinctIssuesCount": 14,
+        "totalRawAlarms": 17,
+        "devicesCount": 11,
+        "devicesList": [
+          "ENVtemp",
+          "Inv01",
+          "Inv02",
+          "Inv08",
+          "Inv09",
+          "Inv11",
+          "Inv12",
+          "Inv15",
+          "Inv16",
+          "Inv17",
+          "PVTemp"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 5,
+          "發電數據異常": 1,
+          "發電效率不佳": 8
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 12:30:00"
       },
       {
         "factoryName": "FCS4期",
@@ -311,7 +374,7 @@
           "發電效率不佳": 7
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:30:00"
+        "latestTime": "2026-11-04 12:00:00"
       },
       {
         "factoryName": "鉅橡",
@@ -419,31 +482,31 @@
         "latestTime": "2026-11-04 08:30:00"
       },
       {
-        "factoryName": "矽品-中科廠",
-        "county": "台中市",
-        "maintainer": "維運二課",
+        "factoryName": "楠梓污水廠三期",
+        "county": "高雄市",
+        "maintainer": "李孟家",
         "distinctIssuesCount": 11,
-        "totalRawAlarms": 17,
+        "totalRawAlarms": 21,
         "devicesCount": 11,
         "devicesList": [
           "Anemometer",
+          "Inv01",
           "Inv02",
           "Inv03",
           "Inv05",
+          "Inv06",
+          "Inv08",
+          "Inv14",
           "Inv15",
-          "Inv21",
-          "Inv23",
-          "Inv40",
-          "Inv41",
-          "Inv52",
-          "Inv56"
+          "Inv16",
+          "Inv18"
         ],
         "alarmTypeCounts": {
           "裝置斷訊": 1,
           "發電效率不佳": 10
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:00:00"
+        "latestTime": "2026-11-04 15:30:00"
       },
       {
         "factoryName": "生利二期13區",
@@ -471,6 +534,29 @@
         "latestTime": "2026-11-04 09:00:00"
       },
       {
+        "factoryName": "日煙國際",
+        "county": "台南市",
+        "maintainer": "維運一課",
+        "distinctIssuesCount": 10,
+        "totalRawAlarms": 19,
+        "devicesCount": 6,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv03",
+          "Inv04",
+          "Inv09",
+          "Inv10"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 2,
+          "發電數據異常": 2,
+          "發電效率不佳": 6
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 16:30:00"
+      },
+      {
         "factoryName": "高振二期",
         "county": "高雄市",
         "maintainer": "維運一課",
@@ -495,6 +581,31 @@
         },
         "worstColor": "red",
         "latestTime": "2026-11-04 00:00:00"
+      },
+      {
+        "factoryName": "受興二期",
+        "county": "台南市",
+        "maintainer": "郭文奇",
+        "distinctIssuesCount": 10,
+        "totalRawAlarms": 10,
+        "devicesCount": 10,
+        "devicesList": [
+          "Inv03",
+          "Inv04",
+          "Inv05",
+          "Inv06",
+          "Inv07",
+          "Inv08",
+          "Inv09",
+          "Inv10",
+          "Inv11",
+          "Inv12"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 10
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 11:00:00"
       },
       {
         "factoryName": "嘉惠",
@@ -566,27 +677,27 @@
         "latestTime": "2026-11-04 10:30:00"
       },
       {
-        "factoryName": "日煙國際",
+        "factoryName": "鉅橡三期",
         "county": "台南市",
         "maintainer": "維運一課",
         "distinctIssuesCount": 8,
-        "totalRawAlarms": 13,
-        "devicesCount": 6,
+        "totalRawAlarms": 8,
+        "devicesCount": 8,
         "devicesList": [
           "Inv01",
           "Inv02",
           "Inv03",
           "Inv04",
-          "Inv09",
-          "Inv10"
+          "Inv05",
+          "Inv07",
+          "Inv08",
+          "Inv09"
         ],
         "alarmTypeCounts": {
-          "裝置斷訊": 1,
-          "發電數據異常": 1,
-          "發電效率不佳": 6
+          "發電效率不佳": 8
         },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 09:00:00"
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 13:00:00"
       },
       {
         "factoryName": "Chemik Y1-5A",
@@ -611,6 +722,28 @@
         "latestTime": "2026-11-04 10:00:00"
       },
       {
+        "factoryName": "東和三期",
+        "county": "台南市",
+        "maintainer": "王永晴",
+        "distinctIssuesCount": 7,
+        "totalRawAlarms": 7,
+        "devicesCount": 7,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv05",
+          "Inv12",
+          "Inv14",
+          "Inv16",
+          "Inv17"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 7
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 11:00:00"
+      },
+      {
         "factoryName": "joe_test",
         "county": "高雄市",
         "maintainer": "維運一課",
@@ -630,6 +763,27 @@
         },
         "worstColor": "red",
         "latestTime": "2026-11-04 09:00:00"
+      },
+      {
+        "factoryName": "新陽能源英茂",
+        "county": "桃園市",
+        "maintainer": "羅健國",
+        "distinctIssuesCount": 6,
+        "totalRawAlarms": 21,
+        "devicesCount": 6,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv03",
+          "Inv04",
+          "Inv05",
+          "Inv06"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 6
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 11:30:00"
       },
       {
         "factoryName": "雲豹-路竹三爺埤第三型",
@@ -654,47 +808,46 @@
         "latestTime": "2026-11-04 10:00:00"
       },
       {
-        "factoryName": "楠梓污水廠三期",
+        "factoryName": "芳生螺絲二期",
         "county": "高雄市",
-        "maintainer": "李孟家",
+        "maintainer": "NA",
         "distinctIssuesCount": 6,
-        "totalRawAlarms": 11,
+        "totalRawAlarms": 16,
         "devicesCount": 6,
         "devicesList": [
-          "Anemometer",
-          "Inv03",
           "Inv05",
-          "Inv06",
-          "Inv08",
-          "Inv18"
-        ],
-        "alarmTypeCounts": {
-          "裝置斷訊": 1,
-          "發電效率不佳": 5
-        },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 10:00:00"
-      },
-      {
-        "factoryName": "新陽能源英茂",
-        "county": "桃園市",
-        "maintainer": "羅健國",
-        "distinctIssuesCount": 6,
-        "totalRawAlarms": 7,
-        "devicesCount": 6,
-        "devicesList": [
-          "Inv01",
-          "Inv02",
-          "Inv03",
-          "Inv04",
-          "Inv05",
-          "Inv06"
+          "Inv13",
+          "Inv14",
+          "Inv15",
+          "Inv17",
+          "Inv19"
         ],
         "alarmTypeCounts": {
           "發電效率不佳": 6
         },
         "worstColor": "orange",
-        "latestTime": "2026-11-04 09:00:00"
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "新陽勤誠興業",
+        "county": "嘉義縣",
+        "maintainer": "蘇哲淋",
+        "distinctIssuesCount": 6,
+        "totalRawAlarms": 11,
+        "devicesCount": 6,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv03",
+          "Inv06",
+          "Inv07",
+          "Inv17"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 6
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 13:30:00"
       },
       {
         "factoryName": "彩邦界(仁德廠)",
@@ -716,7 +869,7 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:30:00"
+        "latestTime": "2026-11-04 16:30:00"
       },
       {
         "factoryName": "恒美",
@@ -740,11 +893,75 @@
         "latestTime": "2026-11-04 00:00:00"
       },
       {
+        "factoryName": "東和一期",
+        "county": "台南市",
+        "maintainer": "維運一課",
+        "distinctIssuesCount": 6,
+        "totalRawAlarms": 6,
+        "devicesCount": 6,
+        "devicesList": [
+          "ENVtemp",
+          "HV_Meter",
+          "Inv01",
+          "Inv04",
+          "LV_Meter",
+          "PVTemp"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 5,
+          "發電效率不佳": 1
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "仁美商標",
+        "county": "台南市",
+        "maintainer": "郭文奇",
+        "distinctIssuesCount": 5,
+        "totalRawAlarms": 12,
+        "devicesCount": 5,
+        "devicesList": [
+          "HV_Meter",
+          "Inv02",
+          "Inv03",
+          "LV_Meter",
+          "系統斷線"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 2,
+          "部份通訊異常": 1,
+          "發電效率不佳": 2
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 15:00:00"
+      },
+      {
+        "factoryName": "展維實業",
+        "county": "彰化縣",
+        "maintainer": "汪順發",
+        "distinctIssuesCount": 5,
+        "totalRawAlarms": 9,
+        "devicesCount": 4,
+        "devicesList": [
+          "Inv01",
+          "Inv04",
+          "Inv05",
+          "Inv06"
+        ],
+        "alarmTypeCounts": {
+          "發電數據異常": 1,
+          "發電效率不佳": 4
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 14:30:00"
+      },
+      {
         "factoryName": "芳生螺絲",
         "county": "高雄市",
         "maintainer": "-",
         "distinctIssuesCount": 5,
-        "totalRawAlarms": 6,
+        "totalRawAlarms": 8,
         "devicesCount": 5,
         "devicesList": [
           "Inv12",
@@ -758,48 +975,28 @@
           "發電效率不佳": 4
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 08:30:00"
+        "latestTime": "2026-11-04 13:30:00"
       },
       {
-        "factoryName": "東和一期",
-        "county": "台南市",
-        "maintainer": "維運一課",
-        "distinctIssuesCount": 5,
-        "totalRawAlarms": 5,
-        "devicesCount": 5,
-        "devicesList": [
-          "ENVtemp",
-          "HV_Meter",
-          "Inv01",
-          "LV_Meter",
-          "PVTemp"
-        ],
-        "alarmTypeCounts": {
-          "裝置斷訊": 5
-        },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 00:00:00"
-      },
-      {
-        "factoryName": "仁美商標",
-        "county": "台南市",
-        "maintainer": "郭文奇",
+        "factoryName": "特力家居高雄館",
+        "county": "高雄市",
+        "maintainer": "李孟家",
         "distinctIssuesCount": 4,
         "totalRawAlarms": 5,
         "devicesCount": 4,
         "devicesList": [
-          "HV_Meter",
-          "Inv02",
-          "LV_Meter",
-          "系統斷線"
+          "Inv04",
+          "Inv06",
+          "Inv07",
+          "LV_Meter"
         ],
         "alarmTypeCounts": {
-          "裝置斷訊": 2,
-          "部份通訊異常": 1,
+          "裝置斷訊": 1,
+          "發電數據異常": 2,
           "發電效率不佳": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:00:00"
+        "latestTime": "2026-11-04 15:30:00"
       },
       {
         "factoryName": "正鶴",
@@ -819,26 +1016,7 @@
           "發電效率不佳": 2
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:30:00"
-      },
-      {
-        "factoryName": "東和二期",
-        "county": "台南市",
-        "maintainer": "王永晴",
-        "distinctIssuesCount": 4,
-        "totalRawAlarms": 4,
-        "devicesCount": 4,
-        "devicesList": [
-          "ENVtemp",
-          "Inv01",
-          "Inv09",
-          "PVTemp"
-        ],
-        "alarmTypeCounts": {
-          "裝置斷訊": 4
-        },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 06:00:00"
+        "latestTime": "2026-11-04 13:30:00"
       },
       {
         "factoryName": "總福塑膠",
@@ -898,6 +1076,24 @@
         "latestTime": "2026-11-04 10:30:00"
       },
       {
+        "factoryName": "福斯商旅頂立台南展示中心",
+        "county": "台南市",
+        "maintainer": "N/A",
+        "distinctIssuesCount": 3,
+        "totalRawAlarms": 25,
+        "devicesCount": 3,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv03"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 3
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
         "factoryName": "鳳山圳滯洪池",
         "county": "高雄市",
         "maintainer": "維運一課",
@@ -917,14 +1113,32 @@
         "latestTime": "2026-11-04 10:30:00"
       },
       {
-        "factoryName": "展維實業",
-        "county": "彰化縣",
+        "factoryName": "欣銓科技鼎興廠TSP1",
+        "county": "新竹縣",
+        "maintainer": "汪順發",
+        "distinctIssuesCount": 3,
+        "totalRawAlarms": 6,
+        "devicesCount": 3,
+        "devicesList": [
+          "Inv01",
+          "Inv02",
+          "Inv04"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 3
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "長榮國際儲運一期",
+        "county": "台中市",
         "maintainer": "汪順發",
         "distinctIssuesCount": 3,
         "totalRawAlarms": 5,
         "devicesCount": 3,
         "devicesList": [
-          "Inv01",
+          "Inv02",
           "Inv04",
           "Inv05"
         ],
@@ -932,7 +1146,25 @@
           "發電效率不佳": 3
         },
         "worstColor": "orange",
-        "latestTime": "2026-11-04 09:00:00"
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "北歐之光",
+        "county": "台北市",
+        "maintainer": "李昀璁",
+        "distinctIssuesCount": 3,
+        "totalRawAlarms": 4,
+        "devicesCount": 2,
+        "devicesList": [
+          "Inv01",
+          "Inv02"
+        ],
+        "alarmTypeCounts": {
+          "裝置斷訊": 2,
+          "發電效率不佳": 1
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 12:00:00"
       },
       {
         "factoryName": "正瀚生技",
@@ -971,6 +1203,26 @@
         "latestTime": "2026-11-04 10:30:00"
       },
       {
+        "factoryName": "東毓",
+        "county": "南投縣",
+        "maintainer": "維運二課",
+        "distinctIssuesCount": 3,
+        "totalRawAlarms": 3,
+        "devicesCount": 3,
+        "devicesList": [
+          "Inv10",
+          "Inv12",
+          "系統斷線"
+        ],
+        "alarmTypeCounts": {
+          "發電數據異常": 1,
+          "系統未連線": 1,
+          "發電效率不佳": 1
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 13:30:00"
+      },
+      {
         "factoryName": "路竹王祈仁",
         "county": "高雄市",
         "maintainer": "李孟家",
@@ -990,81 +1242,80 @@
         "latestTime": "2026-11-04 09:00:00"
       },
       {
-        "factoryName": "特力家居高雄館",
-        "county": "高雄市",
-        "maintainer": "李孟家",
-        "distinctIssuesCount": 3,
-        "totalRawAlarms": 3,
-        "devicesCount": 3,
-        "devicesList": [
-          "Inv04",
-          "Inv06",
-          "LV_Meter"
-        ],
-        "alarmTypeCounts": {
-          "裝置斷訊": 1,
-          "發電數據異常": 2
-        },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 07:30:00"
-      },
-      {
-        "factoryName": "福斯商旅頂立台南展示中心",
-        "county": "台南市",
-        "maintainer": "N/A",
+        "factoryName": "凱聖工業",
+        "county": "彰化縣",
+        "maintainer": "張宇捷",
         "distinctIssuesCount": 2,
         "totalRawAlarms": 9,
         "devicesCount": 2,
         "devicesList": [
           "Inv01",
-          "Inv02"
+          "系統斷線"
         ],
         "alarmTypeCounts": {
-          "發電效率不佳": 2
+          "發電數據異常": 1,
+          "發電效率不佳": 1
         },
         "worstColor": "orange",
-        "latestTime": "2026-11-04 08:30:00"
+        "latestTime": "2026-11-04 12:00:00"
       },
       {
-        "factoryName": "芳生螺絲二期",
-        "county": "高雄市",
-        "maintainer": "NA",
+        "factoryName": "欣銓科技鼎興廠TSP2",
+        "county": "新竹縣",
+        "maintainer": "汪順發",
         "distinctIssuesCount": 2,
-        "totalRawAlarms": 5,
-        "devicesCount": 2,
-        "devicesList": [
-          "Inv05",
-          "Inv14"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 2
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 08:30:00"
-      },
-      {
-        "factoryName": "北歐之光",
-        "county": "台北市",
-        "maintainer": "李昀璁",
-        "distinctIssuesCount": 2,
-        "totalRawAlarms": 2,
+        "totalRawAlarms": 8,
         "devicesCount": 2,
         "devicesList": [
           "Inv01",
-          "Inv02"
+          "Inv03"
         ],
         "alarmTypeCounts": {
-          "裝置斷訊": 2
+          "發電效率不佳": 2
         },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 00:00:00"
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "宜佳美牧場",
+        "county": "台南市",
+        "maintainer": "張晏誠",
+        "distinctIssuesCount": 2,
+        "totalRawAlarms": 6,
+        "devicesCount": 2,
+        "devicesList": [
+          "Inv07",
+          "Inv08"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 2
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "受興一期",
+        "county": "台南市",
+        "maintainer": "郭文奇",
+        "distinctIssuesCount": 2,
+        "totalRawAlarms": 3,
+        "devicesCount": 2,
+        "devicesList": [
+          "Inv02",
+          "Inv05"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 2
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 11:00:00"
       },
       {
         "factoryName": "奇景總部停車場",
         "county": "台南市",
         "maintainer": "維運一課",
         "distinctIssuesCount": 2,
-        "totalRawAlarms": 2,
+        "totalRawAlarms": 3,
         "devicesCount": 2,
         "devicesList": [
           "HV_Meter",
@@ -1075,7 +1326,41 @@
           "發電效率不佳": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 08:30:00"
+        "latestTime": "2026-11-04 11:00:00"
+      },
+      {
+        "factoryName": "合昱開發",
+        "county": "高雄市",
+        "maintainer": "維運一課",
+        "distinctIssuesCount": 2,
+        "totalRawAlarms": 3,
+        "devicesCount": 2,
+        "devicesList": [
+          "Inv01",
+          "Inv02"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 2
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
+      },
+      {
+        "factoryName": "海創人培中心",
+        "county": "高雄市",
+        "maintainer": "李孟家",
+        "distinctIssuesCount": 2,
+        "totalRawAlarms": 3,
+        "devicesCount": 1,
+        "devicesList": [
+          "Inv09"
+        ],
+        "alarmTypeCounts": {
+          "發電數據異常": 1,
+          "發電效率不佳": 1
+        },
+        "worstColor": "red",
+        "latestTime": "2026-11-04 13:30:00"
       },
       {
         "factoryName": "富士電子",
@@ -1110,7 +1395,25 @@
           "發電數據異常": 1
         },
         "worstColor": "red",
-        "latestTime": "2026-11-04 10:30:00"
+        "latestTime": "2026-11-04 17:00:00"
+      },
+      {
+        "factoryName": "裕益竹北廠",
+        "county": "新竹縣",
+        "maintainer": "維運二課",
+        "distinctIssuesCount": 2,
+        "totalRawAlarms": 2,
+        "devicesCount": 2,
+        "devicesList": [
+          "Inv03",
+          "系統斷線"
+        ],
+        "alarmTypeCounts": {
+          "部份通訊異常": 1,
+          "發電效率不佳": 1
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
       },
       {
         "factoryName": "大南方資源再生",
@@ -1128,6 +1431,40 @@
         },
         "worstColor": "red",
         "latestTime": "2026-11-04 00:00:00"
+      },
+      {
+        "factoryName": "恒美二期",
+        "county": "台南市",
+        "maintainer": "郭文奇",
+        "distinctIssuesCount": 2,
+        "totalRawAlarms": 2,
+        "devicesCount": 2,
+        "devicesList": [
+          "Inv01",
+          "Inv03"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 2
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 14:00:00"
+      },
+      {
+        "factoryName": "尚準",
+        "county": "高雄市",
+        "maintainer": "郭明宗",
+        "distinctIssuesCount": 2,
+        "totalRawAlarms": 2,
+        "devicesCount": 2,
+        "devicesList": [
+          "Inv01",
+          "Inv02"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 2
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 11:00:00"
       },
       {
         "factoryName": "安南賴候淑貞",
@@ -1165,22 +1502,6 @@
         "latestTime": "2026-11-04 00:00:00"
       },
       {
-        "factoryName": "凱聖工業",
-        "county": "彰化縣",
-        "maintainer": "張宇捷",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 8,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv01"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 09:00:00"
-      },
-      {
         "factoryName": "順益中壢廠二期",
         "county": "桃園市",
         "maintainer": "張宇捷",
@@ -1197,36 +1518,20 @@
         "latestTime": "2026-11-04 08:30:00"
       },
       {
-        "factoryName": "欣銓科技鼎興廠TSP2",
-        "county": "新竹縣",
-        "maintainer": "汪順發",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 4,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv01"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 09:00:00"
-      },
-      {
-        "factoryName": "受興一期",
-        "county": "台南市",
-        "maintainer": "郭文奇",
+        "factoryName": "海創中心",
+        "county": "高雄市",
+        "maintainer": "李孟家",
         "distinctIssuesCount": 1,
         "totalRawAlarms": 2,
         "devicesCount": 1,
         "devicesList": [
-          "Inv05"
+          "Inv03"
         ],
         "alarmTypeCounts": {
           "發電效率不佳": 1
         },
         "worstColor": "orange",
-        "latestTime": "2026-11-04 09:30:00"
+        "latestTime": "2026-11-04 11:30:00"
       },
       {
         "factoryName": "BM7倉庫(二期)",
@@ -1245,6 +1550,22 @@
         "latestTime": "2026-11-04 10:30:00"
       },
       {
+        "factoryName": "長榮國際儲運二期",
+        "county": "台中市",
+        "maintainer": "汪順發",
+        "distinctIssuesCount": 1,
+        "totalRawAlarms": 2,
+        "devicesCount": 1,
+        "devicesList": [
+          "Inv03"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 1
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 12:30:00"
+      },
+      {
         "factoryName": "富強鑫一期東側重建",
         "county": "台南市",
         "maintainer": "林遠香",
@@ -1259,22 +1580,6 @@
         },
         "worstColor": "red",
         "latestTime": "2026-11-04 00:00:00"
-      },
-      {
-        "factoryName": "海創中心",
-        "county": "高雄市",
-        "maintainer": "李孟家",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv03"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 10:00:00"
       },
       {
         "factoryName": "新大",
@@ -1293,20 +1598,20 @@
         "latestTime": "2026-11-04 00:00:00"
       },
       {
-        "factoryName": "海創人培中心",
+        "factoryName": "雲豹-路竹三鎮埤",
         "county": "高雄市",
         "maintainer": "李孟家",
         "distinctIssuesCount": 1,
         "totalRawAlarms": 1,
         "devicesCount": 1,
         "devicesList": [
-          "Inv09"
+          "Inv02"
         ],
         "alarmTypeCounts": {
-          "發電數據異常": 1
+          "發電效率不佳": 1
         },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 10:30:00"
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
       },
       {
         "factoryName": "台灣愛德克",
@@ -1323,6 +1628,22 @@
         },
         "worstColor": "red",
         "latestTime": "2026-11-04 00:00:00"
+      },
+      {
+        "factoryName": "奇景光電二廠",
+        "county": "台南市",
+        "maintainer": "維運一課",
+        "distinctIssuesCount": 1,
+        "totalRawAlarms": 1,
+        "devicesCount": 1,
+        "devicesList": [
+          "Inv13"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 1
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:00:00"
       },
       {
         "factoryName": "璽富路竹",
@@ -1373,22 +1694,6 @@
         "latestTime": "2026-11-04 00:00:00"
       },
       {
-        "factoryName": "裕益竹北廠",
-        "county": "新竹縣",
-        "maintainer": "維運二課",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv03"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 09:30:00"
-      },
-      {
         "factoryName": "奇樺科技",
         "county": "高雄市",
         "maintainer": "維運一課",
@@ -1403,22 +1708,6 @@
         },
         "worstColor": "red",
         "latestTime": "2026-11-04 00:00:00"
-      },
-      {
-        "factoryName": "東毓",
-        "county": "南投縣",
-        "maintainer": "維運二課",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv10"
-        ],
-        "alarmTypeCounts": {
-          "發電數據異常": 1
-        },
-        "worstColor": "red",
-        "latestTime": "2026-11-04 07:30:00"
       },
       {
         "factoryName": "順益中壢廠一期",
@@ -1501,70 +1790,6 @@
         "latestTime": "2026-11-04 00:00:00"
       },
       {
-        "factoryName": "欣銓科技鼎興廠TSP1",
-        "county": "新竹縣",
-        "maintainer": "汪順發",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv02"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 09:00:00"
-      },
-      {
-        "factoryName": "恒美二期",
-        "county": "台南市",
-        "maintainer": "郭文奇",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv01"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 10:00:00"
-      },
-      {
-        "factoryName": "新陽勤誠興業",
-        "county": "嘉義縣",
-        "maintainer": "蘇哲淋",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv17"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 08:30:00"
-      },
-      {
-        "factoryName": "尚準",
-        "county": "高雄市",
-        "maintainer": "郭明宗",
-        "distinctIssuesCount": 1,
-        "totalRawAlarms": 1,
-        "devicesCount": 1,
-        "devicesList": [
-          "Inv01"
-        ],
-        "alarmTypeCounts": {
-          "發電效率不佳": 1
-        },
-        "worstColor": "orange",
-        "latestTime": "2026-11-04 10:30:00"
-      },
-      {
         "factoryName": "雲豹-路竹三爺埤第一型",
         "county": "高雄市",
         "maintainer": "郭文奇",
@@ -1595,6 +1820,22 @@
         },
         "worstColor": "red",
         "latestTime": "2026-11-04 00:00:00"
+      },
+      {
+        "factoryName": "大舜鈑金科工三期",
+        "county": "台南市",
+        "maintainer": "維運一課",
+        "distinctIssuesCount": 1,
+        "totalRawAlarms": 1,
+        "devicesCount": 1,
+        "devicesList": [
+          "Inv06"
+        ],
+        "alarmTypeCounts": {
+          "發電效率不佳": 1
+        },
+        "worstColor": "orange",
+        "latestTime": "2026-11-04 15:30:00"
       },
       {
         "factoryName": "宜春企業(宜春新廠)",
@@ -1664,163 +1905,163 @@
     "countyDistribution": [
       {
         "county": "台南市",
-        "count": 135,
-        "percentage": 32.0
+        "count": 185,
+        "percentage": 36.0
       },
       {
         "county": "彰化縣",
-        "count": 100,
-        "percentage": 23.7
+        "count": 103,
+        "percentage": 20.0
       },
       {
         "county": "高雄市",
-        "count": 56,
-        "percentage": 13.3
+        "count": 71,
+        "percentage": 13.8
       },
       {
         "county": "台中市",
-        "count": 42,
-        "percentage": 10.0
+        "count": 49,
+        "percentage": 9.5
       },
       {
         "county": "雲林縣",
-        "count": 32,
-        "percentage": 7.6
+        "count": 37,
+        "percentage": 7.2
       },
       {
         "county": "嘉義縣",
-        "count": 24,
-        "percentage": 5.7
+        "count": 29,
+        "percentage": 5.6
       },
       {
         "county": "桃園市",
         "count": 12,
-        "percentage": 2.8
+        "percentage": 2.3
       },
       {
         "county": "屏東縣",
         "count": 10,
-        "percentage": 2.4
-      },
-      {
-        "county": "南投縣",
-        "count": 4,
-        "percentage": 0.9
+        "percentage": 1.9
       },
       {
         "county": "新竹縣",
-        "count": 3,
-        "percentage": 0.7
+        "count": 7,
+        "percentage": 1.4
+      },
+      {
+        "county": "南投縣",
+        "count": 6,
+        "percentage": 1.2
       },
       {
         "county": "台北市",
-        "count": 2,
-        "percentage": 0.5
+        "count": 3,
+        "percentage": 0.6
       },
       {
         "county": "-",
         "count": 2,
-        "percentage": 0.5
+        "percentage": 0.4
       }
     ],
     "maintainerDistribution": [
       {
         "maintainer": "維運二課",
-        "count": 112,
-        "percentage": 26.5
+        "count": 118,
+        "percentage": 23.0
       },
       {
         "maintainer": "維運一課",
-        "count": 98,
-        "percentage": 23.2
+        "count": 117,
+        "percentage": 22.8
       },
       {
         "maintainer": "羅健國",
-        "count": 38,
-        "percentage": 9.0
+        "count": 43,
+        "percentage": 8.4
       },
       {
         "maintainer": "汪順發",
-        "count": 33,
-        "percentage": 7.8
+        "count": 42,
+        "percentage": 8.2
       },
       {
         "maintainer": "李孟家",
-        "count": 32,
-        "percentage": 7.6
+        "count": 40,
+        "percentage": 7.8
+      },
+      {
+        "maintainer": "郭文奇",
+        "count": 31,
+        "percentage": 6.0
       },
       {
         "maintainer": "張晏誠",
-        "count": 24,
-        "percentage": 5.7
+        "count": 26,
+        "percentage": 5.1
+      },
+      {
+        "maintainer": "王永晴",
+        "count": 23,
+        "percentage": 4.5
       },
       {
         "maintainer": "-",
         "count": 20,
-        "percentage": 4.7
+        "percentage": 3.9
       },
       {
         "maintainer": "姜興中",
         "count": 20,
-        "percentage": 4.7
+        "percentage": 3.9
       },
       {
-        "maintainer": "郭文奇",
-        "count": 18,
-        "percentage": 4.3
-      },
-      {
-        "maintainer": "王永晴",
-        "count": 6,
+        "maintainer": "NA",
+        "count": 7,
         "percentage": 1.4
+      },
+      {
+        "maintainer": "蘇哲淋",
+        "count": 6,
+        "percentage": 1.2
+      },
+      {
+        "maintainer": "張宇捷",
+        "count": 4,
+        "percentage": 0.8
+      },
+      {
+        "maintainer": "李昀璁",
+        "count": 3,
+        "percentage": 0.6
+      },
+      {
+        "maintainer": "N/A",
+        "count": 3,
+        "percentage": 0.6
       },
       {
         "maintainer": "Evan",
         "count": 3,
-        "percentage": 0.7
-      },
-      {
-        "maintainer": "張宇捷",
-        "count": 3,
-        "percentage": 0.7
+        "percentage": 0.6
       },
       {
         "maintainer": "維運二課-汪順發",
         "count": 3,
-        "percentage": 0.7
-      },
-      {
-        "maintainer": "NA",
-        "count": 3,
-        "percentage": 0.7
-      },
-      {
-        "maintainer": "李昀璁",
-        "count": 2,
-        "percentage": 0.5
-      },
-      {
-        "maintainer": "N/A",
-        "count": 2,
-        "percentage": 0.5
+        "percentage": 0.6
       },
       {
         "maintainer": "林遠香",
         "count": 2,
-        "percentage": 0.5
-      },
-      {
-        "maintainer": "陳谷濱",
-        "count": 1,
-        "percentage": 0.2
-      },
-      {
-        "maintainer": "蘇哲淋",
-        "count": 1,
-        "percentage": 0.2
+        "percentage": 0.4
       },
       {
         "maintainer": "郭明宗",
+        "count": 2,
+        "percentage": 0.4
+      },
+      {
+        "maintainer": "陳谷濱",
         "count": 1,
         "percentage": 0.2
       }
@@ -1912,6 +2153,27 @@
       ]
     },
     {
+      "factoryName": "新陽",
+      "county": "雲林縣",
+      "maintainer": "羅健國",
+      "which": "系統斷線",
+      "lastAlarmType": "系統未連線",
+      "lastColorLabel": "red",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.999+08:00",
+          "alarmType": "系統未連線",
+          "inv": null,
+          "desc": "新陽 斷線，最後一筆資料時間為2026-11-04 10:29",
+          "errMsg": "",
+          "level": 6,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
       "factoryName": "晶碩光學股份有限公司",
       "county": "桃園市",
       "maintainer": "-",
@@ -1947,6 +2209,27 @@
           "alarmType": "系統未連線",
           "inv": null,
           "desc": "東哥二期 斷線，最後一筆資料時間為2026-09-30 14:45",
+          "errMsg": "",
+          "level": 6,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "東毓",
+      "county": "南投縣",
+      "maintainer": "維運二課",
+      "which": "系統斷線",
+      "lastAlarmType": "系統未連線",
+      "lastColorLabel": "red",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.169+08:00",
+          "alarmType": "系統未連線",
+          "inv": null,
+          "desc": "東毓 斷線，最後一筆資料時間為2026-11-04 11:24",
           "errMsg": "",
           "level": 6,
           "colorLabel": "red"
@@ -2044,14 +2327,14 @@
       "which": "Inv06",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 17:00:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 6,
-          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電，時間: 2026-11-04 16:30 到 2026-11-04 17:00",
           "errMsg": "BM7倉庫&BM10倉庫(一期)第6台逆變器(SN碼: 69.09KWp)變流器未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2128,23 +2411,23 @@
       "which": "Inv05",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 12:00:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 5,
-          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電，時間: 2026-11-04 16:30 到 2026-11-04 17:00",
           "errMsg": "FCS4期第5台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         },
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 5,
-          "desc": "FCS4期第5台逆變器(SN碼: N/A)有日照值但未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "FCS4期第5台逆變器(SN碼: N/A)有日照值但未發電，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
           "errMsg": "FCS4期第5台逆變器(SN碼: N/A)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2158,23 +2441,23 @@
       "which": "Inv13",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 12:00:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 13,
-          "desc": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電，時間: 2026-11-04 16:30 到 2026-11-04 17:00",
           "errMsg": "FCS4期第13台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         },
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 13,
-          "desc": "FCS4期第13台逆變器(SN碼: N/A)有日照值但未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "FCS4期第13台逆變器(SN碼: N/A)有日照值但未發電，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
           "errMsg": "FCS4期第13台逆變器(SN碼: N/A)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2188,26 +2471,47 @@
       "which": "Inv14",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 12:00:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 14,
-          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電，時間: 2026-11-04 16:30 到 2026-11-04 17:00",
           "errMsg": "FCS4期第14台逆變器(SN碼: N/A)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         },
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 14,
-          "desc": "FCS4期第14台逆變器(SN碼: N/A)有日照值但未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "FCS4期第14台逆變器(SN碼: N/A)有日照值但未發電，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
           "errMsg": "FCS4期第14台逆變器(SN碼: N/A)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "凱聖工業",
+      "county": "彰化縣",
+      "maintainer": "張宇捷",
+      "which": "系統斷線",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": null,
+          "desc": "凱聖工業的有日照值但未發電，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "凱聖工業的有日照值但未發電",
+          "level": 2,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -2254,20 +2558,50 @@
       ]
     },
     {
+      "factoryName": "展維實業",
+      "county": "彰化縣",
+      "maintainer": "汪順發",
+      "which": "Inv01",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "red",
+      "time": "2026-11-04 13:00:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 1,
+          "desc": "展維實業第1台逆變器(SN碼: N/A)有日照值但未發電，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "展維實業第1台逆變器(SN碼: N/A)有日照值但未發電",
+          "level": 2,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 1,
+          "desc": "展維實業第1台逆變器(SN碼: N/A)變流器未發電，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "展維實業第1台逆變器(SN碼: N/A)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
       "factoryName": "彩邦界(仁德廠)",
       "county": "台南市",
       "maintainer": "-",
       "which": "系統斷線",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 16:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T16:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": null,
-          "desc": "彩邦界(仁德廠)的整場無有效發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "彩邦界(仁德廠)的整場無有效發電，時間: 2026-11-04 16:00 到 2026-11-04 16:30",
           "errMsg": "彩邦界(仁德廠)的整場無有效發電",
           "level": 2,
           "colorLabel": "orange"
@@ -2281,23 +2615,23 @@
       "which": "Inv12",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 13:30:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 12,
-          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電，時間: 2026-11-04 16:30 到 2026-11-04 17:00",
           "errMsg": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         },
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 12,
-          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)有日照值但未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)有日照值但未發電，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
           "errMsg": "新陽第12台逆變器(SN碼: 22.88kW 已報價換監控系統)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2311,23 +2645,23 @@
       "which": "Inv15",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 13:30:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 15,
-          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電，時間: 2026-11-04 16:30 到 2026-11-04 17:00",
           "errMsg": "新陽第15台逆變器(SN碼: 22.88kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         },
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 15,
-          "desc": "新陽第15台逆變器(SN碼: 22.88kW)有日照值但未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "新陽第15台逆變器(SN碼: 22.88kW)有日照值但未發電，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
           "errMsg": "新陽第15台逆變器(SN碼: 22.88kW)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2341,23 +2675,23 @@
       "which": "Inv21",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 13:30:00",
       "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T17:00:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 21,
-          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電，時間: 2026-11-04 16:30 到 2026-11-04 17:00",
           "errMsg": "新陽第21台逆變器(SN碼: 20.8kW)變流器未發電",
           "level": 2,
           "colorLabel": "red"
         },
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 21,
-          "desc": "新陽第21台逆變器(SN碼: 20.8kW)有日照值但未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "新陽第21台逆變器(SN碼: 20.8kW)有日照值但未發電，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
           "errMsg": "新陽第21台逆變器(SN碼: 20.8kW)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
@@ -2371,15 +2705,84 @@
       "which": "Inv10",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 12:00:00",
+      "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T09:00:00.000+08:00",
+          "timestamp": "2026-11-04T16:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 10,
-          "desc": "日煙國際第10台逆變器(SN碼: 23.4KWp)變流器未發電，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
+          "desc": "日煙國際第10台逆變器(SN碼: 23.4KWp)變流器未發電，時間: 2026-11-04 16:00 到 2026-11-04 16:30",
           "errMsg": "日煙國際第10台逆變器(SN碼: 23.4KWp)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 10,
+          "desc": "日煙國際第10台逆變器(SN碼: 23.4KWp)有日照值但未發電，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "日煙國際第10台逆變器(SN碼: 23.4KWp)有日照值但未發電",
+          "level": 2,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "日煙國際",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv09",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "red",
+      "time": "2026-11-04 16:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 9,
+          "desc": "日煙國際第9台逆變器(SN碼: 26.975KWp)有日照值但未發電，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "日煙國際第9台逆變器(SN碼: 26.975KWp)有日照值但未發電",
+          "level": 2,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-11-04T16:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 9,
+          "desc": "日煙國際第9台逆變器(SN碼: 26.975KWp)變流器未發電，時間: 2026-11-04 16:00 到 2026-11-04 16:30",
+          "errMsg": "日煙國際第9台逆變器(SN碼: 26.975KWp)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv09",
+      "lastAlarmType": "發電數據異常",
+      "lastColorLabel": "red",
+      "time": "2026-11-04 12:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T16:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 9,
+          "desc": "東和二期第9台逆變器(SN碼: 施奈德CL25)變流器未發電，時間: 2026-11-04 16:00 到 2026-11-04 16:30",
+          "errMsg": "東和二期第9台逆變器(SN碼: 施奈德CL25)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 9,
+          "desc": "東和二期第9台逆變器(SN碼: 施奈德CL25)有日照值但未發電，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "東和二期第9台逆變器(SN碼: 施奈德CL25)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
         }
@@ -2413,14 +2816,14 @@
       "which": "系統斷線",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:30:00",
+      "time": "2026-11-04 13:30:00",
       "impact": 1,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": null,
-          "desc": "正鶴的有日照值但未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "正鶴的有日照值但未發電，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
           "errMsg": "正鶴的有日照值但未發電",
           "level": 2,
           "colorLabel": "orange"
@@ -2434,15 +2837,24 @@
       "which": "Inv09",
       "lastAlarmType": "發電數據異常",
       "lastColorLabel": "red",
-      "time": "2026-11-04 10:30:00",
-      "impact": 1,
+      "time": "2026-11-04 13:30:00",
+      "impact": 2,
       "allAlarms": [
         {
-          "timestamp": "2026-11-04T10:30:00.000+08:00",
+          "timestamp": "2026-11-04T14:30:00.000+08:00",
           "alarmType": "發電數據異常",
           "inv": 9,
-          "desc": "海創人培中心第9台逆變器(SN碼: 34.1kWp)變流器未發電，時間: 2026-11-04 10:00 到 2026-11-04 10:30",
+          "desc": "海創人培中心第9台逆變器(SN碼: 34.1kWp)變流器未發電，時間: 2026-11-04 14:00 到 2026-11-04 14:30",
           "errMsg": "海創人培中心第9台逆變器(SN碼: 34.1kWp)變流器未發電",
+          "level": 2,
+          "colorLabel": "red"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 9,
+          "desc": "海創人培中心第9台逆變器(SN碼: 34.1kWp)有日照值但未發電，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "海創人培中心第9台逆變器(SN碼: 34.1kWp)有日照值但未發電",
           "level": 2,
           "colorLabel": "red"
         }
@@ -4024,6 +4436,27 @@
       ]
     },
     {
+      "factoryName": "日煙國際",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv09",
+      "lastAlarmType": "裝置斷訊",
+      "lastColorLabel": "red",
+      "time": "2026-11-04 11:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "裝置斷訊",
+          "inv": 9,
+          "desc": "日煙國際 第9台Inverter(SN碼: 26.975KWp)斷訊，時間: 2026-11-04 11:00 到 2026-11-04 11:30，錯誤訊息: inv",
+          "errMsg": "日煙國際_inv9_inv",
+          "level": 3,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
       "factoryName": "東和一期",
       "county": "台南市",
       "maintainer": "維運一課",
@@ -4207,6 +4640,27 @@
           "inv": 9,
           "desc": "東和二期 第9台Inverter(SN碼: 施奈德CL25)斷訊，時間: 2026-11-04 05:30 到 2026-11-04 06:00，錯誤訊息: inv",
           "errMsg": "東和二期_inv9_inv",
+          "level": 3,
+          "colorLabel": "red"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv15",
+      "lastAlarmType": "裝置斷訊",
+      "lastColorLabel": "red",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "裝置斷訊",
+          "inv": 15,
+          "desc": "東和二期 第15台Inverter(SN碼: 施奈德CL25)斷訊，時間: 2026-11-04 11:30 到 2026-11-04 12:00，錯誤訊息: inv",
+          "errMsg": "東和二期_inv15_inv",
           "level": 3,
           "colorLabel": "red"
         }
@@ -8785,8 +9239,8 @@
       "which": "Inv08",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 22,
+      "time": "2026-11-04 12:30:00",
+      "impact": 24,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -8983,6 +9437,24 @@
           "inv": 8,
           "desc": "Chemik Y1-2A第8台逆變器(SN碼: N/A)MPPT異常(第10串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "Chemik Y1-2A第8台逆變器(SN碼: N/A)MPPT異常(第10串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 8,
+          "desc": "Chemik Y1-2A第8台逆變器(SN碼: N/A)有日照但串列未發電(第1串)，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "Chemik Y1-2A第8台逆變器(SN碼: N/A)有日照但串列未發電(第1串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "Chemik Y1-2A第8台逆變器(SN碼: N/A)MPPT異常(第1串)，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "Chemik Y1-2A第8台逆變器(SN碼: N/A)MPPT異常(第1串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -14272,8 +14744,8 @@
       "which": "Inv14",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 25,
+      "time": "2026-11-04 11:30:00",
+      "impact": 27,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -14497,6 +14969,24 @@
           "inv": 14,
           "desc": "Chemik Y1-2B第14台逆變器(SN碼: N/A)MPPT異常(第14串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "Chemik Y1-2B第14台逆變器(SN碼: N/A)MPPT異常(第14串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 14,
+          "desc": "Chemik Y1-2B第14台逆變器(SN碼: N/A)有日照但串列未發電(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-2B第14台逆變器(SN碼: N/A)有日照但串列未發電(第1串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "Chemik Y1-2B第14台逆變器(SN碼: N/A)MPPT異常(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-2B第14台逆變器(SN碼: N/A)MPPT異常(第1串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -19879,8 +20369,8 @@
       "which": "Inv07",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 18,
+      "time": "2026-11-04 11:30:00",
+      "impact": 30,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -20041,6 +20531,114 @@
           "inv": 7,
           "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第9串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第9串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第11串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第13串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第10串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第10串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第11串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第11串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第12串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第12串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第13串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)有日照但串列未發電(第13串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第10串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第10串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第11串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第11串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第12串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第12串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第13串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "Chemik Y1-3B第7台逆變器(SN碼: N/A)MPPT異常(第13串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -29908,8 +30506,8 @@
       "which": "Inv02",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 2,
+      "time": "2026-11-04 15:00:00",
+      "impact": 8,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T10:00:00.000+08:00",
@@ -29926,6 +30524,81 @@
           "inv": 2,
           "desc": "仁美商標第2台逆變器(SN碼: 40K-M3)MPPT異常(第7串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "仁美商標第2台逆變器(SN碼: 40K-M3)MPPT異常(第7串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 2,
+          "desc": "仁美商標第2台逆變器(SN碼: 40K-M3)有日照但串列未發電(第1串)，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "仁美商標第2台逆變器(SN碼: 40K-M3)有日照但串列未發電(第1串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "仁美商標第2台逆變器(SN碼: 40K-M3)MPPT異常(第1串)，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "仁美商標第2台逆變器(SN碼: 40K-M3)MPPT異常(第1串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "仁美商標第2台逆變器(SN碼: 40K-M3)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "仁美商標",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 14:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T14:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "仁美商標第3台逆變器(SN碼: 40K-M3)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 13:30 到 2026-11-04 14:00",
+          "errMsg": "仁美商標第3台逆變器(SN碼: 40K-M3)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -30016,6 +30689,36 @@
       ]
     },
     {
+      "factoryName": "北歐之光",
+      "county": "台北市",
+      "maintainer": "李昀璁",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "北歐之光第2台逆變器(SN碼: TOUGH 4000 4.23k)效率低於85%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "北歐之光第2台逆變器(SN碼: TOUGH 4000 4.23k)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "北歐之光第2台逆變器(SN碼: TOUGH 4000 4.23k)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "北歐之光第2台逆變器(SN碼: TOUGH 4000 4.23k)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "受興一期",
       "county": "台南市",
       "maintainer": "郭文奇",
@@ -30040,6 +30743,237 @@
           "inv": 5,
           "desc": "受興一期第5台逆變器(SN碼: INV3華為60KTL )MPPT異常(第4串)，時間: 2026-11-04 09:00 到 2026-11-04 09:30",
           "errMsg": "受興一期第5台逆變器(SN碼: INV3華為60KTL )MPPT異常(第4串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興一期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "受興一期第2台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興一期第2台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "受興二期第3台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第3台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv04",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "受興二期第4台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第4台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv05",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "受興二期第5台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第5台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv06",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "受興二期第6台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第6台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv07",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "受興二期第7台逆變器(SN碼: Scder 23.6kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第7台逆變器(SN碼: Scder 23.6kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv08",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "受興二期第8台逆變器(SN碼: Scder 23.6kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第8台逆變器(SN碼: Scder 23.6kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv09",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "受興二期第9台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第9台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv10",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "受興二期第10台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第10台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv11",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "受興二期第11台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第11台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "受興二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv12",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "受興二期第12台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "受興二期第12台逆變器(SN碼: Scder 29.5kWp)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -30274,8 +31208,8 @@
       "which": "Inv16",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 1,
+      "time": "2026-11-04 15:30:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T10:00:00.000+08:00",
@@ -30283,6 +31217,99 @@
           "inv": 16,
           "desc": "台南機場第16台逆變器(SN碼: F3-17.42kWp亞力Plus)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "台南機場第16台逆變器(SN碼: F3-17.42kWp亞力Plus)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "台南機場第16台逆變器(SN碼: F3-17.42kWp亞力Plus)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "台南機場第16台逆變器(SN碼: F3-17.42kWp亞力Plus)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "台南機場",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv04",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "台南機場第4台逆變器(SN碼: B2-21.32kWp施奈德 TL20000E)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "台南機場第4台逆變器(SN碼: B2-21.32kWp施奈德 TL20000E)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "台南機場",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv05",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "台南機場第5台逆變器(SN碼: B3-21.32kWp施奈德 TL20000E)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "台南機場第5台逆變器(SN碼: B3-21.32kWp施奈德 TL20000E)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "台南機場",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv06",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "台南機場第6台逆變器(SN碼: B4-21.32kWp施奈德 TL20000E)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "台南機場第6台逆變器(SN碼: B4-21.32kWp施奈德 TL20000E)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "台南機場",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv08",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "台南機場第8台逆變器(SN碼: B6-16.12kWp施奈德 TL20000E)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "台南機場第8台逆變器(SN碼: B6-16.12kWp施奈德 TL20000E)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -30589,6 +31616,57 @@
           "inv": 10,
           "desc": "台瑞電氣第10台逆變器(SN碼: 盈正)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "台瑞電氣第10台逆變器(SN碼: 盈正)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "合昱開發",
+      "county": "高雄市",
+      "maintainer": "維運一課",
+      "which": "Inv01",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "合昱開發第1台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "合昱開發第1台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "合昱開發",
+      "county": "高雄市",
+      "maintainer": "維運一課",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "合昱開發第2台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "合昱開發第2台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "合昱開發第2台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "合昱開發第2台逆變器(SN碼: N/A)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -31648,14 +32726,56 @@
       ]
     },
     {
+      "factoryName": "大舜鈑金科工三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv06",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "大舜鈑金科工三期第6台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "大舜鈑金科工三期第6台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "奇景光電二廠",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv13",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "奇景光電二廠第13台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "奇景光電二廠第13台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "奇景總部停車場",
       "county": "台南市",
       "maintainer": "維運一課",
       "which": "Inv08",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 1,
+      "time": "2026-11-04 11:00:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -31663,6 +32783,15 @@
           "inv": 8,
           "desc": "奇景總部停車場第8台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "奇景總部停車場第8台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "奇景總部停車場第8台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "奇景總部停車場第8台逆變器(SN碼: N/A)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -31711,6 +32840,84 @@
       ]
     },
     {
+      "factoryName": "宜佳美牧場",
+      "county": "台南市",
+      "maintainer": "張晏誠",
+      "which": "Inv07",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "宜佳美牧場第7台逆變器(SN碼: 70.11)日照值大於300W/m2，電流小於2A(第9串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "宜佳美牧場第7台逆變器(SN碼: 70.11)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "宜佳美牧場",
+      "county": "台南市",
+      "maintainer": "張晏誠",
+      "which": "Inv08",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 5,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2，電流小於2A(第9串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2，電流小於2A(第11串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "宜佳美牧場第8台逆變器(SN碼: 70.11)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "富士電子",
       "county": "台南市",
       "maintainer": "-",
@@ -31753,14 +32960,35 @@
       ]
     },
     {
+      "factoryName": "尚準",
+      "county": "高雄市",
+      "maintainer": "郭明宗",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "尚準第2台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "尚準第2台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "展維實業",
       "county": "彰化縣",
       "maintainer": "汪順發",
       "which": "Inv01",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 12:30:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -31768,6 +32996,15 @@
           "inv": 1,
           "desc": "展維實業第1台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "展維實業第1台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "展維實業第1台逆變器(SN碼: N/A)效率低於85%，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "展維實業第1台逆變器(SN碼: N/A)效率低於85%",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -31834,6 +33071,27 @@
       ]
     },
     {
+      "factoryName": "展維實業",
+      "county": "彰化縣",
+      "maintainer": "汪順發",
+      "which": "Inv06",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 14:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T14:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "展維實業第6台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 14:00 到 2026-11-04 14:30",
+          "errMsg": "展維實業第6台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "恒美二期",
       "county": "台南市",
       "maintainer": "郭文奇",
@@ -31849,6 +33107,27 @@
           "inv": 1,
           "desc": "恒美二期第1台逆變器(SN碼: 48.8 kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "恒美二期第1台逆變器(SN碼: 48.8 kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "恒美二期",
+      "county": "台南市",
+      "maintainer": "郭文奇",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 14:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T14:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "恒美二期第3台逆變器(SN碼: 48.97 kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 13:30 到 2026-11-04 14:00",
+          "errMsg": "恒美二期第3台逆變器(SN碼: 48.97 kWp)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -31993,8 +33272,8 @@
       "which": "Inv08",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 4,
+      "time": "2026-11-04 12:00:00",
+      "impact": 5,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -32031,6 +33310,15 @@
           "errMsg": "新陽第8台逆變器(SN碼: 22.88kW)MPPT異常(第2串)",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "新陽第8台逆變器(SN碼: 22.88kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "新陽第8台逆變器(SN碼: 22.88kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -32041,8 +33329,8 @@
       "which": "Inv13",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 6,
+      "time": "2026-11-04 11:30:00",
+      "impact": 7,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -32095,6 +33383,15 @@
           "inv": 13,
           "desc": "新陽第13台逆變器(SN碼: 22.88kW 2140-79430402D)MPPT異常(第3串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "新陽第13台逆變器(SN碼: 22.88kW 2140-79430402D)MPPT異常(第3串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "新陽第13台逆變器(SN碼: 22.88kW 2140-79430402D)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽第13台逆變器(SN碼: 22.88kW 2140-79430402D)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32191,8 +33488,8 @@
       "which": "Inv19",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 6,
+      "time": "2026-11-04 12:00:00",
+      "impact": 7,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -32245,6 +33542,15 @@
           "inv": 19,
           "desc": "新陽第19台逆變器(SN碼: 22.88kW 2416-69520034T)MPPT異常(第3串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "新陽第19台逆變器(SN碼: 22.88kW 2416-69520034T)MPPT異常(第3串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 19,
+          "desc": "新陽第19台逆變器(SN碼: 22.88kW 2416-69520034T)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "新陽第19台逆變器(SN碼: 22.88kW 2416-69520034T)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32527,6 +33833,90 @@
       ]
     },
     {
+      "factoryName": "新陽",
+      "county": "雲林縣",
+      "maintainer": "羅健國",
+      "which": "Inv11",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "新陽第11台逆變器(SN碼: 22.88kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽第11台逆變器(SN碼: 22.88kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "新陽",
+      "county": "雲林縣",
+      "maintainer": "羅健國",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "新陽第2台逆變器(SN碼: 22.88kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "新陽第2台逆變器(SN碼: 22.88kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "新陽",
+      "county": "雲林縣",
+      "maintainer": "羅健國",
+      "which": "Inv17",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "新陽第17台逆變器(SN碼: 22.88kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "新陽第17台逆變器(SN碼: 22.88kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "新陽",
+      "county": "雲林縣",
+      "maintainer": "羅健國",
+      "which": "Inv18",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "新陽第18台逆變器(SN碼: 22.88kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "新陽第18台逆變器(SN碼: 22.88kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "新陽勤誠興業",
       "county": "嘉義縣",
       "maintainer": "蘇哲淋",
@@ -32548,14 +33938,164 @@
       ]
     },
     {
+      "factoryName": "新陽勤誠興業",
+      "county": "嘉義縣",
+      "maintainer": "蘇哲淋",
+      "which": "Inv06",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 6,
+          "desc": "新陽勤誠興業第6台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第7串)，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "新陽勤誠興業第6台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第7串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "新陽勤誠興業第6台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第7串)，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "新陽勤誠興業第6台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第7串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "新陽勤誠興業",
+      "county": "嘉義縣",
+      "maintainer": "蘇哲淋",
+      "which": "Inv01",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 13:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 1,
+          "desc": "新陽勤誠興業第1台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第9串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第1台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第9串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "新陽勤誠興業第1台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第9串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第1台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第9串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "新陽勤誠興業",
+      "county": "嘉義縣",
+      "maintainer": "蘇哲淋",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 13:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 2,
+          "desc": "新陽勤誠興業第2台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第7串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第2台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第7串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "新陽勤誠興業第2台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第7串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第2台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第7串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "新陽勤誠興業",
+      "county": "嘉義縣",
+      "maintainer": "蘇哲淋",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 13:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 3,
+          "desc": "新陽勤誠興業第3台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第8串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第3台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "新陽勤誠興業第3台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第8串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第3台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第8串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "新陽勤誠興業",
+      "county": "嘉義縣",
+      "maintainer": "蘇哲淋",
+      "which": "Inv07",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 13:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 7,
+          "desc": "新陽勤誠興業第7台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第8串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第7台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "新陽勤誠興業第7台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第8串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "新陽勤誠興業第7台逆變器(SN碼: HuaweiNew_SUN2000_65KTL_M0)MPPT異常(第8串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "新陽能源英茂",
       "county": "桃園市",
       "maintainer": "羅健國",
       "which": "Inv01",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -32563,6 +34103,24 @@
           "inv": 1,
           "desc": "新陽能源英茂第1台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "新陽能源英茂第1台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 1,
+          "desc": "新陽能源英茂第1台逆變器(SN碼: N/A)有日照但串列未發電(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第1台逆變器(SN碼: N/A)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "新陽能源英茂第1台逆變器(SN碼: N/A)MPPT異常(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第1台逆變器(SN碼: N/A)MPPT異常(第8串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32575,8 +34133,8 @@
       "which": "Inv02",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -32584,6 +34142,24 @@
           "inv": 2,
           "desc": "新陽能源英茂第2台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "新陽能源英茂第2台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 2,
+          "desc": "新陽能源英茂第2台逆變器(SN碼: N/A)有日照但串列未發電(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第2台逆變器(SN碼: N/A)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "新陽能源英茂第2台逆變器(SN碼: N/A)MPPT異常(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第2台逆變器(SN碼: N/A)MPPT異常(第8串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32596,8 +34172,8 @@
       "which": "Inv03",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -32605,6 +34181,24 @@
           "inv": 3,
           "desc": "新陽能源英茂第3台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "新陽能源英茂第3台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 3,
+          "desc": "新陽能源英茂第3台逆變器(SN碼: N/A)有日照但串列未發電(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第3台逆變器(SN碼: N/A)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "新陽能源英茂第3台逆變器(SN碼: N/A)MPPT異常(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第3台逆變器(SN碼: N/A)MPPT異常(第8串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32617,8 +34211,8 @@
       "which": "Inv04",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -32626,6 +34220,24 @@
           "inv": 4,
           "desc": "新陽能源英茂第4台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "新陽能源英茂第4台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 4,
+          "desc": "新陽能源英茂第4台逆變器(SN碼: N/A)有日照但串列未發電(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第4台逆變器(SN碼: N/A)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "新陽能源英茂第4台逆變器(SN碼: N/A)MPPT異常(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第4台逆變器(SN碼: N/A)MPPT異常(第8串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32638,8 +34250,8 @@
       "which": "Inv05",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -32647,6 +34259,24 @@
           "inv": 5,
           "desc": "新陽能源英茂第5台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "新陽能源英茂第5台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 5,
+          "desc": "新陽能源英茂第5台逆變器(SN碼: N/A)有日照但串列未發電(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第5台逆變器(SN碼: N/A)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "新陽能源英茂第5台逆變器(SN碼: N/A)MPPT異常(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第5台逆變器(SN碼: N/A)MPPT異常(第8串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32659,8 +34289,8 @@
       "which": "Inv06",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 2,
+      "time": "2026-11-04 11:30:00",
+      "impact": 6,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -32677,6 +34307,42 @@
           "inv": 6,
           "desc": "新陽能源英茂第6台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "新陽能源英茂第6台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 6,
+          "desc": "新陽能源英茂第6台逆變器(SN碼: N/A)有日照但串列未發電(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第6台逆變器(SN碼: N/A)有日照但串列未發電(第6串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 6,
+          "desc": "新陽能源英茂第6台逆變器(SN碼: N/A)有日照但串列未發電(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第6台逆變器(SN碼: N/A)有日照但串列未發電(第8串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "新陽能源英茂第6台逆變器(SN碼: N/A)MPPT異常(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第6台逆變器(SN碼: N/A)MPPT異常(第6串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 6,
+          "desc": "新陽能源英茂第6台逆變器(SN碼: N/A)MPPT異常(第8串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "新陽能源英茂第6台逆變器(SN碼: N/A)MPPT異常(第8串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32818,8 +34484,8 @@
       "which": "Inv09",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -32827,6 +34493,15 @@
           "inv": 9,
           "desc": "日煙國際第9台逆變器(SN碼: 26.975KWp)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "日煙國際第9台逆變器(SN碼: 26.975KWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "日煙國際第9台逆變器(SN碼: 26.975KWp)效率低於85%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "日煙國際第9台逆變器(SN碼: 26.975KWp)效率低於85%",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32839,8 +34514,8 @@
       "which": "Inv10",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -32848,6 +34523,15 @@
           "inv": 10,
           "desc": "日煙國際第10台逆變器(SN碼: 23.4KWp)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "日煙國際第10台逆變器(SN碼: 23.4KWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 10,
+          "desc": "日煙國際第10台逆變器(SN碼: 23.4KWp)效率低於85%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "日煙國際第10台逆變器(SN碼: 23.4KWp)效率低於85%",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -32869,6 +34553,381 @@
           "inv": 7,
           "desc": "明基能源佳世達廠第7台逆變器(SN碼: Delta M70A   76.56k)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "明基能源佳世達廠第7台逆變器(SN碼: Delta M70A   76.56k)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和一期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv04",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "東和一期第4台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "東和一期第4台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和三期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv01",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "東和三期第1台逆變器(SN碼: 現場INV18_Schneider_Conext_CL_25kW)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和三期第1台逆變器(SN碼: 現場INV18_Schneider_Conext_CL_25kW)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和三期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "東和三期第2台逆變器(SN碼: 現場INV19_Schneider_Conext_CL_25kW)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和三期第2台逆變器(SN碼: 現場INV19_Schneider_Conext_CL_25kW)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和三期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv05",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "東和三期第5台逆變器(SN碼: 現場INV22_Schneider_Conext_CL_25kW)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和三期第5台逆變器(SN碼: 現場INV22_Schneider_Conext_CL_25kW)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和三期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv12",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "東和三期第12台逆變器(SN碼: 現場INV29_Schneider_Conext_CL_25kW)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和三期第12台逆變器(SN碼: 現場INV29_Schneider_Conext_CL_25kW)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和三期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv14",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "東和三期第14台逆變器(SN碼: 現場INV31_Schneider_Conext_CL_25kW)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和三期第14台逆變器(SN碼: 現場INV31_Schneider_Conext_CL_25kW)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和三期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv16",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "東和三期第16台逆變器(SN碼: 現場INV33_Schneider_Conext_CL_25kW)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和三期第16台逆變器(SN碼: 現場INV33_Schneider_Conext_CL_25kW)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和三期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv17",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "東和三期第17台逆變器(SN碼: 現場INV34_Schneider_Conext_CL_25kW)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和三期第17台逆變器(SN碼: 現場INV34_Schneider_Conext_CL_25kW)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "東和二期第2台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第2台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv08",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "東和二期第8台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第8台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv09",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "東和二期第9台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第9台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv11",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 11,
+          "desc": "東和二期第11台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第11台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv12",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "東和二期第12台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第12台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv15",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 3,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "東和二期第15台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第15台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "東和二期第15台逆變器(SN碼: 施奈德CL25)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "東和二期第15台逆變器(SN碼: 施奈德CL25)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "東和二期第15台逆變器(SN碼: 施奈德CL25)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "東和二期第15台逆變器(SN碼: 施奈德CL25)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv16",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "東和二期第16台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第16台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東和二期",
+      "county": "台南市",
+      "maintainer": "王永晴",
+      "which": "Inv17",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "東和二期第17台逆變器(SN碼: 施奈德CL25)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "東和二期第17台逆變器(SN碼: 施奈德CL25)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "東毓",
+      "county": "南投縣",
+      "maintainer": "維運二課",
+      "which": "Inv12",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 13:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 12,
+          "desc": "東毓第12台逆變器(SN碼: 33.925kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "東毓第12台逆變器(SN碼: 33.925kWp)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -33025,6 +35084,156 @@
       ]
     },
     {
+      "factoryName": "楠梓污水廠三期",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:00:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "楠梓污水廠三期第2台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "楠梓污水廠三期第2台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "楠梓污水廠三期第2台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第21串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "楠梓污水廠三期第2台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "楠梓污水廠三期",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv14",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:00:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T14:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "楠梓污水廠三期第14台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第20串)，時間: 2026-11-04 13:30 到 2026-11-04 14:00",
+          "errMsg": "楠梓污水廠三期第14台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "楠梓污水廠三期第14台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "楠梓污水廠三期第14台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "楠梓污水廠三期",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv01",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 3,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "楠梓污水廠三期第1台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第19串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "楠梓污水廠三期第1台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "楠梓污水廠三期第1台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "楠梓污水廠三期第1台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "楠梓污水廠三期第1台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第21串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "楠梓污水廠三期第1台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "楠梓污水廠三期",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv15",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "楠梓污水廠三期第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第23串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "楠梓污水廠三期第15台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "楠梓污水廠三期第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第18串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "楠梓污水廠三期第15台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "楠梓污水廠三期",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv16",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 16,
+          "desc": "楠梓污水廠三期第16台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "楠梓污水廠三期第16台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "欣銓科技鼎興廠TSP1",
       "county": "新竹縣",
       "maintainer": "汪順發",
@@ -33046,14 +35255,83 @@
       ]
     },
     {
+      "factoryName": "欣銓科技鼎興廠TSP1",
+      "county": "新竹縣",
+      "maintainer": "汪順發",
+      "which": "Inv04",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 4,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T14:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 14:00 到 2026-11-04 14:30",
+          "errMsg": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "欣銓科技鼎興廠TSP1第4台逆變器(SN碼: 66.66 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "欣銓科技鼎興廠TSP1",
+      "county": "新竹縣",
+      "maintainer": "汪順發",
+      "which": "Inv01",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "欣銓科技鼎興廠TSP1第1台逆變器(SN碼: 66 kW)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "欣銓科技鼎興廠TSP1第1台逆變器(SN碼: 66 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "欣銓科技鼎興廠TSP2",
       "county": "新竹縣",
       "maintainer": "汪順發",
       "which": "Inv01",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 4,
+      "time": "2026-11-04 15:30:00",
+      "impact": 7,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -33088,6 +35366,54 @@
           "inv": 1,
           "desc": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2，電流小於2A(第6串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T14:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-11-04 14:00 到 2026-11-04 14:30",
+          "errMsg": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2，電流小於2A(第8串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "欣銓科技鼎興廠TSP2第1台逆變器(SN碼: 75.24 kW)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "欣銓科技鼎興廠TSP2",
+      "county": "新竹縣",
+      "maintainer": "汪順發",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "欣銓科技鼎興廠TSP2第3台逆變器(SN碼: 83.16 kW)日照值大於300W/m2，電流小於2A(第12串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "欣銓科技鼎興廠TSP2第3台逆變器(SN碼: 83.16 kW)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -33214,8 +35540,8 @@
       "which": "Inv03",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 10:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T10:00:00.000+08:00",
@@ -33223,6 +35549,66 @@
           "inv": 3,
           "desc": "海創中心第3台逆變器(SN碼: 31kWp)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "海創中心第3台逆變器(SN碼: 31kWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "海創中心第3台逆變器(SN碼: 31kWp)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "海創中心第3台逆變器(SN碼: 31kWp)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "海創人培中心",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv09",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "海創人培中心第9台逆變器(SN碼: 34.1kWp)效率低於85%，時間: 2026-11-04 10:30 到 2026-11-04 11:00",
+          "errMsg": "海創人培中心第9台逆變器(SN碼: 34.1kWp)效率低於85%",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "特力家居高雄館",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv07",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "特力家居高雄館第7台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "特力家居高雄館第7台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "特力家居高雄館第7台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "特力家居高雄館第7台逆變器(SN碼: N/A)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35056,8 +37442,8 @@
       "which": "Inv03",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 2,
+      "time": "2026-11-04 11:30:00",
+      "impact": 6,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -35074,6 +37460,42 @@
           "inv": 3,
           "desc": "矽品-中科廠第3台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "矽品-中科廠第3台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 3,
+          "desc": "矽品-中科廠第3台逆變器(SN碼: N/A)有日照但串列未發電(第3串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第3台逆變器(SN碼: N/A)有日照但串列未發電(第3串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 3,
+          "desc": "矽品-中科廠第3台逆變器(SN碼: N/A)有日照但串列未發電(第5串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第3台逆變器(SN碼: N/A)有日照但串列未發電(第5串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "矽品-中科廠第3台逆變器(SN碼: N/A)MPPT異常(第3串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第3台逆變器(SN碼: N/A)MPPT異常(第3串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "矽品-中科廠第3台逆變器(SN碼: N/A)MPPT異常(第5串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第3台逆變器(SN碼: N/A)MPPT異常(第5串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35107,14 +37529,50 @@
       "which": "Inv15",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 15:00:00",
+      "impact": 5,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
           "alarmType": "發電效率不佳",
           "inv": 15,
           "desc": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
+          "errMsg": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第2串)，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
           "errMsg": "矽品-中科廠第15台逆變器(SN碼: N/A)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
@@ -35128,8 +37586,8 @@
       "which": "Inv21",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -35137,6 +37595,24 @@
           "inv": 21,
           "desc": "矽品-中科廠第21台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "矽品-中科廠第21台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 21,
+          "desc": "矽品-中科廠第21台逆變器(SN碼: N/A)有日照但串列未發電(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第21台逆變器(SN碼: N/A)有日照但串列未發電(第1串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 21,
+          "desc": "矽品-中科廠第21台逆變器(SN碼: N/A)MPPT異常(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第21台逆變器(SN碼: N/A)MPPT異常(第1串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35149,8 +37625,8 @@
       "which": "Inv23",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -35158,6 +37634,24 @@
           "inv": 23,
           "desc": "矽品-中科廠第23台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "矽品-中科廠第23台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 23,
+          "desc": "矽品-中科廠第23台逆變器(SN碼: N/A)有日照但串列未發電(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第23台逆變器(SN碼: N/A)有日照但串列未發電(第1串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 23,
+          "desc": "矽品-中科廠第23台逆變器(SN碼: N/A)MPPT異常(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第23台逆變器(SN碼: N/A)MPPT異常(第1串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35170,8 +37664,8 @@
       "which": "Inv40",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 2,
+      "time": "2026-11-04 11:30:00",
+      "impact": 6,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -35190,6 +37684,42 @@
           "errMsg": "矽品-中科廠第40台逆變器(SN碼: N/A)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 40,
+          "desc": "矽品-中科廠第40台逆變器(SN碼: N/A)有日照但串列未發電(第2串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第40台逆變器(SN碼: N/A)有日照但串列未發電(第2串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 40,
+          "desc": "矽品-中科廠第40台逆變器(SN碼: N/A)有日照但串列未發電(第4串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第40台逆變器(SN碼: N/A)有日照但串列未發電(第4串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 40,
+          "desc": "矽品-中科廠第40台逆變器(SN碼: N/A)MPPT異常(第2串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第40台逆變器(SN碼: N/A)MPPT異常(第2串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 40,
+          "desc": "矽品-中科廠第40台逆變器(SN碼: N/A)MPPT異常(第4串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第40台逆變器(SN碼: N/A)MPPT異常(第4串)",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35200,8 +37730,8 @@
       "which": "Inv41",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 2,
+      "time": "2026-11-04 11:30:00",
+      "impact": 6,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -35220,6 +37750,42 @@
           "errMsg": "矽品-中科廠第41台逆變器(SN碼: N/A)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 41,
+          "desc": "矽品-中科廠第41台逆變器(SN碼: N/A)有日照但串列未發電(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第41台逆變器(SN碼: N/A)有日照但串列未發電(第1串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 41,
+          "desc": "矽品-中科廠第41台逆變器(SN碼: N/A)有日照但串列未發電(第3串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第41台逆變器(SN碼: N/A)有日照但串列未發電(第3串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 41,
+          "desc": "矽品-中科廠第41台逆變器(SN碼: N/A)MPPT異常(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第41台逆變器(SN碼: N/A)MPPT異常(第1串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 41,
+          "desc": "矽品-中科廠第41台逆變器(SN碼: N/A)MPPT異常(第3串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第41台逆變器(SN碼: N/A)MPPT異常(第3串)",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35230,8 +37796,8 @@
       "which": "Inv52",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -35239,6 +37805,24 @@
           "inv": 52,
           "desc": "矽品-中科廠第52台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "矽品-中科廠第52台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 52,
+          "desc": "矽品-中科廠第52台逆變器(SN碼: N/A)有日照但串列未發電(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第52台逆變器(SN碼: N/A)有日照但串列未發電(第1串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 52,
+          "desc": "矽品-中科廠第52台逆變器(SN碼: N/A)MPPT異常(第1串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第52台逆變器(SN碼: N/A)MPPT異常(第1串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35251,8 +37835,8 @@
       "which": "Inv56",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 09:00:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T09:00:00.000+08:00",
@@ -35260,6 +37844,96 @@
           "inv": 56,
           "desc": "矽品-中科廠第56台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 08:30 到 2026-11-04 09:00",
           "errMsg": "矽品-中科廠第56台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 56,
+          "desc": "矽品-中科廠第56台逆變器(SN碼: N/A)有日照但串列未發電(第3串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第56台逆變器(SN碼: N/A)有日照但串列未發電(第3串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 56,
+          "desc": "矽品-中科廠第56台逆變器(SN碼: N/A)MPPT異常(第3串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "矽品-中科廠第56台逆變器(SN碼: N/A)MPPT異常(第3串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "矽品-中科廠",
+      "county": "台中市",
+      "maintainer": "維運二課",
+      "which": "Inv01",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 13:00:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "矽品-中科廠第1台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "矽品-中科廠第1台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "矽品-中科廠第1台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "矽品-中科廠第1台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "矽品-中科廠",
+      "county": "台中市",
+      "maintainer": "維運二課",
+      "which": "Inv57",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 57,
+          "desc": "矽品-中科廠第57台逆變器(SN碼: 40K)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "矽品-中科廠第57台逆變器(SN碼: 40K)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "矽品-中科廠",
+      "county": "台中市",
+      "maintainer": "維運二課",
+      "which": "Inv14",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "矽品-中科廠第14台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "矽品-中科廠第14台逆變器(SN碼: N/A)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35272,8 +37946,8 @@
       "which": "Inv01",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 7,
+      "time": "2026-11-04 14:00:00",
+      "impact": 10,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -35337,6 +38011,33 @@
           "errMsg": "福斯商旅頂立台南展示中心第1台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 1,
+          "desc": "福斯商旅頂立台南展示中心第1台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "福斯商旅頂立台南展示中心第1台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第6串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "福斯商旅頂立台南展示中心第1台逆變器(SN碼: Delta_M100A_283)MPPT異常(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "福斯商旅頂立台南展示中心第1台逆變器(SN碼: Delta_M100A_283)MPPT異常(第6串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T14:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "福斯商旅頂立台南展示中心第1台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2，電流小於2A(第9串)，時間: 2026-11-04 13:30 到 2026-11-04 14:00",
+          "errMsg": "福斯商旅頂立台南展示中心第1台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
         }
       ]
     },
@@ -35347,8 +38048,8 @@
       "which": "Inv02",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 2,
+      "time": "2026-11-04 15:30:00",
+      "impact": 13,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -35365,6 +38066,135 @@
           "inv": 2,
           "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第6串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)MPPT異常(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)MPPT異常(第6串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第5串)，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第5串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)MPPT異常(第5串)，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)MPPT異常(第5串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2，電流小於2A(第9串)，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第2串)，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第2串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)MPPT異常(第2串)，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)MPPT異常(第2串)",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T14:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2，電流小於2A(第4串)，時間: 2026-11-04 14:00 到 2026-11-04 14:30",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2，電流小於2A(第10串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "福斯商旅頂立台南展示中心第2台逆變器(SN碼: Delta_M100A_283)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "福斯商旅頂立台南展示中心",
+      "county": "台南市",
+      "maintainer": "N/A",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電數據異常",
+          "inv": 3,
+          "desc": "福斯商旅頂立台南展示中心第3台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "福斯商旅頂立台南展示中心第3台逆變器(SN碼: Delta_M100A_283)有日照但串列未發電(第6串)",
+          "level": 2,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "福斯商旅頂立台南展示中心第3台逆變器(SN碼: Delta_M100A_283)MPPT異常(第6串)，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "福斯商旅頂立台南展示中心第3台逆變器(SN碼: Delta_M100A_283)MPPT異常(第6串)",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35419,8 +38249,8 @@
       "which": "Inv17",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 1,
+      "time": "2026-11-04 11:30:00",
+      "impact": 2,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -35428,6 +38258,15 @@
           "inv": 17,
           "desc": "芳生螺絲第17台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "芳生螺絲第17台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "芳生螺絲第17台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "芳生螺絲第17台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35440,8 +38279,8 @@
       "which": "Inv18",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 2,
+      "time": "2026-11-04 13:30:00",
+      "impact": 3,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -35458,6 +38297,15 @@
           "inv": 18,
           "desc": "芳生螺絲第18台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "芳生螺絲第18台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 18,
+          "desc": "芳生螺絲第18台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "芳生螺絲第18台逆變器(SN碼: Huawei-Sun2000 45.78k)日照值大於600W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35500,8 +38348,8 @@
       "which": "Inv14",
       "lastAlarmType": "發電效率不佳",
       "lastColorLabel": "orange",
-      "time": "2026-11-04 08:30:00",
-      "impact": 3,
+      "time": "2026-11-04 11:30:00",
+      "impact": 4,
       "allAlarms": [
         {
           "timestamp": "2026-11-04T08:30:00.000+08:00",
@@ -35527,6 +38375,153 @@
           "inv": 14,
           "desc": "芳生螺絲二期第14台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 08:00 到 2026-11-04 08:30",
           "errMsg": "芳生螺絲二期第14台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 14,
+          "desc": "芳生螺絲二期第14台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "芳生螺絲二期第14台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "芳生螺絲二期",
+      "county": "高雄市",
+      "maintainer": "NA",
+      "which": "Inv13",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:00:00",
+      "impact": 3,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "芳生螺絲二期第13台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "芳生螺絲二期第13台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "芳生螺絲二期第13台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "芳生螺絲二期第13台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 13,
+          "desc": "芳生螺絲二期第13台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "芳生螺絲二期第13台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "芳生螺絲二期",
+      "county": "高雄市",
+      "maintainer": "NA",
+      "which": "Inv15",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:00:00",
+      "impact": 3,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "芳生螺絲二期第15台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "芳生螺絲二期第15台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "芳生螺絲二期第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第1串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "芳生螺絲二期第15台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 15,
+          "desc": "芳生螺絲二期第15台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "芳生螺絲二期第15台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "芳生螺絲二期",
+      "county": "高雄市",
+      "maintainer": "NA",
+      "which": "Inv19",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 3,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 19,
+          "desc": "芳生螺絲二期第19台逆變器(SN碼: N/A)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 13:00 到 2026-11-04 13:30",
+          "errMsg": "芳生螺絲二期第19台逆變器(SN碼: N/A)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 19,
+          "desc": "芳生螺絲二期第19台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "芳生螺絲二期第19台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 19,
+          "desc": "芳生螺絲二期第19台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "芳生螺絲二期第19台逆變器(SN碼: N/A)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "芳生螺絲二期",
+      "county": "高雄市",
+      "maintainer": "NA",
+      "which": "Inv17",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 17,
+          "desc": "芳生螺絲二期第17台逆變器(SN碼: N/A)日照值大於300W/m2，電流小於2A(第7串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "芳生螺絲二期第17台逆變器(SN碼: N/A)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -35806,6 +38801,285 @@
       ]
     },
     {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv01",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 1,
+          "desc": "鉅橡三期第1台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "鉅橡三期第1台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "鉅橡三期第2台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "鉅橡三期第2台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "鉅橡三期第3台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "鉅橡三期第3台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv04",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "鉅橡三期第4台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "鉅橡三期第4台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv09",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 11:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T11:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 9,
+          "desc": "鉅橡三期第9台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:00 到 2026-11-04 11:30",
+          "errMsg": "鉅橡三期第9台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv05",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "鉅橡三期第5台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "鉅橡三期第5台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv07",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 7,
+          "desc": "鉅橡三期第7台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 11:30 到 2026-11-04 12:00",
+          "errMsg": "鉅橡三期第7台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "鉅橡三期",
+      "county": "台南市",
+      "maintainer": "維運一課",
+      "which": "Inv08",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 13:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T13:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 8,
+          "desc": "鉅橡三期第8台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 12:30 到 2026-11-04 13:00",
+          "errMsg": "鉅橡三期第8台逆變器(SN碼: Schneider_Conext_CL_25kW)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "長榮國際儲運一期",
+      "county": "台中市",
+      "maintainer": "汪順發",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:00:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T14:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "長榮國際儲運一期第2台逆變器(SN碼: 31.72kWp)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 14:00 到 2026-11-04 14:30",
+          "errMsg": "長榮國際儲運一期第2台逆變器(SN碼: 31.72kWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "長榮國際儲運一期第2台逆變器(SN碼: 31.72kWp)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "長榮國際儲運一期第2台逆變器(SN碼: 31.72kWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "長榮國際儲運一期",
+      "county": "台中市",
+      "maintainer": "汪順發",
+      "which": "Inv04",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:00:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:00:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 4,
+          "desc": "長榮國際儲運一期第4台逆變器(SN碼: 31.72kWp)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 14:30 到 2026-11-04 15:00",
+          "errMsg": "長榮國際儲運一期第4台逆變器(SN碼: 31.72kWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "長榮國際儲運一期",
+      "county": "台中市",
+      "maintainer": "汪順發",
+      "which": "Inv05",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "長榮國際儲運一期第5台逆變器(SN碼: 31.72kWp)日照值大於300W/m2，電流小於2A(第3串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "長榮國際儲運一期第5台逆變器(SN碼: 31.72kWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 5,
+          "desc": "長榮國際儲運一期第5台逆變器(SN碼: 31.72kWp)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "長榮國際儲運一期第5台逆變器(SN碼: 31.72kWp)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "長榮國際儲運二期",
+      "county": "台中市",
+      "maintainer": "汪順發",
+      "which": "Inv03",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 12:30:00",
+      "impact": 2,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "長榮國際儲運二期第3台逆變器(SN碼: 40KTL-M3 32.025k)日照值大於600W/m2，RA值低於60%，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "長榮國際儲運二期第3台逆變器(SN碼: 40KTL-M3 32.025k)日照值大於600W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        },
+        {
+          "timestamp": "2026-11-04T12:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 3,
+          "desc": "長榮國際儲運二期第3台逆變器(SN碼: 40KTL-M3 32.025k)日照值大於300W/m2，電流小於2A(第5串)，時間: 2026-11-04 12:00 到 2026-11-04 12:30",
+          "errMsg": "長榮國際儲運二期第3台逆變器(SN碼: 40KTL-M3 32.025k)日照值大於300W/m2",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
       "factoryName": "雲豹-路竹三爺埤第三型",
       "county": "高雄市",
       "maintainer": "李孟家",
@@ -35974,6 +39248,27 @@
           "inv": 4,
           "desc": "雲豹-路竹三爺埤第三型第4台逆變器(SN碼: 6T2289048181)MPPT異常(第8串)，時間: 2026-11-04 09:30 到 2026-11-04 10:00",
           "errMsg": "雲豹-路竹三爺埤第三型第4台逆變器(SN碼: 6T2289048181)MPPT異常(第8串)",
+          "level": 9,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "雲豹-路竹三鎮埤",
+      "county": "高雄市",
+      "maintainer": "李孟家",
+      "which": "Inv02",
+      "lastAlarmType": "發電效率不佳",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "發電效率不佳",
+          "inv": 2,
+          "desc": "雲豹-路竹三鎮埤第2台逆變器(SN碼: 116.64kWp)日照值大於300W/m2，電流小於2A(第17串)，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "雲豹-路竹三鎮埤第2台逆變器(SN碼: 116.64kWp)日照值大於300W/m2",
           "level": 9,
           "colorLabel": "orange"
         }
@@ -36175,6 +39470,27 @@
           "inv": null,
           "desc": "新陽的模組溫度大於80度C，時間: 2026-11-03 23:30 到 2026-11-04 00:00",
           "errMsg": "新陽的模組溫度大於80度C",
+          "level": 3,
+          "colorLabel": "orange"
+        }
+      ]
+    },
+    {
+      "factoryName": "裕益竹北廠",
+      "county": "新竹縣",
+      "maintainer": "維運二課",
+      "which": "系統斷線",
+      "lastAlarmType": "部份通訊異常",
+      "lastColorLabel": "orange",
+      "time": "2026-11-04 15:30:00",
+      "impact": 1,
+      "allAlarms": [
+        {
+          "timestamp": "2026-11-04T15:30:00.000+08:00",
+          "alarmType": "部份通訊異常",
+          "inv": null,
+          "desc": "裕益竹北廠的環境溫度大於60度C，時間: 2026-11-04 15:00 到 2026-11-04 15:30",
+          "errMsg": "裕益竹北廠的環境溫度大於60度C",
           "level": 3,
           "colorLabel": "orange"
         }
