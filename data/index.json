@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-11-21_11-00",
+    "updatedAt": "2026-11-21 11:43:35",
+    "totalSitesWithAlarms": 66,
+    "totalDistinctIssues": 185,
+    "totalRawAlarms": 293,
+    "severityCounts": {
+      "red": 127,
+      "orange": 58,
+      "white": 0
+    },
+    "topAlarmType": "裝置斷訊",
+    "topSite": "台瑞電氣",
+    "filename": "snapshots/2026-11-21_11-00.json"
+  },
+  {
     "snapshotId": "2026-11-20_20-00",
     "updatedAt": "2026-11-20 20:27:35",
     "totalSitesWithAlarms": 65,
