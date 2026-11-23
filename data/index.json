@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-11-23_21-00",
+    "updatedAt": "2026-11-23 21:58:48",
+    "totalSitesWithAlarms": 81,
+    "totalDistinctIssues": 315,
+    "totalRawAlarms": 494,
+    "severityCounts": {
+      "red": 190,
+      "orange": 125,
+      "white": 0
+    },
+    "topAlarmType": "裝置斷訊",
+    "topSite": "生利一期A區",
+    "filename": "snapshots/2026-11-23_21-00.json"
+  },
+  {
     "snapshotId": "2026-11-23_11-00",
     "updatedAt": "2026-11-23 11:28:20",
     "totalSitesWithAlarms": 72,
