@@ -1,5 +1,20 @@
 [
   {
+    "snapshotId": "2026-11-26_22-00",
+    "updatedAt": "2026-11-26 22:41:23",
+    "totalSitesWithAlarms": 68,
+    "totalDistinctIssues": 182,
+    "totalRawAlarms": 323,
+    "severityCounts": {
+      "red": 138,
+      "orange": 44,
+      "white": 0
+    },
+    "topAlarmType": "裝置斷訊",
+    "topSite": "新陽",
+    "filename": "snapshots/2026-11-26_22-00.json"
+  },
+  {
     "snapshotId": "2026-11-26_12-00",
     "updatedAt": "2026-11-26 12:40:40",
     "totalSitesWithAlarms": 59,
